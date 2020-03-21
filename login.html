@@ -7,6 +7,8 @@ Jmarialearning - Control de acceso a los repositorios.
 </h1>
 <body>
 <form>
+    <label for="user">Introduzca el usuario: </label>
+    <input type="text" id="user">
     <label for="pswd">Introduzca la contraseña: </label>
     <input type="password" id="pswd">
     <input type="button" value="Acceder" onclick="checkPswd();" />
@@ -14,9 +16,11 @@ Jmarialearning - Control de acceso a los repositorios.
 <!--Function to check password the already set password is admin-->
 <script type="text/javascript">
     function checkPswd() {
+        var confirmLogin = "jmarialearning";
+        var login = document.getElementById("user").value;
         var confirmPassword = "231202jm";
         var password = document.getElementById("pswd").value;
-        if (password == confirmPassword) {
+        if (password == confirmPassword && login == confirmLogin) {
              window.location="https://1drv.ms/u/s!AhqMDodv-X6JgY4B-AxjPAyMVTLJbw?e=akEUv2";
         }
         else{
