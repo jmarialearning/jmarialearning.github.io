@@ -20,6 +20,10 @@
             display: block;
             margin: auto;
           }
+          code {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 105%;
+}
         </style>
       </head>
 	<h1 style="text-align: center;">Laboratorio: Cálculo con <i>MATLAB</i>.</h1>
@@ -56,6 +60,21 @@
     <p>Parece que en el punto $(x,y) = (0,0)$ la función no está definida y la aplicación no ha hecho gráfica ahí. Si rotamos la vista, lo vemos de forma más clara:</p>
     <img src="img/surf4.svg">
     <p>El punto blanco implica que la función no está definida en $(x,y) = (0,0)$.</p>
-    <p>Hemos visto, múltiples funcionalidades en este ejercicio. Sin embargo, hemos de tener en cuenta que al crear la rejilla para representar funciones, los parámetros de dominio y de paso de las variables han de ser relativamente fáciles de representar, pues si pedimos demasiados puntos, los colores dejarán de verse y el rendimiento gráfico de la aplicación disminuirá considerablemente. Veámoslo con un ejemplo:</p>
-    
+    <p>
+      Hemos visto, múltiples funcionalidades en este ejercicio. Sin embargo, hemos de tener en cuenta que al crear la rejilla para representar funciones, los parámetros de dominio y de paso de las variables han de ser relativamente fáciles de representar, pues si pedimos demasiados puntos, los colores dejarán de verse y el rendimiento gráfico de la aplicación disminuirá considerablemente. Veámoslo con un ejemplo:
+    </p>
+    <img src="img/surf5.svg">
+    <p>Si eliminamos puntos, dando el paso más largo obtenemos una gráfica mejor y una mejora considerable del rendimiento.</p>
+    <img src="img/surf6.svg">
+    <h2>Segundo ejercicio.</h2>
+    <p>
+      El segundo ejercicio de la sesión abordó el tema de los límites y las derivadas parciales con ayuda de la <i>Symbolic Toolbox</i> de <b><i>MATLAB</i></b>. Para empezar, se definen las variables <code>x</code> e <code>y</code> como simbólicas haciendo uso del comando <code>syms x y</code>. Así, se define la función $f(x,y)=\frac{x^2-y^2}{2x^2+y^2}$ y se obtienen sus límites cuando $(x,y) \to (0,0)$:
+    </p>
+    <ul>
+      <li>Primero contra $x$ y después contra $y$: obtenemos un resultado de $-1$.</li>
+      <li>Primero contra $y$ y después contra $x$: obtenemos un resultado de $\frac{1}{2}$.</li>
+    </ul>
+    <p>
+      Para realizar esos límites hemos utilizado el comando <code>limit(limit(f(x,y),x,0),y,0)</code> y <code>limit(limit(f(x,y),y,0),x,0)</code>
+    </p>
 </html>
