@@ -34,7 +34,7 @@
       Una vez definidas la malla y la función, podemos realizar la gráfica 3D de la función haciendo uso del comando <code>surf(x,y,z)</code>. Podemos añadir un cuarto argumento que indique el color; sin embargo, dejaremos que la aplicación lo ponga automáticamente. La salida de este comando nos da una gráfica con la que podemos interactuar. La vemos a continuación:
     </p>
     <img src="img/surf1.svg" width="60%">
-    Podemos, pues, ver un paraboloide con la ecuación que hemos introducido.
+    Podemos, pues, ver un paraboloide con la ecuación $f(x,y) = x^2 + y^2$.
     <p>
       Por otro lado, el comando <code>surfc(x,y,z)</code> hace lo mismo que el anterior, pero añadiendo las curvas de nivel al gráfico saliente:
     </p>
@@ -50,6 +50,12 @@
     <img src="img/contour1.svg">
     <img src="img/contour2.svg">
     <p>
-      La función que hemos representado hasta ahora es siempre continua, por lo que la aplicación no tiene problemas para representarla. Sin embargo, hay funciones con problemas de representación
+      La función que hemos representado hasta ahora es siempre continua, por lo que la aplicación no tiene problemas para representarla. Sin embargo, hay funciones con problemas de representación. Intentemos representar la función $f(x,y) = \frac{\sin{x^2 + y^2}}{x^2 + y^2}$. Procedemos según hemos explicado arriba y obtenemos el siguiente gráfico:
     </p>
+    <img src="img/surf3.svg">
+    <p>Parece que en el punto $(x,y) = (0,0)$ la función no está definida y la aplicación no ha hecho gráfica ahí. Si rotamos la vista, lo vemos de forma más clara:</p>
+    <img src="img/surf4.svg">
+    <p>El punto blanco implica que la función no está definida en $(x,y) = (0,0)$.</p>
+    <p>Hemos visto, múltiples funcionalidades en este ejercicio. Sin embargo, hemos de tener en cuenta que al crear la rejilla para representar funciones, los parámetros de dominio y de paso de las variables han de ser relativamente fáciles de representar, pues si pedimos demasiados puntos, los colores dejarán de verse y el rendimiento gráfico de la aplicación disminuirá considerablemente. Veámoslo con un ejemplo:</p>
+    
 </html>
