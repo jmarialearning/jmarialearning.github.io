@@ -3,18 +3,53 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width">
-        <title>Laboratorio de cálculo</title>
-        <!--<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>-->
+        <title>Laboratorio de Cálculo y Geometría Diferencial</title>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
         <script>
         MathJax = {
           tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
         };
         </script>
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+        <style>
+          p {
+            text-align: justify;
+            text-justify: auto;
+          }
+          img {
+            display: block;
+            margin: auto;
+          }
+        </style>
       </head>
-	<h1 style="text-align: center;">Laboratorio: Cálculo con MATLAB.</h1>
-    <p style="text-align: justify; text-justify: auto;">
-        En esta sesión de laboratorio, se ha utilizado la herramienta <b>MATLAB</b> para realizar una serie de ejercicios referentes a 
+	<h1 style="text-align: center;">Laboratorio: Cálculo con <i>MATLAB</i>.</h1>
+    <p>
+        En esta sesión de laboratorio se ha utilizado la herramienta <b><i>MATLAB</i></b> para realizar una serie de ejercicios de los temas vistos en la asignatura. En concreto, se han abordado los temas referentes a <i>Gráficas 3D</i> y <i>Cálculo multivariable</i>. Así pues, explicaremos estos ejercicios a continuación y realizaremos los ejercicios que se requerían utilizando la aplicación que nos ocupa.
     </p>
-
+    <h2>Primer ejercicio.</h2>
+    <p>
+      En el primer ejercicio abordó el tema de las gráficas en tres dimensiones. En primer lugar, el comando <code>[x,y] = meshgrid(-4:0.2:4,-4:0.2:4)</code> se utiliza para generar la malla que sirve de dominio a <code>z</code>. Se genera así un dominio con $x \in [-4,4]$ e $y \in [-4,4]$ y paso $0.2$. Con la <code>x</code> y la <code>y</code> definidas, definimos la función utilizando la notación <code>z=x.^2+y.^2</code>. Nótese el punto detrás de cada variable, pues <b><i>MATLAB</i></b> ha definido $x$ e $y$ como matrices y dicho punto implica la extensión de la operación a todos los puntos de la matriz. Si no se incluyera este punto, obtendríamos un error.
+    </p>
+    <p>
+      Una vez definidas la malla y la función, podemos realizar la gráfica 3D de la función haciendo uso del comando <code>surf(x,y,z)</code>. Podemos añadir un cuarto argumento que indique el color; sin embargo, dejaremos que la aplicación lo ponga automáticamente. La salida de este comando nos da una gráfica con la que podemos interactuar. La vemos a continuación:
+    </p>
+    <img src="img/surf1.svg" width="60%">
+    Podemos, pues, ver un paraboloide con la ecuación que hemos introducido.
+    <p>
+      Por otro lado, el comando <code>surfc(x,y,z)</code> hace lo mismo que el anterior, pero añadiendo las curvas de nivel al gráfico saliente:
+    </p>
+    <img src="img/surf2.svg" width="60%">
+    <p>
+      Para realizar las curvas de nivel únicamente podemos utilizar dos comandos:
+    </p>
+    <ul>
+      <li><code>contour3(z,6)</code> representará las curvas de nivel en <b>tres</b> dimensiones. El segundo parámetro especifica el número de curvas que se han de representar.</li>
+      <li><code>contour(z,15)</code> hace lo mismo que el comando anterior, pero dando lugar a una gráfica en <b>dos</b> dimensiones.</li>
+    </ul>
+    <p>A continuación aparecen las gráficas de <code>contour3</code> y <code>contour</code> respectivamente.</p>
+    <img src="img/contour1.svg">
+    <img src="img/contour2.svg">
+    <p>
+      La función que hemos representado hasta ahora es siempre continua, por lo que la aplicación no tiene problemas para representarla. Sin embargo, hay funciones con problemas de representación
+    </p>
 </html>
