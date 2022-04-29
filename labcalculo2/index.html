@@ -75,6 +75,12 @@
       <li>Primero contra $y$ y después contra $x$: obtenemos un resultado de $\frac{1}{2}$.</li>
     </ul>
     <p>
-      Para realizar esos límites hemos utilizado el comando <code>limit(limit(f(x,y),x,0),y,0)</code> y <code>limit(limit(f(x,y),y,0),x,0)</code>
+      Para realizar esos límites hemos utilizado los comandos <code>limit(limit(f(x,y),x,0),y,0)</code> y <code>limit(limit(f(x,y),y,0),x,0)</code>. Como son diferentes, el límite no existe. Lo mismo ocurre con la función $g(x,y)=\frac{x^2+y^2}{2x^2+y^2}$, comprobada también con esos comandos.
+    </p>
+    <p>
+      Sin embargo, si comprobamos qué ocurre con la función $h(x,y)=\frac{x^2-y^2}{x+y}$ y realizamos sus límites análogamente obtenemos que los dos límites valen $0$, por lo que el límite sí existe y tiene ese valor.
+    </p>
+    <p>
+      Otra opción necesaria es la petición de <i>límites direccionales</i>. Para ello, declaramos una nueva variable simbólica $m$ con <code>syms m</code>
     </p>
 </html>
