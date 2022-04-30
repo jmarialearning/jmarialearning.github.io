@@ -69,6 +69,7 @@
     <p>Si eliminamos puntos, dando el paso más largo obtenemos una gráfica mejor y una mejora considerable del rendimiento.</p>
     <img src="img/surf6.svg">
     <h2>Segundo ejercicio.</h2>
+    <h3>Límites en varias variables.</h3>
     <p>
       El segundo ejercicio de la sesión abordó el tema de los límites y las derivadas parciales con ayuda de la <i>Symbolic Toolbox</i> de <b><i>MATLAB</i></b>. Para empezar, se definen las variables <code>x</code> e <code>y</code> como simbólicas haciendo uso del comando <code>syms x y</code>. Así, se define la función $f(x,y)=\frac{x^2-y^2}{2x^2+y^2}$ y se obtienen sus límites cuando $(x,y) \to (0,0)$:
     </p>
@@ -80,10 +81,27 @@
       Para realizar esos límites hemos utilizado los comandos <code>limit(limit(f(x,y),x,0),y,0)</code> y <code>limit(limit(f(x,y),y,0),x,0)</code>. Como son diferentes, el límite no existe. Lo mismo ocurre con la función $g(x,y)=\frac{x^2+y^2}{2x^2+y^2}$, comprobada también con esos comandos.
     </p>
     <p>
-      Sin embargo, si comprobamos qué ocurre con la función $h(x,y)=\frac{x^2-y^2}{x+y}$ y realizamos sus límites análogamente obtenemos que los dos límites valen $0$, por lo que el límite sí existe y tiene ese valor.
+      Sin embargo, si comprobamos qué ocurre con la función $h(x,y)=\frac{x^2-y^2}{x+y}$ y realizamos sus límites análogamente obtenemos que los dos límites valen $0$, por lo que el límite, si existe, tiene ese valor.
     </p>
     <p>
-      Otra opción necesaria es la petición de <i>límites direccionales</i>. Para ello, declaramos una nueva variable simbólica $m$ con <code>syms m</code>.
+      Otra opción necesaria es la petición de <i>límites direccionales</i>. Para ello, declaramos una nueva variable simbólica $m$ con <code>syms m</code>. Si los límites dependen de $m$, entonces los límites direccionales serán diferentes y el límite no existirá.
+    </p>
+    <p>
+      Al probar a hacer límites direccionales con $f(x,y)$ acercándonos por las rectas de ecuación $y = m \cdot x$, obtenemos un valor del límite dependiente de $m$, por lo que concluimos que el límite no existe al no coincidir los límites direccionales.
+    </p>
+    <p>
+      Si trabajamos ahora con la función $i(x,y) = \frac{y}{x^2 + y}$ y probamos a acercarnos por el haz de rectas $y = m \cdot x$, obtenemos un valor de $1$ (independiente de $m$). Sin embargo, si seguimos probando con un haz de parábolas ($y = m \cdot x^2$), el límite obtiene un valor de $\frac{m}{m+1}$ que sí depende de $m$, por lo que los límites diferirán y el límite general no existirá.
+    </p>
+    <h3>Derivadas parciales.</h3>
+    <p>
+      En lo que se refiere a las derivadas parciales, se calculan con el comando <code>diff(f,x)</code>. Definimos pues, una nueva función $f$ y hacemos, con dicho comando, la derivada parcial de $f$ respecto de $x$, es decir, $\frac{\partial f}{\partial x}$. Si definimos $f(x,y) = y \cdot x^2 + \cos{\left(x \cdot y^2\right)}$, $\frac{\partial f}{\partial x} = 2xy - y^2 \sin{\left(xy^2\right)}$.
+    </p>
+    <p>
+      Podemos utilizar este comando para derivar parcialmente respecto de otras variables y anidarlo para hacer derivadas parciales mixtas. Para hacer las derivadas parciales respecto de la misma variable utilizamos el comando <code>diff(f,x,2)</code>, que realizaría $\frac{\partial^2 f}{\partial x^2}$.
+    </p>
+    <h2>Tercer ejercicio.</h2>
+    <p>
+
     </p>
     
 </html>
