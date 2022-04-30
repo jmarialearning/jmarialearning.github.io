@@ -101,7 +101,24 @@
     </p>
     <h2>Tercer ejercicio.</h2>
     <p>
-
+        El tercer ejercicio del laboratorio ha puesto el foco en las matrices Jacobiana y Hessiana. Comenzamos definiendo dos funciones $f$ y $g$ de forma numérica en <b><i>MATLAB</i></b>, mediante la orden <code>f=@(x)[x(1)*x(2);1-x(1)^2;sin(x(2))]</code>. Nótese la utilización del símbolo <i>@</i> justo después del signo de igual. Además las definimos de forma simbólica como veníamos haciendo (mediante el comando <code>syms</code>).
+    </p>
+    <p>
+      Ahora preparamos el jacobiano de la función $f$ (llamada <code>f_s</code> en nuestro <i>script</i>) de dos maneras diferentes:
+    </p>
+    <ul>
+      <li><u>De forma manual</u>: mediante la definición de matriz <code>[diff(f_s,x1) diff(f_s,x2)]</code>, que coloca el dos columnas las derivadas parciales de $f$</li>
+      <li><u>Automáticamente</u>: haciendo uso de la función <code>jacobian(f_s)</code>.</li>
+    </ul>
+    <p>
+      Como era de esperar, obtenemos la misma solución en los dos casos:
+    </p>
+    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mrow><mo>(</mo><mtable columnalign="center"><mtr><mtd><mrow><msub><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msub></mrow></mtd><mtd><mrow><msub><mrow><mi>x</mi></mrow><mrow><mn>1</mn></mrow></msub></mrow></mtd></mtr><mtr><mtd><mrow><mrow><mrow><mo>-</mo><mrow><mrow><mn>2</mn><mo> </mo><msub><mrow><mi>x</mi></mrow><mrow><mn>1</mn></mrow></msub></mrow></mrow></mrow></mrow></mrow></mtd><mtd><mrow><mn>0</mn></mrow></mtd></mtr><mtr><mtd><mrow><mn>0</mn></mrow></mtd><mtd><mrow><mrow><mrow><mi>cos</mi></mrow><mrow><mo>(</mo><mrow><mrow><msub><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msub></mrow></mrow><mo>)</mo></mrow></mrow></mrow></mtd></mtr></mtable><mo>)</mo></mrow></mrow></math>
+    <p>
+      Por lo que respecta a la matriz Hessiana, definimos las dos variables simbólicas con <code>syms x y</code> y la función $h(x,y) = x^3 + y^2 \cdot \cos{(x)}\sin{(y)} + \frac{7x^3}{\sin{x}}$. Después, calculamos sus derivadas parciales primeras y las segundas, puras y mixtas con el proceso utilizado para el jacobiano. Obtenemos el mismo resultado haciendo la matriz manualmente o con el comando <code>hessian(h)</code>.
+    </p>
+    <p>
+      Por último, remarcamos la utilización de la regla de la cadena para obtener jacobianas de funciones compuestas. Definimos $z = f(g(y))$ y sacamos su jacobiano con <code>jacobian(z)</code>. Obtenemos el mismo valor que utilizando la regla de la cadena (multiplicando los jacobianos de $f$ y $g$ y sustituyendo las variables por los valores de $g$).
     </p>
     
 </html>
