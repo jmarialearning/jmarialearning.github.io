@@ -1,3 +1,48 @@
-<html>
+<!DOCTYPE html>
+<html style="font-family: Helvetica, Arial, Helvetica, sans-serif; font-size: large;">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>Actividad individual de Cálculo y Geometría Diferencial.</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+      MathJax = {
+        tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+      };
+      </script>
+      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <style>
+        p {
+          text-align: justify;
+          text-justify: auto;
+        }
+        #enunciado{
+          font-size: larger;
+          font-style: italic;
+          text-align: center;
+        }        
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 105%;
+        }
+        footer {
+          text-align: center;
+          font-size: larger;
+        }
+      </style>
+  </head>
+  <h1 style="text-align: center;">Actividad individual de Cálculo y Geometría Diferencial </h1>
+  <footer>Jesús María Mora Mur.</footer>
+  <h2>Ejercicio 1.</h2>
+  <p id="enunciado">Demostrar que $\nabla r^n = n \cdot r^{n-2} \cdot \vec{r}$.</p>
+  <p>En primer lugar, definimos el gradiente de un vector como otro vector cuyas componentes son las derivadas parciales respecto de cada variable. Al tener solo una variable, $r$, la derivada parcial que tenemos es la siguiente:</p>
+  \[\nabla r^n = n \cdot r^{n-1}\cdot \hat{r}\]
+  <p>Siendo $\hat{r}$ un vector unitario en la dirección y sentido de $\vec{r}$. Así pues, sabiendo que $\hat{r} = \frac{\vec{r}}{r}$, sustituimos y obtenemos lo siguiente:</p>
+  \[\nabla r^n = n \cdot r^{n-1}\cdot \frac{\vec{r}}{r} = n \cdot r^{n-2} \cdot \vec{r}\]
+  <p>Como queríamos demostrar.</p>
+  <h2>Ejercicio 2.</h2>
+  <p id="enunciado"></p>
+
 
 </html>
