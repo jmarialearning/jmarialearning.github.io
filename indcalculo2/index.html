@@ -34,6 +34,8 @@
   </head>
   <h1 style="text-align: center;">Actividad individual de Cálculo y Geometría Diferencial </h1>
   <footer>Jesús María Mora Mur.</footer>
+
+
   <h2>Ejercicio 1.</h2>
   <p id="enunciado">Demostrar que $\nabla r^n = n \cdot r^{n-2} \cdot \vec{r}$.</p>
   <p>En primer lugar, definimos el gradiente de un vector como otro vector cuyas componentes son las derivadas parciales respecto de cada variable. Al tener solo una variable, $r$, la derivada parcial que tenemos es la siguiente:</p>
@@ -41,15 +43,49 @@
   <p>Siendo $\hat{r}$ un vector unitario en la dirección y sentido de $\vec{r}$. Así pues, sabiendo que $\hat{r} = \frac{\vec{r}}{r}$, sustituimos y obtenemos lo siguiente:</p>
   \[\nabla r^n = n \cdot r^{n-1}\cdot \frac{\vec{r}}{r} = n \cdot r^{n-2} \cdot \vec{r}\]
   <p>Como queríamos demostrar.</p>
+
+
   <h2>Ejercicio 2.</h2>
   <p id="enunciado">Hallar un vector unitario normal a la superficie $x^{2y} + 2xz = 2$ en el punto $(2,2,3)$.</p>
   <p>Hemos de calcular la</p>
+
+  
   <h2>Ejercicio 3</h2>
   <p id="enunciado">Demostrar que $\nabla \cdot \left(\frac{\vec{r}}{r^3}\right) = 0$</p>
   <p>Sabemos que si la divergencia de un campo es nula, el campo ha de ser resultado de un rotacional. En términos algebraicos:</p>
   \[ \frac{\vec{r}}{r^3} = \left( \nabla \phi \right) \]
   <p>Así, sustituyendo en la identidad:</p>
   \[ \nabla \cdot \left(\frac{1}{r^3} \: \vec{r}\right) = \left( \nabla \frac{1}{r^3} \right) \cdot \vec{r} + \frac{1}{r^3} \left(\nabla \vec{r}\right)\]
+
+
+  <h2>Ejercicio 4.</h2>
+  <p id="enunciado">Demostrar que $\nabla \cdot \left(f \vec{A}\right) = \left(\nabla f\right) \cdot \vec{A} + f \left(\nabla \vec{A}\right)$</p>
+  <p>En primer lugar, desarrollamos el paréntesis:</p>
+  \[\nabla \cdot \left(f \vec{A}\right) = \nabla \cdot \left(f A_x + f A_y + f A_z\right)\]
+
+  <p>Aplicamos ahora el producto escalar:</p>
+
+  \[\frac{\partial f}{\partial x}  \cdot A_x + f \cdot \frac{\partial A_x}{\partial x} + \frac{\partial f}{\partial y} \cdot A_y + f \cdot \frac{\partial A_y}{\partial y} + \frac{\partial f}{\partial z} \cdot A_z + f \cdot \frac{\partial A_z}{\partial z}\]
+
+  <p>Reordenamos lo que tenemos y lo volvemos a poner como producto escalar:</p>
+
+  \[(\nabla f) \cdot \vec{A} + f(\nabla \vec{A})\]
+
+  <p>Como queríamos demostrar.</p>
+  <h2>Ejercicio 5.</h2>
+  <p id="enunciado">Demostrar que $\nabla \times \left(f \vec{A}\right) = \left(\nabla f\right) \times \vec{A} + f \left(\nabla \times \vec{A}\right)$</p>
+  <p>En primer lugar, desarrollamos el paréntesis:</p>
+  \[\nabla \times \left(f \vec{A}\right) = \nabla \times \left(f A_x + f A_y + f A_z\right)\]
+
+  <p>Aplicamos ahora el producto vectorial:</p>
+
+  
+
+  <p>Reordenamos lo que tenemos y lo volvemos a poner como producto escalar:</p>
+
+  \[(\nabla f) \cdot \vec{A} + f(\nabla \vec{A})\]
+
+  <p>Como queríamos demostrar.</p>
 
 
 </html>
