@@ -72,20 +72,61 @@
   \[(\nabla f) \cdot \vec{A} + f(\nabla \vec{A})\]
 
   <p>Como queríamos demostrar.</p>
+<!---->
   <h2>Ejercicio 5.</h2>
+
   <p id="enunciado">Demostrar que $\nabla \times \left(f \vec{A}\right) = \left(\nabla f\right) \times \vec{A} + f \left(\nabla \times \vec{A}\right)$</p>
   <p>En primer lugar, desarrollamos el paréntesis:</p>
   \[\nabla \times \left(f \vec{A}\right) = \nabla \times \left(f A_x + f A_y + f A_z\right)\]
 
   <p>Aplicamos ahora el producto vectorial:</p>
 
-  
-
-  <p>Reordenamos lo que tenemos y lo volvemos a poner como producto escalar:</p>
-
-  \[(\nabla f) \cdot \vec{A} + f(\nabla \vec{A})\]
-
-  <p>Como queríamos demostrar.</p>
-
+  \[\begin{vmatrix}
+  \hat{i} & \hat{j} & \hat{k}\\
+  \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z}\\
+  fA_x & fA_y & fA_z\\
+\end{vmatrix}
+  \]
+<p>La primera componente del vector resultado es:</p>
+\[\frac{\partial}{\partial y} f(A_z) - \frac{\partial}{\partial z} f(A_y) = \left(\frac{\partial f}{\partial y} \cdot A_z - \frac{\partial f}{\partial z} \cdot A_y\right) + \left(\frac{\partial A_z}{\partial y} \cdot f - \frac{\partial A_y}{\partial z} \cdot f\right)\]
+<p>En tal caso, el primer sumando de la derecha coincidiría con $(\nabla f) \times \vec{A}$ y el segundo con $f \left(\nabla \times \vec{A}\right)$, por lo que a sus primeras componentes respecta. Desarrollamos cada uno por separado y comprobamos si son iguales. </p>
+\[(\nabla f) \times \vec{A} = \begin{vmatrix}
+\hat{i} & \hat{j} & \hat{k}\\
+\frac{\partial f}{\partial x} & \frac{\partial f}{\partial y} & \frac{\partial f}{\partial z}\\
+A_x & A_y & A_z\\
+\end{vmatrix} = \left(A_z \frac{\partial f}{\partial y} - A_y \frac{\partial f}{\partial z}\right) \hat{i} \quad ...
+\]
+<!------------------------------>
+\[f \left(\nabla \times \vec{A}\right) = f \begin{vmatrix}
+\hat{i} & \hat{j} & \hat{k}\\
+\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z}\\
+A_x & A_y & A_z\\
+\end{vmatrix} = \left(f \frac{\partial A_z}{\partial y} - f \frac{\partial A_y}{\partial z}\right) \hat{i} \quad ...
+\]
+<p>Así pues, vemos que el desarrollo de la izquierda coincide, en su primera componente, con los desarrollos de la derecha. Esto es extrapolable a todas las componentes, <b>demostrando</b> la identidad.</p>
+<!---->
+<h2>Ejercicio 6.</h2>
+<p id="enunciado">Dado el campo vectorial $\vec{v} = \vec{\omega} \times \vec{r}$, siendo $\vec{\omega}$ constante, demostrar que $\vec{\omega} = \frac{1}{2} \nabla \times \vec{v}$.</p>
+<p></p>
+<!---->
+<h2>Ejercicio 7.</h2>
+<p id="enunciado">Representar el vector $\vec{A} = z \hat{i} - x \hat{j} + y \hat{k}$ en coordenadas cilíndricas.</p>
+<p>Sabemos, por definición, que:</p>
+\[r = \sqrt{z^2 + x^2} \qquad \theta = \arctan{\frac{-x}{z}} \qquad z = y\]
+<!---->
+<p>Así pues, sustituyendo, el vector $\vec{A}$ tendrá las siguientes componentes:</p>
+\[\vec{A} = \left(z^2 + x^2 ,\ \arctan{\frac{-x}{z}}, \ y\right)\]
+<!---->
+<h2>Ejercicio 8.</h2>
+<p id="enunciado">Hallar el cuadrado del elemento de línea en coordenadas esféricas.</p>
+<p>El elemento de línea es $ds$ en coordenadas cartesianas. Para adecuarlo a esféricas, hemos de tener en cuenta el jacobiano. En este sistema es $\rho^2 \sin{\phi}\:d\rho \: d \theta \: d\phi$, por lo que su cuadrado será $\rho^4 \sin^2{\phi}\:d\rho \: d \theta \: d\phi$</p>
+<!---->
+<h2>Ejercicio 9.</h2>
+<p id="enunciado">Hallar las expresiones de los elementos de superficie en coordenadas curvilíneas ortogonales.</p>
+<p>En un sistema de coordenadas curvilíneas</p>
+<!---->
+<h2>Ejercicio 10.</h2>
+<p id="enunciado">Dado el vector $\vec{v} = (3,5)$, hallar las componentes bajo una rotación de $30º$ y comprobar que su módulo no varía.</p>
+<p></p>
 
 </html>
