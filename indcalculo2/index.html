@@ -48,19 +48,24 @@
   <p>Siendo $\hat{r}$ un vector unitario en la dirección y sentido de $\vec{r}$. Así pues, sabiendo que $\hat{r} = \frac{\vec{r}}{r}$, sustituimos y obtenemos lo siguiente:</p>
   \[\nabla r^n = n \cdot r^{n-1}\cdot \frac{\vec{r}}{r} = n \cdot r^{n-2} \cdot \vec{r}\]
   <p>Como queríamos demostrar.</p>
-
+<!---->
 
   <h2>Ejercicio 2.</h2>
   <p id="enunciado">Hallar un vector unitario normal a la superficie $x^{2y} + 2xz = 2$.</p>
   <p>Hemos de calcular la</p>
-
+<!---->
   
   <h2>Ejercicio 3.</h2>
   <p id="enunciado">Demostrar que $\nabla \cdot \left(\frac{\vec{r}}{r^3}\right) = 0$</p>
-  <p>Sabemos que si la divergencia de un campo es nula, el campo ha de ser resultado de un rotacional. En términos algebraicos:</p>
-  \[ \frac{\vec{r}}{r^3} = \left( \nabla \phi \right) \]
-  <p>Así, sustituyendo en la identidad:</p>
-  \[ \nabla \cdot \left(\frac{1}{r^3} \: \vec{r}\right) = \left( \nabla \frac{1}{r^3} \right) \cdot \vec{r} + \frac{1}{r^3} \left(\nabla \vec{r}\right)\]
+  <p>Sabemos que si la divergencia de un campo es nula, el campo ha de ser gradiente de un campo $\phi$ escalar. En términos algebraicos:</p>
+  \[ 
+  \frac{1}{r^2} \hat{r}= \left( \nabla \phi \right)
+   \]
+  <p>Así,el campo escalar que buscamos es:</p>
+  \[
+  \phi = \int \frac{1}{r^2} dr = -\frac{1}{r} + \mathcal{C}
+  \]
+  <p>Por ende, hemos demostrado que el campo tiene divergencia nula.</p>
 
 
   <h2>Ejercicio 4.</h2>
@@ -180,5 +185,16 @@ y' = y \cos{\theta} - x \sin{\theta}
 \]
 <p>Podemos comprobar esto mediante la figura siguiente:</p>
 <img src="img/act10.png" class="responsive">
-
+<p>A la vista de lo especificado en el sistema de arriba, vemos que:</p>
+\[
+\begin{cases}
+x' = \frac{\sqrt{3}}{2}x + \frac{1}{2}y\\
+y' = \frac{\sqrt{3}}{2}y - \frac{1}{2}x
+\end{cases}
+\]
+<p>Por lo que el vector tiene las siguientes componentes:</p>
+\[
+\vec{v} = \left(\frac{5+3\sqrt{3}}{2}, \frac{5\sqrt{3}-3}{2}\right)
+\]
+<p>Se puede comprobar que $v = \sqrt{34}$ en ambos casos.</p>
 </html>
