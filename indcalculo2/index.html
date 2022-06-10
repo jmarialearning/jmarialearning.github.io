@@ -28,6 +28,13 @@
           text-align: center;
           font-size: larger;
         }
+        .responsive {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+}
       </style>
   </head>
   <h1 style="text-align: center;">Actividad individual de Cálculo y Geometría Diferencial </h1>
@@ -113,7 +120,7 @@ A_x & A_y & A_z\\
 \[x = \rho \cos \theta \qquad y = \rho \sin \theta \qquad z = z\]
 <!---->
 <p>Así pues, sustituyendo, el vector $\vec{A}$ tendrá las siguientes componentes:</p>
-\[\vec{A} = z \hat{i} - \rho \cos \theta \hat{j} + \rho \sin \theta \hat{k}\]
+\[\vec{A} = z \hat{i} - \rho \cos \theta \hat{j} + \rho \sin \theta \hat{k} \tag{1} \label{eq:1}\]
 <!---->
 <p>Ahora necesitamos cambiar los vectores unitarios. Sabemos que:</p>
 <!---->
@@ -122,20 +129,37 @@ A_x & A_y & A_z\\
 \[e_z = \left(0, 0, 1\right)\]
 <p>Haciendo las derivadas del vector $(x,y,z)$ con respecto a cada variable y dividiendo los resultados por su módulo.</p>
 <p>De aquí, obtenemos las siguientes igualdades.</p>
-\[\hat{e_\rho} = \cos \theta \hat{i} + \sin \theta \hat{j} \label{eq:1} \tag{1}\]
-\[\hat{e_\theta} = -\sin \theta \hat{i} + \cos \theta \hat{j} \label{eq:2} \tag{2}\]
-\[e_z = \hat{k} \label{eq:3} \tag{3}\]
+\[\hat{e_\rho} = \cos \theta \hat{i} + \sin \theta \hat{j} \label{eq:2} \tag{2}\]
+\[\hat{e_\theta} = -\sin \theta \hat{i} + \cos \theta \hat{j} \label{eq:3} \tag{3}\]
+\[e_z = \hat{k} \label{eq:4} \tag{4}\]
 <!---->
-<p>Si multiplicamos $\eqref{eq:1}$ por $\cos{\theta}$ y $\eqref{eq:2}$ por $-\sin{\theta}$ para sumar las nuevas $\eqref{eq:1}$ y $\eqref{eq:2}$ obtenemos lo siguiente</p>
+<p>Si multiplicamos $\eqref{eq:2}$ por $\cos{\theta}$ y $\eqref{eq:3}$ por $-\sin{\theta}$ para sumar las nuevas $\eqref{eq:2}$ y $\eqref{eq:3}$ obtenemos lo siguiente:</p>
 \[
 \begin{cases}
 \cos \theta \cdot \hat{e_\rho} = \cos^2 \theta \hat{i} + \sin \theta \cdot \cos \theta \hat{j}\\
 -\sin \theta \cdot \hat{e_\theta} = \sin^2 \theta \hat{i} - \sin \theta \cdot \cos \theta \hat{j}
 \end{cases}
 \]
-<p>Sumando obtenemos que</p>
+<p>Sumando obtenemos que:</p>
 \[
-\hat{i} = \cos{\theta} \cdot \hat{e_\rho} - \sin{e_\theta}
+\hat{i} = \cos{\theta} \cdot \hat{e_\rho} - \sin{\theta} \cdot \hat{e_\theta}
+\]
+<p>Análogamente, multiplicamos a $\eqref{eq:3}$ por $\cos{\theta}$ y $\eqref{eq:2}$ por $\sin{\theta}$ para sumar las nuevas ecuaciones, obteniendo lo siguiente:</p>
+\[
+\begin{cases}
+\sin \theta \cdot \hat{e_\rho} = \sin \theta \cdot \cos \theta \hat{i} + \sin^2 \theta \hat{j}\\
+\cos \theta \cdot \hat{e_\theta} = -\sin \theta \cdot \cos \theta \hat{i} + \cos^2 \theta \hat{j}
+\end{cases}
+\]
+<p>Sumando obtenemos que:</p>
+\[
+\hat{j} = \sin{\theta} \cdot \hat{e_\rho} + \cos{\theta} \cdot \hat{e_\theta}
+\]
+<p>Sustituyendo en $\eqref{eq:1}$ los últimos pasos:</p>
+\[\vec{A} = z \left(\cos{\theta} \cdot \hat{e_\rho} - \sin{\theta} \cdot \hat{e_\theta}\right) - \rho \cos \theta \left(\sin{\theta} \cdot \hat{e_\rho} + \cos{\theta} \cdot \hat{e_\theta}\right) + \rho \sin \theta \hat{e_z} \tag{1}\]
+<p>Obtenemos que $\vec{A}$ es</p>
+\[
+\vec{A} = \left(z \cos{\theta} - \rho \sin{\theta} \cos{\theta}, -z\sin{\theta} - \rho \cos^2{\theta}, \rho \sin{\theta}\right)
 \]
 <h2>Ejercicio 8.</h2>
 <p id="enunciado">Hallar el cuadrado del elemento de línea en coordenadas esféricas.</p>
@@ -147,6 +171,14 @@ A_x & A_y & A_z\\
 <!---->
 <h2>Ejercicio 10.</h2>
 <p id="enunciado">Dado el vector $\vec{v} = (3,5)$, hallar las componentes bajo una rotación de $30º$ y comprobar que su módulo no varía.</p>
-<p></p>
+<p>Sabemos, por geometría, que, para cualquier ángulo de rotación las componentes nuevas $(x',y')$ serán:</p>
+\[
+\begin{cases}
+x' = x \cos{\theta} + y \sin{\theta}\\
+y' = y \cos{\theta} - x \sin{\theta}
+\end{cases}
+\]
+<p>Podemos comprobar esto mediante la figura siguiente:</p>
+<img src="img/act10.png" class="responsive">
 
 </html>
