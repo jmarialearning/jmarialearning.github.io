@@ -46,7 +46,7 @@
 
 
   <h2>Ejercicio 2.</h2>
-  <p id="enunciado">Hallar un vector unitario normal a la superficie $x^{2y} + 2xz = 2$ en el punto $(2,2,3)$.</p>
+  <p id="enunciado">Hallar un vector unitario normal a la superficie $x^{2y} + 2xz = 2$.</p>
   <p>Hemos de calcular la</p>
 
   
@@ -112,11 +112,12 @@ A_x & A_y & A_z\\
 <h2>Ejercicio 7.</h2>
 <p id="enunciado">Representar el vector $\vec{A} = z \hat{i} - x \hat{j} + y \hat{k}$ en coordenadas cilíndricas.</p>
 <p>Sabemos, por definición, que:</p>
-\[r = \sqrt{z^2 + x^2} \qquad \theta = \arctan{\frac{-x}{z}} \qquad z = y\]
+\[x = \rho \cos \theta \qquad y = \rho \sin \theta \qquad z = z\]
 <!---->
 <p>Así pues, sustituyendo, el vector $\vec{A}$ tendrá las siguientes componentes:</p>
-\[\vec{A} = \left(z^2 + x^2 ,\ \arctan{\frac{-x}{z}}, \ y\right)\]
+\[\vec{A} = z \hat{i} - \rho \cos \theta \hat{j} + \rho \sin \theta \hat{k}\]
 <!---->
+<p>Ahora necesitamos </p>
 <h2>Ejercicio 8.</h2>
 <p id="enunciado">Hallar el cuadrado del elemento de línea en coordenadas esféricas.</p>
 <p>El elemento de línea es $ds$ en coordenadas cartesianas. Para adecuarlo a esféricas, hemos de tener en cuenta el jacobiano. En este sistema es $\rho^2 \sin{\phi}\:d\rho \: d \theta \: d\phi$, por lo que su cuadrado será $\rho^4 \sin^2{\phi}\:d\rho \: d \theta \: d\phi$</p>
