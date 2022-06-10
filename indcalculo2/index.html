@@ -52,7 +52,11 @@
 
   <h2>Ejercicio 2.</h2>
   <p id="enunciado">Hallar un vector unitario normal a la superficie $x^{2y} + 2xz = 2$.</p>
-  <p>Hemos de calcular la</p>
+  <p>Hemos de calcular el gradiente de $f(x,y,z) = x^{2y} + 2xz - 2$. El vector resultante es:</p>
+  \[
+  \vec{\nabla} f = \left((2y - 1) \cdot x^{2y-1} + 2z, 2x^{2y} \cdot \ln{x}, 2x\right)
+  \]
+
 <!---->
   
   <h2>Ejercicio 3.</h2>
@@ -168,7 +172,18 @@ A_x & A_y & A_z\\
 \]
 <h2>Ejercicio 8.</h2>
 <p id="enunciado">Hallar el cuadrado del elemento de línea en coordenadas esféricas.</p>
-<p>El elemento de línea es $ds$ en coordenadas cartesianas. Para adecuarlo a esféricas, hemos de tener en cuenta el jacobiano. En este sistema es $\rho^2 \sin{\phi}\:d\rho \: d \theta \: d\phi$, por lo que su cuadrado será $\rho^4 \sin^2{\phi}\:d\rho \: d \theta \: d\phi$</p>
+<p>El elemento de línea en coordenadas esféricas tiene la forma siguiente:</p>
+\[
+ds = h_r \: dr \:\hat{r} + h_\theta \: d\theta \:\hat{\theta} + h_\phi \: d\phi \:\hat{\phi}
+\]
+<p>Donde $h_r = 1$, $h_\theta = r$ y $h_\phi = r\sin{\theta}$ son los factores de escala asociados a las coordenadas esféricas. Así pues, </p>
+\[
+ds = 1 \: dr \:\hat{r} + r \: d\theta \:\hat{\theta} + r\sin{\theta} \: d\phi \:\hat{\phi}
+\]
+<p>Elevando al cuadrado,</p>
+\[
+(ds)^2 = 1 \: dr \:\hat{r} + r^2 \: d\theta \:\hat{\theta} + r^2\sin^2{\theta} \: d\phi \:\hat{\phi}
+\]
 <!---->
 <h2>Ejercicio 9.</h2>
 <p id="enunciado">Hallar las expresiones de los elementos de superficie en coordenadas curvilíneas ortogonales.</p>
