@@ -8,7 +8,9 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script>
       MathJax = {
-        tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
       };
       </script>
       <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -113,7 +115,28 @@ A_x & A_y & A_z\\
 <p>Así pues, sustituyendo, el vector $\vec{A}$ tendrá las siguientes componentes:</p>
 \[\vec{A} = z \hat{i} - \rho \cos \theta \hat{j} + \rho \sin \theta \hat{k}\]
 <!---->
-<p>Ahora necesitamos </p>
+<p>Ahora necesitamos cambiar los vectores unitarios. Sabemos que:</p>
+<!---->
+\[\hat{e_\rho} = \left(\cos \theta, \sin \theta, 0\right)\]
+\[\hat{e_\theta} = \left(-\sin \theta, \cos \theta, 0\right)\]
+\[e_z = \left(0, 0, 1\right)\]
+<p>Haciendo las derivadas del vector $(x,y,z)$ con respecto a cada variable y dividiendo los resultados por su módulo.</p>
+<p>De aquí, obtenemos las siguientes igualdades.</p>
+\[\hat{e_\rho} = \cos \theta \hat{i} + \sin \theta \hat{j} \label{eq:1} \tag{1}\]
+\[\hat{e_\theta} = -\sin \theta \hat{i} + \cos \theta \hat{j} \label{eq:2} \tag{2}\]
+\[e_z = \hat{k} \label{eq:3} \tag{3}\]
+<!---->
+<p>Si multiplicamos $\eqref{eq:1}$ por $\cos{\theta}$ y $\eqref{eq:2}$ por $-\sin{\theta}$ para sumar las nuevas $\eqref{eq:1}$ y $\eqref{eq:2}$ obtenemos lo siguiente</p>
+\[
+\begin{cases}
+\cos \theta \cdot \hat{e_\rho} = \cos^2 \theta \hat{i} + \sin \theta \cdot \cos \theta \hat{j}\\
+-\sin \theta \cdot \hat{e_\theta} = \sin^2 \theta \hat{i} - \sin \theta \cdot \cos \theta \hat{j}
+\end{cases}
+\]
+<p>Sumando obtenemos que</p>
+\[
+\hat{i} = \cos{\theta} \cdot \hat{e_\rho} - \sin{e_\theta}
+\]
 <h2>Ejercicio 8.</h2>
 <p id="enunciado">Hallar el cuadrado del elemento de línea en coordenadas esféricas.</p>
 <p>El elemento de línea es $ds$ en coordenadas cartesianas. Para adecuarlo a esféricas, hemos de tener en cuenta el jacobiano. En este sistema es $\rho^2 \sin{\phi}\:d\rho \: d \theta \: d\phi$, por lo que su cuadrado será $\rho^4 \sin^2{\phi}\:d\rho \: d \theta \: d\phi$</p>
