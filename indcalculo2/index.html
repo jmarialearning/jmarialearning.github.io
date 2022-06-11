@@ -121,7 +121,29 @@ A_x & A_y & A_z\\
 <!---->
 <h2>Ejercicio 6.</h2>
 <p id="enunciado">Dado el campo vectorial $\vec{v} = \vec{\omega} \times \vec{r}$, siendo $\vec{\omega}$ constante, demostrar que $\vec{\omega} = \frac{1}{2} \nabla \times \vec{v}$.</p>
-<p></p>
+<p>Como $\vec{v} = \vec{\omega} \times \vec{r}$, sabemos que $\nabla \times \vec{v} = \nabla \times \left(\vec{\omega} \times \vec{r}\right)$. Calculamos el vector $\vec{\omega} \times \vec{r}$ y sacamos su rotacional. Obtenemos los resultados siguientes para el primer vector.</p>
+\[
+\vec{\omega} \times \vec{r} = \begin{vmatrix}
+		\hat{i} & \hat{j} & \hat{k}\\
+		\omega_x & \omega_y & \omega_j\\
+		x & y & z\\		
+	\end{vmatrix} = \left(z\omega_y - y\omega_z;\ x\omega_z - z\omega_x;\ y\omega_x - x\omega_y\right)
+\]
+<p>Sacamos el rotacional del vector resultado:</p>
+\[
+	 	\nabla \times \left(\vec{\omega} \times \vec{r}\right) = \begin{vmatrix}
+	 	\hat{i} & \hat{j} & \hat{k}\\
+	 	\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z}\\
+	 	z\omega_y - y\omega_z & x\omega_z - z\omega_x & y\omega_x - x\omega_y\\		
+	 \end{vmatrix} = 
+\]
+\[=\left(\frac{\partial}{\partial y}\left(y\omega_x - x\omega_y\right) - \frac{\partial}{\partial z}\left(x\omega_z - z\omega_x\right); \ \frac{\partial}{\partial z}\left(z\omega_y - y\omega_z\right) - \frac{\partial}{\partial x}\left(y\omega_x - x\omega_y\right);\ \frac{\partial}{\partial x}\left(x\omega_z - z\omega_x\right) - \frac{\partial}{\partial y} \left(z\omega_y - y\omega_z\right)\right)
+\]
+<p>Algunas derivadas parciales se anulan y obtenemos el siguiente vector:</p>
+\[
+	\left(\omega_x + \omega_x; \ \omega_y + \omega_y; \ \omega_z + \omega_z\right) = \vec{\omega} + \vec{\omega}
+\]
+<p>Como queríamos desmostrar.</p>
 <!---->
 <h2>Ejercicio 7.</h2>
 <p id="enunciado">Representar el vector $\vec{A} = z \hat{i} - x \hat{j} + y \hat{k}$ en coordenadas cilíndricas.</p>
