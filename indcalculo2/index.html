@@ -187,7 +187,18 @@ ds = 1 \: dr \:\hat{r} + r \: d\theta \:\hat{\theta} + r\sin{\theta} \: d\phi \:
 <!---->
 <h2>Ejercicio 9.</h2>
 <p id="enunciado">Hallar las expresiones de los elementos de superficie en coordenadas curvilíneas ortogonales.</p>
-<p>En un sistema de coordenadas curvilíneas</p>
+<p>En un sistema de coordenadas curvilíneas tal que $x = x(u,v,w)$, $y = y(u,v,w)$ y $z = z(u,v,w)$ tenemos que los elementos de superficie respecto de cada variable son los factores de escala de las variables restantes por sus diferenciales. Así,</p>
+\[
+dS_u = h_v \: h_w \: dv \: dw \qquad dS_v = h_u \: h_w \: du \: dw \qquad dS_w = h_v \: h_u \: dv \: du
+\]
+<p>Por otra parte, conocemos que los factores de escala son:</p>
+\[
+h_u = \left|\frac{\partial \vec{r}}{\partial u}\right| \qquad h_v = \left|\frac{\partial \vec{r}}{\partial v}\right| \qquad h_w = \left|\frac{\partial \vec{r}}{\partial w}\right|
+\]
+<p>Siendo $\vec{r} = x \hat{i} + y\hat{j} + z \hat{k}$. Sustituyendo en los elementos:</p>
+\[
+dS_u = \left|\frac{\partial \vec{r}}{\partial v}\right| \: \left|\frac{\partial \vec{r}}{\partial w}\right| \: dv \: dw \quad dS_v = \left|\frac{\partial \vec{r}}{\partial u}\right| \: \left|\frac{\partial \vec{r}}{\partial w}\right| \: du \: dw \quad dS_w = \left|\frac{\partial \vec{r}}{\partial v}\right| \: \left|\frac{\partial \vec{r}}{\partial u}\right| \: dv \: du
+\]
 <!---->
 <h2>Ejercicio 10.</h2>
 <p id="enunciado">Dado el vector $\vec{v} = (3,5)$, hallar las componentes bajo una rotación de $30º$ y comprobar que su módulo no varía.</p>
