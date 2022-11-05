@@ -59,6 +59,10 @@
 	<p id="enunciado">Calcular la diferencial de la función de dos variables $f(x,y) = x^2 y + e^{-x} \cdot y^2$.</p>
 	<p>Para calcular el diferencial derivamos implícitamente:</p>
 	\[
-	df = 2xy + x^2 \cdot dy - e^{-x} y^2 +2y \cdot e^{-x} dy
+	df = 2xy \cdot dx + x^2 \cdot dy - e^{-x} y^2 \cdot dx +2y \cdot e^{-x} dy
+	\]
+	<p>Por lo que obtenemos la siguente expresión:</p>
+	\[
+	df = \left(2xy - e^{-x} y^2\right) \cdot dx + \left(x^2 + 2y \cdot e^{-x}\right) \cdot dy
 	\]
 </html>
