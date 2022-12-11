@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html style="font-family: Helvetica, Arial, sans-serif; font-size: large;">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width">
+        <title>Laboratorio de Cálculo y Geometría Diferencial</title>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script>
+        MathJax = {
+          tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+        };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <style>
+          p {
+            text-align: justify;
+            text-justify: auto;
+          }
+          img {
+            display: block;
+            margin: auto;
+            width: auto;
+            max-width: 100%;
+          }
+          code {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 105%;
+          }
+          footer{
+            text-align: center;
+          }
+        </style>
+      </head>
+	<h1 style="text-align: center;">Laboratorio: Cálculo con <i>MATLAB</i>.</h1>
+    <p>
+        En esta sesión de laboratorio se ha utilizado la herramienta <b><i>MATLAB</i></b> para realizar una serie de ejercicios de los temas vistos en la asignatura. En concreto, se han abordado los temas referentes a <i>Gráficas 3D</i> y <i>Cálculo multivariable</i>. Así pues, explicaremos estos ejercicios a continuación y realizaremos los ejercicios que se requerían utilizando la aplicación que nos ocupa.
+    </p>
+    <h2>Primer ejercicio.</h2>
+    <p>
+      En el primer ejercicio abordó el tema de las gráficas en tres dimensiones. En primer lugar, el comando <code>[x,y] = meshgrid(-4:0.2:4,-4:0.2:4)</code> se utiliza para generar la malla que sirve de dominio a <code>z</code>. Se genera así un dominio con $x \in [-4,4]$ e $y \in [-4,4]$ y paso $0.2$. Con la <code>x</code> y la <code>y</code> definidas, definimos la función utilizando la notación <code>z=x.^2+y.^2</code>. Nótese el punto detrás de cada variable, pues <b><i>MATLAB</i></b> ha definido $x$ e $y$ como matrices y dicho punto implica la extensión de la operación a todos los puntos de la matriz. Si no se incluyera este punto, obtendríamos un error.
+    </p>
+    <p>
+      Una vez definidas la malla y la función, podemos realizar la gráfica 3D de la función haciendo uso del comando <code>surf(x,y,z)</code>. Podemos añadir un cuarto argumento que indique el color; sin embargo, dejaremos que la aplicación lo ponga automáticamente. La salida de este comando nos da una gráfica con la que podemos interactuar. La vemos a continuación:
+    </p>
+    <img src="img/surf1.svg">
+    Podemos, pues, ver un paraboloide con la ecuación $f(x,y) = x^2 + y^2$.
+    <p>
+      Por otro lado, el comando <code>surfc(x,y,z)</code> hace lo mismo que el anterior, pero añadiendo las curvas de nivel al gráfico saliente:
+    </p>
+    <img src="img/surf2.svg">
+    <p>
+      Para realizar las curvas de nivel únicamente podemos utilizar dos comandos:
+    </p>
+    <ul>
+      <li><code>contour3(z,6)</code> representará las curvas de nivel en <b>tres</b> dimensiones. El segundo parámetro especifica el número de curvas que se han de representar.</li>
+      <li><code>contour(z,15)</code> hace lo mismo que el comando anterior, pero dando lugar a una gráfica en <b>dos</b> dimensiones.</li>
+    </ul>
+    <p>A continuación aparecen las gráficas de <code>contour3</code> y <code>contour</code> respectivamente.</p>
+    <img src="img/contour1.svg">
+    <img src="img/contour2.svg">
+    <p>
+      La función que hemos representado hasta ahora es siempre continua, por lo que la aplicación no tiene problemas para representarla. Sin embargo, hay funciones con problemas de representación. Intentemos representar la función $f(x,y) = \frac{\sin{x^2 + y^2}}{x^2 + y^2}$. Procedemos según hemos explicado arriba y obtenemos el siguiente gráfico:
+    </p>
+    <img src="img/surf3.svg">
+    <p>Parece que en el punto $(x,y) = (0,0)$ la función no está definida y la aplicación no ha hecho gráfica ahí. Si rotamos la vista, lo vemos de forma más clara:</p>
+    <img src="img/surf4.svg">
+    <p>El punto blanco implica que la función no está definida en $(x,y) = (0,0)$.</p>
+    <p>
+      Hemos visto, múltiples funcionalidades en este ejercicio. Sin embargo, hemos de tener en cuenta que al crear la rejilla para representar funciones, los parámetros de dominio y de paso de las variables han de ser relativamente fáciles de representar, pues si pedimos demasiados puntos, los colores dejarán de verse y el rendimiento gráfico de la aplicación disminuirá considerablemente. Veámoslo con un ejemplo:
+    </p>
+    <img src="img/surf5.svg">
+    <p>Si eliminamos puntos, dando el paso más largo obtenemos una gráfica mejor y una mejora considerable del rendimiento.</p>
+    <img src="img/surf6.svg">
+    <h2>Segundo ejercicio.</h2>
+    <h3>Límites en varias variables.</h3>
+    <p>
+      El segundo ejercicio de la sesión abordó el tema de los límites y las derivadas parciales con ayuda de la <i>Symbolic Toolbox</i> de <b><i>MATLAB</i></b>. Para empezar, se definen las variables <code>x</code> e <code>y</code> como simbólicas haciendo uso del comando <code>syms x y</code>. Así, se define la función $f(x,y)=\frac{x^2-y^2}{2x^2+y^2}$ y se obtienen sus límites cuando $(x,y) \to (0,0)$:
+    </p>
+    <ul>
+      <li>Primero contra $x$ y después contra $y$: obtenemos un resultado de $-1$.</li>
+      <li>Primero contra $y$ y después contra $x$: obtenemos un resultado de $\frac{1}{2}$.</li>
+    </ul>
+    <p>
+      Para realizar esos límites hemos utilizado los comandos <code>limit(limit(f(x,y),x,0),y,0)</code> y <code>limit(limit(f(x,y),y,0),x,0)</code>. Como son diferentes, el límite no existe. Lo mismo ocurre con la función $g(x,y)=\frac{x^2+y^2}{2x^2+y^2}$, comprobada también con esos comandos.
+    </p>
+    <p>
+      Sin embargo, si comprobamos qué ocurre con la función $h(x,y)=\frac{x^2-y^2}{x+y}$ y realizamos sus límites análogamente obtenemos que los dos límites valen $0$, por lo que el límite, si existe, tiene ese valor.
+    </p>
+    <p>
+      Otra opción necesaria es la petición de <i>límites direccionales</i>. Para ello, declaramos una nueva variable simbólica $m$ con <code>syms m</code>. Si los límites dependen de $m$, entonces los límites direccionales serán diferentes y el límite no existirá.
+    </p>
+    <p>
+      Al probar a hacer límites direccionales con $f(x,y)$ acercándonos por las rectas de ecuación $y = m \cdot x$, obtenemos un valor del límite dependiente de $m$, por lo que concluimos que el límite no existe al no coincidir los límites direccionales.
+    </p>
+    <p>
+      Si trabajamos ahora con la función $i(x,y) = \frac{y}{x^2 + y}$ y probamos a acercarnos por el haz de rectas $y = m \cdot x$, obtenemos un valor de $1$ (independiente de $m$). Sin embargo, si seguimos probando con un haz de parábolas ($y = m \cdot x^2$), el límite obtiene un valor de $\frac{m}{m+1}$ que sí depende de $m$, por lo que los límites diferirán y el límite general no existirá.
+    </p>
+    <h3>Derivadas parciales.</h3>
+    <p>
+      En lo que se refiere a las derivadas parciales, se calculan con el comando <code>diff(f,x)</code>. Definimos pues, una nueva función $f$ y hacemos, con dicho comando, la derivada parcial de $f$ respecto de $x$, es decir, $\frac{\partial f}{\partial x}$. Si definimos $f(x,y) = y \cdot x^2 + \cos{\left(x \cdot y^2\right)}$, $\frac{\partial f}{\partial x} = 2xy - y^2 \sin{\left(xy^2\right)}$.
+    </p>
+    <p>
+      Podemos utilizar este comando para derivar parcialmente respecto de otras variables y anidarlo para hacer derivadas parciales mixtas. Para hacer las derivadas parciales respecto de la misma variable utilizamos el comando <code>diff(f,x,2)</code>, que realizaría $\frac{\partial^2 f}{\partial x^2}$.
+    </p>
+    <h2>Tercer ejercicio.</h2>
+    <p>
+        El tercer ejercicio del laboratorio ha puesto el foco en las matrices Jacobiana y Hessiana. Comenzamos definiendo dos funciones $f$ y $g$ de forma numérica en <b><i>MATLAB</i></b>, mediante la orden <code>f=@(x)[x(1)*x(2);1-x(1)^2;sin(x(2))]</code>. Nótese la utilización del símbolo <i>@</i> justo después del signo de igual. Además las definimos de forma simbólica como veníamos haciendo (mediante el comando <code>syms</code>).
+    </p>
+    <p>
+      Ahora preparamos el jacobiano de la función $f$ (llamada <code>f_s</code> en nuestro <i>script</i>) de dos maneras diferentes:
+    </p>
+    <ul>
+      <li><u>De forma manual</u>: mediante la definición de matriz <code>[diff(f_s,x1) diff(f_s,x2)]</code>, que coloca el dos columnas las derivadas parciales de $f$</li>
+      <li><u>Automáticamente</u>: haciendo uso de la función <code>jacobian(f_s)</code>.</li>
+    </ul>
+    <p>
+      Como era de esperar, obtenemos la misma solución en los dos casos:
+    </p>
+    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mrow><mo>(</mo><mtable columnalign="center"><mtr><mtd><mrow><msub><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msub></mrow></mtd><mtd><mrow><msub><mrow><mi>x</mi></mrow><mrow><mn>1</mn></mrow></msub></mrow></mtd></mtr><mtr><mtd><mrow><mrow><mrow><mo>-</mo><mrow><mrow><mn>2</mn><mo> </mo><msub><mrow><mi>x</mi></mrow><mrow><mn>1</mn></mrow></msub></mrow></mrow></mrow></mrow></mrow></mtd><mtd><mrow><mn>0</mn></mrow></mtd></mtr><mtr><mtd><mrow><mn>0</mn></mrow></mtd><mtd><mrow><mrow><mrow><mi>cos</mi></mrow><mrow><mo>(</mo><mrow><mrow><msub><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></msub></mrow></mrow><mo>)</mo></mrow></mrow></mrow></mtd></mtr></mtable><mo>)</mo></mrow></mrow></math>
+    <p>
+      Por lo que respecta a la matriz Hessiana, definimos las dos variables simbólicas con <code>syms x y</code> y la función $h(x,y) = x^3 + y^2 \cdot \cos{(x)}\sin{(y)} + \frac{7x^3}{\sin{x}}$. Después, calculamos sus derivadas parciales primeras y las segundas, puras y mixtas con el proceso utilizado para el jacobiano. Obtenemos el mismo resultado haciendo la matriz manualmente o con el comando <code>hessian(h)</code>.
+    </p>
+    <p>
+      Por último, remarcamos la utilización de la regla de la cadena para obtener jacobianas de funciones compuestas. Definimos $z = f(g(y))$ y sacamos su jacobiano con <code>jacobian(z)</code>. Obtenemos el mismo valor que utilizando la regla de la cadena (multiplicando los jacobianos de $f$ y $g$ y sustituyendo las variables por los valores de $g$).
+    </p>
+    <h2>Ejercicios adicionales para incluir en la memoria.</h2>
+    <p>
+      Los ejercicios adicionales se pueden descargar en el campus virtual o a través de los siguientes enlaces directos:
+    </p>
+    <ul>
+      <li><a href="exes/ejercicios.mlx">Ejercicios (<i>MATLAB Live Script</i>)</a></li>
+      <li><a href="exes/ejercicios.pdf">Ejercicios (PDF)</a></li>
+    </ul>
+    <footer>Jesús María Mora Mur.</footer>
+    <footer>30 de abril de 2022.</footer>
+
+</html>

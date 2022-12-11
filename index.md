@@ -1,3 +1,0 @@
-# jmarialearning.github.io
-WebPage 
-

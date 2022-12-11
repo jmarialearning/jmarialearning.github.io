@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html style="font-family: Arial, Helvetica, sans-serif; font-size: large;">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+      };
+      </script>
+      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <style>
+        p{
+            text-align: justify;
+            text-justify: auto;
+        }
+        #enunciado{
+            font-size: larger;
+            font-style: italic;
+            text-align: center;
+        }
+        footer{
+            text-align: center;
+            font-size: larger;
+        }
+        img{
+            display: block;
+            margin: auto;
+            max-width: fit-content;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    </head>
+    <title>Actividad individual de Termodinámica</title>
+    <h1 style="text-align: center;">Actividad Individual de Termodinámica</h1>
+    <footer>Jesús María Mora Mur.</footer>
+
+    <h2>Ejercicio 1.</h2>
+    <p id="enunciado">Calcula la derivada de la función $f(x) = x^2 \cdot e^{-2x} + \ln{(2x+1)}$.</p>
+    <p>Calculamos en primer lugar la derivada del producto $x^2 \cdot e^{-2x}$ siguiendo la regla del producto:</p>
+    \[
+    \frac{d}{dx}\left(x^2 \cdot e^{-2x}\right) = 2x \cdot e^{-2x} - x^2 \cdot 2e^{-2x} = 2x \cdot e^{-2x} \cdot \left(1-x \right)
+    \]
+    <p>Además sabemos que la derivada del logaritmo neperiano es:</p>
+    \[
+    \frac{d}{dx}\left(\ln{(2x+1)}\right) = \frac{2}{2x + 1}
+    \]
+    <p>Por consiguiente, si sumamos ambas partes obtenemos que la derivada buscada es:</p>
+    \[
+    \frac{df}{dx} = 2x \cdot e^{-2x} \cdot \left(1-x \right) + \frac{2}{2x + 1}
+    \]
+	<h2>Ejercicio 2</h2>
+	<p id="enunciado">Calcular la diferencial de la función de dos variables $f(x,y) = x^2 y + e^{-x} \cdot y^2$.</p>
+	<p>Para calcular el diferencial derivamos implícitamente:</p>
+	\[
+	df = 2xy \cdot dx + x^2 \cdot dy - e^{-x} y^2 \cdot dx +2y \cdot e^{-x} dy
+	\]
+	<p>Por lo que obtenemos la siguente expresión:</p>
+	\[
+	df = \left(2xy - e^{-x} y^2\right) \cdot dx + \left(x^2 + 2y \cdot e^{-x}\right) \cdot dy
+	\]
+    <h2>Ejercicio 8</h2>
+    <p id="enunciado">En un proceso isotermo a 25 ºC un gas ideal, que ocupa inicialmente un volumen de 24 L, aumenta su presión de 1 atm a 3.5 atm. Calcular el volumen final que ocupará el gas.</p>
+    <p>Para resolver este problema utilizaremos la ley de Boyle-Mariotte. Dicha ley caracteriza los procesos que ocurren con gases ideales a temperatura constante. Su formulación es la siguiente:</p>
+    \[
+    p \cdot V = k
+    \]
+    Así pues, podemos comparar las presiones y los volúmenes en dos estados <i>1</i> y <i>2</i> de la siguiente manera:
+    \[
+    p_1 \cdot V_1 = p_2 \cdot V_2
+    \]
+</html>

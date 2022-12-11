@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Jmarialearning - Acceso restringido</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width">
+</head>
+<h1 span style="font-family: Helvetica, Arial">
+Jmarialearning - Control de acceso a los repositorios.
+</h1>
+<body>
+<form>
+    <p><label span style="font-family: Helvetica, Arial" for="user">Introduzca el usuario: </label>
+    <input type="text" id="user"></p>
+    <p><label span style="font-family: Helvetica, Arial "for="pswd">Introduzca la contraseña: </label>
+    <input type="password" id="pswd"></p>
+    <input type="button" value="Acceder" onclick="checkPswd();" />
+</form>
+<script type="text/javascript">
+    function checkPswd() {
+        var confirmLogin = "jmarialearning";
+        var login = document.getElementById("user").value;
+        var confirmPassword = "jmarialearning";
+        var password = document.getElementById("pswd").value;
+        if (password == confirmPassword && login == confirmLogin) {
+             window.location="https://unizares-my.sharepoint.com/:f:/g/personal/817065_unizar_es/EoYkJCZT7wBBrxpGViGKDE0BzMo0KiLExDj0SO4o1XFkTg?e=5qqPDI";
+        }
+        else{
+            alert("Identificación Errónea. Inténtelo otra vez.");
+        }
+    }
+</script>
+    <a span style="font-family: Helvetica, Arial" href="/..">Volver...</a>
+</body>
+</html>

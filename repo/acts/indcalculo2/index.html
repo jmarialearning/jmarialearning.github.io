@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html style="font-family: Helvetica, Arial, Helvetica, sans-serif; font-size: large;">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>Actividad individual de Cálculo y Geometría Diferencial</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+      };
+      </script>
+      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <style>
+        p {
+          text-align: justify;
+          text-justify: auto;
+        }
+        #enunciado{
+          font-size: larger;
+          font-style: italic;
+          text-align: center;
+        }        
+        footer {
+          text-align: center;
+          font-size: larger;
+        }
+        .responsive {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+}
+      </style>
+  </head>
+  <h1 style="text-align: center;">Actividad individual de Cálculo y Geometría Diferencial </h1>
+  <footer>Jesús María Mora Mur.</footer>
+
+
+  <h2>Ejercicio 1.</h2>
+  <p id="enunciado">Demostrar que $\nabla r^n = n \cdot r^{n-2} \cdot \vec{r}$.</p>
+  <p>En primer lugar, definimos el gradiente de un vector como otro vector cuyas componentes son las derivadas parciales respecto de cada variable. Al tener solo una variable, $r$, la derivada parcial que tenemos es la siguiente:</p>
+  \[\nabla r^n = n \cdot r^{n-1}\cdot \hat{r}\]
+  <p>Siendo $\hat{r}$ un vector unitario en la dirección y sentido de $\vec{r}$. Así pues, sabiendo que $\hat{r} = \frac{\vec{r}}{r}$, sustituimos y obtenemos lo siguiente:</p>
+  \[\nabla r^n = n \cdot r^{n-1}\cdot \frac{\vec{r}}{r} = n \cdot r^{n-2} \cdot \vec{r}\]
+  <p>Como queríamos demostrar.</p>
+<!---->
+
+  <h2>Ejercicio 2.</h2>
+  <p id="enunciado">Hallar un vector unitario normal a la superficie $x^{2y} + 2xz = 2$.</p>
+  <p>Hemos de calcular el gradiente de $f(x,y,z) = x^{2y} + 2xz - 2$. El vector resultante es:</p>
+  \[
+  \vec{\nabla} f = \left((2y - 1) \cdot x^{2y-1} + 2z, 2x^{2y} \cdot \ln{x}, 2x\right)
+  \]
+
+<!---->
+  
+  <h2>Ejercicio 3.</h2>
+  <p id="enunciado">Demostrar que $\nabla \cdot \left(\frac{\vec{r}}{r^3}\right) = 0$</p>
+  <p>Sabemos que si la divergencia de un campo es nula, el campo ha de ser gradiente de un campo $\phi$ escalar. En términos algebraicos:</p>
+  \[ 
+  \frac{1}{r^2} \hat{r}= \left( \nabla \phi \right)
+   \]
+  <p>Así,el campo escalar que buscamos es:</p>
+  \[
+  \phi = \int \frac{1}{r^2} dr = -\frac{1}{r} + \mathcal{C}
+  \]
+  <p>Por ende, hemos demostrado que el campo tiene divergencia nula.</p>
+
+
+  <h2>Ejercicio 4.</h2>
+  <p id="enunciado">Demostrar que $\nabla \cdot \left(f \vec{A}\right) = \left(\nabla f\right) \cdot \vec{A} + f \left(\nabla \vec{A}\right)$</p>
+  <p>En primer lugar, desarrollamos el paréntesis:</p>
+  \[\nabla \cdot \left(f \vec{A}\right) = \nabla \cdot \left(f A_x + f A_y + f A_z\right)\]
+
+  <p>Aplicamos ahora el producto escalar:</p>
+
+  \[\frac{\partial f}{\partial x}  \cdot A_x + f \cdot \frac{\partial A_x}{\partial x} + \frac{\partial f}{\partial y} \cdot A_y + f \cdot \frac{\partial A_y}{\partial y} + \frac{\partial f}{\partial z} \cdot A_z + f \cdot \frac{\partial A_z}{\partial z}\]
+
+  <p>Reordenamos lo que tenemos y lo volvemos a poner como producto escalar:</p>
+
+  \[(\nabla f) \cdot \vec{A} + f(\nabla \vec{A})\]
+
+  <p>Como queríamos demostrar.</p>
+<!---->
+  <h2>Ejercicio 5.</h2>
+
+  <p id="enunciado">Demostrar que $\nabla \times \left(f \vec{A}\right) = \left(\nabla f\right) \times \vec{A} + f \left(\nabla \times \vec{A}\right)$</p>
+  <p>En primer lugar, desarrollamos el paréntesis:</p>
+  \[\nabla \times \left(f \vec{A}\right) = \nabla \times \left(f A_x + f A_y + f A_z\right)\]
+
+  <p>Aplicamos ahora el producto vectorial:</p>
+
+  \[\begin{vmatrix}
+  \hat{i} & \hat{j} & \hat{k}\\
+  \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z}\\
+  fA_x & fA_y & fA_z\\
+\end{vmatrix}
+  \]
+<p>La primera componente del vector resultado es:</p>
+\[\frac{\partial}{\partial y} f(A_z) - \frac{\partial}{\partial z} f(A_y) = \left(\frac{\partial f}{\partial y} \cdot A_z - \frac{\partial f}{\partial z} \cdot A_y\right) + \left(\frac{\partial A_z}{\partial y} \cdot f - \frac{\partial A_y}{\partial z} \cdot f\right)\]
+<p>En tal caso, el primer sumando de la derecha coincidiría con $(\nabla f) \times \vec{A}$ y el segundo con $f \left(\nabla \times \vec{A}\right)$, por lo que a sus primeras componentes respecta. Desarrollamos cada uno por separado y comprobamos si son iguales. </p>
+\[(\nabla f) \times \vec{A} = \begin{vmatrix}
+\hat{i} & \hat{j} & \hat{k}\\
+\frac{\partial f}{\partial x} & \frac{\partial f}{\partial y} & \frac{\partial f}{\partial z}\\
+A_x & A_y & A_z\\
+\end{vmatrix} = \left(A_z \frac{\partial f}{\partial y} - A_y \frac{\partial f}{\partial z}\right) \hat{i} \quad ...
+\]
+<!------------------------------>
+\[f \left(\nabla \times \vec{A}\right) = f \begin{vmatrix}
+\hat{i} & \hat{j} & \hat{k}\\
+\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z}\\
+A_x & A_y & A_z\\
+\end{vmatrix} = \left(f \frac{\partial A_z}{\partial y} - f \frac{\partial A_y}{\partial z}\right) \hat{i} \quad ...
+\]
+<p>Así pues, vemos que el desarrollo de la izquierda coincide, en su primera componente, con los desarrollos de la derecha. Esto es extrapolable a todas las componentes, <b>demostrando</b> la identidad.</p>
+<!---->
+<h2>Ejercicio 6.</h2>
+<p id="enunciado">Dado el campo vectorial $\vec{v} = \vec{\omega} \times \vec{r}$, siendo $\vec{\omega}$ constante, demostrar que $\vec{\omega} = \frac{1}{2} \nabla \times \vec{v}$.</p>
+<p>Como $\vec{v} = \vec{\omega} \times \vec{r}$, sabemos que $\nabla \times \vec{v} = \nabla \times \left(\vec{\omega} \times \vec{r}\right)$. Calculamos el vector $\vec{\omega} \times \vec{r}$ y sacamos su rotacional. Obtenemos los resultados siguientes para el primer vector.</p>
+\[
+\vec{\omega} \times \vec{r} = \begin{vmatrix}
+		\hat{i} & \hat{j} & \hat{k}\\
+		\omega_x & \omega_y & \omega_j\\
+		x & y & z\\		
+	\end{vmatrix} = \left(z\omega_y - y\omega_z;\ x\omega_z - z\omega_x;\ y\omega_x - x\omega_y\right)
+\]
+<p>Sacamos el rotacional del vector resultado:</p>
+\[
+	 	\nabla \times \left(\vec{\omega} \times \vec{r}\right) = \begin{vmatrix}
+	 	\hat{i} & \hat{j} & \hat{k}\\
+	 	\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z}\\
+	 	z\omega_y - y\omega_z & x\omega_z - z\omega_x & y\omega_x - x\omega_y\\		
+	 \end{vmatrix} = 
+\]
+\[=\left(\frac{\partial}{\partial y}\left(y\omega_x - x\omega_y\right) - \frac{\partial}{\partial z}\left(x\omega_z - z\omega_x\right); \ \frac{\partial}{\partial z}\left(z\omega_y - y\omega_z\right) - \frac{\partial}{\partial x}\left(y\omega_x - x\omega_y\right);\ \frac{\partial}{\partial x}\left(x\omega_z - z\omega_x\right) - \frac{\partial}{\partial y} \left(z\omega_y - y\omega_z\right)\right)
+\]
+<p>Algunas derivadas parciales se anulan y obtenemos el siguiente vector:</p>
+\[
+	\left(\omega_x + \omega_x; \ \omega_y + \omega_y; \ \omega_z + \omega_z\right) = \vec{\omega} + \vec{\omega}
+\]
+<p>Como queríamos desmostrar.</p>
+<!---->
+<h2>Ejercicio 7.</h2>
+<p id="enunciado">Representar el vector $\vec{A} = z \hat{i} - x \hat{j} + y \hat{k}$ en coordenadas cilíndricas.</p>
+<p>Sabemos, por definición, que:</p>
+\[x = \rho \cos \theta \qquad y = \rho \sin \theta \qquad z = z\]
+<!---->
+<p>Así pues, sustituyendo, el vector $\vec{A}$ tendrá las siguientes componentes:</p>
+\[\vec{A} = z \hat{i} - \rho \cos \theta \hat{j} + \rho \sin \theta \hat{k} \tag{1} \label{eq:1}\]
+<!---->
+<p>Ahora necesitamos cambiar los vectores unitarios. Sabemos que:</p>
+<!---->
+\[\hat{e_\rho} = \left(\cos \theta, \sin \theta, 0\right)\]
+\[\hat{e_\theta} = \left(-\sin \theta, \cos \theta, 0\right)\]
+\[e_z = \left(0, 0, 1\right)\]
+<p>Haciendo las derivadas del vector $(x,y,z)$ con respecto a cada variable y dividiendo los resultados por su módulo.</p>
+<p>De aquí, obtenemos las siguientes igualdades.</p>
+\[\hat{e_\rho} = \cos \theta \hat{i} + \sin \theta \hat{j} \label{eq:2} \tag{2}\]
+\[\hat{e_\theta} = -\sin \theta \hat{i} + \cos \theta \hat{j} \label{eq:3} \tag{3}\]
+\[e_z = \hat{k} \label{eq:4} \tag{4}\]
+<!---->
+<p>Si multiplicamos $\eqref{eq:2}$ por $\cos{\theta}$ y $\eqref{eq:3}$ por $-\sin{\theta}$ para sumar las nuevas $\eqref{eq:2}$ y $\eqref{eq:3}$ obtenemos lo siguiente:</p>
+\[
+\begin{cases}
+\cos \theta \cdot \hat{e_\rho} = \cos^2 \theta \hat{i} + \sin \theta \cdot \cos \theta \hat{j}\\
+-\sin \theta \cdot \hat{e_\theta} = \sin^2 \theta \hat{i} - \sin \theta \cdot \cos \theta \hat{j}
+\end{cases}
+\]
+<p>Sumando obtenemos que:</p>
+\[
+\hat{i} = \cos{\theta} \cdot \hat{e_\rho} - \sin{\theta} \cdot \hat{e_\theta}
+\]
+<p>Análogamente, multiplicamos a $\eqref{eq:3}$ por $\cos{\theta}$ y $\eqref{eq:2}$ por $\sin{\theta}$ para sumar las nuevas ecuaciones, obteniendo lo siguiente:</p>
+\[
+\begin{cases}
+\sin \theta \cdot \hat{e_\rho} = \sin \theta \cdot \cos \theta \hat{i} + \sin^2 \theta \hat{j}\\
+\cos \theta \cdot \hat{e_\theta} = -\sin \theta \cdot \cos \theta \hat{i} + \cos^2 \theta \hat{j}
+\end{cases}
+\]
+<p>Sumando obtenemos que:</p>
+\[
+\hat{j} = \sin{\theta} \cdot \hat{e_\rho} + \cos{\theta} \cdot \hat{e_\theta}
+\]
+<p>Sustituyendo en $\eqref{eq:1}$ los últimos pasos:</p>
+\[\vec{A} = z \left(\cos{\theta} \cdot \hat{e_\rho} - \sin{\theta} \cdot \hat{e_\theta}\right) - \rho \cos \theta \left(\sin{\theta} \cdot \hat{e_\rho} + \cos{\theta} \cdot \hat{e_\theta}\right) + \rho \sin \theta \hat{e_z} \tag{1}\]
+<p>Obtenemos que $\vec{A}$ es</p>
+\[
+\vec{A} = \left(z \cos{\theta} - \rho \sin{\theta} \cos{\theta}, -z\sin{\theta} - \rho \cos^2{\theta}, \rho \sin{\theta}\right)
+\]
+<h2>Ejercicio 8.</h2>
+<p id="enunciado">Hallar el cuadrado del elemento de línea en coordenadas esféricas.</p>
+<p>El elemento de línea en coordenadas esféricas tiene la forma siguiente:</p>
+\[
+ds = h_r \: dr \:\hat{r} + h_\theta \: d\theta \:\hat{\theta} + h_\phi \: d\phi \:\hat{\phi}
+\]
+<p>Donde $h_r = 1$, $h_\theta = r$ y $h_\phi = r\sin{\theta}$ son los factores de escala asociados a las coordenadas esféricas. Así pues, </p>
+\[
+ds = 1 \: dr \:\hat{r} + r \: d\theta \:\hat{\theta} + r\sin{\theta} \: d\phi \:\hat{\phi}
+\]
+<p>Elevando al cuadrado,</p>
+\[
+(ds)^2 = 1 \: dr \:\hat{r} + r^2 \: d\theta \:\hat{\theta} + r^2\sin^2{\theta} \: d\phi \:\hat{\phi}
+\]
+<!---->
+<h2>Ejercicio 9.</h2>
+<p id="enunciado">Hallar las expresiones de los elementos de superficie en coordenadas curvilíneas ortogonales.</p>
+<p>En un sistema de coordenadas curvilíneas tal que $x = x(u,v,w)$, $y = y(u,v,w)$ y $z = z(u,v,w)$ tenemos que los elementos de superficie respecto de cada variable son los factores de escala de las variables restantes por sus diferenciales. Así,</p>
+\[
+dS_u = h_v \: h_w \: dv \: dw \qquad dS_v = h_u \: h_w \: du \: dw \qquad dS_w = h_v \: h_u \: dv \: du
+\]
+<p>Por otra parte, conocemos que los factores de escala son:</p>
+\[
+h_u = \left|\frac{\partial \vec{r}}{\partial u}\right| \qquad h_v = \left|\frac{\partial \vec{r}}{\partial v}\right| \qquad h_w = \left|\frac{\partial \vec{r}}{\partial w}\right|
+\]
+<p>Siendo $\vec{r} = x \hat{i} + y\hat{j} + z \hat{k}$. Sustituyendo en los elementos:</p>
+\[
+dS_u = \left|\frac{\partial \vec{r}}{\partial v}\right| \: \left|\frac{\partial \vec{r}}{\partial w}\right| \: dv \: dw \quad dS_v = \left|\frac{\partial \vec{r}}{\partial u}\right| \: \left|\frac{\partial \vec{r}}{\partial w}\right| \: du \: dw \quad dS_w = \left|\frac{\partial \vec{r}}{\partial v}\right| \: \left|\frac{\partial \vec{r}}{\partial u}\right| \: dv \: du
+\]
+<!---->
+<h2>Ejercicio 10.</h2>
+<p id="enunciado">Dado el vector $\vec{v} = (3,5)$, hallar las componentes bajo una rotación de $30º$ y comprobar que su módulo no varía.</p>
+<p>Sabemos, por geometría, que, para cualquier ángulo de rotación las componentes nuevas $(x',y')$ serán:</p>
+\[
+\begin{cases}
+x' = x \cos{\theta} + y \sin{\theta}\\
+y' = y \cos{\theta} - x \sin{\theta}
+\end{cases}
+\]
+<p>Podemos comprobar esto mediante la figura siguiente:</p>
+<img src="img/act10.png" class="responsive">
+<p>A la vista de lo especificado en el sistema de arriba, vemos que:</p>
+\[
+\begin{cases}
+x' = \frac{\sqrt{3}}{2}x + \frac{1}{2}y\\
+y' = \frac{\sqrt{3}}{2}y - \frac{1}{2}x
+\end{cases}
+\]
+<p>Por lo que el vector tiene las siguientes componentes:</p>
+\[
+\vec{v} = \left(\frac{5+3\sqrt{3}}{2}, \frac{5\sqrt{3}-3}{2}\right)
+\]
+<p>Se puede comprobar que $v = \sqrt{34}$ en ambos casos.</p>
+</html>

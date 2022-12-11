@@ -1,0 +1,45 @@
+<html style="font-family: Arial, Helvetica, sans-serif; font-size: large;">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Laboratorio de cálculo</title>
+    <style>
+    p {text-align: justify;text-justify: auto;}
+    img {
+        display: block;
+        margin: auto;
+        max-width: 100%;
+    }
+    footer {text-align: center;}
+    </style>
+    <h1 style="text-align: center;">Laboratorio: Cálculo computacional.</h1>
+    <p>En la sesión de la asignatura de cálculo del día 17 de enero, el alumnado del Grado en Física tuvo la oportunidad de experimentar con la herramienta <strong>MATLAB</strong>, conociendo sus funcionalidades, así como sus aplicaciones en la asignatura. Se desarrollaron 4 ejemplos, que venimos a explicar a continuación.</p>
+    <h2>Primer ejercicio.</h2>
+    <p>El primer ejercicio propuesto consistía en realizar la gráfica de una función a trozos. Para ello, se propusieron 2 métodos.</p>
+    <p>El primer método consistió en forzar la creación de una tabla de valores mediante el comando <code>linspace(i,f,n)</code> o un <i>array</i>, declarándolo como <code>x = i:p:f</code>, siendo en ambos casos <code>i</code> el valor inicial, <code>f</code> el final, <code>p</code> el paso (diferencia entre dos valores consecutivos) y <code>n</code> el número de valores que se crean (por defecto 100) Así, se obtienen los valores de la variable independiente para cada trozo de función.</p>
+    <p>Una vez hecho esto, se declaran las funciones correspondientes a cada trozo. Un ejemplo es el siguiente: <code>y2 = cos (x2 - pi/4)</code>.</p>
+    <p>Con esto realizado y con ayuda del comando <code>plot(x,y)</code>, podemos representar las funciones, previa creación de un <i>array</i> en el que <code>x</code> cada uno de los intervalos e <code>y</code>, cada una de las imágenes de las funciones. He aquí una prueba de lo que obtenemos:</p>
+    <img src="img/grafico1.svg" width="auto">
+    <p>Por otra parte, podemos evitar que el programa una todo utilizando la misma rutina, pero haciendo referencia a cada trozo. Intercalamos el comando <code>hold on</code> para que quede todo dibujado en la misma ventana, obteniendo así la gráfica como cabría esperar.</p>
+    <img src="img/grafico2.svg" width="auto">
+    <h2>Segundo y tercer ejercicio.</h2>
+    <p>El segundo ejercicio propuesto hacía uso de la caja de herramientas para cálculo simbólico (llamada en MATLAB <i>Symbolic Toolbox</i>). Este módulo del programa nos permite manipular las <i>letras</i> como variables, pudiendo crear ecuaciones y resolverlas, así como simplificar expresiones, derivarlas u obtener límites. Explicaremos los comandos utilizados en los párrafos venideros, para la resolución del tercer ejercicio. </p>
+    <p>En primer lugar, debemos advertir al programa qué <i>letras</i> queremos que entienda como simbólicas. Para esto utilizamos el comando <code>syms</code> seguido de la variable que nombramos como independiente. Una vez ejecutado este comando, declaramos la función normalmente (<code>y = (x^2 + 2*x - 1)/x</code>) y el programa la renderiza en fuente matemática. Con el comando <code>ezplot</code> podemos representar la función, dando un intervalo en concreto para la variable independiente, entre corchetes. Por ejemplo, escribiendo <code>ezplot(y,[-10,10])</code> obtenemos la siguiente gráfica:</p>
+    <img src="img/grafico3.svg" width="auto">
+    <p>Como podemos ver, la función presenta una asíntota oblicua por cada lado. Caractericemos, pues dichas asíntotas con su recta. Obtenemos calculando la pendiente y la ordenada en el origen que la asíntota oblicua por la derecha es <math><mi>x</mi><mo>+</mo>2</math>, al igual que por la izquierda. Así pues, dibujamos en una misma gráfica la asíntota y la función, en diferentes colores, con el código siguiente:</p>
+    <code style="text-align:center;">
+        ezplot(y,[-10,10])<p></p>
+        hold on<p></p>
+        ezplot(yasin,[-10,10])    
+    </code>
+    <p>Siendo <code>yasin</code> la recta definida por la asintota oblicua (i.e. <math><mi>x</mi><mo>+</mo>2</math>).</p>
+    <p>Por otra parte, obtenemos, mediante límites, las asíntotas verticales mediante <code>limit(y,x,0,'left')</code> y <code>limit(y,x,0,'right')</code> para especificar los respectivos límites laterales. Obtenemos infinito y menos infinito, que vienen expresados con su símbolo al estar en el entorno <i>Symbolic</i>. Se utiliza la notación <math>&infin;</math> y <math>-&infin;</math>.</p>
+    <h2>Cuarto ejercicio.</h2>
+    <p>En el último ejercicio, se ha procedido a hacer un estudio completo de la función <code>y = x/(1+x^2)</code>. Comenzamos representando la gráfica con el comando <code>ezplot(y,[-20,20])</code> y obtenemos el siguiente resultado:</p>
+    <img src="img/grafico4.svg" width="auto">
+    <p>Después, estudiamos los máximos y los mínimos de la función, calculando sus derivadas y simplificándolas mediante el comando <code>y1 = simplify(diff(y))</code>. Resolvemos <math><mi>y</mi>&prime;<mo>=</mo> 0</math> y obtenemos los puntos críticos, <math><mi>x</mi> <mo>=</mo> -1</math> y <math><mi>x</mi><mo>=</mo> 1</math>. A continuación, sustituimos los valores en la expresión de la segunda derivada (<code>y2 = simplify(diff(y,2))</code>) y obtenemos que el primer punto corresponde a un <strong>mínimo relativo</strong> y el segundo, a un <strong>máximo relativo</strong>. Para estudiar la curvatura, procedemos igual pero igualando esta vez la segunda derivada a 0. Obtenemos los posibles puntos singulares de la función y, por tanto los intervalos que debemos mirar. Así, sustituimos, mediante el comando <code>subs</code> un valor que pertenezca a los intervalos y vemos el signo. Sabemos que si el resultado es positivo, la función es cóncava en el intervalo. En caso contrario, será convexa.</p>
+    <footer>Jesús María Mora Mur.</footer>
+</html>
