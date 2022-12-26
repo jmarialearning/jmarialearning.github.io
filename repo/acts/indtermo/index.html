@@ -61,12 +61,35 @@
 	\[
 	df = 2xy \cdot dx + x^2 \cdot dy - e^{-x} y^2 \cdot dx +2y \cdot e^{-x} dy
 	\]
-	<p>Por lo que obtenemos la siguente expresión:</p>
+	<p>Por lo que obtenemos la siguiente expresión:</p>
 	\[
 	df = \left(2xy - e^{-x} y^2\right) \cdot dx + \left(x^2 + 2y \cdot e^{-x}\right) \cdot dy
 	\]
     <h2>Ejercicio 3</h2>
-    <p id="enunciado">Calcula el trabajo realizado en un sistema químico durante una expansión isóbara a 1 atmósfera de presión si el gas ocupa inicialmente el volumen de 22.4</p>
+    <p id="enunciado">Calcula el trabajo realizado en un sistema químico durante una expansión isóbara a 1 atmósfera de presión si el gas ocupa inicialmente el volumen de 22.4 L y duplica su volumen.</p>
+    <p>Es conocido que el trabajo en un proceso isobaro viene dado por la caracterización siguiente:</p>
+    \[
+    W =\int_{V_1}^{V_2}p \cdot dV= p \cdot \Delta V
+    \]
+    <p>Donde $p$ es la presión (constante durante todo el proceso) y $\Delta V$ es el cambio de volumen. Así,si el volumen se duplica, el trabajo es:</p>
+    \[
+    W = p \cdot \left(2V - V\right) = p \cdot V = 1 \: \text{atm} \cdot 22.4 \: \text{L} = 22.4 \: \text{J}
+    \]
+    <div style="background-color: rgb(216, 144, 144); color: rgb(0,0,0); padding: 1%;">
+    <h2>Ejercicio 4</h2>
+    <p id="enunciado">Calcula el aumento de temperatura de 1 L de agua si su calor específico es constante ($1 \: \frac{\text{cal}}{\text{g} \cdot º\text{C}}$) y se realiza un trabajo adiabático de 5 J.</p>
+    <p>Utilizamos para realizar este ejercicio la caracterización de un proceso adiabático:</p>
+    \[
+    W = \frac{p_1 V_1 - p_2 V_2}{\gamma - 1} \label{eq:1} \tag{1}
+    \]
+    <p>Si reescribimos $\eqref{eq:1}$ sin $\gamma$ obtenemos:</p>
+    \[
+    W = C_V \cdot \frac{p_1 V_1 - p_2 V_2}{R}
+    \]
+    </div>
+    <h2>Ejercicio 5</h2>
+    <p id="enunciado">Calcula el trabajo realizado por la expansión de dos moles de un gas ideal en una expansión isoterma (T = 42 ºC) en la que la presión se reduce a la mitad.</p>
+    <p>Comenzamos caracterizando el trabajo en un proceso isotermo.</p>
     <h2>Ejercicio 8</h2>
     <p id="enunciado">En un proceso isotermo a 25 ºC un gas ideal, que ocupa inicialmente un volumen de 24 L, aumenta su presión de 1 atm a 3.5 atm. Calcular el volumen final que ocupará el gas.</p>
     <p>Para resolver este problema utilizaremos la ley de Boyle-Mariotte. Dicha ley caracteriza los procesos que ocurren con gases ideales a temperatura constante. Su formulación es la siguiente:</p>
@@ -75,9 +98,9 @@
     \]
     Así pues, podemos comparar las presiones y los volúmenes en dos estados <i>1</i> y <i>2</i> de la siguiente manera:
     \[
-    p_1 \cdot V_1 = p_2 \cdot V_2 \tag{1}
+    p_1 \cdot V_1 = p_2 \cdot V_2 \tag{2} \label{eq:2}
     \]
-    Despejamos $V_2$ de la ecuación (1):
+    Despejamos $V_2$ de la ecuación \eqref{eq:2}:
     \[
     V_2 = \frac{p_1 \cdot V_1}{p_2}
     \]
