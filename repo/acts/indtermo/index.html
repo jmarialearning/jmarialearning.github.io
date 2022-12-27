@@ -89,7 +89,32 @@
     </div>
     <h2>Ejercicio 5</h2>
     <p id="enunciado">Calcula el trabajo realizado por la expansión de dos moles de un gas ideal en una expansión isoterma (T = 42 ºC) en la que la presión se reduce a la mitad.</p>
-    <p>Comenzamos caracterizando el trabajo en un proceso isotermo.</p>
+    <p>Comenzamos caracterizando el trabajo en un proceso isotermo:</p>
+    \[
+    W = nRT \cdot \ln{\frac{p_2}{p_1}} \label{eq:2} \tag{2}
+    \]
+    <p>Así, sustituyendo en $\eqref{eq:2}$:</p>
+    \[
+    W = 2 \: \text{mol} \cdot 8.314 \: \frac{\text{J}}{\text{mol} \cdot \text{K}}\cdot 315.15 \: \text{K} \cdot \ln{\frac{1}{2}} = +3632.3 \: \text{J}
+    \]
+    <p>Si consideramos el criterio de signos utilizado en la asignatura.</p>
+    <h2>Ejercicio 6</h2>
+    <p id="enunciado">Si en un proceso termodinámico cíclico en la primera etapa se absorbe un calor equivalente a 4.56 cal y se realiza un trabajo sobre el sistema de 3 J, calcular el calor absorbido en la segunda etapa si el sistema realiza sobre los alrededores un trabajo de 2.1 J. </p>
+    <p>Sabemos que, en todo proceso cíclico la variación de energía interna es 0, por lo que $Q = W$.Así pues,</p>
+    \[
+    Q_1 + Q_2 = W_1 + W_2 \implies Q_2 = W_1 + W_2 - Q_1
+    \]
+    <p>Si sustituimos, con los signos correspondientes, sabiendo que $1 \: \text{cal} \equiv 4.18 \: \text{J}$:</p>
+    \[
+    Q_2 = W_1 + W_2 - Q_1 = -3 \: \text{J} + 2.1 \: \text{J} + 19.1 \: \text{J} = 18.2 \: \text{J}
+    \]
+    <h2>Ejercicio 7</h2>
+    <p id="enunciado">Calcular la variación de energía interna en un proceso isostérico en el que se absorben 45.4 cal.</p>
+    <p>Sabemos que $\Delta U = Q - W$. También sabemos que no hay trabajo si no hay cambio de volumen, por lo que la variación en la energía interna coincidirá con el calor. Así, en unidades del SI y sabiendo que: $1 \: \text{cal} \equiv 4.18 \: \text{J}$</p>
+    \[
+    \Delta U = Q = +189.9 \: \text{J}
+    \]
+    <p>Según el criterio utilizado en la actividad que nos ocupa.</p>
     <h2>Ejercicio 8</h2>
     <p id="enunciado">En un proceso isotermo a 25 ºC un gas ideal, que ocupa inicialmente un volumen de 24 L, aumenta su presión de 1 atm a 3.5 atm. Calcular el volumen final que ocupará el gas.</p>
     <p>Para resolver este problema utilizaremos la ley de Boyle-Mariotte. Dicha ley caracteriza los procesos que ocurren con gases ideales a temperatura constante. Su formulación es la siguiente:</p>
@@ -98,9 +123,9 @@
     \]
     Así pues, podemos comparar las presiones y los volúmenes en dos estados <i>1</i> y <i>2</i> de la siguiente manera:
     \[
-    p_1 \cdot V_1 = p_2 \cdot V_2 \tag{2} \label{eq:2}
+    p_1 \cdot V_1 = p_2 \cdot V_2 \tag{3} \label{eq:3}
     \]
-    Despejamos $V_2$ de la ecuación \eqref{eq:2}:
+    Despejamos $V_2$ de la ecuación \eqref{eq:3}:
     \[
     V_2 = \frac{p_1 \cdot V_1}{p_2}
     \]
