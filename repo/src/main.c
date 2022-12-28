@@ -1,13 +1,13 @@
 #include <stdio.h>
 /* Comentario
-multilínea
+multilÃ­nea
 */
 /*int main() {
 	printf("Hello");
 	return 0;
 }*/
-/*Aquí definimos las funciones para sumar y multiplicar 2 números 
-así como la que eleva un número a otro*/
+/*AquÃ­ definimos las funciones para sumar y multiplicar 2 nÃºmeros 
+asÃ­ como la que eleva un numero a otro*/
 int suma(int num1, int num2){
 	return num1 + num2;
 }
@@ -21,17 +21,17 @@ int potencia(int base, int exponente){
 	}
 	return aux;
 }
-//Inicializamos el método main.
+//Inicializamos el mÃ©todo main.
 int main(){
-	/*Ponemos valores a las variables que trabajarán y declaramos
-	las que devolverán los resultados.
+	/*Ponemos valores a las variables que trabajan y declaramos
+	las que devuelven los resultados.
 	*/
 	int num1 = 3;
 	int num2 = 2;
 	int res_pot = potencia(num1, num2);
 	int res_suma = suma(num1, num2);
 	int res_multi = producto(num1, num2);
-	/*Una cadena, para ver como funcionan y cómo se utiliza su especificación de
+	/*Una cadena, para ver como funcionan y cÃ³mo se utiliza su especificaciÃ³n de
 	formato, %s.*/
 	char caracteres[100] = "Cadena";
 	printf("Hola mundo");
