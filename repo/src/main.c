@@ -1,49 +1,47 @@
 #include <stdio.h>
-/* Comentario
-multilínea
-*/
-/*int main() {
-	printf("Hello");
-	return 0;
-}*/
-/*Aquí definimos las funciones para sumar y multiplicar 2 números 
-así como la que eleva un numero a otro*/
-int suma(int num1, int num2){
-	return num1 + num2;
-}
 int producto(int num1, int num2){
-	return num1*num2;
+    return num1 * num2;
+}
+int suma(int num1, int num2){
+    return num1 + num2;
 }
 int potencia(int base, int exponente){
-	int aux = 1;
-	for(int i = 1; i <= exponente; i++){
-		aux = aux*base;
-	}
-	return aux;
+    int aux = 1;
+    for(int i = 1; i <= exponente; i++){
+        aux = aux * base;
+    }
+    return aux;
 }
-//Inicializamos el método main.
-int main(){
-	/*Ponemos valores a las variables que trabajan y declaramos
-	las que devuelven los resultados.
-	*/
-	int num1 = 3;
-	int num2 = 2;
-	int res_pot = potencia(num1, num2);
-	int res_suma = suma(num1, num2);
-	int res_multi = producto(num1, num2);
-	/*Una cadena, para ver como funcionan y cómo se utiliza su especificación de
-	formato, %s.*/
-	char caracteres[100] = "Cadena";
-	printf("Hola mundo");
-	/*Simplemente para que quede algo impreso por pantalla y comprobemos,
-	visualmente	que todo ejecuta como es debido.*/
-	printf("\nResultados de las operaciones.");
-	printf("\nSuma de %d y %d es %d", num1, num2, res_suma);
-	printf("\nProducto de %d y %d es %d", num1, num2, res_multi);
-	printf("\n%d elevado a %d es %d", num1, num2, res_pot);
-	printf("\n%s", caracteres);
-	printf("\nY hasta aqui nuestro programa.");/* No se pueden poner tildes a no
-	ser que se ponga antes el comando "chcp 1252"...
-	*/
-	return 0;
+int factorial(int n){
+    if (n == 0){
+        return 1;
+    }
+    else{
+        return producto(n,factorial(n-1));
+    }
+}
+int division(int num1, int num2){
+    if(num2 != 0){
+        return num1/num2;
+    }
+    else{
+        return 0; //Está mal...
+    }
+}
+int main (){
+int num_numeros, numero1, numero2;
+printf("Cuántas parejas de números quieres operar?\n");
+scanf("%d",&num_numeros);
+for (int i =0 ; i < num_numeros; i++)
+{
+printf("Escribe el primer número y el segundo\n");
+scanf("%d %d",&numero1,&numero2);
+printf("El resultado de las operaciones es el siguiente %d*%d=%d, %d+%d=%d,%d!=%d , %d^%d=%d, %d/%d=%d\n",
+numero1, numero2, producto(numero1,numero2),
+numero1, numero2, suma(numero1,numero2),
+numero1, factorial(numero1),
+numero1, numero2, potencia(numero1,numero2),
+numero1, numero2, division(numero1,numero2));
+}
+return 0;
 }
