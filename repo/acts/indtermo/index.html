@@ -75,18 +75,24 @@
     \[
     W = p \cdot \left(2V - V\right) = p \cdot V = 1 \: \text{atm} \cdot 22.4 \: \text{L} = 22.4 \: \text{J}
     \]
-    <div style="background-color: rgb(216, 144, 144); color: rgb(0,0,0); padding: 1%;">
     <h2>Ejercicio 4</h2>
     <p id="enunciado">Calcula el aumento de temperatura de 1 L de agua si su calor específico es constante ($1 \: \frac{\text{cal}}{\text{g} \cdot º\text{C}}$) y se realiza un trabajo adiabático de 5 J.</p>
-    <p>Utilizamos para realizar este ejercicio la caracterización de un proceso adiabático:</p>
+    <p>Sabemos, por el primer principio de la termodinámica, que:</p>
     \[
-    W = \frac{p_1 V_1 - p_2 V_2}{\gamma - 1} \label{eq:1} \tag{1}
+    \Delta U = Q - W \label{eq:1} \tag{1}
     \]
-    <p>Si reescribimos $\eqref{eq:1}$ sin $\gamma$ obtenemos:</p>
+    <p>Si reescribimos $\eqref{eq:1}$para procesos adiabáticos:</p>
     \[
-    W = C_V \cdot \frac{p_1 V_1 - p_2 V_2}{R}
+    \Delta U =- W
     \]
-    </div>
+    <p>Asimismo, sabemos que:</p>
+    \[
+    \Delta U =C_V \Delta T
+    \]
+    <p>Por ende, uniendo estas dos ecuaciones, tenemos que:</p>
+    \[
+    - W = C_V \Delta T \implies \Delta T = \frac{C_V}{-W} = \frac{1 \: \frac{\text{cal}}{\text{g} \cdot º\text{C}}}{-5 \: \mathrm{J} \cdot \frac{1}{4.18}\ \frac{\mathrm{cal}}{\mathrm{J}}}
+    \]
     <h2>Ejercicio 5</h2>
     <p id="enunciado">Calcula el trabajo realizado por la expansión de dos moles de un gas ideal en una expansión isoterma (T = 42 ºC) en la que la presión se reduce a la mitad.</p>
     <p>Comenzamos caracterizando el trabajo en un proceso isotermo:</p>
