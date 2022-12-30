@@ -91,8 +91,9 @@
     \]
     <p>Por ende, uniendo estas dos ecuaciones, tenemos que:</p>
     \[
-    - W = C_V \Delta T \implies \Delta T = \frac{C_V}{-W} = \frac{1 \: \frac{\text{cal}}{\text{g} \cdot º\text{C}}}{-5 \: \mathrm{J} \cdot \frac{1}{4.18}\ \frac{\mathrm{cal}}{\mathrm{J}}}
+    - W = C_V \Delta T \implies \Delta T = \frac{C_V}{-W} = \frac{1 \: \frac{\text{cal}}{\text{g} \cdot º\text{C}}}{5 \: \mathrm{J} \cdot \frac{1}{4.18}\ \frac{\mathrm{cal}}{\mathrm{J}}} \approx 0.8 \: º\text{C}
     \]
+    <p>Pues si se realiza trabajo sobre el sistema, este tiene signo positivo.</p>
     <h2>Ejercicio 5</h2>
     <p id="enunciado">Calcula el trabajo realizado por la expansión de dos moles de un gas ideal en una expansión isoterma (T = 42 ºC) en la que la presión se reduce a la mitad.</p>
     <p>Comenzamos caracterizando el trabajo en un proceso isotermo:</p>
@@ -160,11 +161,22 @@
     \[
     V = \frac{nRT}{p} = \frac{1 \: \mathrm{mol} \cdot 0.082 \: \frac{\mathrm{atm} \cdot \mathrm{L}}{\mathrm{mol} \cdot \mathrm{K}} \cdot 298.15 \: \mathrm{K}}{1 \: \mathrm{atm}} \approx 24.4 \: \mathrm{L}
     \]
-    <div style="background-color: rgb(216, 144, 144); color: rgb(0,0,0); padding: 1%;">
-        <h2>Ejercicio 11</h2>
+    <h2>Ejercicio 11</h2>
     <p id="enunciado">Calcular la variación de energía interna un gas ideal que se expande isotérmicamente a 20 °C, de un volumen inicial de 2 a 3.5 L. Calcular el calor absorbido (en calorías) sabiendo que la presión inicial es de 1 atm.</p>
-    <p>El trabajo</p>
-    </div>
+    <p>Al ser un proceso isotermo, la variación de energía interna es nula. Por ende, si $\Delta U = 0 \implies Q = W$.</p>
+    <p>El trabajo que tiene lugar en el proceso es igual a:</p>
+    \[
+    W = nRT \cdot \ln{\frac{V_f}{V_o}} \label{eq:6} \tag{6}
+    \]
+    <p>Podemos aplicar en este caso que, según $\eqref{eq:5}$:</p>
+    \[
+    nRT = pV
+    \]
+    <p>Así, reescribimos $\eqref{eq:6}$ en los siguientes términos:</p>
+    \[
+    W = pV \cdot \ln{\frac{V_f}{V_o}} = 1 \: \text{atm} \cdot 2\: \text{L} \ln\left({\frac{3.5 \: \text{L}}{2 \: \text{L}}}\right) = 1.12 \: \text{J}
+    \]
+    <p>Por ende, el calor absorbido será 1.12 J.</p>
     <h2>Ejercicio 12</h2>
     <p id="enunciado">Comparar la presión de un mol de nitrógeno molecular que ocupa un volumen de 2 L utilizando la ecuación de estado de Van der Waals y la ecuación de estado del gas ideal a la temperatura ambiente de 25 °C. Calcular también la temperatura de Boyle. Datos: a = 1.39 atm(L/mol)<sup>2</sup>, b = 0.0392 L/mol.</p>
     <h3 style="text-align: center; font-size: larger;">Utilizando la ecuación de estado de gas ideal.</h3>
