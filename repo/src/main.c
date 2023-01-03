@@ -21,12 +21,14 @@ int factorial(int n){
     }
 }
 int division(int num1, int num2){
+    int retorno = 0;
     if(num2 != 0){
-        return num1/num2;
+        retorno = num1/num2;
     }
     else{
-        return 0; //Está mal...
+        printf("No se puede dividir por 0. La impresión de la división ha de ignorarse.\n");
     }
+    return retorno;
 }
 int main (){
 int num_numeros, numero1, numero2;
