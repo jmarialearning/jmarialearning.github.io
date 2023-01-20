@@ -86,7 +86,7 @@ int main()
     printf("Introduzca el segundo operando: ");
     scanf("%d", &num2);
     imprime_menu();
-    printf("Selecciona una opción [1 - 7]:");
+    printf("Seleccione una opción [1 - 7]:");
     scanf("%d", &sel);
     switch (sel)
     {
