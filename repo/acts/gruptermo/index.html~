@@ -37,7 +37,13 @@
         }
     </style>
     </head>
-    <title>Actividad grupal de termodin mica</title>
-    <h1 style="text-align: center;">Actividad grupal de termodin mica.</h1>
-    <footer>Jes#s Mar!a Mora Mur</footer>
-    <h2></h2>
+    <title>Actividad grupal de termodinámica</title>
+    <h1 style="text-align: center;">Actividad grupal de termodinámica.</h1>
+    <footer>Jesús María Mora Mur</footer>
+    <h2>Ejercicio 1.</h2>
+    <p id="enunciado">Calcular el aumento de entropía de un foco térmico a la temperatura de 120 ºC que absorbe 5.4 cal de calor.</p>
+    <p>Por la definición de entropía, sabemos que:</p>
+    \[
+	\Delta S = \frac{\Delta Q}{T}
+    \]
+    <p>Así pues, la variación de entropía será:</p>
