@@ -197,14 +197,14 @@ Para poder realizar el proceso que arriba especificamos, utilizaremos el program
 <ul>
 <li><p>En primer lugar, hemos aislado los datos de <a href="https://www.epa.gov/system/files/other-files/2023-02/Lab_Results_Air.csv" class="uri">https://www.epa.gov/system/files/other-files/2023-02/Lab_Results_Air.csv</a> (la base de datos que utilizaremos) según su ubicación, obteniendo sendos archivos CSV para cada lugar.</p>
 <ul>
-<li><a href="https://jmarialearning.github.io/repo/acts/labstat/data/A-01.csv">Lugar 1.</a></li>
-<li><a href="https://jmarialearning.github.io/repo/acts/labstat/data/DW.csv">Lugar 2.</a></li>
-<li><a href="https://jmarialearning.github.io/repo/acts/labstat/data/UW.csv">Lugar 3.</a></li>
-<li><a href="https://jmarialearning.github.io/repo/acts/labstat/data/WA-01.csv">Lugar 4.</a></li>
-<li><a href="https://jmarialearning.github.io/repo/acts/labstat/data/WA-02.csv">Lugar 5.</a></li>
-<li><a href="https://jmarialearning.github.io/repo/acts/labstat/data/WA-03.csv">Lugar 6.</a></li>
-<li><a href="https://jmarialearning.github.io/repo/acts/labstat/data/WA-04.csv">Lugar 7.</a></li>
-<li><a href="https://jmarialearning.github.io/repo/acts/labstat/data/WA-05.csv">Lugar 8.</a></li>
+<li><a href="https://jmarialearning.github.io/repo/acts/labstat/data/A-01.csv" class="uri">https://jmarialearning.github.io/repo/acts/labstat/data/A-01.csv</a> Lugar 1.</li>
+<li><a href="https://jmarialearning.github.io/repo/acts/labstat/data/DW.csv" class="uri">https://jmarialearning.github.io/repo/acts/labstat/data/DW.csv</a> Lugar 2.</li>
+<li><a href="https://jmarialearning.github.io/repo/acts/labstat/data/UW.csv" class="uri">https://jmarialearning.github.io/repo/acts/labstat/data/UW.csv</a> Lugar 3.</li>
+<li><a href="https://jmarialearning.github.io/repo/acts/labstat/data/WA-01.csv" class="uri">https://jmarialearning.github.io/repo/acts/labstat/data/WA-01.csv</a> Lugar 4.</li>
+<li><a href="https://jmarialearning.github.io/repo/acts/labstat/data/WA-02.csv" class="uri">https://jmarialearning.github.io/repo/acts/labstat/data/WA-02.csv</a> Lugar 5.</li>
+<li><a href="https://jmarialearning.github.io/repo/acts/labstat/data/WA-03.csv" class="uri">https://jmarialearning.github.io/repo/acts/labstat/data/WA-03.csv</a> Lugar 6.</li>
+<li><a href="https://jmarialearning.github.io/repo/acts/labstat/data/WA-04.csv" class="uri">https://jmarialearning.github.io/repo/acts/labstat/data/WA-04.csv</a> Lugar 7.</li>
+<li><a href="https://jmarialearning.github.io/repo/acts/labstat/data/WA-05.csv" class="uri">https://jmarialearning.github.io/repo/acts/labstat/data/WA-05.csv</a> Lugar 8.</li>
 </ul></li>
 <li><p>Hemos creado una columna extra en cada CSV, llamada <em>Differential</em>, en la que hemos puesto la diferencia (en días) entre la medición y el accidente. Así podremos comparar la expansión del Benceno en el tiempo.</p></li>
 <li><p>Importamos los datos en R utilizando la librería <code>readr</code> y, en concreto, su instrucción <code>import_csv</code>. Así, podremos trabajar con ellos en R.</p></li>
