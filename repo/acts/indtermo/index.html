@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width">
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script src="https://polyfill.io/v3/polyfill.js?features=es5,es6,es7"></script>
     <script>
       MathJax = {
         tex: {
@@ -41,7 +41,7 @@
     <h1 style="text-align: center;">Actividad Individual de Termodinámica</h1>
     <footer>Jesús María Mora Mur.</footer>
 
-    <h2>Ejercicio 1.</h2>
+    <h2>Ejercicio 1</h2>
     <p id="enunciado">Calcula la derivada de la función $f(x) = x^2 \cdot e^{-2x} + \ln{(2x+1)}$.</p>
     <p>Calculamos en primer lugar la derivada del producto $x^2 \cdot e^{-2x}$ siguiendo la regla del producto:</p>
     \[
@@ -61,10 +61,67 @@
 	\[
 	df = 2xy \cdot dx + x^2 \cdot dy - e^{-x} y^2 \cdot dx +2y \cdot e^{-x} dy
 	\]
-	<p>Por lo que obtenemos la siguente expresión:</p>
+	<p>Por lo que obtenemos la siguiente expresión:</p>
 	\[
 	df = \left(2xy - e^{-x} y^2\right) \cdot dx + \left(x^2 + 2y \cdot e^{-x}\right) \cdot dy
 	\]
+    <h2>Ejercicio 3</h2>
+    <p id="enunciado">Calcula el trabajo realizado en un sistema químico durante una expansión isóbara a 1 atmósfera de presión si el gas ocupa inicialmente el volumen de 22.4 L y duplica su volumen.</p>
+    <p>Es conocido que el trabajo en un proceso isobaro viene dado por la caracterización siguiente:</p>
+    \[
+    W =\int_{V_1}^{V_2}p \cdot dV= p \cdot \Delta V
+    \]
+    <p>Donde $p$ es la presión (constante durante todo el proceso) y $\Delta V$ es el cambio de volumen. Así,si el volumen se duplica, el trabajo es:</p>
+    \[
+    W = p \cdot \left(2V - V\right) = p \cdot V = 1 \: \text{atm} \cdot 22.4 \: \text{L} = 22.4 \: \text{J}
+    \]
+    <h2>Ejercicio 4</h2>
+    <p id="enunciado">Calcula el aumento de temperatura de 1 L de agua si su calor específico es constante ($1 \: \frac{\text{cal}}{\text{g} \cdot º\text{C}}$) y se realiza un trabajo adiabático de 5 J.</p>
+    <p>Sabemos, por el primer principio de la termodinámica, que:</p>
+    \[
+    \Delta U = Q - W \label{eq:1} \tag{1}
+    \]
+    <p>Si reescribimos $\eqref{eq:1}$para procesos adiabáticos:</p>
+    \[
+    \Delta U =- W
+    \]
+    <p>Asimismo, sabemos que:</p>
+    \[
+    \Delta U =C_V \Delta T
+    \]
+    <p>Por ende, uniendo estas dos ecuaciones, tenemos que:</p>
+    \[
+    - W = C_V \Delta T \implies \Delta T = \frac{C_V}{-W} = \frac{1 \: \frac{\text{cal}}{\text{g} \cdot º\text{C}}}{5 \: \mathrm{J} \cdot \frac{1}{4.18}\ \frac{\mathrm{cal}}{\mathrm{J}}} \approx 0.8 \: º\text{C} \equiv 0.8 \: \text{K}
+    \]
+    <p>Pues si se realiza trabajo sobre el sistema, este tiene signo positivo.</p>
+    <h2>Ejercicio 5</h2>
+    <p id="enunciado">Calcula el trabajo realizado por la expansión de dos moles de un gas ideal en una expansión isoterma (T = 42 ºC) en la que la presión se reduce a la mitad.</p>
+    <p>Comenzamos caracterizando el trabajo en un proceso isotermo:</p>
+    \[
+    W = nRT \cdot \ln{\frac{p_2}{p_1}} \label{eq:2} \tag{2}
+    \]
+    <p>Así, sustituyendo en $\eqref{eq:2}$:</p>
+    \[
+    W = 2 \: \text{mol} \cdot 8.314 \: \frac{\text{J}}{\text{mol} \cdot \text{K}}\cdot 315.15 \: \text{K} \cdot \ln{\frac{1}{2}} = +3632.3 \: \text{J}
+    \]
+    <p>Si consideramos el criterio de signos utilizado en la asignatura.</p>
+    <h2>Ejercicio 6</h2>
+    <p id="enunciado">Si en un proceso termodinámico cíclico en la primera etapa se absorbe un calor equivalente a 4.56 cal y se realiza un trabajo sobre el sistema de 3 J, calcular el calor absorbido en la segunda etapa si el sistema realiza sobre los alrededores un trabajo de 2.1 J. </p>
+    <p>Sabemos que, en todo proceso cíclico la variación de energía interna es 0, por lo que $Q = W$.Así pues,</p>
+    \[
+    Q_1 + Q_2 = W_1 + W_2 \implies Q_2 = W_1 + W_2 - Q_1
+    \]
+    <p>Si sustituimos, con los signos correspondientes, sabiendo que $1 \: \text{cal} \equiv 4.18 \: \text{J}$:</p>
+    \[
+    Q_2 = W_1 + W_2 - Q_1 = -3 \: \text{J} + 2.1 \: \text{J} + 19.1 \: \text{J} = 18.2 \: \text{J}
+    \]
+    <h2>Ejercicio 7</h2>
+    <p id="enunciado">Calcular la variación de energía interna en un proceso isostérico en el que se absorben 45.4 cal.</p>
+    <p>Sabemos que $\Delta U = Q - W$. También sabemos que no hay trabajo si no hay cambio de volumen, por lo que la variación en la energía interna coincidirá con el calor. Así, en unidades del SI y sabiendo que: $1 \: \text{cal} \equiv 4.18 \: \text{J}$</p>
+    \[
+    \Delta U = Q = +189.9 \: \text{J}
+    \]
+    <p>Según el criterio utilizado en la actividad que nos ocupa.</p>
     <h2>Ejercicio 8</h2>
     <p id="enunciado">En un proceso isotermo a 25 ºC un gas ideal, que ocupa inicialmente un volumen de 24 L, aumenta su presión de 1 atm a 3.5 atm. Calcular el volumen final que ocupará el gas.</p>
     <p>Para resolver este problema utilizaremos la ley de Boyle-Mariotte. Dicha ley caracteriza los procesos que ocurren con gases ideales a temperatura constante. Su formulación es la siguiente:</p>
@@ -73,6 +130,72 @@
     \]
     Así pues, podemos comparar las presiones y los volúmenes en dos estados <i>1</i> y <i>2</i> de la siguiente manera:
     \[
-    p_1 \cdot V_1 = p_2 \cdot V_2
+    p_1 \cdot V_1 = p_2 \cdot V_2 \tag{3} \label{eq:3}
+    \]
+    <p>Despejamos $V_2$ de la ecuación $\eqref{eq:3}$:</p>
+    \[
+    V_2 = \frac{p_1 \cdot V_1}{p_2}
+    \]
+    Si sustituimos los datos, obtenemos un $V_2$ de:
+    \[
+    V_2 = \frac{1 \: \text{atm} \cdot 24 \: \text{L}}{3.5 \: \text{atm}} \approx 6.86 \: \text{L} \equiv 6.86 \cdot 10^{-3} \: \text{m}^3
+    \]
+    <h2>Ejercicio 9</h2>
+    <p id="enunciado">En una transformación isobárica la temperatura de un gas asciende de 25 °C a 100 °C. Calcular el volumen final del gas si inicialmente su volumen era 4 L.</p>
+    <p>Utilizamos la ley de Charles y Gay-Lusaac para resolver el problema.</p>
+    \[
+    \frac{V_1}{T_1} = \frac{V_2}{T_2} \label{eq:4} \tag{4}
+    \]
+    <p>Si despejamos $V_2$ de $\eqref{eq:4}$ obtenemos el $V_2$ siguiente, sabiendo que para pasar de grados Celsius a Kelvin hemos de sumar 273.15 a las temperaturas, siendo estas de $298.15 \: \mathrm{K}$ y $373.15 \: \mathrm{K}$ respectivamente. Así pues:</p>
+    \[
+    V_2 = \frac{V_1 \cdot T_2}{T_1} = \frac{4 \: \mathrm{L} \cdot 373.15 \: \mathrm{K}}{298.15 \: \mathrm{K}} \approx 5 \: \mathrm{L} \equiv 5 \cdot 10^{-3} \: \text{m}^3
+    \]
+    <h2>Ejercicio 10</h2>
+    <p id="enunciado">Calcular el volumen que ocupa un mol de un gas ideal a la presión atmosférica y a la temperatura ambiente de 25 °C.</p>
+    <p>Tenemos los datos de presión, temperatura y cantidad de sustancia, así que haremos uso de la ecuación de estado de los gases ideales para obtener el volumen.</p>
+    <p>En primer lugar, pasamos los grados Celsius a Kelvin sumando 273.15 y obteniendo un valor de $T = 298.15 K$.</p>
+    \[
+    pV = nRT \label{eq:5} \tag{5}
+    \]
+    <p>Despejando el volumen de $\eqref{eq:5}$ y sabiendo que $R = 0.082 \: \frac{\mathrm{atm} \cdot \mathrm{L}}{\mathrm{mol} \cdot \mathrm{K}}$:</p>
+    \[
+    V = \frac{nRT}{p} = \frac{1 \: \mathrm{mol} \cdot 0.082 \: \frac{\mathrm{atm} \cdot \mathrm{L}}{\mathrm{mol} \cdot \mathrm{K}} \cdot 298.15 \: \mathrm{K}}{1 \: \mathrm{atm}} \approx 24.4 \: \mathrm{L} \equiv 2.44 \cdot 10^{-2} \: \text{m}^3
+    \]
+    <h2>Ejercicio 11</h2>
+    <p id="enunciado">Calcular la variación de energía interna un gas ideal que se expande isotérmicamente a 20 °C, de un volumen inicial de 2 a 3.5 L. Calcular el calor absorbido (en calorías) sabiendo que la presión inicial es de 1 atm.</p>
+    <p>Al ser un proceso isotermo, la variación de energía interna es nula. Por ende, si $\Delta U = 0 \implies Q = W$.</p>
+    <p>El trabajo que tiene lugar en el proceso es igual a:</p>
+    \[
+    W = nRT \cdot \ln{\frac{V_f}{V_o}} \label{eq:6} \tag{6}
+    \]
+    <p>Podemos aplicar en este caso que, según $\eqref{eq:5}$:</p>
+    \[
+    n = \frac{pV}{RT} = \frac{1 \: \text{atm} \cdot 2\: \text{L}}{0.082 \: \frac{\mathrm{atm} \cdot \mathrm{L}}{\mathrm{mol} \cdot \mathrm{K}} \cdot 293.15 \: \mathrm{K}} = 0.083 \: \mathrm{mol}
+    \]
+    <p>Así, reescribimos $\eqref{eq:6}$ en los siguientes términos:</p>
+    \[
+    W = nRT \cdot \ln{\frac{V_f}{V_o}} = 0.083 \: \mathrm{mol} \cdot 1.987 \: \frac{\mathrm{cal}}{\mathrm{mol} \cdot \mathrm{K}} \cdot 293.15 \: \mathrm{K} \cdot \ln\left({\frac{3.5 \: \text{L}}{2 \: \text{L}}}\right) = 27.12 \: \text{cal}
+    \]
+    <p>Por ende, el calor absorbido será de 27.12 calorías.</p>
+    <h2>Ejercicio 12</h2>
+    <p id="enunciado">Comparar la presión de un mol de nitrógeno molecular que ocupa un volumen de 2 L utilizando la ecuación de estado de Van der Waals y la ecuación de estado del gas ideal a la temperatura ambiente de 25 °C. Calcular también la temperatura de Boyle. Datos: a = 1.39 atm(L/mol)<sup>2</sup>, b = 0.0392 L/mol.</p>
+    <h3 style="text-align: center; font-size: larger;">Utilizando la ecuación de estado de gas ideal.</h3>
+    <p>Conocemos dicha ecuación, según hemos escrito en $\eqref{eq:5}$. La aplicamos con las condiciones que tenemos en el problema.</p>
+    \[pV = nRT \tag{5}\]
+    <p>Despejamos la presión, sabiendo que $25 \: º\text{C} \equiv 298.15 \: \text{K}$</p>
+    \[
+    p = \frac{nRT}{V} = \frac{1 \: \mathrm{mol} \cdot 0.082 \: \frac{\mathrm{atm} \cdot \mathrm{L}}{\mathrm{mol} \cdot \mathrm{K}} \cdot 298.15 \: \mathrm{K}}{2 \: \mathrm{L}} \approx 12.2 \: \mathrm{atm} \equiv 1.24 \cdot 10^6 \: \text{Pa}
+    \]
+    <h3 style="text-align: center; font-size: larger;">Utilizando la ecuación de Van der Waals.</h3>
+    <p>Utilizaremos la ecuación siguiente:</p>
+    \[\left(p + \frac{an^2}{V^2}\right) \cdot \left(V - nb\right) = nRT\]
+    <p>Despejamos la presión, sabiendo que $25 \: º\text{C} \equiv 298.15 \: \text{K}$</p>
+    \[
+    p = \frac{nRT}{V - nb} - \frac{an^2}{V^2} = \frac{1 \: \mathrm{mol} \cdot 0.082 \: \frac{\mathrm{atm} \cdot \mathrm{L}}{\mathrm{mol} \cdot \mathrm{K}} \cdot 298.15 \: \mathrm{K}}{2 \: \mathrm{L} - 1 \: \mathrm{mol} \cdot 0.0392 \: \frac{\mathrm{L}}{\mathrm{mol}}}  - \frac{1.39 \: \mathrm{atm} \cdot \left(\frac{\mathrm{L}}{\mathrm{mol}}\right)^2 \cdot \left(1 \: \mathrm{mol}\right)^2}{\left(2 \: \mathrm{L}\right)^2}\approx 12.1 \: \mathrm{atm} \equiv 1.23 \cdot 10^6 \: \text{Pa}
+    \]
+    <h3 style="text-align: center; font-size: larger;">Temperatura de Boyle.</h3>
+    <p>En lo que se refiere a la temperatura de Boyle, la calculamos con la siguiente ecuación:</p>
+    \[
+    T_B = \frac{a}{Rb} = \frac{1.39 \: \mathrm{atm} \cdot \left(\frac{\mathrm{L}}{\mathrm{mol}}\right)^2}{0.082 \: \frac{\mathrm{atm} \cdot \mathrm{L}}{\mathrm{mol} \cdot \mathrm{K}} \cdot 0.0392 \: \frac{\mathrm{L}}{\mathrm{mol}}} = 432.43 \: \text{K}
     \]
 </html>
