@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html  style="font-family: Helvetica, Arial, sans-serif; font-size: large; margin-left: 5%;margin-right: 5%;">
+<html  style="font-family: Helvetica, Arial, sans-serif; font-size: medium; margin-left: 5%;margin-right: 5%;">
 <head>
     <!--<meta charset="utf-8">-->
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -56,9 +56,52 @@
 		tr:hover{
 			background-color: #D6EEEE;
 		}
+		.tooltip {
+			position: relative;
+  			display: inline-block;
+  			border-bottom: 1px dotted black;
+		}
+		.tooltip .tooltiptext {
+  			visibility: hidden;
+  			width: 120px;
+  			background-color: black;
+  			color: #ffffff;
+  			text-align: center;
+  			padding: 5px 0;
+  			border-radius: 6px;
+			position: absolute;
+  			z-index: 1;
+			top: 100%;
+			left: 50%;
+			margin-left: -60px;
+			opacity: 0;
+  			transition: opacity 1s;
+		}
+		.tooltip:hover .tooltiptext {
+  			visibility: visible;
+			opacity: 80%;
+		}
+		.tooltip .tooltiptext::after {
+  			content: " ";
+  			position: absolute;
+  			bottom: 100%;
+  			left: 50%;
+  			margin-left: -5px;
+  			border-width: 5px;
+  			border-style: solid;
+  			border-color: transparent transparent black transparent;
+		}
+
 	</style>
 	<title>Justificación TFG</title>
 </head>
-<h1 style="text-align: center;;">Justificación TFG</h1>
-<p></p>
+<h1 style="text-align: center;">Justificación TFG</h1>
+<p>La etapa de educación primaria conlleva la iniciación en el aprendizaje de los escolares. En las escuelas se imparten una serie de conocimientos y experiencias que permiten que el alumnado acceda a conceptos con un nivel de concreción que irá en aumento sobre todo en cursos superiores.</p>
+<p>Uno de los aspectos clave de la etapa que nos ocupa (dependiente principalmente del profesorado) tiene que ver con la capacidad de transmitir una idea general de la rama de conocimiento trabajada, evitando un innecesario aprendizaje de contenidos conceptuales de 
+<s class="tooltip" style="background-color: lightcoral;">escandalosa dificultad.<span class="tooltiptext" style="font-weight: bold;">¿Podría quedar bien? ¿Quizá es <i>excederse</i>?</span></s>
+<span class="tooltip" style="background-color: lightgreen;">una dificultad superior a la prescrita por el currículo en vigor.<span class="tooltiptext" style="font-weight: bold;">Esto mejor</span></p>
+<p>Esta tarea queda, a veces, tachada de <i>ardua</i> por parte del claustro de profesores, especialmente en las asignaturas de ciencias. Así hay voces que afirman que es imposible que los escolares aprendan ciencias en cursos de Educación Primaria por la imposibilidad de plantear hipótesis, abstraer entidades o manejar variables. Responde este planteamiento a una concepción un tanto simplista de la ciencia: la que entiende que la educación en la ciencia queda reducida a una serie de leyes y teorías obtenidas, como es evidente, al finalizar el <i>método científico</i>.</p>
+<p>Esta idea parte de los planteamientos de 
+<span class="tooltip" style="font-weight: bold; background-color: lightgreen;">Piaget<span class="tooltiptext">Poner referencia detrás</span></span>
+, en los que se especifica que el niño no alcanza estos estadios evolutivos hasta que no tiene 12 o más años, relegando la <i>ciencia</i> para la etapa de <b>Educación Secundaria Obligatoria</b>.</p>
 </html>
