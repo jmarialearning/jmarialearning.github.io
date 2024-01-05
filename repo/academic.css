@@ -1,0 +1,98 @@
+		p,
+		ul,
+		ol {
+			text-align: justify;
+			text-justify: auto;
+		}
+
+		#enunciado {
+			font-size: larger;
+			font-style: italic;
+			text-align: center;
+		}
+		#cita {
+			color: blue;
+			text-decoration: none;
+		}
+		#cita40p {
+			font-family: 'Times New Roman', Times, serif;
+			font-size: medium;
+			font-style: italic;
+			margin-left: 10%;
+		}
+
+		#remark {
+			background-color: rgb(188, 110, 110);
+			font-weight: bold;
+			text-align: center;
+		}
+
+		footer {
+			text-align: center;
+			font-size: larger;
+		}
+		object {
+			width: 90%;
+			height: 800px;
+			max-height: 100%;
+			padding-right: 5%;
+			padding-left: 5%;
+		}
+		table {
+			border: 1px solid black;
+			width: 100%
+		}
+		td,th {
+			border: 1px solid black;
+			text-align: center;
+		}
+		tr:hover{
+			background-color: #D6EEEE;
+		}
+		.tooltip {
+			position: relative;
+  			display: inline-block;
+  			border-bottom: 1px dotted black;
+		}
+		.tooltip .tooltiptext {
+  			visibility: hidden;
+  			width: 120px;
+  			background-color: black;
+  			color: #ffffff;
+  			text-align: center;
+  			padding: 5px 0;
+  			border-radius: 6px;
+			position: absolute;
+  			z-index: 1;
+			top: 100%;
+			left: 50%;
+			margin-left: -60px;
+			opacity: 0;
+  			transition: opacity 1s;
+		}
+		.tooltip:hover .tooltiptext {
+  			visibility: visible;
+			opacity: 80%;
+		}
+		.tooltip .tooltiptext::after {
+  			content: " ";
+  			position: absolute;
+  			bottom: 100%;
+  			left: 50%;
+  			margin-left: -5px;
+  			border-width: 5px;
+  			border-style: solid;
+  			border-color: transparent transparent black transparent;
+		}
+		html {
+			font-family: Helvetica, Arial, sans-serif;
+			font-size: medium;
+			margin-left: 5%;
+			margin-right: 5%;
+		}
+		h1 {
+			text-align: center;
+		}
+		.tooltiptext {
+			font-weight: bold;
+		}
