@@ -46,7 +46,8 @@ Se definen más específicamente, los siguientes objetivos específicos:
 El sujeto destino del presente proyecto es un niño de Segundo Curso de Infantil, con 4 años de edad. El sujeto llega con un diagnóstico realizado por el Equipo de Atención Temprana, en laos siguientes trastornos:
 - Retraso Global del Desarrollo. // Poner los códigos del DSM.
 - Trastorno por Deficit de Atención e Hiperactividad, tipo combinado.
-
+Mediante observación, son notables los rasgos del Trastorno del Espectro Autista que podemos observar, a saber:
+// Comprobar cuánto es TEA, pero, si esto es cierto, especificar bien los rasgos que se ven.
 = Descripción de las actividades realizadas.
 Las actividades que se han realizado con el alumno han sido las que realizó la maestra en clase, pues, a la vista de lo especificado en la @Destinatarios, el alumno no tiene desfase curricular que obligue o justifique la adaptación de material completo. En cualquier caso, sí se realizan ciertas modificaciones al formato general de las actividades _in situ_.
 == Métodos.
