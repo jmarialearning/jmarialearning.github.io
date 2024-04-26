@@ -1,3 +1,8 @@
+#set document(
+  title: ["Memoria de prácticas de mención de Pedagogía Terapéutica"],
+  author: "Jesús María Mora Mur",
+  date: datetime.today(offset: auto)
+)
 #set par(
   justify: true,
   //leading: 1.5em

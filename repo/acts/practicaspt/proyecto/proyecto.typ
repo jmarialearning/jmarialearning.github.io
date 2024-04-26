@@ -1,3 +1,8 @@
+#set document(
+  title: ["Proyecto de prácticas de mención de Pedagogía Terapéutica"],
+  author: "Jesús María Mora Mur",
+  date: datetime.today(offset: auto)
+)
 #set par(justify: true)
 #set text(
   font: "Times New Roman",
