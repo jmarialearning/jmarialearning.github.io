@@ -32,7 +32,7 @@
 #set page(numbering: "1")
 #counter(page).update(1)
 = Planteamiento y justificación de la propuesta a desarrollar.
-La presente propuesta de intervecnión para especialistas de Pedagogía Terapéutica se ha preparado para un sujeto de Segundo Curso de Educación Infantil. 
+La presente propuesta de intervecnión para especialistas de Pedagogía Terapéutica se ha preparado para un sujeto de Segundo Curso de Educación Infantil. El sujeto 
 = Objetivo general y específicos. 
 == Objetivo general.
 Se define como objetivo general el siguiente, en base a las observaciones previas a la intervención que se han realizado y a la anamnesis realizada a las profesionales que han trabajado con el sujeto en el curso escolar:
@@ -67,4 +67,13 @@ Definimos a continuación los objetivos de la sesión:
 - Iniciar el proceso lector mediante asociación de significante y significado.
 - Escribir palabras a partir de un modelo dado.
 == Sesión 3.
+// Máquina mágica de cambio de figuras, color y operaciones.
+/* Fotografiar tarjetas de Innovamat y attrezo general. */
+En esta sesión se ha realizado trabajo del área de matemáticas. En concreto, se han trabajado los contenidos del cambio de color y forma en razonamiento lógico y las sumas y restas con números hasta el 10.
+=== Objetivos.
+- Recordar los nombres de las figuras geométricas: _cuadrado_, _rectángulo_, _círculo_ y _triángulo_.
+- Entender los conceptos de _igual_ y _diferente_.
+- Aplicar patrones de cambio dados, atendiendo a un atributo de figuras geométricas.
+- Resolver sumas y restas con números hasta el 10, con ayuda manipulativa.
+- Adivinar el número sumado a restado a otro, dado el resultado final de la operación.
 
