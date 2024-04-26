@@ -1,4 +1,7 @@
-#set par(justify: true)
+#set par(
+  justify: true,
+  //leading: 1.5em
+)
 #set text(
   font: "Times New Roman",
   size: 12pt,
@@ -11,15 +14,15 @@
 )
 #align(top+center,[
   #image(
-    "img/logoUZ.png",
+    "../img/logoUZ.png",
     width: 80%
   )
 ])
 
 #align(horizon+center, text(20pt, hyphenate: false)[
-  *Proyecto de prácticas de mención de Pedagogía Terapéutica*
+  *Memoria de prácticas de mención de Pedagogía Terapéutica*
 ])
-#align(bottom+right,text(18pt)[
+#align(bottom+right, text(18pt)[
   Jesús María Mora Mur.\
   Curso 2023-2024.\
   Universidad de Zaragoza.\
@@ -28,52 +31,66 @@
   Tutora de la Universidad: Alejandra Aguilar Latorre.
 ])
 #pagebreak()
+#outline(
+  indent:auto
+)
+#pagebreak()
 #set heading(numbering: "1.")
 #set page(numbering: "1")
 #counter(page).update(1)
-= Planteamiento y justificación de la propuesta a desarrollar.
-La presente propuesta de intervecnión para especialistas de Pedagogía Terapéutica se ha preparado para un sujeto de Segundo Curso de Educación Infantil. El sujeto 
-= Objetivo general y específicos. 
-== Objetivo general.
-Se define como objetivo general el siguiente, en base a las observaciones previas a la intervención que se han realizado y a la anamnesis realizada a las profesionales que han trabajado con el sujeto en el curso escolar:
-- Comprender y aprovechar óptimamente las dinámicas propias del aula de Segundo Curso de Educación Infantil.
-== Objetivos específicos.
-Se definen más específicamente, los siguientes objetivos específicos:
-- Comprender la secuencia de tareas propia de la clase habitual. 
-- Diferenciar entre los tiempos de juego y trabajo en el aula ordinaria.
-- Disminuir el número de episodios disruptivos en clase.
-= Destinatarios. <Destinatarios>
-El sujeto destino del presente proyecto es un niño de Segundo Curso de Infantil, con 4 años de edad. El sujeto llega con un diagnóstico realizado por el Equipo de Atención Temprana, en laos siguientes trastornos:
-- Retraso Global del Desarrollo. // Poner los códigos del DSM.
-- Trastorno por Deficit de Atención e Hiperactividad, tipo combinado.
-Mediante observación, son notables los rasgos del Trastorno del Espectro Autista que podemos observar, a saber:
-// Comprobar cuánto es TEA, pero, si esto es cierto, especificar bien los rasgos que se ven.
-= Descripción de las actividades realizadas.
-Las actividades que se han realizado con el alumno han sido las que realizó la maestra en clase, pues, a la vista de lo especificado en la @Destinatarios, el alumno no tiene desfase curricular que obligue o justifique la adaptación de material completo. En cualquier caso, sí se realizan ciertas modificaciones al formato general de las actividades _in situ_.
-== Métodos.
-Se han utilizado las directrices del método TEACCH para trabajar con el niño, las cuales permiten la gestión del entorno y la secuenciaión de la tarea 
-== Sesión 1.
-// Estuve solo. Trabajamos con la rayuela el Innovamat.
-== Sesión 2.
-// Sesión de traabajo de crucigrama Mariposa, mariquita y demás cuestiones.
-En esta sesión se ha trabajado la lectoescritura a partir de la propuesta de proyecto de etapa de #highlight(fill: gradient.linear(..color.map.rainbow))[*Aquí va el nombre del proyecto*]. Se ha realizado un crucigrama de la siguiente forma:
-// Poner aquí una imagen de la ficha del día.
-=== Objetivos. 
-// Habrá que pensar cuáles son los de intervención y cuáles los de la actividad.
-Definimos a continuación los objetivos de la sesión:
-- Iniciar la comprensión de la metodología de trabajo en la intervención.
-- Trazar el nombre y el vocabulario del proyecto correctamente.
-- Reconocer las letras del abecedario.
-- Iniciar el proceso lector mediante asociación de significante y significado.
-- Escribir palabras a partir de un modelo dado.
-== Sesión 3.
-// Máquina mágica de cambio de figuras, color y operaciones.
-/* Fotografiar tarjetas de Innovamat y attrezo general. */
-En esta sesión se ha realizado trabajo del área de matemáticas. En concreto, se han trabajado los contenidos del cambio de color y forma en razonamiento lógico y las sumas y restas con números hasta el 10.
-=== Objetivos.
-- Recordar los nombres de las figuras geométricas: _cuadrado_, _rectángulo_, _círculo_ y _triángulo_.
-- Entender los conceptos de _igual_ y _diferente_.
-- Aplicar patrones de cambio dados, atendiendo a un atributo de figuras geométricas.
-- Resolver sumas y restas con números hasta el 10, con ayuda manipulativa.
-- Adivinar el número sumado a restado a otro, dado el resultado final de la operación.
+= Contextualización del centro.
+Las prácticas escolares se han realizado en el CEIP La Merced. Este centro está situado en Barbastro (Huesca), en la zona alta de la ciudad. Se localiza en la Calle Beato Florentino Asensio, S/N.\
+Pese a que el centro se encuentra en una zona de ampliación de la ciudad y está rodeada de edificios de nueva construcción, hoy, no son muchas las familias jóvenes con niños en edad escolar las que ocupan dichas edificaciones. El centro abarca también a un gran número de población de los cascos más antiguos de la localidad donde el poder adquisitivo de las familias desciende considerablemente.\
+El número total de estudiantes es de 371 (115 en Educación Infantil y 256 en Educación Primaria). El centro tiene un número importante de alumnado extranjero: 25 en Infantil y 53 en Primaria, de 22 nacionalidades distintas. Predomina el alumnado sudamericano y marroquí. Por otro lado, también hay 27 personas de etnia gitana. Esta cuestión es clave en lo que a atención a la diversidad se refiere, pues el alumnado puede presentar dificultades por desconocimiento del idioma, condiciones personales o de historia escolar o incorporación tardía al sistema educativo. De ahí deriva una necesidad de conocer el dato, con el objeto de adelantarse a la manifestación de las necesidades o vigilar especialmente la inclusión plena del alumnado en el centro.\
+Desde el curso 2022/2023 el centro es de Escolarización Preferente para alumnado con Trastorno del Espectro Autista y esto implica cambios a diferentes niveles para crear un clima inclusivo accesible a toda la Comunidad Educativa.\
+Las instalaciones están adaptadas a las actividades escolares del día a día, pero en este momento la heterogeneidad de los grupos-clase hace que sea necesario poner en práctica otros tipos de agrupamientos, como desdobles, apoyos en pequeños grupos, otros espacios para otras áreas como religión Evangélica o adaptar un aula para el trabajo con alumnado TEA. Parece, pues, preciso, que el centro disponga de nuevos espacios, más accesibles y mejor dotados en aras de permitir un aprendizaje significativo, íntegro e inclusivo para todo el alumnado del centro educativo. 
+= Análisis del Plan de Atención a la diversidad.
+== Objetivos.
+- Considerar el proceso de enseñanza-aprendizaje como compensador de las desigualdades socioculturales y personales de cada alumno/a.
+  - Adecuar los recursos humanos, recursos materiales, espacios y tiempos a mitigar o eliminar los efectos negativos de las citadas desigualdades. 
+  - Adecuar aquellos aspectos del currículo que sea preciso: objetivos, contenidos, criterios de evaluación, agrupamientos, metodología, etc.; incluso la flexibilización en el tipo de escolarización o su duración, previa aprobación de la Dirección Provincial. Todo ello dependiendo de las características que pueda presentar el alumnado. 
+  - Desarrollar aptitudes y habilidades que permitan superar deficiencias y desventajas que, por sus características personales u origen sociocultural, se les plantean a determinados grupos de alumnos. 
+- Responder a las necesidades de cada alumno/a desde una educación personalizada. 
+- Priorizar y facilitar la coordinación entre los distintos profesores, la comunidad educativa, los recursos culturales, los recursos sociales y los recursos sanitarios externos al centro.
+  - Potenciar la normalización escolar: regular la asistencia a clase. Evitar el absentismo escolar. 
+  - Mejorar la relación entre las familias y el Centro. Conseguir la integración social. 
+  - Considerar la atención a la diversidad como un proceso continuo e integrado dentro del currículo. Promover conductas que favorezcan la autonomía y la participación, así como la aceptación de la diversidad.  
+  - Conocer claramente, para cada alumno/a, los objetivos y contenidos a adquirir en cada ciclo, así como los criterios de evaluación a aplicar. 
+  - Utilizar la heterogeneidad de recursos educativos para los/as alumnos/as de un mismo nivel
+== Actuaciones de Atención a la Diversidad.
 
+== Recursos para atender a la diversidad.
+En el centro existen los siguientes recursos personales para atender a la diversidad.
+- 1 plaza completa de especialista de Pedagogía Terapéutica.
+- 1 plaza completa de especialista de Audición y Lenguaje.
+- Para el aula de atención preferente al alumnado con Trastorno del Espectro Autista:
+  - 1 plaza completa de Audición y Lenguaje.
+  - 1 plaza parcial de Pedagogía Terapéutica, con una dotación del 92%.
+- 4 auxiliares de Educación Especial.
+Por lo que se refiere a los recursos materiales, el centro cuenta con
+== Atención preferente al alumnado con Trastorno del Espectro Autista.
+
+= Estudio y análisis de la práctica docente del maestro de PT.
+
+== Descripción del aula.
+
+== Alumnado con quien se ha trabajado. 
+Se ha trabajado con el siguiente alumnado en presencia de la tutora de prácticas:
+- Etapa de Educación Infantil.
+  - Segundo curso B: A., alumno con diagnóstico de Retraso Global del Desarrollo (315.8) y Trastorno por Déficit de Atención e Hiperactividad, presentación combinada (314.01).
+  - Segundo curso A: C., alumna con diagnóstico de Retraso Global del Desarrollo (315.8) y Trastorno por Déficit de Atención e Hiperactividad, presentación combinada (314.01).
+- Etapa de Educación Primaria.
+  - Segundo curso: R., J., P. y G.; alumnado con dificultades en lectoescritura. //Falta ID DSM, diagnóstico.
+  - Tercer curso: M., alumno con Discapacidad Intelectual Moderada 
+  - Cuarto curso: F., L. y A., alumnos con NEAE derivadas de condiciones personales y de historia escolar. R. incorporación tardía.
+  - Quinto curso B: A., alumno con ACS en ING y LCL. Dificultades de aprendizaje en la lectoescritura /*Dislexia*/. N. Condiciones personales. ACS LCL, MAT, CN, CS, ENG. //Modificar esto que quede mejor y sin abreviaturas.
+  - Sexto curso B: W. e I., alumnos con NEAE derivadas de condiciones personales y de historia escolar. M., alumno con desconocimiento del idioma.
+Por otro lado, se realizan apoyos generalistas en las clases para todo el alumnado que necesite ayuda en el trabajo educativo cotidiano, al amparo de las Actuaciones Generales de intervención educativa. Especificadas en el artículo segundo, apartado tres de la Orden ECD/913/2023, del 11 de julio, por la que se modifica la Orden ECD/1005/2018, de 7 de junio, por la que se regulan las actuaciones de intervención educativa inclusiva.
+== Funciones llevadas a cabo por la maestra PT.
+La maestra de Pedagogía Terapéutica lleva a cabo diferentes funciones en función del alumnado que trabaja en el aula, adaptándose a las singularidades que presenta cada persona. Son las siguientes funciones las más habituales en el trabajo cotidiano de la maestra:
+- Adaptación de materiales para el trabajo de clase del alumnado.
+- Gestión del entorno de trabajo del alumnado que así lo requiera.
+- Coordinación con los tutores para preparación de material, planes de apoyo y Adaptaciones, si proceden.
+- Coordinación con el EOEIP.
+- Complementación de las actividades realizadas en aula ordinaria, dentro o fuera de la misma.
+== Descripción y observación de las metodologías, recursos y evaluación.

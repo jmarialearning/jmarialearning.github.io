@@ -11,7 +11,7 @@
 )
 #align(top+center,[
   #image(
-    "img/logoUZ.png",
+    "../img/logoUZ.png",
     width: 80%
   )
 ])
@@ -27,6 +27,10 @@
   Tutora del colegio: Silvia Visús Clavero.\
   Tutora de la Universidad: Alejandra Aguilar Latorre.
 ])
+#pagebreak()
+#outline(
+  indent: auto
+)
 #pagebreak()
 #set heading(numbering: "1.")
 #set page(numbering: "1")
