@@ -41,7 +41,7 @@
 #set page(numbering: "1")
 #counter(page).update(1)
 = Planteamiento y justificación de la propuesta a desarrollar.
-La presente propuesta de intervecnión para especialistas de Pedagogía Terapéutica se ha preparado para un sujeto de Segundo Curso de Educación Infantil. El sujeto 
+La presente propuesta de intervención para especialistas de Pedagogía Terapéutica se ha preparado para un sujeto de Segundo Curso de Educación Infantil. El sujeto 
 = Objetivo general y específicos. 
 == Objetivo general.
 Se define como objetivo general el siguiente, en base a las observaciones previas a la intervención que se han realizado y a la anamnesis realizada a las profesionales que han trabajado con el sujeto en el curso escolar:
@@ -60,11 +60,11 @@ Mediante observación, son notables los rasgos del Trastorno del Espectro Autist
 = Descripción de las actividades realizadas.
 Las actividades que se han realizado con el alumno han sido las que realizó la maestra en clase, pues, a la vista de lo especificado en la @Destinatarios, el alumno no tiene desfase curricular que obligue o justifique la adaptación de material completo. En cualquier caso, sí se realizan ciertas modificaciones al formato general de las actividades _in situ_.
 == Métodos.
-Se han utilizado las directrices del método TEACCH para trabajar con el niño, las cuales permiten la gestión del entorno y la secuenciaión de la tarea 
+Se han utilizado las directrices del método TEACCH para trabajar con el niño, las cuales permiten la gestión del entorno y la secuenciación de la tarea 
 == Sesión 1.
 // Estuve solo. Trabajamos con la rayuela el Innovamat.
 == Sesión 2.
-// Sesión de traabajo de crucigrama Mariposa, mariquita y demás cuestiones.
+// Sesión de trabajo de crucigrama Mariposa, mariquita y demás cuestiones.
 En esta sesión se ha trabajado la lectoescritura a partir de la propuesta de proyecto de etapa de #highlight(fill: gradient.linear(..color.map.rainbow))[*Aquí va el nombre del proyecto*]. Se ha realizado un crucigrama de la siguiente forma:
 // Poner aquí una imagen de la ficha del día.
 === Objetivos. 

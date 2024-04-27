@@ -72,7 +72,15 @@ En el centro existen los siguientes recursos personales para atender a la divers
   - 1 plaza completa de Audición y Lenguaje.
   - 1 plaza parcial de Pedagogía Terapéutica, con una dotación del 92%.
 - 4 auxiliares de Educación Especial.
-Por lo que se refiere a los recursos materiales, el centro cuenta con
+Por lo que se refiere a los recursos materiales, el centro cuenta con un Aula de atención preferente a alumnado con trastorno del espectro autista en la que destacan los siguientes recursos:
+- *Rincón de la calma*, donde el alumnado puede relajarse. Hay colchonetas que evitan que el alumnado pueda hacerse daño. Además hay un _tipi_ y cojines, que están libres por completo.
+- *Rincón de la lógica*, donde hay diversos juegos que permiten el trabajo de la competencia lógico-matemática y las habilidades STEAM.
+- *Área de trabajo*, lugar donde se trabaja y se realiza la secuencia de tareas del día.
+- *Mesa sensorial*, donde el alumnado puede explorar con diversas _cajas sensoriales_.
+- *Botellas de la calma*, con diferentes patrones, que permiten calmar al alumnado que así lo requiere mediante estímulos visuales.
+- *Relojes de arena o fluidos viscosos*, que permiten al alumnado con trastorno del espectro autista visualizar de una forma rápida y e independiente del nivel educativo el paso del tiempo.
+- *Secuenciación del trabajo*, mediante _método TEACCH_ y/o _agendas visuales_.
+En lo referido a los recursos didácticos
 == Atención preferente al alumnado con Trastorno del Espectro Autista.
 
 = Estudio y análisis de la práctica docente del maestro de PT.
