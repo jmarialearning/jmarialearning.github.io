@@ -97,7 +97,7 @@ Se ha trabajado con el siguiente alumnado en presencia de la tutora de práctica
   - Tercer curso: M., alumno con Discapacidad Intelectual Moderada 
   - Cuarto curso: F., L. y A., alumnos con NEAE derivadas de condiciones personales y de historia escolar. R. incorporación tardía.
   - Quinto curso B: A., alumno con ACS en ING y LCL. Dificultades de aprendizaje en la lectoescritura /*Dislexia*/. N. Condiciones personales. ACS LCL, MAT, CN, CS, ENG. //Modificar esto que quede mejor y sin abreviaturas.
-  - Sexto curso B: W. e I., alumnos con NEAE derivadas de condiciones personales y de historia escolar. M., alumno con desconocimiento del idioma.
+  - Sexto curso B: W. e I., alumnos con NEAE derivadas de condiciones personales y de historia escolar. M. y D., alumnado con desconocimiento del idioma.
 Por otro lado, se realizan apoyos generalistas en las clases para todo el alumnado que necesite ayuda en el trabajo educativo cotidiano, al amparo de las Actuaciones Generales de intervención educativa. Especificadas en el artículo segundo, apartado tres de la Orden ECD/913/2023, del 11 de julio, por la que se modifica la Orden ECD/1005/2018, de 7 de junio, por la que se regulan las actuaciones de intervención educativa inclusiva.
 == Funciones llevadas a cabo por la maestra PT.
 La maestra de Pedagogía Terapéutica lleva a cabo diferentes funciones en función del alumnado que trabaja en el aula, adaptándose a las singularidades que presenta cada persona. Son las siguientes funciones las más habituales en el trabajo cotidiano de la maestra:
