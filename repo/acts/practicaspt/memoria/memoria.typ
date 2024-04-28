@@ -67,7 +67,7 @@ Las instalaciones están adaptadas a las actividades escolares del día a día, 
   - Conocer claramente, para cada alumno/a, los objetivos y contenidos a adquirir en cada ciclo, así como los criterios de evaluación a aplicar. 
   - Utilizar la heterogeneidad de recursos educativos para los/as alumnos/as de un mismo nivel
 == Actuaciones de Atención a la Diversidad.
-
+// Esto lo pondremos cuando tengamos el nuevo PAD, total, es lo mismo.
 == Recursos para atender a la diversidad.
 En el centro existen los siguientes recursos personales para atender a la diversidad.
 - 1 plaza completa de especialista de Pedagogía Terapéutica.
@@ -90,7 +90,7 @@ En lo referido a los recursos didácticos
 = Estudio y análisis de la práctica docente del maestro de PT.
 
 == Descripción del aula.
-El aula en la que se ha trabajado es pequeña, como es habitual en un despacho de especialista de Pedagogía Terapéutica. Esto ocurre así por la cantidad de alumnado que, simultáneamente puede haber en ese despacho. El número máximo de alumnado con que se trabaja a la vez es de tres alumnos. Por ende, la clase está bien dotada en términos de superficie y cumple sobradamente con las directrices establecidas por @neufert_arte_1936.
+El aula en la que se ha trabajado es pequeña, como es habitual en un despacho de especialista de Pedagogía Terapéutica. Esto ocurre así por la cantidad de alumnado que, simultáneamente puede haber en ese despacho. El número máximo de alumnado con que se trabaja a la vez es de tres alumnos. Por ende, la clase está bien dotada en términos de superficie y cumple sobradamente con las directrices establecidas por #cite(<neufert_arte_1936>,form: "prose").
 
 En el aula podemos ver en la parte derecha según entramos una pizarra de tiza y diferentes paneles de porexpán que permiten a la maestra colgar diferentes elementos visuales que son de ayuda en diferentes áreas curriculares. Además, en la pizarra, se pueden explicar los conceptos a todo el alumnado a la vez, lo cual permite una mayor eficiencia en el proceso de enseñanza-aprendizaje.
 
@@ -106,9 +106,9 @@ Se ha trabajado con el siguiente alumnado en presencia de la tutora de práctica
   - Segundo curso A: C., alumna con diagnóstico de Retraso Global del Desarrollo (315.8) y Trastorno por Déficit de Atención e Hiperactividad, presentación combinada (314.01).
 - Etapa de Educación Primaria.
   - Segundo curso: R., J., P. y G.; alumnado con dificultades en lectoescritura. //Falta ID DSM, diagnóstico.
-  - Tercer curso: M., alumno con Discapacidad Intelectual Moderada 
+  - Tercer curso: M., alumno con Discapacidad Intelectual Moderada (318.0)
   - Cuarto curso: F., L. y A., alumnos con NEAE derivadas de condiciones personales y de historia escolar. R. incorporación tardía.
-  - Quinto curso B: A., alumno con ACS en ING y LCL. Dificultades de aprendizaje en la lectoescritura /*Dislexia*/. N. Condiciones personales. ACS LCL, MAT, CN, CS, ENG. //Modificar esto que quede mejor y sin abreviaturas.
+  - Quinto curso B: A., alumno con ACS en ING y LCL. Dificultades de aprendizaje en la lectoescritura (315.00). N. Condiciones personales. ACS LCL, MAT, CN, CS, ENG. //Modificar esto que quede mejor y sin abreviaturas.
   - Sexto curso B: W. e I., alumnos con NEAE derivadas de condiciones personales y de historia escolar. M. y D., alumnado con desconocimiento del idioma.
 Por otro lado, se realizan apoyos generalistas en las clases para todo el alumnado que necesite ayuda en el trabajo educativo cotidiano, al amparo de las Actuaciones Generales de intervención educativa. Especificadas en el artículo segundo, apartado tres de la Orden ECD/913/2023, del 11 de julio, por la que se modifica la Orden ECD/1005/2018, de 7 de junio, por la que se regulan las actuaciones de intervención educativa inclusiva.
 == Funciones llevadas a cabo por la maestra PT.
