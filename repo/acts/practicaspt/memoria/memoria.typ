@@ -44,10 +44,14 @@
 #set page(numbering: "1")
 #counter(page).update(1)
 = Contextualización del centro.
-Las prácticas escolares se han realizado en el CEIP La Merced. Este centro está situado en Barbastro (Huesca), en la zona alta de la ciudad. Se localiza en la Calle Beato Florentino Asensio, S/N.\
-Pese a que el centro se encuentra en una zona de ampliación de la ciudad y está rodeada de edificios de nueva construcción, hoy, no son muchas las familias jóvenes con niños en edad escolar las que ocupan dichas edificaciones. El centro abarca también a un gran número de población de los cascos más antiguos de la localidad donde el poder adquisitivo de las familias desciende considerablemente.\
-El número total de estudiantes es de 371 (115 en Educación Infantil y 256 en Educación Primaria). El centro tiene un número importante de alumnado extranjero: 25 en Infantil y 53 en Primaria, de 22 nacionalidades distintas. Predomina el alumnado sudamericano y marroquí. Por otro lado, también hay 27 personas de etnia gitana. Esta cuestión es clave en lo que a atención a la diversidad se refiere, pues el alumnado puede presentar dificultades por desconocimiento del idioma, condiciones personales o de historia escolar o incorporación tardía al sistema educativo. De ahí deriva una necesidad de conocer el dato, con el objeto de adelantarse a la manifestación de las necesidades o vigilar especialmente la inclusión plena del alumnado en el centro.\
-Desde el curso 2022/2023 el centro es de Escolarización Preferente para alumnado con Trastorno del Espectro Autista y esto implica cambios a diferentes niveles para crear un clima inclusivo accesible a toda la Comunidad Educativa.\
+Las prácticas escolares se han realizado en el CEIP La Merced. Este centro está situado en Barbastro (Huesca), en la zona alta de la ciudad. Se localiza en la Calle Beato Florentino Asensio, S/N.
+
+Pese a que el centro se encuentra en una zona de ampliación de la ciudad y está rodeada de edificios de nueva construcción, hoy, no son muchas las familias jóvenes con niños en edad escolar las que ocupan dichas edificaciones. El centro abarca también a un gran número de población de los cascos más antiguos de la localidad donde el poder adquisitivo de las familias desciende considerablemente.
+
+El número total de estudiantes es de 371 (115 en Educación Infantil y 256 en Educación Primaria). El centro tiene un número importante de alumnado extranjero: 25 en Infantil y 53 en Primaria, de 22 nacionalidades distintas. Predomina el alumnado sudamericano y marroquí. Por otro lado, también hay 27 personas de etnia gitana. Esta cuestión es clave en lo que a atención a la diversidad se refiere, pues el alumnado puede presentar dificultades por desconocimiento del idioma, condiciones personales o de historia escolar o incorporación tardía al sistema educativo. De ahí deriva una necesidad de conocer el dato, con el objeto de adelantarse a la manifestación de las necesidades o vigilar especialmente la inclusión plena del alumnado en el centro.
+
+Desde el curso 2022/2023 el centro es de Escolarización Preferente para alumnado con Trastorno del Espectro Autista y esto implica cambios a diferentes niveles para crear un clima inclusivo accesible a toda la Comunidad Educativa.
+
 Las instalaciones están adaptadas a las actividades escolares del día a día, pero en este momento la heterogeneidad de los grupos-clase hace que sea necesario poner en práctica otros tipos de agrupamientos, como desdobles, apoyos en pequeños grupos, otros espacios para otras áreas como religión Evangélica o adaptar un aula para el trabajo con alumnado TEA. Parece, pues, preciso, que el centro disponga de nuevos espacios, más accesibles y mejor dotados en aras de permitir un aprendizaje significativo, íntegro e inclusivo para todo el alumnado del centro educativo. 
 = Análisis del Plan de Atención a la diversidad.
 == Objetivos.
@@ -86,7 +90,15 @@ En lo referido a los recursos didácticos
 = Estudio y análisis de la práctica docente del maestro de PT.
 
 == Descripción del aula.
+El aula en la que se ha trabajado es pequeña, como es habitual en un despacho de especialista de Pedagogía Terapéutica. Esto ocurre así por la cantidad de alumnado que, simultáneamente puede haber en ese despacho. El número máximo de alumnado con que se trabaja a la vez es de tres alumnos. Por ende, la clase está bien dotada en términos de superficie y cumple sobradamente con las directrices establecidas por @neufert_arte_1936.
 
+En el aula podemos ver en la parte derecha según entramos una pizarra de tiza y diferentes paneles de porexpán que permiten a la maestra colgar diferentes elementos visuales que son de ayuda en diferentes áreas curriculares. Además, en la pizarra, se pueden explicar los conceptos a todo el alumnado a la vez, lo cual permite una mayor eficiencia en el proceso de enseñanza-aprendizaje.
+
+Por otro lado, tenemos en la otra parte del aula varios armarios en los que la maestra guarda diferentes materiales de uso habitual para el trabajo con el alumnado con necesidades. En concreto, podemos nombrar diferentes juegos lógicos o un juego para introducir vocabulario por bloques temáticos a personas con desconocimiento del idioma español.
+
+En el fondo de la estancia vemos dos ordenadores. Uno es para el uso personal de la docente y otro está preparado para poder trabajar contenidos con el alumnado. Cabe destacar que los dos equipos están bastante anticuados en lo que a prestaciones y actualizaciones de seguridad se refiere. Esto podría suponer un problema de seguridad que se vería resuelto en parte por la seguridad física de los archivos confidenciales del colegio, lo cual los hace invulnerables a un ataque informático siempre que se siga esa directriz. En cualquier caso, merecen una actualización para brindar una experiencia acorde a los tiempos en que vivimos y a lo requerido por las administraciones públicas. 
+
+La estancia está dividia por una puerta tipo acordeón con el cuarto de material, pero la separación de las dos estancias es total, siendo imposible abrir dicha puerta.
 == Alumnado con quien se ha trabajado. 
 Se ha trabajado con el siguiente alumnado en presencia de la tutora de prácticas:
 - Etapa de Educación Infantil.
@@ -107,3 +119,8 @@ La maestra de Pedagogía Terapéutica lleva a cabo diferentes funciones en funci
 - Coordinación con el EOEIP.
 - Complementación de las actividades realizadas en aula ordinaria, dentro o fuera de la misma.
 == Descripción y observación de las metodologías, recursos y evaluación.
+
+#bibliography(
+  "fuentes.bib",
+  style: "american-psychological-association"
+)
