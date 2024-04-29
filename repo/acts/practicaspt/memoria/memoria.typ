@@ -90,7 +90,6 @@ En lo referido a los recursos didácticos
 == Atención preferente al alumnado con Trastorno del Espectro Autista.
 
 = Estudio y análisis de la práctica docente del maestro de PT.
-
 == Descripción del aula.
 El aula en la que se ha trabajado es pequeña, como es habitual en un despacho de especialista de Pedagogía Terapéutica. Esto ocurre así por la cantidad de alumnado que, simultáneamente puede haber en ese despacho. El número máximo de alumnado con que se trabaja a la vez es de tres alumnos. Por ende, la clase está bien dotada en términos de superficie y cumple sobradamente con las directrices establecidas por #cite(<neufert_arte_1936>,form: "prose").
 
@@ -126,6 +125,8 @@ La maestra PT tiene, desde luego, una diversidad más que importante en clase. P
 Se busca siempre trabajar evitando gritar o permitiendo la expresión del alumnado. Sin embargo, es preciso que el alumnado entienda que en un centro educativo debe haber unos límites en cuestiones de convivencia, en base a lo estipulado en el Reglamento de Régimen Interior.
 
 Para guiar al alumnado la maestra utiliza la dinámica de _preguntas para la reflexión_ e _inducción_. De esta manera, se busca que el alumnado conteste autónomamente, con ayuda del profesor. De hecho, ahí radica nuestra función: guiar al alumnado para que, de forma autónoma, o, en su defecto, con poca ayuda, puedan obtener el resultado exitoso.
+
+Por otro lado es también habitual debatir y acordar con el alumnado, sobre todo si la motivación es escasa, premios o recompensas si realizan correctamente la tarea. Estamos, sin embargo, ante un problema, en tanto en cuanto podemos entrar en una dinámica de chantajes mutuos en la que no se produzca el aprendizaje. La maestra domina los tiempos y requerimientos de forma óptima, evitando tan indeseadas situaciones. 
 #bibliography(
   "fuentes.bib",
   style: "american-psychological-association"
