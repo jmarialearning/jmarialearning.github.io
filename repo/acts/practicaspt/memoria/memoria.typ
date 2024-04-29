@@ -84,6 +84,8 @@ Por lo que se refiere a los recursos materiales, el centro cuenta con un Aula de
 - *Botellas de la calma*, con diferentes patrones, que permiten calmar al alumnado que así lo requiere mediante estímulos visuales.
 - *Relojes de arena o fluidos viscosos*, que permiten al alumnado con trastorno del espectro autista visualizar de una forma rápida y e independiente del nivel educativo el paso del tiempo.
 - *Secuenciación del trabajo*, mediante _método TEACCH_ y/o _agendas visuales_.
+
+Se especifican estas cuestiones por ser las más relevantes. Sin embargo, hay múltiples materiales más para otro tipo de personas con diferentes necesidades.
 En lo referido a los recursos didácticos
 == Atención preferente al alumnado con Trastorno del Espectro Autista.
 
