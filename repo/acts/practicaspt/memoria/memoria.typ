@@ -105,7 +105,7 @@ Se ha trabajado con el siguiente alumnado en presencia de la tutora de práctica
   - Segundo curso B: A., alumno con diagnóstico de Retraso Global del Desarrollo (315.8) y Trastorno por Déficit de Atención e Hiperactividad, presentación combinada (314.01).
   - Segundo curso A: C., alumna con diagnóstico de Retraso Global del Desarrollo (315.8) y Trastorno por Déficit de Atención e Hiperactividad, presentación combinada (314.01).
 - Etapa de Educación Primaria.
-  - Segundo curso: R., J., P. y G.; alumnado con dificultades en lectoescritura. //Falta ID DSM, diagnóstico.
+  - Segundo curso: R., J., P. y G.; alumnado con dificultades en lectoescritura. (315.00 y 315.2) //Faltan especificadores. 
   - Tercer curso: M., alumno con Discapacidad Intelectual Moderada (318.0)
   - Cuarto curso: F., L. y A., alumnos con NEAE derivadas de condiciones personales y de historia escolar. R. incorporación tardía.
   - Quinto curso B: A., alumno con ACS en ING y LCL. Dificultades de aprendizaje en la lectoescritura (315.00). N. Condiciones personales. ACS LCL, MAT, CN, CS, ENG. //Modificar esto que quede mejor y sin abreviaturas.
@@ -119,7 +119,11 @@ La maestra de Pedagogía Terapéutica lleva a cabo diferentes funciones en funci
 - Coordinación con el EOEIP.
 - Complementación de las actividades realizadas en aula ordinaria, dentro o fuera de la misma.
 == Descripción y observación de las metodologías, recursos y evaluación.
+La maestra PT tiene, desde luego, una diversidad más que importante en clase. Por ende, las metodologías son variopintas y, como es evidente, diametralmente opuestas en función del alumnado que trabaja en cada momento.
 
+Se busca siempre trabajar evitando gritar o permitiendo la expresión del alumnado. Sin embargo, es preciso que el alumnado entienda que en un centro educativo debe haber unos límites en cuestiones de convivencia, en base a lo estipulado en el Reglamento de Régimen Interior.
+
+Para guiar al alumnado la maestra utiliza la dinámica de _preguntas para la reflexión_ e _inducción_. De esta manera, se busca que el alumnado conteste autónomamente, con ayuda del profesor. De hecho, ahí radica nuestra función: guiar al alumnado para que, de forma autónoma, o, en su defecto, con poca ayuda, puedan obtener el resultado exitoso.
 #bibliography(
   "fuentes.bib",
   style: "american-psychological-association"
