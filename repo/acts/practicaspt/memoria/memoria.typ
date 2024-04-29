@@ -86,7 +86,8 @@ Por lo que se refiere a los recursos materiales, el centro cuenta con un Aula de
 - *Secuenciación del trabajo*, mediante _método TEACCH_ y/o _agendas visuales_.
 
 Se especifican estas cuestiones por ser las más relevantes. Sin embargo, hay múltiples materiales más para otro tipo de personas con diferentes necesidades.
-En lo referido a los recursos didácticos
+
+En lo referido a los recursos didácticos, es bien conocida la necesidad de las maestras y maestros especialistas en Atención a la Diversidad de formarse continuamente para propiciar que la atención al alumnado con Trastorno del Espectro Autista sea
 == Atención preferente al alumnado con Trastorno del Espectro Autista.
 
 = Estudio y análisis de la práctica docente del maestro de PT.
@@ -109,7 +110,7 @@ Se ha trabajado con el siguiente alumnado en presencia de la tutora de práctica
   - Segundo curso: R., J., P. y G.; alumnado con dificultades en lectoescritura. (315.00 y 315.2) //Faltan especificadores. 
   - Tercer curso: M., alumno con Discapacidad Intelectual Moderada (318.0)
   - Cuarto curso: F., L. y A., alumnos con NEAE derivadas de condiciones personales y de historia escolar. R. incorporación tardía.
-  - Quinto curso B: A., alumno con ACS en ING y LCL. Dificultades de aprendizaje en la lectoescritura (315.00). N. Condiciones personales. ACS LCL, MAT, CN, CS, ENG. //Modificar esto que quede mejor y sin abreviaturas.
+  - Quinto curso B: A., alumno con dificultades de aprendizaje en la lectoescritura (315.00). N., alumno con NEAE por condiciones personales y de historia escolar. //Modificar esto que quede mejor y sin abreviaturas.
   - Sexto curso B: W. e I., alumnos con NEAE derivadas de condiciones personales y de historia escolar. M. y D., alumnado con desconocimiento del idioma.
 Por otro lado, se realizan apoyos generalistas en las clases para todo el alumnado que necesite ayuda en el trabajo educativo cotidiano, al amparo de las Actuaciones Generales de intervención educativa. Especificadas en el artículo segundo, apartado tres de la Orden ECD/913/2023, del 11 de julio, por la que se modifica la Orden ECD/1005/2018, de 7 de junio, por la que se regulan las actuaciones de intervención educativa inclusiva.
 == Funciones llevadas a cabo por la maestra PT.
