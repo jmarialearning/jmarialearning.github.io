@@ -89,7 +89,7 @@ Se especifican estas cuestiones por ser las más relevantes. Sin embargo, hay m�
 
 En lo referido a los recursos didácticos, es bien conocida la necesidad de las maestras y maestros especialistas en Atención a la Diversidad de formarse continuamente para propiciar que la atención al alumnado con Trastorno del Espectro Autista sea
 == Atención preferente al alumnado con Trastorno del Espectro Autista.
-
+El alumnado con Trastorno del Espectro Autista cuenta con diferentes recursos para que se pueda gestionar su aprendizaje de forma correcta
 = Estudio y análisis de la práctica docente del maestro de PT.
 == Descripción del aula.
 El aula en la que se ha trabajado es pequeña, como es habitual en un despacho de especialista de Pedagogía Terapéutica. Esto ocurre así por la cantidad de alumnado que, simultáneamente puede haber en ese despacho. El número máximo de alumnado con que se trabaja a la vez es de tres alumnos. Por ende, la clase está bien dotada en términos de superficie y cumple sobradamente con las directrices establecidas por #cite(<neufert_arte_1936>,form: "prose").
