@@ -112,7 +112,7 @@ Se ha trabajado con el siguiente alumnado en presencia de la tutora de práctica
   - Segundo curso B: A., alumno con diagnóstico de Retraso Global del Desarrollo (315.8) y Trastorno por Déficit de Atención e Hiperactividad, presentación combinada (314.01).
   - Segundo curso A: C., alumna con diagnóstico de Retraso Global del Desarrollo (315.8) y Trastorno por Déficit de Atención e Hiperactividad, presentación combinada (314.01).
 - Etapa de Educación Primaria.
-  - Segundo curso: R., J., P. y G.; alumnado con dificultades en lectoescritura. (315.00 y 315.2) //Faltan especificadores. 
+  - Segundo curso: R., J., P. y G.; alumnado con dificultades en lectoescritura. (315.00 y 315.2)
   - Tercer curso: M., alumno con Discapacidad Intelectual Moderada (318.0)
   - Cuarto curso: F., L. y A., alumnos con NEAE derivadas de condiciones personales y de historia escolar. R. incorporación tardía.
   - Quinto curso B: A., alumno con dificultades de aprendizaje en la lectoescritura (315.00). N., alumno con NEAE por condiciones personales y de historia escolar. //Modificar esto que quede mejor y sin abreviaturas.
