@@ -85,7 +85,12 @@ Por lo que se refiere a los recursos materiales, el centro cuenta con un Aula de
 - *Relojes de arena o fluidos viscosos*, que permiten al alumnado con trastorno del espectro autista visualizar de una forma rápida y e independiente del nivel educativo el paso del tiempo.
 - *Secuenciación del trabajo*, mediante _método TEACCH_ y/o _agendas visuales_.
 
-Se especifican estas cuestiones por ser las más relevantes. Sin embargo, hay múltiples materiales más para otro tipo de personas con diferentes necesidades.
+Se especifican estas cuestiones por ser las más relevantes. Sin embargo, hay múltiples materiales más para otro tipo de personas con diferentes necesidades. Entre ellos destacamos los siguientes:
+
+- *Materiales para idioma español*, de la editorial _GEU_, especializada en materiales para atención a la diversidad.
+- *Cuadernillos de lectoescritura*, para trabajar la lectura y la grafía de letras. El material es antiguo pero funcional con una adaptación del vocabulario.
+- *Juegos de logica*, que permiten al alumnado ejercitar el razonamiento lógico.
+- *Juegos de memoria visual*, entre los que destacan el _memory_ o el _LINCE_. Permiten trabajar la atención a través del canal visual y la memoria de trabajo así como los conceptos de _igual_ y _diferente_.
 
 En lo referido a los recursos didácticos, es bien conocida la necesidad de las maestras y maestros especialistas en Atención a la Diversidad de formarse continuamente para propiciar que la atención al alumnado con Trastorno del Espectro Autista sea
 == Atención preferente al alumnado con Trastorno del Espectro Autista.
