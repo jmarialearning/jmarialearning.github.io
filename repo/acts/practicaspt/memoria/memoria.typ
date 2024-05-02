@@ -128,12 +128,13 @@ La maestra de Pedagogía Terapéutica lleva a cabo diferentes funciones en funci
 == Descripción y observación de las metodologías, recursos y evaluación.
 La maestra PT tiene, desde luego, una diversidad más que importante en clase. Por ende, las metodologías son variopintas y, como es evidente, diametralmente opuestas en función del alumnado que trabaja en cada momento.
 
-Se busca siempre trabajar evitando gritar o permitiendo la expresión del alumnado. Sin embargo, es preciso que el alumnado entienda que en un centro educativo debe haber unos límites en cuestiones de convivencia, en base a lo estipulado en el Reglamento de Régimen Interior.
+Se busca siempre trabajar evitando gritar o permitiendo la expresión del alumnado. Sin embargo, es preciso que el alumnado entienda que en un centro educativo debe haber unos límites en cuestiones de convivencia, en base a lo estipulado en el Reglamento de Régimen Interior. Se mantienen esos límites siempre, imperando siempre dicho documento redactado en base al Decreto 73/2011 de 22 de marzo, del Gobierno de Aragón, por el que se establece la Carta de derechos y deberes de los miembros de la comunidad educativa y las bases de las normas de convivencia en los centros educativos no universitarios de la Comunidad Autónoma de Aragón.
 
 Para guiar al alumnado la maestra utiliza la dinámica de _preguntas para la reflexión_ e _inducción_. De esta manera, se busca que el alumnado conteste autónomamente, con ayuda del profesor. De hecho, ahí radica nuestra función: guiar al alumnado para que, de forma autónoma, o, en su defecto, con poca ayuda, puedan obtener el resultado exitoso.
 
 Por otro lado es también habitual debatir y acordar con el alumnado, sobre todo si la motivación es escasa, premios o recompensas si realizan correctamente la tarea. Estamos, sin embargo, ante un problema, en tanto en cuanto podemos entrar en una dinámica de chantajes mutuos en la que no se produzca el aprendizaje. La maestra domina los tiempos y requerimientos de forma óptima, evitando tan indeseadas situaciones. 
 #bibliography(
   "fuentes.bib",
+  title: "4. Referencias",
   style: "american-psychological-association"
 )
