@@ -92,7 +92,7 @@ Se especifican estas cuestiones por ser las más relevantes. Sin embargo, hay m�
 - *Juegos de logica*, que permiten al alumnado ejercitar el razonamiento lógico.
 - *Juegos de memoria visual*, entre los que destacan el _memory_ o el _LINCE_. Permiten trabajar la atención a través del canal visual y la memoria de trabajo así como los conceptos de _igual_ y _diferente_.
 
-En lo referido a los recursos didácticos, es bien conocida la necesidad de las maestras y maestros especialistas en Atención a la Diversidad de formarse continuamente para propiciar que la atención al alumnado con Trastorno del Espectro Autista sea
+En lo referido a los recursos didácticos, es bien conocida la necesidad de las maestras y maestros especialistas en Atención a la Diversidad de formarse continuamente para propiciar que la atención al alumnado con Trastorno del Espectro Autista sea acorde a sus necesidades. Por ende, se utilizan todos los materiales listados arriba, siguiendo secuencias tipo TEACCH con los niños para propiciar su correcta gestión de los tiempos de trabajo. 
 == Atención preferente al alumnado con Trastorno del Espectro Autista.
 El alumnado con Trastorno del Espectro Autista cuenta con diferentes recursos para que se pueda gestionar su aprendizaje de forma correcta
 = Estudio y análisis de la práctica docente del maestro de PT.

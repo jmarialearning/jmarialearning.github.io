@@ -66,7 +66,7 @@ Se han utilizado las directrices del método TEACCH para trabajar con el niño, 
 // Estuve solo. Trabajamos con la rayuela el Innovamat.
 == Sesión 2.
 // Sesión de trabajo de crucigrama Mariposa, mariquita y demás cuestiones.
-En esta sesión se ha trabajado la lectoescritura a partir de la propuesta de proyecto de etapa de #highlight(fill: gradient.linear(..color.map.rainbow))[*Aquí va el nombre del proyecto*]. Se ha realizado un crucigrama de la siguiente forma:
+En esta sesión se ha trabajado la lectoescritura a partir de la propuesta de proyecto de etapa llamado _*Volar*_. Se ha realizado un crucigrama de la siguiente forma:
 // Poner aquí una imagen de la ficha del día.
 === Objetivos. 
 // Habrá que pensar cuáles son los de intervención y cuáles los de la actividad.
@@ -86,4 +86,14 @@ En esta sesión se ha realizado trabajo del área de matemáticas. En concreto, 
 - Aplicar patrones de cambio dados, atendiendo a un atributo de figuras geométricas.
 - Resolver sumas y restas con números hasta el 10, con ayuda manipulativa.
 - Adivinar el número sumado a restado a otro, dado el resultado final de la operación.
-
+== Sesión 4.
+// Aeródromo de Berbegal. Ctra...
+=== Objetivos.
+- Conocer las partes de una dirección postal.
+- Trazar las letras a partir de un modelo dado.
+== Sesión 5.
+// Prismas y no prismas.
+=== Objetivos.
+- Recordar los nombres de los cuerpos geométricos: _prismas_, _pirámides_, _cilindros_, _conos_ y _esferas_.
+- Entender los conceptos de _igual_ y _diferente_.
+- Clasificar atendiendo a los atributos relevantes de los cuerpos.
