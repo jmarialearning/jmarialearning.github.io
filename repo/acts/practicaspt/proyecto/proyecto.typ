@@ -4,6 +4,7 @@
   date: datetime.today(offset: auto)
 )
 #set par(justify: true)
+#show figure.caption: emph
 #set text(
   font: "Times New Roman",
   size: 12pt,
@@ -67,7 +68,14 @@ Se han utilizado las directrices del método TEACCH para trabajar con el niño, 
 == Sesión 2.
 // Sesión de trabajo de crucigrama Mariposa, mariquita y demás cuestiones.
 En esta sesión se ha trabajado la lectoescritura a partir de la propuesta de proyecto de etapa llamado _*Volar*_. Se ha realizado un crucigrama de la siguiente forma:
-// Poner aquí una imagen de la ficha del día.
+#figure(
+  image(
+    "img/sesion2.jpg",
+    width: 90%,
+    format: "jpg"
+  ),
+  caption: [Trabajo del alumno durante la sesión.],
+)
 === Objetivos. 
 // Habrá que pensar cuáles son los de intervención y cuáles los de la actividad.
 Definimos a continuación los objetivos de la sesión:
