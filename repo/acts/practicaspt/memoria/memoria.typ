@@ -68,6 +68,23 @@ Las instalaciones están adaptadas a las actividades escolares del día a día, 
   - Utilizar la heterogeneidad de recursos educativos para los/as alumnos/as de un mismo nivel
 == Actuaciones de Atención a la Diversidad.
 // Esto lo pondremos cuando tengamos el nuevo PAD, total, es lo mismo.
+En el centro se realizan las siguientes actuaciones de atención a la diversidad, conforme a lo dispuesto en la Orden ECD/913/2023, del 11 de julio, por la que se modifica la Orden ECD/1005/2018, de 7 de junio, por la que se regulan las actuaciones de intervención educativa inclusiva.
+=== Actuaciones generales.
+- Estimulación del lenguaje en Infantil: adaptación de cuentos y retahílas con pictogramas. Además estimulación en todos los componentes del lenguaje.
+- Refuerzos y apoyos en aula ordinaria o fuera de ella: para alumnado con ACS, desfase curricular, intervención en aspectos del lenguaje, refuerzo de lectoescritura o inmersión lingüística. Se trabajan contenidos similares a los del grupo si es posible y con regularidad temporal.
+- Desdobles: en diferentes horas, aprovechando especialistas o maestros generalistas en horas sin su grupo.
+- Prevención del absentismo: identificación del riesgo y coordinación con la UAO y el IASS, si procede.
+- Prevención de necesidades: mediante coordinación en las tutorías de Infantil y Primaria.
+- Adaptaciones no significativas del currículo, sin modificación de la evaluación.
+=== Actuaciones específicas.
+- Adaptaciones curriculares significativas.
+- Adaptaciones de acceso al currículo.
+- Flexibilización en incorporación a nivel inferior: en casos de incorporación tardía o prematuriedad extrema en Infantil.
+- Permanencia extraordinaria en las etapas del sistema educativo.
+- Aceleración parcial del currículo.
+- Exención parcial extraordinaria, si existe informe médico que recomienda evitar la actividad por propiciar riesgo vital.
+- Cambio de tipo de centro o escolarización combinada.
+
 == Recursos para atender a la diversidad.
 En el centro existen los siguientes recursos personales para atender a la diversidad.
 - 1 plaza completa de especialista de Pedagogía Terapéutica.
@@ -117,7 +134,7 @@ Se ha trabajado con el siguiente alumnado en presencia de la tutora de práctica
   - Cuarto curso: F., L. y A., alumnos con NEAE derivadas de condiciones personales y de historia escolar. R. incorporación tardía.
   - Quinto curso B: A., alumno con dificultades de aprendizaje en la lectoescritura (315.00). N., alumno con NEAE por condiciones personales y de historia escolar. //Modificar esto que quede mejor y sin abreviaturas.
   - Sexto curso B: W. e I., alumnos con NEAE derivadas de condiciones personales y de historia escolar. M. y D., alumnado con desconocimiento del idioma.
-Por otro lado, se realizan apoyos generalistas en las clases para todo el alumnado que necesite ayuda en el trabajo educativo cotidiano, al amparo de las Actuaciones Generales de intervención educativa. Especificadas en el artículo segundo, apartado tres de la Orden ECD/913/2023, del 11 de julio, por la que se modifica la Orden ECD/1005/2018, de 7 de junio, por la que se regulan las actuaciones de intervención educativa inclusiva.
+Por otro lado, se realizan apoyos generalistas en las clases para todo el alumnado que necesite ayuda en el trabajo educativo cotidiano, al amparo de las Actuaciones Generales de intervención educativa, especificadas en el artículo segundo, apartado tres de la Orden ECD/913/2023, del 11 de julio, por la que se modifica la Orden ECD/1005/2018, de 7 de junio, por la que se regulan las actuaciones de intervención educativa inclusiva.
 == Funciones llevadas a cabo por la maestra PT.
 La maestra de Pedagogía Terapéutica lleva a cabo diferentes funciones en función del alumnado que trabaja en el aula, adaptándose a las singularidades que presenta cada persona. Son las siguientes funciones las más habituales en el trabajo cotidiano de la maestra:
 - Adaptación de materiales para el trabajo de clase del alumnado.
@@ -133,8 +150,27 @@ Se busca siempre trabajar evitando gritar o permitiendo la expresión del alumna
 Para guiar al alumnado la maestra utiliza la dinámica de _preguntas para la reflexión_ e _inducción_. De esta manera, se busca que el alumnado conteste autónomamente, con ayuda del profesor. De hecho, ahí radica nuestra función: guiar al alumnado para que, de forma autónoma, o, en su defecto, con poca ayuda, puedan obtener el resultado exitoso.
 
 Por otro lado es también habitual debatir y acordar con el alumnado, sobre todo si la motivación es escasa, premios o recompensas si realizan correctamente la tarea. Estamos, sin embargo, ante un problema, en tanto en cuanto podemos entrar en una dinámica de chantajes mutuos en la que no se produzca el aprendizaje. La maestra domina los tiempos y requerimientos de forma óptima, evitando tan indeseadas situaciones. 
+= Análisis y reflexión del aprendizaje en las prácticas.
+== Actividad docente.
+La actividad docente realizada en el centro de prácticas como especialista de Pedagogía Terapéutica ha sido acorde a lo requerido para el desempeño óptimo del puesto. Se ha trabajado con el alumnado arriba listado para conseguir los objetivos que se pretenden alcanzar en el curso escolar. Desde la guía y la intervención personalizada teniendo  en cuenta las peculiaridades de cada persona, se ha trabajado atendiendo a las necesidades con el objetivo de conseguir dichos objetivos de la manera más inclusiva posible.
+== Competencias adquiridas en el periodo de prácticas.
+Se han adquirido diversas competencias clave y virtudes para el trabajo como especialista de Pedagogía Terapéutica, entre las que destacamos:
+- *Paciencia*, virtud de especial relevancia por las casuísticas trabajadas en el aula. Ante disrupciones o dificultades en la comprensión, es esencial mantener la templanza y estar preparados para explicar sucesivas veces los conceptos o procedimientos que se trabajan.
+- *Templanza*, en las llamadas al orden que se realizan en el centro educativo, es necesario actuar dando un _feedback_ formativo y enriquecedor para el alumno o alumna, lo cual propicia la mejora. Han existido casos en los que esto se ha tenido que realizar.
+
+En lo que se refiere a las competencias académicas, podemos mencionar:
+- *Trabajo con alumnado con Trastorno del espectro autista*: se requiere, en ciertos casos, una especial atención a las palabras y frases utilizadas para dar las consignas, con el objetivo de evitar, por ejemplo, una _ecolalia_ que no se quiere buscar. En su lugar, se procede a la expansión y extensión del discurso dando respuestas, que el niño o niña podrá repetir.
+- *Trabajo con el alumnado de Educación Infantil*, cuestión cultivada mucho durante el periodo. Como especialistas, es competencia nuestra trabajar con el alumnado de educación infantil. Sin embargo, no hemos sido formados para esta etapa, en la que hay cuestiones que se han de tener en cuenta para el trabajo habitual. La necesidad de comprobar exhaustivamente el trabajo realizado, tener en cuenta la diferencia de altura entre el alumnado y nosotros mismos o la importancia del material manipulativo para los conceptos matemáticos o científicos son algunas de las habilidades que se han de tener para preparar secuenias o adaptaciones de material en el aula de Educación Infantil.
+== Grado de consecución de los objetivos de las prácticas. 
+De forma general, se considera que los objetivos que quedaban propuestos para las prácticas se han cumplido. El trabajo se ha realizado con aprovechamiento y éxito, en tanto en cuanto se han podido comprobar los efectos positivos del mismo en el alumnado. Mediante la supervisión de la tutora, se ha podido mejorar la forma de trabajo y adecuarla a los casos que existen en el aula. Así pues, el periodo de prácticas ha sido cursado con aprovechamiento para permitir un aprendizaje real en el contexto del especialista PT.
+== Aspectos para seguir mejorando.
+Aun con los objetivos cumplidos, siempre cabe un lugar para la mejora de las foras de trabajo. Podemos mencionar diversas cuestiones entre las que destacan las siguientes:
+- Adecuación al aula de Educación Infantil. Al ser la primera vez que se intervenía en el aula de la etapa mencionada, los primeros días fueron complicados por las diferencias manifiestas que existen entre la forma de trabajar en Primaria con respecto a la existente en Infantil. Sin embargo, gracias a la disposición de la tutora y de las maestras de la etapa, se pasó correctamente el periodo de adaptación a la nueva dinámica con facilidad, llegando a trabajar sin problemas en el aula.
+- Trabajo con ciertos colectivos: no podemos olvidar la presencia de colectivos vulnerables o con un alto riesgo de exclusión social. Existen cuestiones estructurales que no siempre permiten una alineación de escuela y familia. Como profesionales, hemos de conocer estas cuestiones y ser flexibles a la vez que exigentes con el alumnado, manteniendo la compostura y profesionalidad en la institución educativa, pero siendo indulgentes con los niños, que suelen carecer de culpa en la mayoría de los casos.
+
+En suma, las prácticas escolares de especialista de Pedagogía Terapéutica han supuesto un aprendizaje clave, que complementa a los académicos, para la práctica futura, en lo que a métodos, habilidades y formas de proceder se refiere.
 #bibliography(
   "fuentes.bib",
-  title: "4. Referencias",
+  title: "5. Referencias.",
   style: "american-psychological-association"
 )
