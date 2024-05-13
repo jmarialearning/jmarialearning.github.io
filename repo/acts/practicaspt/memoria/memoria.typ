@@ -84,7 +84,6 @@ En el centro se realizan las siguientes actuaciones de atención a la diversidad
 - Aceleración parcial del currículo.
 - Exención parcial extraordinaria, si existe informe médico que recomienda evitar la actividad por propiciar riesgo vital.
 - Cambio de tipo de centro o escolarización combinada.
-
 == Recursos para atender a la diversidad.
 En el centro existen los siguientes recursos personales para atender a la diversidad.
 - 1 plaza completa de especialista de Pedagogía Terapéutica.
