@@ -1,5 +1,5 @@
 #set document(
-  title: ["Memoria de prácticas de mención de Pedagogía Terapéutica"],
+  title: ["Memoria de prácticas de mención de Audición y Lenguaje"],
   author: "Jesús María Mora Mur",
   date: datetime.today(offset: auto)
 )
@@ -24,15 +24,15 @@
 ])
 
 #align(horizon+center, text(20pt, hyphenate: false)[
-  *Memoria de prácticas de mención de Pedagogía Terapéutica*
+  *Memoria de prácticas de mención de Audición y Lenguaje*
 ])
 #align(bottom+right, text(18pt)[
   Jesús María Mora Mur.\
   Curso 2023-2024.\
   Universidad de Zaragoza.\
-  Centro educativo: CEIP La Merced\
-  Tutora del colegio: Silvia Visús Clavero.\
-  Tutora de la Universidad: Alejandra Aguilar Latorre.
+  Centro educativo: CEIP Pedro I\
+  Tutora del colegio: Eva Les.\ // Falta segundo apellido.
+  Tutora de la Universidad: Charo Tobeña Arasanz.
 ])
 #pagebreak()
 #outline(
