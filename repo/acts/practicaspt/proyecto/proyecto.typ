@@ -3,13 +3,17 @@
   author: "Jesús María Mora Mur",
   date: datetime.today(offset: auto)
 )
-#set par(justify: true)
+#set par(
+  justify: true,
+  leading: 1.5em
+)
 #show figure.caption: emph
 #set text(
   font: "Times New Roman",
   size: 12pt,
   hyphenate: auto,
-  lang: "es"
+  lang: "es",
+  
 )
 #set page(
   paper: "a4",
@@ -42,7 +46,7 @@
 #set page(numbering: "1")
 #counter(page).update(1)
 = Planteamiento y justificación de la propuesta a desarrollar.
-La presente propuesta de intervención para especialistas de Pedagogía Terapéutica se ha preparado para un sujeto de Segundo Curso de Educación Infantil. El sujeto 
+La presente propuesta de intervención para especialistas de Pedagogía Terapéutica se ha preparado para un sujeto de Segundo Curso de Educación Infantil.
 = Objetivo general y específicos. 
 == Objetivo general.
 Se define como objetivo general el siguiente, en base a las observaciones previas a la intervención que se han realizado y a la anamnesis realizada a las profesionales que han trabajado con el sujeto en el curso escolar:
@@ -53,12 +57,19 @@ Se definen más específicamente, los siguientes objetivos específicos:
 - Diferenciar entre los tiempos de juego y trabajo en el aula ordinaria.
 - Disminuir el número de episodios disruptivos en clase.
 = Destinatarios. <Destinatarios>
-El sujeto destino del presente proyecto es un niño de Segundo Curso de Infantil, con 4 años de edad. El sujeto llega con un diagnóstico realizado por el Equipo de Atención Temprana, en laos siguientes trastornos:
+El sujeto destino del presente proyecto es un niño de Segundo Curso de Infantil, con 4 años de edad. El sujeto llega con un diagnóstico realizado por el Equipo de Atención Temprana, en los siguientes trastornos:
 - Retraso Global del Desarrollo, (315.8).
-- Trastorno por Deficit de Atención e Hiperactividad, tipo combinado, (314.01).
-Mediante observación, son notables los rasgos del Trastorno del Espectro Autista que podemos observar, a saber:
-// Comprobar cuánto es TEA, pero, si esto es cierto, especificar bien los rasgos que se ven.
-- Ecolalias continuas.
+- Trastorno por Déficit de Atención e Hiperactividad, tipo combinado, (314.01).
+
+Estos trastornos son relativamente habituales en la etapa de infantil, pues los niños están ahora más vigilados y se realizan más pruebas que permiten detectar precozmente las necesidades del alumnado.
+
+El Retraso Global del Desarrollo es una afección según la cual existe un desfase en los hitos del desarrollo del niño, sin que se pueda realizar una valoración clínica por la edad del niño. Es un diagnóstico transitorio.
+
+Por otro lado, el Trastorno por Déficit de Atención e Hiperactividad (TDAH) implica una interferencia en el desarrollo por un periodo de tiempo no banal, con patrones de _impulsividad_ (acciones apresuradas sin reflexión), _hiperactividad_ (movimiento excesivo) e _inatención_ (dificultad para mantener la atención focalizada sobre la tarea). Empieza en la infancia y se ha de dar en diferentes entornos.
+
+El diagnóstico diferencial del TDAH es complejo. Prueba de ello es, por ejemplo, la mera presencia de síntomas en el curso de tratamientos farmacológicos con broncodilatadores. Por otro lado, la impulsividad se puede detectar en un trastorno explosivo intermitente, negativista, autista, apego reactivo o trastornos de ansiedad y afectivos, en población infantil.
+
+Hemos de tener en cuenta que los comportamientos propios del TDAH son difíciles de distinguir de los normotípicos por debajo de los 4 años. Esto se puede extrapolar a toda la etapa de Educación Infantil.
 = Descripción de las actividades realizadas.
 Las actividades que se han realizado con el alumno han sido las que realizó la maestra en clase, pues, a la vista de lo especificado en la @Destinatarios[sección], el alumno no tiene desfase curricular que obligue o justifique la adaptación de material completo. En cualquier caso, sí se realizan ciertas modificaciones al formato general de las actividades _in situ_. Además, se modifica el entorno de la siguiente manera.
 == Métodos.
@@ -77,10 +88,9 @@ En esta sesión se ha trabajado la lectoescritura a partir de la propuesta de pr
 === Objetivos. 
 // Habrá que pensar cuáles son los de intervención y cuáles los de la actividad.
 Definimos a continuación los objetivos de la sesión:
-- Iniciar la comprensión de la metodología de trabajo en la intervención.
 - Trazar el nombre y el vocabulario del proyecto correctamente.
 - Reconocer las letras del abecedario.
-- Iniciar el proceso lector mediante asociación de significante y significado.
+- Iniciarse en el proceso lector mediante asociación de significante y significado.
 - Escribir palabras a partir de un modelo dado.
 === Desarrollo de la sesión.
 En primer lugar, se repartieron al alumnado las fichas para realizar. Se preparó el rincón TEACCH al alumno, con las siguientes consideraciones:
@@ -104,16 +114,24 @@ En esta sesión se ha realizado trabajo del área de matemáticas. En concreto, 
 === Desarrollo de la sesión.
 Se desarrolló la sesión en asamblea. Con todos los alumnos y alumnas dispuestos se les mostró la _máquina mágica_, que modifica la forma de las figuras planas. Delante de la misma, se colocó una carta similar a esta. 
 // Aquí va la carta.
-Podemos ver los diferentes cambios de la máquina en dicha carta. La sesión se produjo mediante una dinámica de preguntas para el alumnado. Ante estas cuestiones, nuestro alumno respondió correctamente, conociendo qué iba a venir en cada caso.
+Podemos ver los diferentes cambios de la máquina en dicha carta. La sesión se produjo mediante una dinámica de preguntas para el alumnado. Ante estas cuestiones, nuestro alumno respondió correctamente, conociendo qué iba a venir en cada caso. Sin embargo, la guía hubo de ser frecuente para evitar las distracciones en asamblea.
+
+Después, se modificó la carta y se trabajó con otras que añadían o quitaban, como las que a continuación aparecen:
+// Cartas de sumar y restar.
+Se siguió una dinámica análoga a la anterior y el alumno respondió satisfactoriamente utilizando sus dedos para contar en lugar de realizarlo mentalmente.
 == Sesión 3.
 // Aeródromo de Berbegal. Ctra...
 === Objetivos.
 - Conocer las partes de una dirección postal.
 - Trazar las letras a partir de un modelo dado.
 - Seguir una línea recta para trazar las letras del modelo.
+=== Desarrollo de la sesión.
+Al necesitar ver correctamente los modelos en la pizarra se modificó el rincón TEACCH preparado para situarlo más cerca de la misma. Después de introducir el proyecto *_Volar_* de nuevo para permitir que el alumnado recordara la situación se trabajó la presencia de un aeródromo en la localidad. Con ese inductor, se solicitó al alumnado que escribiese la dirección del lugar, trabajando antes cuestiones más sencillas, como la dirección de casa. Una vez vistos los elementos de una dirección postal, la maestra escribió en la pizarra la dirección, que el alumno copió en su hoja sin mayor desavenencia. Hubo, eso sí, que especificar cada letra y la ubicación y disposición de las palabras en los renglones, pues no llegó nuestro alumno a comprender la necesidad de espaciar los contenidos en 4 líneas. 
 == Sesión 4.
 // Prismas y no prismas.
 === Objetivos.
 - Recordar los nombres de los cuerpos geométricos: _prismas_, _pirámides_, _cilindros_, _conos_ y _esferas_.
 - Entender los conceptos de _igual_ y _diferente_.
 - Clasificar atendiendo a los atributos relevantes de los cuerpos geométricos.
+=== Desarrollo de la sesión. 
+En primer lugar, la maestra sacó figuras planas y cuerpos geométricos diferentes y los dejó a la vista del alumnado.

@@ -5,7 +5,7 @@
 )
 #set par(
   justify: true,
-  //leading: 1.5em
+  leading: 1.5em
 )
 #set text(
   font: "Times New Roman",
