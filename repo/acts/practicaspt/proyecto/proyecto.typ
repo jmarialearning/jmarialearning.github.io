@@ -81,7 +81,6 @@ Se expone a continuación la vinculación curricular de la propuesta realizada, 
 === Área de Crecimiento en Armonía.
 #table(
   columns: 1,
-  inset: 10pt,
   table.cell([*Criterios de calificación asociados a la CE.CA.4*], align: center, fill:blue.lighten(60%)),
   [_Establecer interacciones sociales en condiciones de igualdad, valorando la importancia de la amistad, el respeto y la empatía, para construir su propia identidad basada en valores democráticos y de respeto a los derechos humanos._],
   [4.1. Participar con iniciativa en juegos y actividades colectivas
@@ -95,7 +94,6 @@ rechazando estereotipos de género.\
 En lo que se refiere a los saberes básicos:
 #table(
   columns: 1,
-  inset: 10pt,
   table.cell([*D. Interacción socioemocional del entorno. La vida junto a los demás.*], align: center, fill:blue.lighten(60%)),
   table.cell([_Conocimientos, destrezas y actitudes._], align: center),
   table.cell([- Estrategias de autorregulación de la conducta. Empatía y respeto.\
@@ -106,7 +104,6 @@ En lo que se refiere a los saberes básicos:
 === Área de Descubrimiento y Exploración del Entorno.
 #table(
   columns: 1,
-  inset: 10pt,
   table.cell([*Criterios de calificación asociados a la CE.DEE.1*], align: center, fill: blue.lighten(60%)),
   [_Identificar las características de materiales, objetos y colecciones y establecer relaciones entre ellos, mediante la exploración, la manipulación sensorial y el manejo de herramientas sencillas para descubrir y crear una idea cada vez más compleja del mundo desarrollando las destrezas lógico-matemáticas._],
   [1.1. Establecer distintas relaciones entre los objetos a partir de sus cualidades o atributos, mostrando curiosidad e interés.\
@@ -125,7 +122,6 @@ table.cell([*Criterios de calificación asociados a la CE.DEE.2*], align: center
 En lo que se refiere a los saberes básicos:
 #table(
   columns: 1,
-  inset: 10pt,
   table.cell([*A. Diálogo corporal con el entorno. Exploración creativa de objetos, materiales y espacios.*], align: center,fill:blue.lighten(60%)),
   table.cell([_Conocimientos, destrezas y actitudes._], align: center),
   table.cell([- Cualidades o atributos de los objetos. Relaciones de orden, correspondencia, clasificación y comparación.\
@@ -143,7 +139,6 @@ table.cell([- Estrategias de construcción de nuevos conocimientos: relaciones y
 === Área de Comunicación y Representación de la Realidad.
 #table(
   columns: 1,
-  inset: 10pt,
   table.cell([*Criterios de calificación asociados a la CE.CRR.3*], align: center, fill: blue.lighten(60%)),
   [_Producir mensajes de manera eficaz, personal y creativa utilizando diferentes lenguajes, descubriendo los códigos de cada uno de ellos y explorando sus posibilidades expresivas para responder a diferentes necesidades comunicativas._],
   [3.3. Evocar y expresar espontáneamente ideas a través del relato oral.\
@@ -156,7 +151,6 @@ table.cell([*Criterios de calificación asociados a la CE.CRR.4*], align: center
 En lo que se refiere a los saberes básicos:
 #table(
   columns: 1,
-  inset: 10pt,
   table.cell([*C. Comunicación verbal oral. Expresión-comprensión-diálogo*], align: center,fill:blue.lighten(60%)),
   table.cell([_Conocimientos, destrezas y actitudes._], align: center),
   table.cell([- Intención comunicativa de los mensajes.\
