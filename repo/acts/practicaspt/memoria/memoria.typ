@@ -66,25 +66,28 @@ Las instalaciones están adaptadas a las actividades escolares del día a día, 
   - Considerar la atención a la diversidad como un proceso continuo e integrado dentro del currículo. Promover conductas que favorezcan la autonomía y la participación, así como la aceptación de la diversidad.  
   - Conocer claramente, para cada alumno/a, los objetivos y contenidos a adquirir en cada ciclo, así como los criterios de evaluación a aplicar. 
   - Utilizar la heterogeneidad de recursos educativos para los/as alumnos/as de un mismo nivel
+
+A la vista de los objetivos parece correcta la visión de la diversidad que existe en el centro. Al ser un centro de atención preferente al alumnado con Trastorno del Espectro Autista, estas líneas han de ser claras y cumplirse de forma tajante. 
+
+Es interesante también remarcar la cantidad de objetivos logísticos existentes, que si bien no centrados en el alumnado del centro, son importantes para brindar una ejor experiencia y atención a sus necesidades.
 == Actuaciones de Atención a la Diversidad.
-// Esto lo pondremos cuando tengamos el nuevo PAD, total, es lo mismo.
 En el centro se realizan las siguientes actuaciones de atención a la diversidad, conforme a lo dispuesto en la Orden ECD/913/2023, del 11 de julio, por la que se modifica la Orden ECD/1005/2018, de 7 de junio, por la que se regulan las actuaciones de intervención educativa inclusiva.
 === Actuaciones generales.
 - Estimulación del lenguaje en Infantil: adaptación de cuentos y retahílas con pictogramas. Además estimulación en todos los componentes del lenguaje.
 - Refuerzos y apoyos en aula ordinaria o fuera de ella: para alumnado con ACS, desfase curricular, intervención en aspectos del lenguaje, refuerzo de lectoescritura o inmersión lingüística. Se trabajan contenidos similares a los del grupo si es posible y con regularidad temporal.
-- Desdobles: en diferentes horas, aprovechando especialistas o maestros generalistas en horas sin su grupo.
+- Desdobles: en diferentes horas, aprovechando especialistas o maestros generalistas en horas sin su grupo. Es muy habitual en los centros para disminuir la ratio y atender mejor a la diversidad, pues se ha demostrado su efectividad en los contextos reales.
 - Prevención del absentismo: identificación del riesgo y coordinación con la UAO y el IASS, si procede.
-- Prevención de necesidades: mediante coordinación en las tutorías de Infantil y Primaria.
-- Adaptaciones no significativas del currículo, sin modificación de la evaluación.
+- Prevención de necesidades: mediante coordinación en las tutorías de Infantil y Primaria. Supone la primera línea de atención a las necesidades del alumnado. La observación de las clases por parte de tutoras y tutores es clave, para que los especialistas puedan detectar casos de interés que estén en riesgo de desarrollar una _Necesidad Específica de Apoyo Educativo_ (NEAE). 
+- Adaptaciones no significativas del currículo, sin modificación de la evaluación. Son el paso previo a una adaptación sobre los criterios de evaluación mismos, sin perjucio del nivel de competencia correspondiente por curso origen.
 === Actuaciones específicas.
-- Adaptaciones curriculares significativas.
-- Adaptaciones de acceso al currículo.
+- Adaptaciones curriculares significativas, si se ha de bajar la evaluación a un nivel inferior al que corresponde por curso origen.
+- Adaptaciones de acceso al currículo, muy útiles si existen problemas de acceso a la información por discapcidades sensoriales, entre otras cuestiones..
 - Flexibilización en incorporación a nivel inferior: en casos de incorporación tardía o prematuriedad extrema en Infantil.
 - Permanencia extraordinaria en las etapas del sistema educativo.
 - Aceleración parcial del currículo.
 - Exención parcial extraordinaria, si existe informe médico que recomienda evitar la actividad por propiciar riesgo vital.
-- Cambio de tipo de centro o escolarización combinada.
-== Recursos para atender a la diversidad.
+- Cambio de tipo de centro o escolarización combinada, para casos en los que no se puede garantizar la mejor atención en el centro. Se optará por un preferente de diferente categoría o un centro de Educación Especial.
+== Recursos para atender a la diversidad. <recursos>
 En el centro existen los siguientes recursos personales para atender a la diversidad.
 - 1 plaza completa de especialista de Pedagogía Terapéutica.
 - 1 plaza completa de especialista de Audición y Lenguaje.
@@ -108,9 +111,13 @@ Se especifican estas cuestiones por ser las más relevantes. Sin embargo, hay m�
 - *Juegos de logica*, que permiten al alumnado ejercitar el razonamiento lógico.
 - *Juegos de memoria visual*, entre los que destacan el _memory_ o el _LINCE_. Permiten trabajar la atención a través del canal visual y la memoria de trabajo así como los conceptos de _igual_ y _diferente_.
 
-En lo referido a los recursos didácticos, es bien conocida la necesidad de las maestras y maestros especialistas en Atención a la Diversidad de formarse continuamente para propiciar que la atención al alumnado con Trastorno del Espectro Autista sea acorde a sus necesidades. Por ende, se utilizan todos los materiales listados arriba, siguiendo secuencias tipo TEACCH con los niños para propiciar su correcta gestión de los tiempos de trabajo. 
+En lo referido a los recursos didácticos, es bien conocida la necesidad de las maestras y maestros especialistas en Atención a la Diversidad de formarse continuamente para propiciar que la atención al alumnado con Trastorno del Espectro Autista sea acorde a sus necesidades. Por ende, se utilizan todos los materiales listados arriba, siguiendo secuencias tipo TEACCH con los niños para propiciar su correcta gestión de los tiempos de trabajo. Asimismo, los pictogramas (habitualmente provenientes de la plataforma ARASAAC), son un instrumento especialmente útil para la asociación de significante y significado, así como la comprensión correcta de las palabras por personas con desconocimiento del español o con TEA.
 == Atención preferente al alumnado con Trastorno del Espectro Autista.
-El alumnado con Trastorno del Espectro Autista cuenta con diferentes recursos para que se pueda gestionar su aprendizaje de forma correcta
+El alumnado con Trastorno del Espectro Autista cuenta con diferentes recursos para que se pueda gestionar su aprendizaje de forma correcta. Se han especificado en la @recursos[sección], pero no son útiles sin profesionales que los pongan en práctica. 
+
+Los profesionales que trabajan con alumnado TEA no tienen por qué de ser especialistas de atención a la diversidad, pues aun con propuesta de intervención en el aula preferente, la ley regula el número mínimo de horas que un alumno con TEA debe permanecer en su aula ordinaria, para propiciar la inclusión. Así pues, la formación y sensibilización en el centro es esencial para permitir que toda la comunidad educativa sepa como trabajar con este tipo de alumnado, entienda sus peticiones y necesidades y adapte sus secuencias o modos de trabajo a la presencia de dichas personas en la comunidad educativa.
+
+Se han impartido, a este respecto, diferentes formaciones de métodos habituales de trabajo con el alumnado. Además, se ha realizado una semana TEA, para sensibilizar al personal no docente y alumnado del trastorno, sus características y las necesidades que existen, así como las potencialidades y debilidades habituales en los individuos que lo padecen.
 = Estudio y análisis de la práctica docente del maestro de PT.
 == Descripción del aula.
 El aula en la que se ha trabajado es pequeña, como es habitual en un despacho de especialista de Pedagogía Terapéutica. Esto ocurre así por la cantidad de alumnado que, simultáneamente puede haber en ese despacho. El número máximo de alumnado con que se trabaja a la vez es de tres alumnos. Por ende, la clase está bien dotada en términos de superficie y cumple sobradamente con las directrices establecidas por #cite(<neufert_arte_1936>,form: "prose").
@@ -154,20 +161,21 @@ Por otro lado es también habitual debatir y acordar con el alumnado, sobre todo
 La actividad docente realizada en el centro de prácticas como especialista de Pedagogía Terapéutica ha sido acorde a lo requerido para el desempeño óptimo del puesto. Se ha trabajado con el alumnado arriba listado para conseguir los objetivos que se pretenden alcanzar en el curso escolar. Desde la guía y la intervención personalizada teniendo  en cuenta las peculiaridades de cada persona, se ha trabajado atendiendo a las necesidades con el objetivo de conseguir dichos objetivos de la manera más inclusiva posible.
 == Competencias adquiridas en el periodo de prácticas.
 Se han adquirido diversas competencias clave y virtudes para el trabajo como especialista de Pedagogía Terapéutica, entre las que destacamos:
-- *Paciencia*, virtud de especial relevancia por las casuísticas trabajadas en el aula. Ante disrupciones o dificultades en la comprensión, es esencial mantener la templanza y estar preparados para explicar sucesivas veces los conceptos o procedimientos que se trabajan.
-- *Templanza*, en las llamadas al orden que se realizan en el centro educativo, es necesario actuar dando un _feedback_ formativo y enriquecedor para el alumno o alumna, lo cual propicia la mejora. Han existido casos en los que esto se ha tenido que realizar.
+- *Paciencia*, virtud de especial relevancia por las casuísticas trabajadas en el aula. Ante disrupciones o dificultades en la comprensión, es esencial mantener la paciencia y estar preparados para explicar sucesivas veces los conceptos o procedimientos que se trabajan. Así es como se consigue el aprendizaje, más si cabe en atención a la diversidad de forma específica.
+- *Templanza*, en las llamadas al orden que se realizan en el centro educativo, es necesario actuar dando un _feedback_ formativo y enriquecedor para el alumno o alumna, lo cual propicia la mejora. Han existido casos en los que esto se ha tenido que realizar, pero se ha hecho conforme a legislación y pensando en estas cuestiones, buscando el aprendizaje y la intención de evitar volver a cometer el mismo error por segunda vez.
 
 En lo que se refiere a las competencias académicas, podemos mencionar:
 - *Trabajo con alumnado con Trastorno del espectro autista*: se requiere, en ciertos casos, una especial atención a las palabras y frases utilizadas para dar las consignas, con el objetivo de evitar, por ejemplo, una _ecolalia_ que no se quiere buscar. En su lugar, se procede a la expansión y extensión del discurso dando respuestas, que el niño o niña podrá repetir.
 - *Trabajo con el alumnado de Educación Infantil*, cuestión cultivada mucho durante el periodo. Como especialistas, es competencia nuestra trabajar con el alumnado de educación infantil. Sin embargo, no hemos sido formados para esta etapa, en la que hay cuestiones que se han de tener en cuenta para el trabajo habitual. La necesidad de comprobar exhaustivamente el trabajo realizado, tener en cuenta la diferencia de altura entre el alumnado y nosotros mismos o la importancia del material manipulativo para los conceptos matemáticos o científicos son algunas de las habilidades que se han de tener para preparar secuenias o adaptaciones de material en el aula de Educación Infantil.
+- *Uso de diferentes recursos de especialidad*, como tableros de comunicación 
 == Grado de consecución de los objetivos de las prácticas. 
 De forma general, se considera que los objetivos que quedaban propuestos para las prácticas se han cumplido. El trabajo se ha realizado con aprovechamiento y éxito, en tanto en cuanto se han podido comprobar los efectos positivos del mismo en el alumnado. Mediante la supervisión de la tutora, se ha podido mejorar la forma de trabajo y adecuarla a los casos que existen en el aula. Así pues, el periodo de prácticas ha sido cursado con aprovechamiento para permitir un aprendizaje real en el contexto del especialista PT.
 == Aspectos para seguir mejorando.
 Aun con los objetivos cumplidos, siempre cabe un lugar para la mejora de las foras de trabajo. Podemos mencionar diversas cuestiones entre las que destacan las siguientes:
-- Adecuación al aula de Educación Infantil. Al ser la primera vez que se intervenía en el aula de la etapa mencionada, los primeros días fueron complicados por las diferencias manifiestas que existen entre la forma de trabajar en Primaria con respecto a la existente en Infantil. Sin embargo, gracias a la disposición de la tutora y de las maestras de la etapa, se pasó correctamente el periodo de adaptación a la nueva dinámica con facilidad, llegando a trabajar sin problemas en el aula.
-- Trabajo con ciertos colectivos: no podemos olvidar la presencia de colectivos vulnerables o con un alto riesgo de exclusión social. Existen cuestiones estructurales que no siempre permiten una alineación de escuela y familia. Como profesionales, hemos de conocer estas cuestiones y ser flexibles a la vez que exigentes con el alumnado, manteniendo la compostura y profesionalidad en la institución educativa, pero siendo indulgentes con los niños, que suelen carecer de culpa en la mayoría de los casos.
+- *Adecuación al aula de Educación Infantil*. Al ser la primera vez que se intervenía en el aula de la etapa mencionada, los primeros días fueron complicados por las diferencias manifiestas que existen entre la forma de trabajar en Primaria con respecto a la existente en Infantil. Sin embargo, gracias a la disposición de la tutora y de las maestras de la etapa, se pasó correctamente el periodo de adaptación a la nueva dinámica con facilidad, llegando a trabajar sin problemas en el aula.
+- *Trabajo con ciertos colectivos*: no podemos olvidar la presencia de colectivos vulnerables o con un alto riesgo de exclusión social. Existen cuestiones estructurales que no siempre permiten una alineación de escuela y familia. Como profesionales, hemos de conocer estas cuestiones y ser flexibles a la vez que exigentes con el alumnado, manteniendo la compostura y profesionalidad en la institución educativa, pero siendo indulgentes con los niños, que suelen carecer de culpa en la mayoría de los casos.
 
-En suma, las prácticas escolares de especialista de Pedagogía Terapéutica han supuesto un aprendizaje clave, que complementa a los académicos, para la práctica futura, en lo que a métodos, habilidades y formas de proceder se refiere.
+En suma, las prácticas escolares de especialista de Pedagogía Terapéutica han supuesto un aprendizaje clave, que complementa a los académicos, para la práctica futura, en lo que a métodos, habilidades y formas de proceder se refiere. No se puede, a este respecto, más que agradecer al centro, especialmente a los docentes de atención a la diversidad, su presencia y disposición para resolver dudas y explicar las dinámicas, así como para permitir las intervenciones que se han estimado y dar _feedback_ formativo, cuando así ha sido procedente.
 #bibliography(
   "fuentes.bib",
   title: "5. Referencias.",

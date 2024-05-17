@@ -45,16 +45,16 @@
 #set page(numbering: "1")
 #set par(leading: 1.5em)
 #counter(page).update(1)
-= Planteamiento y justificación de la propuesta a desarrollar.
+= Justificación de la propuesta a desarrollar.
 La presente propuesta de intervención para especialistas de Pedagogía Terapéutica se ha preparado para un sujeto de Segundo Curso de Educación Infantil. Como se especificará en la @Destinatarios[sección], el diagnóstico del niño permite su permanencia en el aula de Educación Infantil. Curricularmente, el niño sigue lo requerido en el aula, sin que sea necesaria una adaptación de materiales para su caso. \
-Esto puede ser relevante para la inclusión del niño en su grupo, en tanto en cuanto aprende los mismos contenidos que sus compañeros, siguiendo el ritmo del grupo. Sin embargo, es preciso decir que la ubicación del niño en el aula y sus compañeros o compañeras cercanos han de ser cuidadosamente escogidos para permitir un mejor aprendizaje, sin distractores. \
-Es habitual la gestión del entorno y condiciones del mismo en lugar de un apoyo fuera de aula o la adaptación de materiales pues el rendimiento curricular puede (como es el caso) no verse afectado. Así, se permite la mayor inclusión para el niño, enriqueciendo su decurso vital con las actividades que toda la clase recibe, sin educación diferenciada, pues no procede.
+Esto puede ser relevante para la inclusión del niño en su grupo, en tanto en cuanto aprende los mismos contenidos que sus compañeros, siguiendo el ritmo del grupo. Sin embargo, es preciso decir que la ubicación del niño en el aula y sus compañeros o compañeras cercanos han de ser cuidadosamente escogidos para permitir un mejor aprendizaje, sin distractores. Ciertos compañeros de mesa pueden causar problemas en este sentido, pues llegan a distraer al alumno. en infantil esto es más acusado si cabe.\
+Es habitual la gestión del entorno y condiciones del mismo en lugar de un apoyo fuera de aula o la adaptación de materiales pues el rendimiento curricular puede (como es el caso) no verse afectado. Así, se permite la mayor inclusión para el niño, enriqueciendo su decurso vital con las actividades que toda la clase recibe, sin educación diferenciada, pues no procede en este caso por el buen nivel curricular del niño.
 = Objetivo general y específicos. 
 == Objetivo general.
-Se define como objetivo general el siguiente, en base a las observaciones previas a la intervención que se han realizado y a la anamnesis realizada a las profesionales que han trabajado con el sujeto en el curso escolar:
+Se define como _objetivo general_ el siguiente, en base a las observaciones previas a la intervención que se han realizado y a la anamnesis realizada a las profesionales que han trabajado con el sujeto en el curso escolar:
 - Comprender y aprovechar óptimamente las dinámicas propias del aula de Segundo Curso de Educación Infantil.
 == Objetivos específicos.
-Se definen más específicamente, los siguientes objetivos específicos:
+Se definen más en detalle, los siguientes _objetivos específicos_:
 - Comprender la secuencia de tareas propia de la clase habitual. 
 - Diferenciar entre los tiempos de juego y trabajo en el aula ordinaria.
 - Disminuir el número de episodios disruptivos en clase.
@@ -82,7 +82,7 @@ En esta sesión se ha trabajado la lectoescritura a partir de la propuesta de pr
 #figure(
   image(
     "img/sesion2.jpg",
-    width: 90%,
+    width: 85%,
     format: "jpg"
   ),
   caption: [Trabajo del alumno durante la sesión.],
@@ -120,7 +120,7 @@ Podemos ver los diferentes cambios de la máquina en dicha carta. La sesión se 
 
 Después, se modificó la carta y se trabajó con otras que añadían o quitaban, como las que a continuación aparecen:
 // Cartas de sumar y restar.
-Se siguió una dinámica análoga a la anterior y el alumno respondió satisfactoriamente utilizando sus dedos para contar en lugar de realizarlo mentalmente.
+Se siguió una dinámica análoga a la anterior y el alumno respondió satisfactoriamente utilizando sus dedos para contar en lugar de realizarlo mentalmente. En cualquier caso, queda patente el nivel curricular del alumno cuando media poco lenguaje oral.
 == Sesión 3.
 // Aeródromo de Berbegal. Ctra...
 === Objetivos.
@@ -136,5 +136,5 @@ Al necesitar ver correctamente los modelos en la pizarra se modificó el rincón
 - Entender los conceptos de _igual_ y _diferente_.
 - Clasificar atendiendo a los atributos relevantes de los cuerpos geométricos.
 === Desarrollo de la sesión. 
-En primer lugar, la maestra sacó figuras planas y cuerpos geométricos diferentes y los dejó a la vista del alumnado. Preguntó qué diferenciaba a una figura plana (con un ejemplo concreto) de un cuerpo geométrico (con otro ejemplo), para entender la noción de _volumen_. Así, se propició que el alumnado entendiese la diferencia entre _figura plana_ y _cuerpo geométrico_. Una vez cateogrizados estos objetos matemáticos, se trabajaron los cuerpos geométricos, clasificando en prismas y no prismas. Al trabajar en un nivel de reconocimiento y visualización de percepción geométrica de Van Hiele, se trabajó asemejando los diferentes _entes_ matemáticos atendiendo a objetos cotidianos, como pirámides, cubos, balones u otras cuestiones que el alumnado entendiese. Nuestro alumno tenía diferentes accesorios de estimulación que tenían este tipo de patrones, por lo que se utilizaron estos para trabajar de forma individualizada con él, complementando a la asamblea, generadora de distracciones que evitan que el niño focalice la atención sobre la explicación.\
+En primer lugar, la maestra sacó figuras planas y cuerpos geométricos diferentes y los dejó a la vista del alumnado. Preguntó qué diferenciaba a una figura plana (con un ejemplo concreto) de un cuerpo geométrico (con otro ejemplo), para entender la noción de _volumen_. Así, se propició que el alumnado entendiese la diferencia entre _figura plana_ y _cuerpo geométrico_. Una vez categorizados estos objetos matemáticos, se trabajaron los cuerpos geométricos, clasificando en prismas y no prismas. Al trabajar en un nivel de reconocimiento y visualización de percepción geométrica de Van Hiele, se trabajó asemejando los diferentes _entes_ matemáticos atendiendo a objetos cotidianos, como pirámides, cubos, balones u otras cuestiones que el alumnado entendiese. Nuestro alumno tenía diferentes accesorios de estimulación que tenían este tipo de patrones, por lo que se utilizaron estos para trabajar de forma individualizada con él, complementando a la asamblea, generadora de distracciones que evitan que el niño focalice la atención sobre la explicación.\
 Nuestro alumno entendió los conceptos y las caracterizaciones que se pretendían trabajar. Sin embargo, el vocabulario nuevo no quedó totalmente adquirido. Realizó los repartos de forma manipulativa sin llegar a verbalizar lo realizado, eso sí, sin errores.
