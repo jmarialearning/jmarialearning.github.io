@@ -9,7 +9,7 @@
 #set text(
   font: "Times New Roman",
   size: 12pt,
-  hyphenate: auto,
+  hyphenate: false,
   lang: "es"
 )
 #set page(
