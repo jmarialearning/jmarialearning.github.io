@@ -44,15 +44,52 @@
 #set par(leading: 1.5em)
 #counter(page).update(1)
 = Contextualización del centro.
-Las prácticas escolares se han realizado en el CEIP La Merced. Este centro está situado en Barbastro (Huesca), en la zona alta de la ciudad. Se localiza en la Calle Beato Florentino Asensio, S/N.
-
-Pese a que el centro se encuentra en una zona de ampliación de la ciudad y está rodeada de edificios de nueva construcción, hoy, no son muchas las familias jóvenes con niños en edad escolar las que ocupan dichas edificaciones. El centro abarca también a un gran número de población de los cascos más antiguos de la localidad donde el poder adquisitivo de las familias desciende considerablemente.
-
-El número total de estudiantes es de 371 (115 en Educación Infantil y 256 en Educación Primaria). El centro tiene un número importante de alumnado extranjero: 25 en Infantil y 53 en Primaria, de 22 nacionalidades distintas. Predomina el alumnado sudamericano y marroquí. Por otro lado, también hay 27 personas de etnia gitana. Esta cuestión es clave en lo que a atención a la diversidad se refiere, pues el alumnado puede presentar dificultades por desconocimiento del idioma, condiciones personales o de historia escolar o incorporación tardía al sistema educativo. De ahí deriva una necesidad de conocer el dato, con el objeto de adelantarse a la manifestación de las necesidades o vigilar especialmente la inclusión plena del alumnado en el centro.
-
-Desde el curso 2022-2023 el centro es de Escolarización Preferente para alumnado con Trastorno del Espectro Autista y esto implica cambios a diferentes niveles para crear un clima inclusivo accesible a toda la Comunidad Educativa.
-
-Las instalaciones están adaptadas a las actividades escolares del día a día, pero en este momento la heterogeneidad de los grupos-clase hace que sea necesario poner en práctica otros tipos de agrupamientos, como desdobles, apoyos en pequeños grupos, otros espacios para otras áreas como religión Evangélica o adaptar un aula para el trabajo con alumnado TEA. Parece, pues, preciso, que el centro disponga de nuevos espacios, más accesibles y mejor dotados en aras de permitir un aprendizaje significativo, íntegro e inclusivo para todo el alumnado del centro educativo. 
+Las prácticas escolares se han realizado en el CEIP Pedro I. Este centro está situado en Barbastro (Huesca). Se localiza en la Calle Beato Florentino Asensio, S/N.\
+El C.E.I.P. “Pedro I” de Barbastro es un colegio público que está ubicado en la zonallamada “Las huertas”. La ciudad de Barbastro tiene una población de 17200 habitantes, es la capital de la comarca del Somontano y cuenta con bastantes servicios de tipo educativo: guarderías, escuelas infantiles, colegios de Educación Infantil y Primaria, Institutos de Educación Secundaria y Bachillerato y Grados, así como la Universidad de Educación a Distancia (UNED).\
+Barbastro se hermanó en 1963 con la ciudad de Saint Gaudens, a raíz de lo cual se realiza desde hace muchos años desde nuestro centro un intercambio escolar con el colegio L'Ecole Du Pilat.\
+Este colegio fue inicialmente una extensión del CEIP “Alto Aragón” dentro del edificio de un antiguo instituto técnico situado en la calle Antonio Machado Nº 5. Se designó definitivamente como colegio en 1981, dándole el nombre de Colegio Público “Pedro I” (se decidió poner este nombre, a propuesta de un profesor de sociales del colegio, por pertenecer a un rey aragonés que reconquistó la ciudad) , en ese momento contaba con una vía en la etapa de infantil y primaria. El colegio fue creciendo y se hizo necesaria la construcción de un nuevo colegio, que se inauguró el 24 de septiembre de 2010.\
+En la actualidad, el colegio acoge las etapas de Educación Infantil (2º Ciclo) y Educación Primaria. Es un colegio de 3 vías y cuenta con un total de 21 unidades creadas: 7 Infantil y 14 de Primaria.\
+En la actualidad,al centro asisten 462 alumnos y alumnas. Respecto al alumnado, la situación del colegio ha variado de forma visible en los últimos años, especialmente con la llegada de inmigrantes. Antes, en el centro, convivían alumnos procedentes de familias de Barbastro o de los pueblos de su entorno y ahora existen en el Centro alrededor de 12 nacionalidades diferentes.\
+Tenemos alumnos inmigrantes de diferentes procedencias (Marruecos, Gambia, Malí, Ecuador, Bolivia, Guatemala, Brasil, República Dominicana, Bulgaria, Rumanía, China...) y una minoría de alumnado de etnia gitana.\
+En nuestro centro asisten alumnos con necesidades educativas especiales (albinismo ocular, TEA, síndrome de Angelman, diferentes disfunciones motóricas, auditivas, diversos alumnos con trastornos de lenguaje y comunicación, TDAH,...).
+Todo esto hace que nos tengamos que plantear que las necesidades de nuestros alumnos y alumnas son distintas.\
+En el momento de la revisión de este documento el Claustro está compuesto por 39 profesores/as: 8 de Educación Infantil, 4 de Educación Primaria,1 de Música, 5deEducación Física,2 de Educación Física con francés, 5 Filología inglesa, 5 Filología Francesa, 1 de Pedagogía terapéutica, 2 de Audición y Lenguaje, 5 profesoras colaboradoras de Francés y 1 de Religión Católica. Además contamos con el apoyo de una Técnico Auxiliar de Educación Infantil y de dos Auxiliares de Educación Especial.
+Un día y una mañana a la semana el centro es atendido por la Orientadora y una tarde a la semana la Trabajadora Social de Equipo, ambos pertenecientes al EOEIP de Monzón.\
+El AMPA colabora en cuantas actividades programa el Centro y, además, realiza otras propias( guardería, las actividades extraescolares,fiesta fin de curso ...).\
+Por lo que respectan a los *servicios educativos*, existen los siguientes:
+-	Guardería (7:30 a 9:30h y 16:30 a 17:30h- APA).
+  - Comedor Escolar (13 a 15h).
+-	Actividades Extraescolares (8:30- 9:30h y 16:30- 19h- APA)
+  - Biblioteca (lunes y miércoles 16:30- 17:30)
+Estos servicios son atendidos por monitoras de tiempo libre y personal de la cocina.\
+    • ESPACIOS
+En la actualidad el colegio está ubicado en un edificio nuevo, construido en el 2009, que reúne las características suficientes para acoger a los niños y niñas de Educación Infantil y de Educación Primaria.\
+ESPACIOS DEL CENTRO:\
+- Aulas de clase- tutorías
+- Aulas para desdobles- Lengua Extranjera Francés
+- Aula de música.
+- Aula de expresión corporal
+- Aula de plástica.
+- Aula para Lengua Extranjera- Inglés
+- Aula para el profesorado especialista de PT y AL
+- Biblioteca.
+- Aula de informática.
+- Gimnasio.
+- Sala de psicomotricidad.
+- Sala de usos múltiples.
+- Patio de recreo para infantil
+- Patio de recreo para el alumnado de primaria.
+- Sala de profesores/as.
+- Tutorías para los equipos didácticos y departamentos.
+- Despacho para el Equipo de Orientación.
+- Espacio para la asociación de Padres-Madres.
+- Secretaría y despachos para la Dirección y la Jefatura de Estudios.
+- Conserjería.
+- La cocina y el comedor.
+PROCESO PEDAGÓGICO\
+Este colegio ha seguido todo el proceso de implantación de la reforma educativa, elaborando su Proyecto Educativo ysu Proyecto Curricular conforme a la misma, y conforme a las instrucciones que se aportan a los Equipos directivos desde Inspección Educativa.
+El Centro realiza experiencias innovadoras: talleres con familias en Ed. Infantil y equipo didáctico 1-2, agrupamientos flexibles con el alumnado desde 3 años hasta 6º de Ed. Primaria, recreos cooperativos tanto en el horario de recreo lectivo como en el horario de comedor de 14 a 15h, servicio de Bibliopatio en el recreo de Ed. Primaria,
+El profesorado participa actividades de formación, debidamente expuestas y explicadas dentro del Plan de Formación de Centros y en PGA y Memoria de Fin de Curso, tanto dentro del horario lectivo como fuera del mismo.
 = Análisis del Plan de Atención a la diversidad.
 == Objetivos.
 - Considerar el proceso de enseñanza-aprendizaje como compensador de las desigualdades socioculturales y personales de cada alumno/a.
