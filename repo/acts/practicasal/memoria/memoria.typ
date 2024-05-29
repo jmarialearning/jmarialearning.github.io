@@ -52,43 +52,10 @@ En la actualidad, el colegio acoge las etapas de Educación Infantil (2º Ciclo)
 En la actualidad, al centro asisten 462 alumnos y alumnas. Respecto al alumnado, la situación del colegio ha variado de forma visible en los últimos años, especialmente con la llegada de inmigrantes. Antes, en el centro, convivían alumnos procedentes de familias de Barbastro o de los pueblos de su entorno y ahora existen en el centro alrededor de 12 nacionalidades diferentes.\
 Existe alumnado inmigrante de diferentes procedencias (Marruecos, Gambia, Malí, Ecuador, Bolivia, Guatemala, Brasil, República Dominicana, Bulgaria, Rumanía, China...) y una minoría de alumnado de etnia gitana.\
 En el centro asisten alumnos con necesidades educativas especiales (albinismo ocular, TEA, síndrome de Angelman, diferentes disfunciones motóricas, auditivas, diversos alumnos con trastornos de lenguaje y comunicación, TDAH,...).
+== Claustro y concexiones con entidades.
 El Claustro está compuesto por 39 profesores/as: 8 de Educación Infantil, 4 de Educación Primaria,1 de Música, 5deEducación Física,2 de Educación Física con francés, 5 Filología inglesa, 5 Filología Francesa, 1 de Pedagogía terapéutica, 2 de Audición y Lenguaje, 5 profesoras colaboradoras de Francés y 1 de Religión Católica. Además hay una Técnico Auxiliar de Educación Infantil y dos Auxiliares de Educación Especial.
 Un día y una mañana a la semana el centro es atendido por la Orientadora y una tarde a la semana la Trabajadora Social de Equipo, ambos pertenecientes al EOEIP de Monzón.\
-El AMPA colabora en cuantas actividades programa el Centro y, además, realiza otras propias( guardería, las actividades extraescolares,fiesta fin de curso ...).\
-Por lo que respectan a los *servicios educativos*, existen los siguientes:
--	Guardería (7:30 a 9:30h y 16:30 a 17:30h- APA).
-  - Comedor Escolar (13 a 15h).
--	Actividades Extraescolares (8:30- 9:30h y 16:30- 19h- APA)
-  - Biblioteca (lunes y miércoles 16:30- 17:30)
-Estos servicios son atendidos por monitoras de tiempo libre y personal de la cocina.\
-    • ESPACIOS
-En la actualidad el colegio está ubicado en un edificio nuevo, construido en el 2009, que reúne las características suficientes para acoger a los niños y niñas de Educación Infantil y de Educación Primaria.\
-ESPACIOS DEL CENTRO:\
-- Aulas de clase- tutorías
-- Aulas para desdobles- Lengua Extranjera Francés
-- Aula de música.
-- Aula de expresión corporal
-- Aula de plástica.
-- Aula para Lengua Extranjera- Inglés
-- Aula para el profesorado especialista de PT y AL
-- Biblioteca.
-- Aula de informática.
-- Gimnasio.
-- Sala de psicomotricidad.
-- Sala de usos múltiples.
-- Patio de recreo para infantil
-- Patio de recreo para el alumnado de primaria.
-- Sala de profesores/as.
-- Tutorías para los equipos didácticos y departamentos.
-- Despacho para el Equipo de Orientación.
-- Espacio para la asociación de Padres-Madres.
-- Secretaría y despachos para la Dirección y la Jefatura de Estudios.
-- Conserjería.
-- La cocina y el comedor.
-PROCESO PEDAGÓGICO\
-Este colegio ha seguido todo el proceso de implantación de la reforma educativa, elaborando su Proyecto Educativo ysu Proyecto Curricular conforme a la misma, y conforme a las instrucciones que se aportan a los Equipos directivos desde Inspección Educativa.
-El Centro realiza experiencias innovadoras: talleres con familias en Ed. Infantil y equipo didáctico 1-2, agrupamientos flexibles con el alumnado desde 3 años hasta 6º de Ed. Primaria, recreos cooperativos tanto en el horario de recreo lectivo como en el horario de comedor de 14 a 15h, servicio de Bibliopatio en el recreo de Ed. Primaria,
-El profesorado participa actividades de formación, debidamente expuestas y explicadas dentro del Plan de Formación de Centros y en PGA y Memoria de Fin de Curso, tanto dentro del horario lectivo como fuera del mismo.
+El AMPA colabora en varias actividades del Centro y, además, realiza otras propias (guardería, las actividades extraescolares,fiesta fin de curso ...).\
 = Análisis del Plan de Atención a la diversidad.
 == Objetivos.
 - Considerar el proceso de enseñanza-aprendizaje como compensador de las desigualdades socioculturales y personales de cada alumno/a.
