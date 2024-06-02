@@ -14,23 +14,28 @@ Jmarialearning - Acceso a los enlaces de <a href="https://arasaac.org/">ARASAAC<
     <input type="text" id="picto"></p>
     <p style="font-family: Arial, Helvetica, sans-serif;">
         <label style="font-family: Arial, Helvetica, sans-serif;">Resolución:</label>
-        <input type="radio" id="300" name="res" value="300">
+        <input type="radio" id="res" name="res" value="300">
         <label for="300">300px</label>
-        <input type="radio" id="500" name="res" value="500">
+        <input type="radio" id="res" name="res" value="500">
         <label for="500">500px</label>
-        <input type="radio" id="2500" name="res" value="2500">
+        <input type="radio" id="res" name="res" value="2500">
         <label for="2500">2500px</label>
     </p>
     <input type="button" value="Generar link" onclick="GenerarLink()"/>
+    <p id="linkgen"></p>
 </form>
 <script type="text/javascript">
     function GenerarLink() {
-        var pictoid = document.getElementById("picto").value;
-        var resol = document.getElementById("res").value;
-        const url = new URL(`https://static.arasaac.org/pictograms/${pictoid}/${pictoid}_${resol}.png)`);
-        window.location = {url};
+        var pictoid = document.getElementById("picto").value.toString();
+        var resnum = document.getElementsByName("res");
+        for(i = 0; i < resnum.length; i++) {
+            if(resnum[i].checked){
+                var resol = resnum[i].value.toString();
+            }
+        }
         var base = "https://static.arasaac.org/pictograms";
-        new  URL("/")
+        var result = base + "/" + pictoid + "/" + pictoid + "_" + resol + ".png";
+        document.getElementById("linkgen").innerHTML = result;
     }
 </script>
     <a span style="font-family: Helvetica, Arial" href="/..">Volver...</a>
