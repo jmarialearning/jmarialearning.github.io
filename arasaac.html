@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>Jmarialearning - Acceso a los enlaces de ARASAAC (API)</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width">
+</head>
+<h1 span style="font-family: Helvetica, Arial">
+Jmarialearning - Acceso a los enlaces de <a href="https://arasaac.org/">ARASAAC</a>.
+</h1>
+<body>
+<form>
+    <p><label span style="font-family: Helvetica, Arial" for="picto">Identificador del pictograma: </label>
+    <input type="text" id="picto"></p>
+    <p style="font-family: Arial, Helvetica, sans-serif;">
+        <label style="font-family: Arial, Helvetica, sans-serif;">Resolución:</label>
+        <input type="radio" id="300" name="res" value="300">
+        <label for="300">300px</label>
+        <input type="radio" id="500" name="res" value="500">
+        <label for="500">500px</label>
+        <input type="radio" id="2500" name="res" value="2500">
+        <label for="2500">2500px</label>
+    </p>
+    <input type="button" value="Generar link" onclick="GenerarLink()"/>
+</form>
+<script type="text/javascript">
+    function GenerarLink() {
+        var pictoid = document.getElementById("picto").value;
+        var resol = document.getElementById("res").value;
+        const url = new URL(`https://static.arasaac.org/pictograms/${pictoid}/${pictoid}_${resol}.png)`);
+        window.location = {url};
+        var base = "https://static.arasaac.org/pictograms";
+        new  URL("/")
+    }
+</script>
+    <a span style="font-family: Helvetica, Arial" href="/..">Volver...</a>
+</body>
+</html>
