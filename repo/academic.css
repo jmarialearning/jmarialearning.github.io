@@ -1,5 +1,4 @@
 		html {
-			font-size: medium;
 			font-family: Arial, Helvetica, sans-serif;
 			margin-left: 5%;
 			margin-right: 5%;
@@ -17,7 +16,8 @@
 		#enunciado {
 			font-size: larger;
 			font-style: italic;
-			text-align: center;
+			text-align: justify;
+			text-justify: auto;
 		}
 		#cita {
 			color: blue;
@@ -27,7 +27,7 @@
 			font-family: 'Times New Roman', Times, serif;
 			font-size: medium;
 			font-style: italic;
-			margin-left: 5%;
+			margin-left: 10%;
 		}
 
 		#remark {
@@ -92,15 +92,6 @@
   			border-width: 5px;
   			border-style: solid;
   			border-color: transparent transparent black transparent;
-		}
-		html {
-			font-family: Helvetica, Arial, sans-serif;
-			font-size: medium;
-			margin-left: 5%;
-			margin-right: 5%;
-		}
-		h1 {
-			text-align: center;
 		}
 		.tooltiptext {
 			font-weight: bold;
