@@ -10,6 +10,13 @@
         };
         </script>
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <style>
+            table{
+                width: auto;
+                max-width: 100%;
+                min-width: 50%;
+            }
+        </style>
     </head>
     <!---->
     <h1>Laboratorio de óptica.</h1>
@@ -25,5 +32,308 @@
     <p>Los <i>thin films</i> son láminas de material con un grosor que varía entre décimas de nanómetro ($1 \: \mathrm{nm} \equiv 10^{-9} \: \mathrm{m}$) y varias micras ($1 \: \mathrm{\mu m} \equiv 10^{-6} \: \mathrm{m}$).</p>
     <p>Las aplicaciones de los <i>thin films</i> pueden ser los <b>recubrimientos</b> de diferentes objetos, así como semiconductores y memorias de ordenador. En lo que a los recubrimientos se refiere, los <i>thin films</i> de tipo cerámico se utilizan, entre otras cuestiones, para mejorar la vida útil de los utensilios de corte. Además, se suelen utilizar láminas similares en los paneles fotovoltaicos, buscando un ahorro de material y, por consiguiente, de costes. <a href="#wikithinfilm" id="cita">Wikipedia</a>.</p>
     <h2>Estudio de un <i>thin film</i>.</h2>
-    <p>Para realizar el estudio se ha utilizado el simulador de <a href="https://www.filmetrics.com/reflectance-calculator?units=nm&mat[]=Air&d[]=0&mat[]=TiO2%20-%20Rutile&d[]=15&mat[]=Si&d[]=0&sptype=r">filmetrics.com</a>, que nos permite ver las gráficas de transmitancia, reflectancia y absorción de diferentes materiales:</p>
+    <p>Para realizar el estudio se ha utilizado el simulador de <a href="https://www.filmetrics.com/reflectance-calculator?units=nm&mat[]=Air&d[]=0&mat[]=TiO2%20-%20Rutile&d[]=15&mat[]=Si&d[]=0&sptype=r">filmetrics.com</a>, que nos permite ver las gráficas de transmitancia, reflectancia y absorción de diferentes materiales.</p>
+    <h3>Propiedades.</h3>
+    <p>Se enumeran a continuación las propiedades de nuestra lámina:</p>
+    <ul>
+        <li>Medio: aire.</li>
+        <li>Material de la película: TiO<sub>2</sub> - Rutilo</li>
+        <li>Grosor: $15 \: \mathrm{nm}$.</li>
+        <li>Sustrato: Polietileno.</li>
+    </ul>
+    <h3>Análisis y discusión de los datos obtenidos.</h3>
+    <h4>Transmitancia y reflectancia.</h4>
+    <p>Comenzamos la recogida de datos con un ángulo de incidencia de $\require{gensymb} 0 \degree$. Obtenemos los siguientes datos de mínimos y máximos:</p>
+    <table>
+        <tr>
+            <th colspan="3">Reflectancia</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Valor</td>
+            <td>$\lambda$</td>
+        </tr>
+        <tr>
+            <td>Mínimo</td>
+            <td>0,0837594</td>
+            <td>1000</td>
+        </tr>
+        <tr>
+            <td>Máximo</td>
+            <td>0,6535993</td>
+            <td>330</td>
+        </tr>
+        <tr>
+            <td>Mínimo relativo</td>
+            <td>0,3207503</td>
+            <td>210</td>
+        </tr>
+    </table>
+    <p></p>
+    <table>
+        <tr>
+            <th colspan="3">Transmitancia</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Valor</td>
+            <td>$\lambda$</td>
+        </tr>
+        <tr>
+            <td>Mínimo</td>
+            <td>0,0407934</td>
+            <td>290</td>
+        </tr>
+        <tr>
+            <td>Máximo</td>
+            <td>0,9162406</td>
+            <td>1000</td>
+        </tr>
+        <tr>
+            <td>Máximo relativo</td>
+            <td>0,2329928</td>
+            <td>210</td>
+        </tr>
+    </table>
+    <p>Utilizando la aplicación graficadora GNUPlot, podemos ver la disposición de los datos en un gráfico.</p>
+    <p>Si aumentamos el ángulo de incidencia obtenemos los siguientes datos. Para $30 \degree$:</p>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="3">Reflectancia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td>Valor</td>
+                <td>$\lambda$</td>
+            </tr>
+            <tr>
+                <td>Mínimo</td>
+                <td>0,108878</td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <td>Máximo</td>
+                <td>0,6940301</td>
+                <td>330</td>
+            </tr>
+            <tr>
+                <td>Mínimo relativo</td>
+                <td>0,3699463</td>
+                <td>210</td>
+            </tr>
+        </tbody>
+    </table>
+    <p></p>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="3">Transmitancia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td>Valor</td>
+                <td>$\lambda$</td>
+            </tr>
+            <tr>
+                <td>Mínimo</td>
+                <td>0,0348991</td>
+                <td>290</td>
+            </tr>
+            <tr>
+                <td>Máximo</td>
+                <td>0,891122</td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <td>Máximo relativo</td>
+                <td>0,2083644</td>
+                <td>210</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Y para $60 \degree$ obtenemos los siguientes resultados:</p>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="3">Reflectancia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td>Valor</td>
+                <td>$\lambda$</td>
+            </tr>
+            <tr>
+                <td>Mínimo</td>
+                <td>0,2511999</td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <td>Máximo</td>
+                <td>0,8132208</td>
+                <td>330</td>
+            </tr>
+            <tr>
+                <td>Mínimo relativo</td>
+                <td>0,5555834</td>
+                <td>210</td>
+            </tr>
+        </tbody>
+    </table>
+    <p></p>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="3">Transmitancia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td>Valor</td>
+                <td>$\lambda$</td>
+            </tr>
+            <tr>
+                <td>Mínimo</td>
+                <td>0,0197556</td>
+                <td>290</td>
+            </tr>
+            <tr>
+                <td>Máximo</td>
+                <td>0,7488001</td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <td>Máximo relativo</td>
+                <td>0,1341152</td>
+                <td>210</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Todos estos datos se han obtenido mediante una polarización de tipo <i>s</i>. Tenemos también los datos equivalntes para la polarización de tipo <i>p</i>. Considerando que con incidencia nula no varían los datos, para un ángulo de $30 \degree$, tenemos:</p>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="3">Reflectancia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td>Valor</td>
+                <td>$\lambda$</td>
+            </tr>
+            <tr>
+                <td>Mínimo</td>
+                <td>0,0595903</td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <td>Máximo</td>
+                <td>0,6070445</td>
+                <td>330</td>
+            </tr>
+            <tr>
+                <td>Mínimo relativo</td>
+                <td>0,2671146</td>
+                <td>210</td>
+            </tr>
+        </tbody>
+    </table>
+    <p></p>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="3">Transmitancia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td>Valor</td>
+                <td>$\lambda$</td>
+            </tr>
+            <tr>
+                <td>Mínimo</td>
+                <td>0,0464961</td>
+                <td>290</td>
+            </tr>
+            <tr>
+                <td>Máximo</td>
+                <td>0,9404097</td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <td>Máximo relativo</td>
+                <td>0,2407495</td>
+                <td>210</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Y para ángulo de $60 \degree$:</p>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="3">Reflectancia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td>Valor</td>
+                <td>$\lambda$</td>
+            </tr>
+            <tr>
+                <td>Mínimo</td>
+                <td>0,0124268</td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <td>Máximo</td>
+                <td>0,4043707</td>
+                <td>330</td>
+            </tr>
+            <tr>
+                <td>Mínimo relativo</td>
+                <td>0,1365673</td>
+                <td>210</td>
+            </tr>
+        </tbody>
+    </table>
+    <p></p>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="3">Transmitancia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td>Valor</td>
+                <td>$\lambda$</td>
+            </tr>
+            <tr>
+                <td>Mínimo</td>
+                <td>0,0699425</td>
+                <td>290</td>
+            </tr>
+            <tr>
+                <td>Máximo</td>
+                <td>0,9875732</td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <td>Máximo relativo</td>
+                <td>0,2601813</td>
+                <td>210</td>
+            </tr>
+        </tbody>
+    </table>
 </html>
