@@ -27,10 +27,17 @@
         calculator?wmin=200&wmax=1000&wstep=1&angle=20&pol=p&units=nm&mat[]=Ai
         r&d[]=0&mat[]=PbS&d[]=5&mat[]=Polyethylene&d[]=0&sptype=r">Enlace</a></div>
     <h2>Búsqueda de información.</h2>
-    <a href="https://arxiv.org/abs/1303.2741">Estudio TiO<sub>2</sub> films</a>
+    <a hidden href="https://arxiv.org/abs/1303.2741">Estudio TiO<sub>2</sub> films</a>
     <p id="enunciado">Buscar información general sobre los <u>thin films</u> y exponer brevemente las posibles aplicaciones derivadas de sus propiedades ópticas.</p>
-    <p>Los <i>thin films</i> son láminas de material con un grosor que varía entre décimas de nanómetro ($1 \: \mathrm{nm} \equiv 10^{-9} \: \mathrm{m}$) y varias micras ($1 \: \mathrm{\mu m} \equiv 10^{-6} \: \mathrm{m}$).</p>
-    <p>Las aplicaciones de los <i>thin films</i> pueden ser los <b>recubrimientos</b> de diferentes objetos, así como semiconductores y memorias de ordenador. En lo que a los recubrimientos se refiere, los <i>thin films</i> de tipo cerámico se utilizan, entre otras cuestiones, para mejorar la vida útil de los utensilios de corte. Además, se suelen utilizar láminas similares en los paneles fotovoltaicos, buscando un ahorro de material y, por consiguiente, de costes. <a href="#wikithinfilm" id="cita">Wikipedia</a>.</p>
+    <p>Los <i>thin films</i> son láminas de material con un grosor que varía entre décimas de nanómetro ($1 \: \mathrm{nm} \equiv 10^{-9} \: \mathrm{m}$) y varias micras ($1 \: \mathrm{\mu m} \equiv 10^{-6} \: \mathrm{m}$) <a href="#wikithinfilm" id="cita">("Thin Film", 2024)</a>.</p>
+    <p>Las aplicaciones de los <i>thin films</i> pueden ser los <b>recubrimientos</b> de diferentes objetos, así como semiconductores y memorias de ordenador. En lo que a los recubrimientos se refiere, los <i>thin films</i> de tipo cerámico se utilizan, entre otras cuestiones, para mejorar la vida útil de los utensilios de corte. Además, se suelen utilizar láminas similares en los paneles fotovoltaicos, buscando un ahorro de material y, por consiguiente, de costes. <a href="#wikithinfilm" id="cita">("Thin Film", 2024)</a>.</p>
+    <p>En lo que respecta a la película que hemos elegido, existen diferentes propiedades a tener en cuenta, que enumeran <a href="#optical" id="cita">Evtushenko et al. (2015)</a>:</p>
+    <ul>
+        <li>Almacenamiento de energía: baterías solares.</li>
+        <li>Bajo estimulación UV, creación de radicales activos.</li>
+        <li>Descomposición del agua con estimulación UV o la luz del Sol.</li>
+    </ul>
+    <p>Entre otras.</p>
     <h2>Estudio de un <i>thin film</i>.</h2>
     <p>Para realizar el estudio se ha utilizado el simulador de <a href="https://www.filmetrics.com/reflectance-calculator?units=nm&mat[]=Air&d[]=0&mat[]=TiO2%20-%20Rutile&d[]=15&mat[]=Si&d[]=0&sptype=r">filmetrics.com</a>, que nos permite ver las gráficas de transmitancia, reflectancia y absorción de diferentes materiales.</p>
     <h3>Propiedades.</h3>
@@ -41,7 +48,7 @@
         <li>Grosor: $15 \: \mathrm{nm}$.</li>
         <li>Sustrato: Polietileno.</li>
     </ul>
-    <h3>Análisis y discusión de los datos obtenidos.</h3>
+    <h3>Análisis de los datos obtenidos.</h3>
     <h4>Transmitancia y reflectancia.</h4>
     <p>Comenzamos la recogida de datos con un ángulo de incidencia de $\require{gensymb} 0 \degree$. Obtenemos los siguientes datos de mínimos y máximos:</p>
     <table>
@@ -725,8 +732,26 @@
     </table>
     <p>Lo cual se traduce en gráficos de la forma siguiente:</p>
     <img class="responsive" src="img/celulosa.png" />
-    <h4>Discusión de los resultados.</h4>
-    <h5>Tendencia general.</h5>
+    <h4>Coeficientes de extinción, absorción y índices de refracción complejos.</h4>
+    <p>Calculamos el coeficiente de absorción a partir de la transmitancia como especifica <a id="cita" href="#reyes">Reyes et al. (2019)</a>:</p>
+    <p>\[
+            \alpha = \frac{\ln{\frac{1}{T}}}{t} \tag{1}
+        \]
+    </p>
+    <p>Donde $\alpha$ es el coeficiente de absorción, $T$ es la transmitancia y $t$ el grosor de la lámina. Obtenemos el siguiente gráfico.</p>
+    <img class="responsive" src="img/coefabs.png" />
+    <p>Por otro lado, el coeficiente de extinción puede ser graficado análogamente, siguiendo la igualdad que se presenta seguidamente:</p>
+    <p>\[
+        \kappa = \frac{\lambda \cdot \alpha}{4\pi} \tag{2}
+    \]
+</p>
+    <img class="responsive" src="img/coefext.png" />
+    <p>Este coeficiente corresponde a la parte imaginaria del <i>índice de refracción complejo</i>. La parte real es siempre el índice obtenido por la ley de Snell. Para nuestro caso vale $n = 2.609$. Así pues, se define el <i>índice de refracción complejo</i> como:</p>
+    <p>\[
+        n^{\ast} = n + i \cdot \kappa \tag{3}
+    \]
+</p>
+    <h3>Discusión de los resultados.</h3>
     <p>Tal y como se ha podido analizar en las tablas y los gráficos que se han adjuntado, vemos varias cuestiones comunes a casi todos los conjuntos de datos que se trabajan:</p>
     <ul>
         <li>En el entorno cercano de $\lambda = 200 \: \mathrm{nm}$, existe un extremo local.</li>
@@ -738,4 +763,9 @@
     <p>Por otro lado, el uso de polarización tipo <i>p</i> demuestra una mejor transmitancia para igual ángulo de incidencia.</p>
     <p>En lo que respecta a los grosores, vemos que cuando aumentamos el grosor, la transmitancia disminuye considerablemente.</p>
     <p>Entre un medio acrílico y uno de celulosa, los datos son prácticamente idénticos. Sin embargo, al compararlo con nuestra lámina de TiO<sub>2</sub> y Rutilo vemos que los dos medios son significativamente mejores transmisores de la luz que incide sobre ellos.</p>
+    <p>Hemos podido comprobar como el material tiene transmitancias altas conforme aumentamos la longitud de onda, lo cual es útil para el cometido principal de uso del mismo, siendo estimulado habitualmente por luz ultravioleta, de $\lambda$ corta. Conseguimos así que la luz no pase fácilmente la película.</p>
+    <h2>Referencias.</h2>
+    <p class="francesa" id="optical">Evtushenko, Yu. M., Romashkin, S. V., Trofimov, N. S., y Chekhlova, T. K. (2015). Optical properties of TiO<sub>2</sub> thin films. Physics Procedia, 73, 100-107. <a href="https://doi.org/10.1016/j.phpro.2015.09.128">https://doi.org/10.1016/j.phpro.2015.09.128</a></p>
+    <p class="francesa" id="reyes">Reyes, M. D. L. Á.; Figueroa, S.; Ramírez, E. y Santis, L. F. (2019). Efecto del número de capas en las propiedades ópticas de películas delgadas de CuO-TiO<sub>2</sub>. En O. Benavides, Handbooks Ciencias e Ingeniería de Materiales para Aplicaciones Energéticas TI (1<sup>a</sup> ed., pp. 94-102). ECORFAN. <a href="https://doi.org/10.35429/H.2019.1.94.102">https://doi.org/10.35429/H.2019.1.94.102</a></p>
+    <p class="francesa" id="wikithinfilm">Thin film. (2024). En Wikipedia. <a href="https://en.wikipedia.org/w/index.php?title=Thin_film&oldid=1224588831">https://en.wikipedia.org/w/index.php?title=Thin_film&oldid=1224588831</a></p>
 </html>
