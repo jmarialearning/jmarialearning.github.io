@@ -16,6 +16,14 @@
   paper: "a4",
   margin: (left: 3cm, right: 3cm, top: 3cm, bottom: 3cm)
 )
+#set list(
+  tight: true,
+  spacing: 1em
+)
+#set block(
+  below: 1.5em,
+  above: 1.5em
+)
 #align(top+center,[
   #image(
     "../img/logoUZ.png",
@@ -31,7 +39,7 @@
   Curso 2023-2024.\
   Universidad de Zaragoza.\
   Centro educativo: CEIP Pedro I\
-  Tutora del colegio: Eva Les Gran.\ // Falta segundo apellido.
+  Tutora del colegio: Eva Les Gran.\
   Tutora de la Universidad: Charo Tobeña Arasanz.
 ])
 #pagebreak()
@@ -53,19 +61,95 @@ En la actualidad, al centro asisten 462 alumnos y alumnas. Respecto al alumnado,
 Existe alumnado inmigrante de diferentes procedencias (Marruecos, Gambia, Malí, Ecuador, Bolivia, Guatemala, Brasil, República Dominicana, Bulgaria, Rumanía, China...) y una minoría de alumnado de etnia gitana.\
 En el centro asisten alumnos con necesidades educativas especiales (albinismo ocular, TEA, síndrome de Angelman, diferentes disfunciones motóricas, auditivas, diversos alumnos con trastornos de lenguaje y comunicación, TDAH,...).
 == Claustro y conexiones con entidades.
-El Claustro está compuesto por 39 profesores/as: 8 de Educación Infantil, 4 de Educación Primaria, 1 de Música, 5 de Educación Física, 2 de Educación Física con francés, 5 Filología inglesa, 5 Filología Francesa, 1 de Pedagogía terapéutica, 2 de Audición y Lenguaje, 5 profesoras colaboradoras de Francés y 1 de Religión Católica. Además hay una Técnico Auxiliar de Educación Infantil y dos Auxiliares de Educación Especial.
+El Claustro está compuesto por 39 docentes: 8 de Educación Infantil, 4 de Educación Primaria, 1 de Música, 5 de Educación Física, 2 de Educación Física con francés, 5 Filología inglesa, 5 Filología Francesa, 1 de Pedagogía terapéutica, 2 de Audición y Lenguaje, 5 profesoras colaboradoras de Francés y 1 de Religión Católica. Además hay una Técnico Auxiliar de Educación Infantil y dos Auxiliares de Educación Especial.
 Un día y una mañana a la semana el centro es atendido por la Orientadora y una tarde a la semana la Trabajadora Social de Equipo, ambos pertenecientes al EOEIP de Monzón.\
-El AMPA colabora en varias actividades del Centro y, además, realiza otras propias (guardería, las actividades extraescolares,fiesta fin de curso ...).\
+El AMPA colabora en varias actividades del Centro y, además, realiza otras propias (guardería, las actividades extraescolares, fiesta fin de curso ...).\
 = Análisis del Plan de Atención a la diversidad.
 == Objetivos.
+El centro en que se han desarrollado las prácticas busca, en línea con los planteamientos de la educación moderna, que todas las personas integrantes de la comunidad educativa perciban la diversidad como una oportunidad para enriquecer el entorno de aprendizaje.
 
+La legislación en atención a la diversidad en la Comunidad Autónoma de Aragón sigue estas tesis, propuestas por la UNESCO, en varias normas, entre las que destacan el _Decreto 164/2022, de 16 de noviembre, del Gobierno de Aragón, por el que se modifica el Decreto 188/2017, de 28 de noviembre, del Gobierno de Aragón, por el que se regula la respuesta educativa inclusiva y la convivencia en las comunidades educativas de la Comunidad Autónoma de Aragón_. En su título segundo, se detallan los principios generales de actuación:
+#set par(leading: 0.65em)
+#list(tight: true,
+[La prevención y anticipación.],
+[La equidad y la inclusión, y la accesibilidad universal a la educación.],
+[La personalización de la enseñanza.],
+[La calidad de la educación para todo el alumnado.],
+[La participación de la comunidad educativa y la coordinación.],
+[La convivencia, sentida como la transmisión de valores que favorezcan la solidaridad, la tolerancia, la igualdad, el respeto, la justicia y la valoración de las diferencias.],
+[La autonomía en la organización y funcionamiento de los centros educativos, para convivencia positiva y la inclusión de todo el alumnado.],
+[La formación y el impulso de prácticas innovadoras],
+[La flexibilidad de los elementos organizativos del centro.],
+[La escuela inclusiva como referente del encuentro de todas las identidades de género siguiendo los principios de igualdad y equidad.],
+[La orientación educativa y la tutoría en los distintos niveles educativos.])
+En base a esto, se especifican unos objetivos que citamos a continuación:
+#list(tight: false,
+[Favorecer la igualdad de oportunidades, proporcionar una educación personalizada y fomentar la participación, la solidaridad y la cooperación entre el alumnado. En conclusión, aprender juntos independientemente de sus condiciones personales, sociales o culturales.],
+[Detectar de forma temprana y preventiva, evaluar y hacer el seguimiento de las
+necesidades educativas en el alumnado.],
+[Posibilitar la integración social y educativa de este alumnado potenciando actitudes de aceptación y respeto en todos los alumnos y alumnas.
+Potenciar la incorporación de los diferentes valores que aportan las distintas culturas y fomentar la participación del alumnado y de sus familias en la vida del centro.],
+[Ofrecer al alumnado en situación social o cultural desfavorecida o que presente graves dificultades de adaptación escolar, una respuesta educativa adecuada y de calidad que le facilite conseguir los objetivos educativos para que pueda integrarse en la sociedad.],
+[Favorecer la cooperación entre el profesorado y las familias, fomentando la implicación de éstas en el proceso educativo de sus hijos.])
+#set par(leading: 1.5em)
 == Actuaciones de Atención a la Diversidad.
-// Esto lo pondremos cuando tengamos el nuevo PAD, total, es lo mismo.
-En el centro se realizan las siguientes actuaciones de atención a la diversidad, conforme a lo dispuesto en la Orden ECD/913/2023, del 11 de julio, por la que se modifica la Orden ECD/1005/2018, de 7 de junio, por la que se regulan las actuaciones de intervención educativa inclusiva.
+En el centro se realizan las siguientes actuaciones de atención a la diversidad, conforme a lo dispuesto en la Orden ECD/913/2023, del 11 de julio, por la que se modifica la Orden ECD/1005/2018, del 7 de junio, por la que se regulan las actuaciones de intervención educativa inclusiva.
+#set par(leading: 0.65em)
 === Actuaciones generales.
-
+Se realizan en el centro las siguientes _actuaciones generales_:
++ *Prevención de necesidades y respuesta anticipada*
+  - Estimulación del lenguaje en 4 y 5 años.
+  - Coordinación con las guarderías para incluir al nuevo alumnado en 3 años.
+  - Coordinación con instituciones externas (ASPACE, Asociación DOWN u ONCE entre otras).
+  - Coordinación con IASS, USMIJ o CEPAIM.
+  - Coordinación de cambio de etapa.
+  - Coordinación interciclos.
+  - Apoyos de profesorado de infantil en Primer Ciclo de Primaria.
+  - Participación de la mediación CAREI.
+  - Evaluaciones iniciales: gestión de informes para prevenir la aparación de condiciones de NEAE.
++ *Promoción de la asistencia y la permanencia en el sistema educativo*
+  - Plan de Absentismo Provincial con el Personal de Servicios a la Comunidad y Equipo Directivo.
+  - Intervención del EOEIP, si procede.
+  - Atención domiciliaria.
+  - Plan de acogida con el CEPAIM.
++ *Función tutorial y convivencia escolar*
+  - Entrevistas con las familias, con EOEIP y especialistas PT y AL participantes.
+  - Tutorías individuales con el alumnado.
+  - Actividades específicas en las horas de Tutoría, detalladas en el POAT.
+  - Recreos cooperativos y propuestas de inclusión en los patios.
+  - Actuaciones de centro.
++ *Propuestas metodológicas y organizativas*
+  - _Desdobles de especialista_ y _codocencia_: para realizar cuando existan ACNEAEs. Preferentemente, se realizarán dentro del aula, a no ser que esté justificada la salida. Además, versarán, en la medida de lo posible, sobre la misma temática trabajada en el grupo-clase.
+  - _Metodologías en Educación Infantil_: proyectos, rincones y talleres.
+  - Aprendizaje cooperativo.
+  - Tutoría entre iguales.
+  - Apoyos para lectoescritura en primer ciclo.
+  - Desdobles en ciencias.
+  - Apadrinamiento lector.
+  - Apoyos generalistas y especialistas personalizados _dentro de aula_.
++ *Accesibilidad universal al aprendizaje*
+  - Uso de pictogramas.
+  - Tabletas y portátiles para facilitar el acceso a la información y su expresión.
+  - Utilización de equipos de FM y sistemas bimodales para el trabajo diario con alumnado con discapacidad auditiva.
+  - Adaptación del mobiliario y señalización de espacios para personas con discapacidad visual.
++ *Adaptaciones no significativas del currículo*
+  - Priorización de criterios imprescindibles.
+  - Enriquecimiento curricular
+  - _Adecuación de la evaluación_: oral, con más tiempo o apoyo visual.
++ *Programas de colaboración*
+  - Grupos interactivos.
+  - Tertulias dialógicas.
+  - Bibliotecas tutorizadas.
+  - Grupos de apoyo.
++ *Programas establecidos por la Administración*
+  - AÚNA.
+  - Refuerzo de Cruz Roja.
+  - Mediación árabe del CAREI.
+  - Programa de hábitos saludables.
 === Actuaciones específicas.
-
+Se especifican en el Plan de Atención a la Diversidad las siguientes _actuaciones específicas_:
++ *Adaptación Curricular Significativa*
+#set par(leading: 1.5em)
 == Recursos para atender a la diversidad.
 
 = Estudio y análisis de la práctica docente del maestro de PT.
