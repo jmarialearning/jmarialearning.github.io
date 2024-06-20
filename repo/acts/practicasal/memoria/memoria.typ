@@ -69,7 +69,6 @@ El AMPA colabora en varias actividades del Centro y, además, realiza otras prop
 El centro en que se han desarrollado las prácticas busca, en línea con los planteamientos de la educación moderna, que todas las personas integrantes de la comunidad educativa perciban la diversidad como una oportunidad para enriquecer el entorno de aprendizaje.
 
 La legislación en atención a la diversidad en la Comunidad Autónoma de Aragón sigue estas tesis, propuestas por la UNESCO, en varias normas, entre las que destacan el _Decreto 164/2022, de 16 de noviembre, del Gobierno de Aragón, por el que se modifica el Decreto 188/2017, de 28 de noviembre, del Gobierno de Aragón, por el que se regula la respuesta educativa inclusiva y la convivencia en las comunidades educativas de la Comunidad Autónoma de Aragón_. En su título segundo, se detallan los principios generales de actuación:
-#set par(leading: 0.65em)
 #list(tight: true,
 [La prevención y anticipación.],
 [La equidad y la inclusión, y la accesibilidad universal a la educación.],
@@ -94,7 +93,6 @@ Potenciar la incorporación de los diferentes valores que aportan las distintas 
 #set par(leading: 1.5em)
 == Actuaciones de Atención a la Diversidad.
 En el centro se realizan las siguientes actuaciones de atención a la diversidad, conforme a lo dispuesto en la Orden ECD/913/2023, del 11 de julio, por la que se modifica la Orden ECD/1005/2018, del 7 de junio, por la que se regulan las actuaciones de intervención educativa inclusiva.
-#set par(leading: 0.65em)
 === Actuaciones generales.
 Se realizan en el centro las siguientes _actuaciones generales_:
 + *Prevención de necesidades y respuesta anticipada*
@@ -148,24 +146,69 @@ Se realizan en el centro las siguientes _actuaciones generales_:
   - Programa de hábitos saludables.
 === Actuaciones específicas.
 Se especifican en el Plan de Atención a la Diversidad las siguientes _actuaciones específicas_:
-+ *Adaptación Curricular Significativa*
++ *Adaptación Curricular Significativa*, entendida como la modificación de los elementos nucleares del currículo, cuando existen más de dos años de desfase curricular. 
++ *Adaptación de acceso al currículo*
+  - Propuesta de Auxiliar de Educación Especial.
+  - Ayudas técnicas.
+  - SAAC.
+  - Modificación de elementos físicos.
 #set par(leading: 1.5em)
 == Recursos para atender a la diversidad.
-
-= Estudio y análisis de la práctica docente del maestro de PT.
+En el centro existen los siguientes recursos personales de Atención a la Diversidad:
+- Dos especialistas de Pedagogía Terapéutica.
+- Una especialista de Audición y Lenguaje.
+- Un especialista de inglés con Audición y Lenguaje.
+- Dos auxiliares de Educación Especial.
+- Una orientadora del EOEIP de Monzón.
+#set par(leading: 1.5em)
+Por otro lado, existen diferentes _recursos materiales_ que permiten una correcta gestión de la diversidad, a saber:
+- _Equipos técnicos de Frecuencia Modulada_ para permitir que el profesorado y alumnado con discapacidad auditiva acceda a la información de forma óptima haciendo uso del canal auditivo.
+- _Mesas adaptadas_ para personas con discapacidad motora, preparadas para sillas de ruedas. Además, _sillas adaptadas_ para poder trabajar con este alumnado.
+- Accesibilidad universal y eliminación de barreras arquitectónicas, de acuerdo con las directrices de #cite(<neufert_arte_1936>, form: "prose") y otras voces.
+#set par(leading: 1.5em)
+= Estudio y análisis de la práctica docente de la maestra de AL.
 == Descripción del aula.
+El aula en que se ha trabajado durante las prácticas tiene una apariencia moderna, que le confiere versatilidad para poder intervenir en pequeño grupo cuando es necesario. Es un aula con superficie rectangular, que permite un aprovechamiento óptimo de los lugares de trabajo del profesorado y del alumnado. No es menos cierto que el aula es pequeña, pero cumple con las directrices establecidas por #cite(<neufert_arte_1936>, form: "prose") para creación de centros de educación. Además, tiene un aula idéntica contigua que se utiliza también para el trabajo del departamento de Atención a la Diversidad, permitiendo una mejor gestión del alumnado llevado por PT y AL.
 
+Existen en el aula una mesa para el profesorado, con un ordenador y otra doble para el alumnado, además de 3 armarios donde se guardan los materiales propios para el trabajo diario de especialista. 
 == Alumnado con quien se ha trabajado. 
-
-== Funciones llevadas a cabo por la maestra PT.
-
+Se ha trabajado con el siguiente alumnado en el transcurso de las prácticas:
++ *Etapa de Educación Infantil*
+  - 1º: J.R., A. y S., alumnado con Retraso Global del Desarrollo, Trastorno del Espectro Autista y Trastorno del Lenguaje.
+  - 3º: G., A., D., A. y M.: alumnado con dislalias en diversos fonemas. 
++ *Etapa de Educación Primaria*
+  - 1º: M., J., M. y L.: alumnado con dislalias en diversos fonemas.
+  - 2º: I.: alumnado con retraso lectoescritor y discapacidad intelectual.
+  - 3º: D.: alumnado con discapacidad intelectual.
+  - 6º: S., alumnado con Trastorno del Espectro Autista. J., alumnado con Discapacidad Intelectual y M., alumnado con Hipoacusia profunda.
+#set par(leading: 1.5em)
+== Funciones llevadas a cabo por la maestra AL.
+Entre las fuunciones de la maestra de Audición y Lenguaje se encuentran las siguientes:
+- Estimulación del lenguaje en Infantil, en gran grupo y pequeño grupo.
+- Prevención de dificultades del lenguaje en infantil y primer ciclo.
+- En primer ciclo prevención de los retrasos lectoescritores.
+- Gestión de las problemáticas de lenguaje y audición y su consiguiente estimulación para permitir la máxima inclusión.
+- Asesoramiento profesional sobre dificultades del lenguaje, patologías e intervención.
+- Informes y seguimiento de las patologías del lenguaje, coordinación con las familias y los tutores, con el objeto de transmitir la información.
+#set par(leading: 1.5em)
 == Descripción y observación de las metodologías, recursos y evaluación.
-
+En lo que respecta a las metodologías, se han observados diferentes cuestiones que merecen mención en el presente documento:\
+En lo que se refiere a los grupos de dislalias, la maestra suele mantener una rutina compuesta por un saludo con la frase _Buenos días_, haciendo énfasis, en los fonema /b/ y /s/. Después, haciendo uso de un vocabulario seleccionado, se procede a estimular en lenguaje repetido la correcta articulación de los fonemas en punto y modo. Las praxias se relegan a un segundo plano.\
+Por otro lado, es habitual el trabajo con juegos de descripción, preguntas y respuestas con el objetivo de extrapolar los aprendizajes específicos al lenguaje espontáneo.\
+Con respecto al alumnado con Discapacidad Intelectual se establecen unas pautas generales de actuación, sin perjuicio de una personalización y adaptación de los métodos a la individualidad de cada estudiante. Entre otras, destacan el trabajo de lectoescritura, estructuración de las frases orales y escritas y el procesamiento lector y escritor, así como los ejercicios de comprensión literal e inferencial.\
+Por último, en lo que se refiere al alumnado con hipoacusia, se trabaja el lenguaje oral mediante numerosos apoyos técnicos (rehabilitación del implante en el programa SEDEA del colegio La Purísima en Zaragoza, equipos de FM) y pedagógicos (LSE, dactilogía, LNA, gestos y pictogramas). Se propicia la integración de los aprendizajes en estos métodos con el objeto de dotar al alumnado de herramientas y estrategias para suplir el canal auditivo, extremadamente importante en nuestro sector.
 = Análisis y reflexión del aprendizaje en las prácticas.
 == Actividad docente.
-
+Se han realizado numerosas actividades durante el periodo de prácticas, a nivel académico, complementario o extraescolar. La asistencia a reuniones ha sido regular, con varias coordinaciones de ciclo y con el EOEIP. En ellas se han tratado aspectos como la creación de planes de apoyo y refuerzo, así como la planificación de actividades para los niños.\
+Por otro lado, se han hecho diferentes actividades extraescolares con la celebración del fin de curso en el colegio. Estas actividades permiten un fomento de la convivencia entre todos los grupos. Por otro lado, la celebración del festival permite generar una situación social de referencia que busca que los escolares trabajen aprendizajes variados con una motivación, la _muestra al público_.
 == Competencias adquiridas en el periodo de prácticas.
-
+Se especifican a continuación las competencias adquiridas en este periodo de prácticas:
+- *Paciencia*, virtud de especial relevancia por las casuísticas trabajadas en el aula. Ante disrupciones o dificultades en la comprensión, es esencial mantener la paciencia y estar preparados para explicar sucesivas veces los conceptos o procedimientos que se trabajan. Así es como se consigue el aprendizaje, más si cabe en atención a la diversidad de forma específica.
+- *Templanza*, en las llamadas al orden que se realizan en el centro educativo, es necesario actuar dando un _feedback_ formativo y enriquecedor para el alumno o alumna, lo cual propicia la mejora. Han existido casos en los que esto se ha tenido que realizar, pero se ha hecho conforme a legislación y pensando en estas cuestiones, buscando el aprendizaje y la intención de evitar volver a cometer el mismo error por segunda vez.\
+En lo que se refiere a las competencias académicas, podemos mencionar:
+- *Trabajo con alumnado hipoacúsico*, con el que es preciso trabajar de forma diferente en la dación de consignas. El continuo apoyo visual así como la correcta dicción y la gestión de los equipos técnicos ha necesitado ser trabajada para conseguir que el alumnado accediese a la información dada.
+- *Trabajo con el alumnado de Educación Infantil*, cuestión cultivada mucho durante el periodo. Como especialistas, es competencia nuestra trabajar con el alumnado de educación infantil. Sin embargo, no hemos sido formados para esta etapa, en la que hay cuestiones que se han de tener en cuenta para el trabajo habitual. La necesidad de comprobar exhaustivamente el trabajo realizado, tener en cuenta la diferencia de altura entre el alumnado y nosotros mismos o la importancia del material manipulativo para los conceptos matemáticos o científicos son algunas de las habilidades que se han de tener para preparar secuencias o adaptaciones de material en el aula de Educación Infantil.
+- *Uso de diferentes recursos de especialidad*, como equipos de FM, pictogramas o secuenciadores de información para alumnado con TEA.
 == Grado de consecución de los objetivos de las prácticas. 
 
 == Aspectos para seguir mejorando.
