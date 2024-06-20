@@ -211,7 +211,8 @@ En lo que se refiere a las competencias académicas, podemos mencionar:
 - *Uso de diferentes recursos de especialidad*, como equipos de FM, pictogramas o secuenciadores de información para alumnado con TEA.
 == Grado de consecución de los objetivos de las prácticas. 
 En líneas generales, se ha podido ver que los objetivos de las prácticas se han cumplido, en tanto en cuanto se han conocido las líneas básicas de actuación de las y los docentes de Audición y Lenguaje, así como unas posibilidades de intervención en las patologías de lenguaje y audición en el alumnado de Educación Infantil y Primaria.\
-Más en detalle, se ha podido comprobar cómo funcionan cuestiones tan básicas como una ACS
+Más en detalle, se ha podido comprobar cómo funcionan cuestiones tan básicas como una ACS para alumnado de primaria o los conocidos Planes Personalizados de Refuerzo, así como un Plan de Seguimiento Personalizado.\
+Por otro lado, se ha podido ver el funcionamiento de 
 == Aspectos para seguir mejorando.
 
 #bibliography(
