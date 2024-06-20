@@ -210,7 +210,8 @@ En lo que se refiere a las competencias académicas, podemos mencionar:
 - *Trabajo con el alumnado de Educación Infantil*, cuestión cultivada mucho durante el periodo. Como especialistas, es competencia nuestra trabajar con el alumnado de educación infantil. Sin embargo, no hemos sido formados para esta etapa, en la que hay cuestiones que se han de tener en cuenta para el trabajo habitual. La necesidad de comprobar exhaustivamente el trabajo realizado, tener en cuenta la diferencia de altura entre el alumnado y nosotros mismos o la importancia del material manipulativo para los conceptos matemáticos o científicos son algunas de las habilidades que se han de tener para preparar secuencias o adaptaciones de material en el aula de Educación Infantil.
 - *Uso de diferentes recursos de especialidad*, como equipos de FM, pictogramas o secuenciadores de información para alumnado con TEA.
 == Grado de consecución de los objetivos de las prácticas. 
-
+En líneas generales, se ha podido ver que los objetivos de las prácticas se han cumplido, en tanto en cuanto se han conocido las líneas básicas de actuación de las y los docentes de Audición y Lenguaje, así como unas posibilidades de intervención en las patologías de lenguaje y audición en el alumnado de Educación Infantil y Primaria.\
+Más en detalle, se ha podido comprobar cómo funcionan cuestiones tan básicas como una ACS
 == Aspectos para seguir mejorando.
 
 #bibliography(
