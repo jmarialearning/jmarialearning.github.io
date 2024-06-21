@@ -231,6 +231,6 @@ A la vista del desempeño de los estudiantes en la intervención y la comparaci�
 En suma, podemos considerar la intervención efectiva. Como limitaciones, quizá han existido errores de temporalización que no han permitido aprovechar al máximo la intervención. Además, podemos sumar también el hecho del final de curso que propicia cierto cansancio y hastío en nuestro alumnado. Esto se ha intentado evitar siguiendo una dinámica motivante, que salga de la rutina (puesto que también lo hacen en otras áreas) y que utilice nuevos elementos como la tecnologia digital y la interacción con ella.
 #bibliography(
   "fuentes.bib",
-  title: "5. Referencias.",
+  title: "6. Referencias.",
   style: "american-psychological-association"
 )
