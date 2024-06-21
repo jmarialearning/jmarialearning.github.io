@@ -69,7 +69,7 @@ El AMPA colabora en varias actividades del Centro y, además, realiza otras prop
 El centro en que se han desarrollado las prácticas busca, en línea con los planteamientos de la educación moderna, que todas las personas integrantes de la comunidad educativa perciban la diversidad como una oportunidad para enriquecer el entorno de aprendizaje.
 
 La legislación en atención a la diversidad en la Comunidad Autónoma de Aragón sigue estas tesis, propuestas por la UNESCO, en varias normas, entre las que destacan el _Decreto 164/2022, de 16 de noviembre, del Gobierno de Aragón, por el que se modifica el Decreto 188/2017, de 28 de noviembre, del Gobierno de Aragón, por el que se regula la respuesta educativa inclusiva y la convivencia en las comunidades educativas de la Comunidad Autónoma de Aragón_. En su título segundo, se detallan los principios generales de actuación:
-#list(tight: true,
+#list(tight: false,
 [La prevención y anticipación.],
 [La equidad y la inclusión, y la accesibilidad universal a la educación.],
 [La personalización de la enseñanza.],
@@ -90,7 +90,6 @@ necesidades educativas en el alumnado.],
 Potenciar la incorporación de los diferentes valores que aportan las distintas culturas y fomentar la participación del alumnado y de sus familias en la vida del centro.],
 [Ofrecer al alumnado en situación social o cultural desfavorecida o que presente graves dificultades de adaptación escolar, una respuesta educativa adecuada y de calidad que le facilite conseguir los objetivos educativos para que pueda integrarse en la sociedad.],
 [Favorecer la cooperación entre el profesorado y las familias, fomentando la implicación de éstas en el proceso educativo de sus hijos.])
-#set par(leading: 1.5em)
 == Actuaciones de Atención a la Diversidad.
 En el centro se realizan las siguientes actuaciones de atención a la diversidad, conforme a lo dispuesto en la Orden ECD/913/2023, del 11 de julio, por la que se modifica la Orden ECD/1005/2018, del 7 de junio, por la que se regulan las actuaciones de intervención educativa inclusiva.
 === Actuaciones generales.
@@ -101,10 +100,10 @@ Se realizan en el centro las siguientes _actuaciones generales_:
   - Coordinación con instituciones externas (ASPACE, Asociación DOWN u ONCE entre otras).
   - Coordinación con IASS, USMIJ o CEPAIM.
   - Coordinación de cambio de etapa.
-  - Coordinación interciclos.
+  - Coordinación entre ciclos.
   - Apoyos de profesorado de infantil en Primer Ciclo de Primaria.
   - Participación de la mediación CAREI.
-  - Evaluaciones iniciales: gestión de informes para prevenir la aparación de condiciones de NEAE.
+  - Evaluaciones iniciales: gestión de informes para prevenir la aparición de condiciones de NEAE.
 + *Promoción de la asistencia y la permanencia en el sistema educativo*
   - Plan de Absentismo Provincial con el Personal de Servicios a la Comunidad y Equipo Directivo.
   - Intervención del EOEIP, si procede.
@@ -152,7 +151,6 @@ Se especifican en el Plan de Atención a la Diversidad las siguientes _actuacion
   - Ayudas técnicas.
   - SAAC.
   - Modificación de elementos físicos.
-#set par(leading: 1.5em)
 == Recursos para atender a la diversidad.
 En el centro existen los siguientes recursos personales de Atención a la Diversidad:
 - Dos especialistas de Pedagogía Terapéutica.
@@ -160,16 +158,13 @@ En el centro existen los siguientes recursos personales de Atención a la Divers
 - Un especialista de inglés con Audición y Lenguaje.
 - Dos auxiliares de Educación Especial.
 - Una orientadora del EOEIP de Monzón.
-#set par(leading: 1.5em)
 Por otro lado, existen diferentes _recursos materiales_ que permiten una correcta gestión de la diversidad, a saber:
 - _Equipos técnicos de Frecuencia Modulada_ para permitir que el profesorado y alumnado con discapacidad auditiva acceda a la información de forma óptima haciendo uso del canal auditivo.
 - _Mesas adaptadas_ para personas con discapacidad motora, preparadas para sillas de ruedas. Además, _sillas adaptadas_ para poder trabajar con este alumnado.
 - Accesibilidad universal y eliminación de barreras arquitectónicas, de acuerdo con las directrices de #cite(<neufert_arte_1936>, form: "prose") y otras voces.
-#set par(leading: 1.5em)
 = Estudio y análisis de la práctica docente de la maestra de AL.
 == Descripción del aula.
-El aula en que se ha trabajado durante las prácticas tiene una apariencia moderna, que le confiere versatilidad para poder intervenir en pequeño grupo cuando es necesario. Es un aula con superficie rectangular, que permite un aprovechamiento óptimo de los lugares de trabajo del profesorado y del alumnado. No es menos cierto que el aula es pequeña, pero cumple con las directrices establecidas por #cite(<neufert_arte_1936>, form: "prose") para creación de centros de educación. Además, tiene un aula idéntica contigua que se utiliza también para el trabajo del departamento de Atención a la Diversidad, permitiendo una mejor gestión del alumnado llevado por PT y AL.
-
+El aula en que se ha trabajado durante las prácticas tiene una apariencia moderna, que le confiere versatilidad para poder intervenir en pequeño grupo cuando es necesario. Es un aula con superficie rectangular, que permite un aprovechamiento óptimo de los lugares de trabajo del profesorado y del alumnado. No es menos cierto que el aula es pequeña, pero cumple con las directrices establecidas por #cite(<neufert_arte_1936>, form: "prose") para creación de centros de educación. Además, tiene un aula idéntica contigua que se utiliza también para el trabajo del departamento de Atención a la Diversidad, permitiendo una mejor gestión del alumnado llevado por PT y AL.\
 Existen en el aula una mesa para el profesorado, con un ordenador y otra doble para el alumnado, además de 3 armarios donde se guardan los materiales propios para el trabajo diario de especialista. 
 == Alumnado con quien se ha trabajado. 
 Se ha trabajado con el siguiente alumnado en el transcurso de las prácticas:
@@ -181,16 +176,14 @@ Se ha trabajado con el siguiente alumnado en el transcurso de las prácticas:
   - 2º: I.: alumnado con retraso lectoescritor y discapacidad intelectual.
   - 3º: D.: alumnado con discapacidad intelectual.
   - 6º: S., alumnado con Trastorno del Espectro Autista. J., alumnado con Discapacidad Intelectual y M., alumnado con Hipoacusia profunda.
-#set par(leading: 1.5em)
 == Funciones llevadas a cabo por la maestra AL.
-Entre las fuunciones de la maestra de Audición y Lenguaje se encuentran las siguientes:
+Entre las funciones de la maestra de Audición y Lenguaje se encuentran las siguientes:
 - Estimulación del lenguaje en Infantil, en gran grupo y pequeño grupo.
 - Prevención de dificultades del lenguaje en infantil y primer ciclo.
-- En primer ciclo prevención de los retrasos lectoescritores.
+- En primer ciclo de primaria, prevención de los retrasos lectoescritores.
 - Gestión de las problemáticas de lenguaje y audición y su consiguiente estimulación para permitir la máxima inclusión.
 - Asesoramiento profesional sobre dificultades del lenguaje, patologías e intervención.
-- Informes y seguimiento de las patologías del lenguaje, coordinación con las familias y los tutores, con el objeto de transmitir la información.
-#set par(leading: 1.5em)
+- redacción de informes y seguimiento de las patologías del lenguaje, coordinación con las familias y los tutores, con el objeto de transmitir la información.
 == Descripción y observación de las metodologías, recursos y evaluación.
 En lo que respecta a las metodologías, se han observados diferentes cuestiones que merecen mención en el presente documento:\
 En lo que se refiere a los grupos de dislalias, la maestra suele mantener una rutina compuesta por un saludo con la frase _Buenos días_, haciendo énfasis, en los fonema /b/ y /s/. Después, haciendo uso de un vocabulario seleccionado, se procede a estimular en lenguaje repetido la correcta articulación de los fonemas en punto y modo. Las praxias se relegan a un segundo plano.\
