@@ -1,5 +1,5 @@
 #set document(
-  title: ["Proyecto de prácticas de mención de Pedagogía Terapéutica"],
+  title: ["Proyecto de prácticas de mención de Audición y Lenguaje"],
   author: "Jesús María Mora Mur",
   date: datetime.today(offset: auto)
 )
@@ -26,7 +26,7 @@
 ])
 
 #align(horizon+center, text(20pt, hyphenate: false)[
-  *Proyecto de prácticas de mención de Pedagogía Terapéutica*
+  *Proyecto de prácticas de mención de Audición y Lenguaje*
 ])
 #align(bottom+right,text(18pt)[
   Jesús María Mora Mur.\
@@ -119,7 +119,11 @@ caption: "Ejemplo de la segunda actividad: preguntas explícitas"
 ),
 caption: "Ejemplo de la segunda actividad: preguntas deducibles"
 ) <figura3>
-Se volvieron a introducir diferentes estímulos (imágenes) para poder trabajar de forma alterna
+Se volvieron a introducir diferentes estímulos (imágenes) para poder trabajar de forma alterna con los dos estudiantes. Además, se pidieron varias cuestiones:
++ Dar una respuesta correcta a la pregunta.
++ Justificar con detalle esa respuesta.
++ Describir la imagen que se veía en pareja.
+La sesión transcurrió sin problemáticas de ningún tipo
 == Actividad 3.
 
 === Objetivos.
