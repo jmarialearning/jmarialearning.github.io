@@ -71,17 +71,55 @@ Las actividades se han realizado teniendo en cuenta que se introduce contenido n
 == Métodos.
 
 == Actividad 1.
-
+En la primera actividad se han propuesto una serie de estímulos para trabajar las comprensiones inferenciales y la estructuración de la frase. Se ha preparado para ello un _Genially_ en el que se han visualizado diferentes estímulos visuales, para permitir un mejor trabajo con el alumnado con discapacidad auditiva. He aquí una imagen de los estímulos:
+#figure(
+  image(
+  "img/infer1.png",
+  width: 100%
+),
+caption: "Ejemplo de la primera actividad"
+) <figura1>
+#highlight(fill: gradient.linear(..color.map.rainbow), stroke: gradient.linear(..color.map.rainbow), radius: 5pt)[*Licencia CC-BY de las imágenes*]
 === Objetivos. 
-
+Los objetivos de la sesión son los siguientes:
+- Comprender e integrar la metodología de la intervención.
+- Reconocer diferentes elementos cotidianos y denominarlos correctamente.
+- Caracterizar atributos de ciertos objetos.
+- Reconocer atributos comunes a distintos objetos.
 === Desarrollo de la sesión.
-
+En primer lugar, se explicó qué se iba a realizar ese día y la forma de trabajar de la intervención. Una vez se aseguró la comprensión de las órdenes, se comenzó la actividad. Había 8 estímulos, cuatro para cada estudiante. Se presentaban varias opciones para responder a la pregunta _¿Qué necesito?_. Todas las preguntas, como la que vemos en la @figura1[figura], tienen varias respuestas correctas.\
+Se pedían varias cuestiones:
++ Marcar correctamente qué se necesita para cada acción.
++ Realizar una frase del tipo _Para_ [...] _necesito_ [...]. Se da esta plantilla para facilitar la estructura, objeto principal de esta escritura y verbalización.
++ Enumerar todos los elementos que aparecen en la transparencia (acción y opciones), justificar por qué se han elegido o dejado y comprobar si hay algunos elementos que compartan propiedades comunes. 
+La dificultad que supone la presencia en el aula de dos niveles de vocabulario, comprensión y expresión oral y escrita ha supuesto un desafío claro. Esta cuestión se ha intentado solventar haciendo partícipe a los dos estudiantes en cada estímulo, preparando preguntas adecuadas a las diferentes cuestiones que se pretenden trabajar con cada uno de ellos.\
+En lo que al desarrollo de la sesión se refiere, esta siguió el planteamiento previsto. No es, eso sí, menos cierto que visto el comportamiento en una observación anterior se optó por reducir la intensidad de esta primera actividad temiendo que no surtiese el efecto deseado. El comportamiento mencionado (pasivo y con dificultades serias en el procesamiento de la información) demostró ser coyuntural, no mostrándose tal conducta en la sesión de intervención. Así pues, se adecuó la intervención sucesiva en consecuencia.\
+#highlight(fill: gradient.linear(..color.map.rainbow), stroke: gradient.linear(..color.map.rainbow), radius: 5pt)[*Falta explicar cómo fue la sesión. ¿Lo hicieron bien? etc.*]
 == Actividad 2.
-
+En esta segunda actividad, desarrollada en una sesión distinta se trabajó la diferencia entre comprensión literal e inferencial en tanto en cuanto, la comprensión literal es explícita en un texto o imagen, mientras que la inferencial no. Trabajaremos desde la oralidad a partir de imágenes.
 === Objetivos.
-
+- Distinguir entre lo que se ve y lo que se intuye en una imagen. 
+- Deducir acciones a partir de lo que se ve en una imagen.
+- Describir detalladamente las imágenes propuestas.
 === Desarrollo de la sesión.
-
+Se utilizó un corto espacio de tiempo para explicar en qué iba a consistir la sesión. Las preguntas son de dos tipos:
+- Preguntas tipo _ojo_: visibles explícitamente al mirar la imagen.
+- Preguntas tipo _lupa_: no visibles explícitamente pero deducibles a partir de las acciones que se ven en las imágenes.
+#figure(
+  image(
+  "img/infer2.png",
+  width: 100%
+),
+caption: "Ejemplo de la segunda actividad: preguntas explícitas"
+) <figura2>
+#figure(
+  image(
+  "img/infer3.png",
+  width: 100%
+),
+caption: "Ejemplo de la segunda actividad: preguntas deducibles"
+) <figura3>
+Se volvieron a introducir diferentes estímulos (imágenes) para poder trabajar de forma alterna
 == Actividad 3.
 
 === Objetivos.
