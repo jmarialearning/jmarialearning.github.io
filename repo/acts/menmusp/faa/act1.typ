@@ -56,9 +56,10 @@ Como recursos para armonizar se han utilizado los siguientes:
   [Inversiones del acorde de triada en estado fundamental: primera y segunda inversión.],
   [Cadencias de varios tipos: perfectas (V-I), compuestas de primer orden (IV-V-I) y compuestas de segundo orden, llamadas también #math.vec(delim: none,[$bold(6)$],[$bold(4)$]) cadencial.],
   [Cadencia plagal (IV-I)],
-  [6-2-5-1, progresión de acordes proveniente del _gospel_, _rhythm and blues_ y _jazz_ que utiliza los grados tonales representados por los números arábigos (VI-II-V-I). Mejora el conocido 2-5-1 añadiendo otro acorde que aporta tensión al resolver al segundo grado. Las variaciones de esta progresión son numerosas, a menudo alterando notas del acorde o utilizando su versión aumentada.],
+  [6-2-5-1, progresión de acordes proveniente del _gospel_, _rhythm and blues_ y _jazz_ que utiliza los grados tonales representados por los números arábigos (VI-II-V-I). Mejora el conocido 2-5-1 añadiendo otro acorde que aporta tensión al resolver al segundo grado. Las variaciones de esta progresión son numerosas, a menudo alterando notas del acorde o utilizando su versión aumentada. Se ha procedido aquí con la versión más simple.],
   [Acordes de cuatriada, como el de 7ª de dominante en varias inversiones.],
   [Progresiones cromáticas]
 )
 = Propuesta didáctica. <propuesta>
-Especificados los criterios de elección vamos a articular una propuesta didáctica para la etapa de Educación Primaria.
+Especificados los criterios de elección vamos a articular una propuesta didáctica para la etapa de Educación Primaria. Dicha propuesta consiste en la realización de distintas sesiones para adquirir conceptos de análisis y armonía en el aula, así como para hilar el contenido musical con otras áreas del currículo de Educación Primaria.\
+En lo respectivo a la primera obra _Estrellita, ¿dónde estás?_, trabajaremos contenidos de la asignatura de ciencias sociales. En concreto, se trabajará el Universo. Por otro lado, con _La tarara_, pretendemos explicar cuál fue el contexto del personaje de La Tarara y el modo de subsistencia de la Andalucía popular antaño.
