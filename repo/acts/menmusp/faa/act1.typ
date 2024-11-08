@@ -22,7 +22,7 @@
   Jesús María Mora Mur.\
   Curso 2024-2025.\
   Universidad Internacional de La Rioja.\
-  Asignatura: Fundamentos de armonía y análisis musical.
+  Fundamentos de armonía y análisis musical.
 ])
 #pagebreak()
 #outline(
@@ -44,7 +44,7 @@ Con la intención de respetar el enunciado de la actividad, se han elegido dos c
   [_La tarara_ para el modo menor.],
   [_Estrellita, ¿dónde estás?_ para el modo mayor.]
 )
-El potencial pedagógico al que nos referimos en el apartado #highlight(fill: gradient.linear(..color.map.rainbow), [*Propuesta didáctica*]) justifica también la elección de las obras.
+El potencial pedagógico al que nos referimos en la @propuesta justifica también la elección de las obras.
 = Escritura y armonización de las obras musicales.
 La escritura de las obras musicales se ha realizado con una línea melódica diferenciada del acompañamiento. El instrumento acompañante evita la reduplicación de la línea vocal, limitándose a armonizar la voz. Para la presentación se ha utilizado el programa _MuseScore_, que permite añadir distintas notaciones musicales de dinámica, agógica u otras. Además, permite una previsualización del resultado y su escucha según las indicaciones mostradas.\
 Como recursos para armonizar se han utilizado los siguientes:
@@ -60,3 +60,5 @@ Como recursos para armonizar se han utilizado los siguientes:
   [Acordes de cuatriada, como el de 7ª de dominante en varias inversiones.],
   [Progresiones cromáticas]
 )
+= Propuesta didáctica. <propuesta>
+Especificados los criterios de elección vamos a articular una propuesta didáctica para la etapa de Educación Primaria.
