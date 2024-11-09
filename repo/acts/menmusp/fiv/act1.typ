@@ -41,7 +41,7 @@
     inset: 10pt,
     align: horizon,
     table.header([Número instrumentos],[Nombre],[Familia]),
-    [1],[Pandero],[Membranófonos golpeados],
+    [1],[Timbales],[Membranófonos golpeados],
   ), caption: [Análisis de la audición 1.]
 )
 == Audición 2.
@@ -61,7 +61,7 @@
     inset: 10pt,
     align: horizon,
     table.header([Número instrumentos],[Nombre],[Familia]),
-    [1],[Trompa],[Aerófonos de boquilla],
+    [1],[Trombón],[Aerófonos de boquilla],
   ), caption: [Análisis de la audición 3.]
 )
 == Audición 4.
@@ -94,3 +94,38 @@
     [2],[Clave y violonchelo],[Cordófonos pulsados y frotados],
   ), caption: [Análisis de la audición 6.]
 )
+== Audición 7.
+#figure(
+  table(
+    columns: 3,
+    inset: 10pt,
+    align: horizon,
+    table.header([Número instrumentos],[Nombre],[Familia]),
+    [1],[Órgano],[Aerófonos mixtos],
+  ), caption: [Análisis de la audición 7.]
+)
+== Audición 8.
+#figure(
+  table(
+    columns: 3,
+    inset: 10pt,
+    align: horizon,
+    table.header([Número instrumentos],[Nombre],[Familia]),
+    [2],[Clarinete y piano],[Aerófonos mixtos e cordófonos percutidos],
+  ), caption: [Análisis de la audición 8.]
+)
+== Audición 9.
+#figure(
+  table(
+    columns: 3,
+    inset: 10pt,
+    align: horizon,
+    table.header([Número instrumentos],[Nombre],[Familia]),
+    [3],[Piano, violín y trompa],[Cordófonos percutidos, frotados y aerófonos de boquilla],
+  ), caption: [Análisis de la audición 9.]
+)
+= Reflexión acerca de las posibilidades tímbricas en la formación del alumnado.
+La Educación tímbrica permite al alumnado desarrollar las habilidades de discriminación y categorización de instrumentos musicales, conocer las características que diferencian el timbre de cada instrumento, a la vez que desarrolla su oído y conoce estrategias que le permiten mejorarlo para futuras situaciones de discriminación. De esta manera, conseguimos que todo nuestro grupo clase mejore las mencionadas habilidades mediante situaciones reales de escucha y clasificación a través de audiciones. Este planteamiento va en línea con las tesis de #cite(form: "prose", <dewey_experiencia_2004>), que especifica que una metodología innovadora y motivadora consiste en la experimentación, por parte del alumnado, de prácticas relevantes que le permiten aprender del hecho cotidiano.
+#show bibliography: set heading(numbering: "1.")
+#bibliography(title: [Referencias], 
+"bibliography.bib", style: "american-psychological-association")
