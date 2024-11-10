@@ -1,5 +1,5 @@
 #set document(
-  title: ["Actividad 1 Fundamentos de armonía y análisis"],
+  title: ["Actividad 1 Formación Instrumental y Vocal"],
   author: "Jesús María Mora Mur",
   date: datetime.today(offset: auto)
 )
