@@ -15,7 +15,7 @@
   lang: "es"
 )
 #align(top+center,[
-  #image("img/logounir.png", width:70%)
+  #image("../img/logounir.png", width:70%)
 ])
 #align(horizon+center,text(19pt, hyphenate: false)[*Actividad 1: comparando música y _mousiké_.*])
 #align(bottom+right, text(18pt)[
