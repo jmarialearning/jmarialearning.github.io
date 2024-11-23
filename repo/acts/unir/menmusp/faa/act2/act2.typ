@@ -14,6 +14,12 @@
   hyphenate: auto,
   lang: "es"
 )
+#set list(
+  tight: false,
+  indent: 1em,
+  spacing: auto,
+  marker: [-]
+)
 #align(top+center,[
   #image("../img/logounir.png", width:70%)
 ])
@@ -48,75 +54,29 @@ Nos permiten trabajar distintos aspectos relacionados con la música para coment
 Las obras musicales tienen las partituras siguientes:\
 #highlight(fill: gradient.linear(..color.map.spectral))[Buscar o hacer partituras.]
 == Noche de paz.
-Podemos comenzar analizando la partitura a través de la tonalidad. La obra fue originalmente compuesta en Re Mayor, de acuerdo con lo que vemos en  
-= Propuesta didáctica. <propuesta>
-Especificados los criterios de elección vamos a articular una propuesta didáctica para la etapa de Educación Primaria. Dicha propuesta consiste en la realización de distintas sesiones para adquirir conceptos de análisis y armonía en el aula, así como para hilar el contenido musical con otras áreas del currículo de Educación Primaria.\
-En lo respectivo a la primera obra _Estrellita, ¿dónde estás?_, trabajaremos contenidos de la asignatura de ciencias sociales. En concreto, se trabajará el Universo. Por otro lado, con _La tarara_ nos limitaremos únicamente a las enseñanzas musicales que de la obra podemos extraer.
-== Propuesta a partir de la canción _Estrellita_.
-Los contenidos musicales que se trabajarán a partir de esta obra musical serán los correspondientes a la _agógica_ de la canción. Se prevé para tercer ciclo de Educación Primaria. Según hemos visto en las partituras, se han indicado diferentes marcas de modificación del _tempo_ de la obra. Preguntaremos qué significa la indicación $ note.quarter = 80 $ dentro de la obra. Para ello dejaremos que el alumnado modifique ese valor a otro y que nos explique después de oír la obra qué ha ocurrido. Para la indicación $note.quarter = 100$ pretendemos que el alumnado vea como la obra va reproducida de forma más rápida. Por otro lado trabajaremos las equivalencias del tipo:
-$ note.half = note.quarter $
-Con el objeto de que el alumnado detecte que en ese caso, al convertir las blancas en negras, la velocidad de la pieza se _duplica_.\
-Como se ha especificado, se podrá realizar también una propuesta interdisciplinar con la asignatura de Ciencias Sociales mediante una reflexión a través de la letra de la canción que a continuación se adjunta:
-#text(font: "Times New Roman")[
-#align(center)[Estrellita, ¿dónde estás?\
-Me pregunto quién serás\
-En el cielo o en el mar\
-Un diamante de verdad\
-
-Estrellita, ¿dónde estás?\
-Me pregunto quién serás\
-
-En el cielo o en el mar\
-Un diamante de verdad\
-Estrellita, ¿dónde estás?\
-Me pregunto quién serás\
-
-Estrellita, ¿dónde estás?\
-Me pregunto quién serás\
-En el cielo o en el mar\
-Un diamante de verdad\
-
-Estrellita, ¿dónde estás?\
-Me pregunto quién serás\
-]]
-Desde aquí, podemos trabajar qué son las estrellas, dónde se encuentran, cuál es su función en el universo y cuál es su composición de forma básica. Se iniciaría esta parte mediante una inducción a través de preguntas partiendo de la letra:\
-#align(center)[_¿Dónde creéis que están las estrellas, en el cielo o en el mar? ¿Por qué?_\
-_¿Por qué compara la letra a las estellas con diamantes? ¿Qué hace a las estrellas tener esa propiedad?_]
-De aquí obtendríamos por inducción los conceptos requeridos en lo explicitado.
-== Propuesta a partir de la canción _La tarara_.
-Los contenidos musicales que se trabajarán a partir de esta obra musical serán los correspondientes a la _dinámica_ y _agógica_ de la canción. Se prevé para tercer ciclo de Educación Primaria. Al igual que en la anterior propuesta se han indicado diferentes marcas de tiempo y matices. Se reflexionará primeramente sobre la indicación `morendo`. En la audición se detecta como el pulso de la obra es cada vez menor. En la pestaña _tempo_ en MuseScore, pediremos al alumnado que cambie la indicación para que baje el _tempo_, cambiando el `morendo` por otra indicación, así como que lo acelere (utilizando `accel.` u otros). Trabajaremos también la indicación `tempo primo` y `a tempo` para volver al tiempo original. Por último se considera trabajar los _tenuti_ del cuarto compás tienen una función, evitar picar esas notas completamente. Se realizará esta cuestión con una demostración al piano para diferenciar entre _tenuto_, _stacatto_ y _legato_.\
-Por otro lado, en lo que respecta a la dinámica, merece la pena comprobar qué se ha realizado en las dos casillas. Vemos para empezar que durante toda la obra la indicación es _mezzoforte_. Sin embargo, en las casillas vemos reguladores y reforzadores. Mediante inducción por preguntas, interpelamos al alumnado:\
-#align(center)[_¿Que hace el signo del compás 7? ¿A qué se parece?_\ _¿Y el `cresc.` del compás 9?_\ En el último compás hay varios signos parecidos al signo _mayor que..._ matemático. _¿Qué creéis que significan?_]
-Conseguiremos mediante estas preguntas y dinámicas un acercamiento a la dinámica de una pieza musical y la importancia de respetarla durante su interpretación. Además, podemos trabajar los conceptos de canción, estrofa y estribillo, viendo como repetimos una parte varias veces y cambian las estrofas a la vista de la letra de la canción que a continuación se adjunta:\
-#text(font: "Times New Roman")[
-#align(center)[Tiene la tarara\
-un vestido blanco\
-con lunares rojos\
-para el Jueves Santo\
-
-*La tarara, sí*\
-*La tarara, no*\
-*La tarara, madre*\
-*Que la bailo yo.*\
-
-Tiene la Tarara\
-un dedito malo\
-que curar no puede\
-ningún cirujano.\
-
-*La tarara, sí*\
-*La tarara, no*\
-*La tarara, madre*\
-*Que la bailo yo.*\
-
-Tiene la Tarara\
-un cesto de frutas\
-y me da, si quiero,\
-siempre las maduras.\
-
-*La tarara, sí*\
-*La tarara, no*\
-*La tarara, madre*\
-*Que la bailo yo.*\
-]]
-Nótese como las partes en negrita corresponden al estribillo y se repiten continuamente.
+Podemos comenzar analizando la partitura a través de la tonalidad. La obra fue originalmente compuesta en Re Mayor, de acuerdo con lo que vemos en lo que parece su manuscrito por parte de #cite(<gruberphoto>,form: "prose"). Por otro lado, vemos que su compás es compuesto, #math.vec(delim: none,[$bold(6)$],[$bold(8)$]), con lo que cada tiempo del compás queda compuesto por una negra con puntillo (1,5 tiempos de negra). Se subdivide en 3 corcheas por tiempo.\
+=== Acordes.
+Merecen mención también los acordes de la pieza musical. Estos son, en orden de importancia, sobre:
+- La tónica (D), con sus inversiones.
+- La dominante (A), su acorde de 7ª y las inversiones del mismo.
+- La subdominante (G).
+- La superdominante (B).
+- La supertónica (E).
+- La modal (F).
+Dichos grados tonales se han utilizado con diferentes propósitos, a saber:
+- El primer, cuarto y quinto grado de la escala de re (en este caso) son fundamentales para cualquier obra musical. Una cadencia perfecta (V-I) o plagal (IV-I) son las más comunes en las obras. Es conocida también la importancia del acorde de 7ª (cifrado como 7, #math.vec(delim: none,[$bold(6)$],[$bold(5)$]), +4 y +2) pues aporta tensión y resuelve (como acorde de dominante que es) a la tónica.
+- Por otro lado, la superdominante (VI), permite iniciar la progresión 6-2-5-1, que se utiliza en los últimos compases de la obra. De esta explicación deducimos también la importancia del segundo grado (II).
+- La modal en Re Mayor (III), es Fa sostenido. No es casualidad que el tercer grado de una tonalidad mayor sea la dominante en la tonalidad relativa menor. Se utiliza, pues, el tercer grado para resolver a la relativa menor en ciertos momentos. Esta técnica se conoce como _dominante secundaria_.
+=== Estructura.
+La obra está compuesta por tres frases diferenciadas, de 4 compases cada una. La primera tiene un tema repetido dos compases y luego otro tema de contraste variado. La segunda frase tiene un tema de dos compases, que varía en los dos siguientes. Por último, la tercera frase tiene un tema de dos compases, variado en los dos siguientes, que concluye la canción.
+=== Parámetros del sonido.
+La tesitura de la línea melódica varía entre el Do4 y el Fa5, medidos con el sistema científico (internacional). En lo que a la duración se refiere, atendiendo a la partitura original, la nota que más dura se extiende por dos tiempos de negra.
+=== Utilización y pertinencia en el aula de música.
+Esta canción es de utilidad en el aula de música por varias razones:
+- Es conocida en muchos países del mundo, entre ellos España, lo cual permite que se aprenda más rápido.
+- La tesitura no es difícil para los niños. Al contrario, puede servir para trabajar el canto en el aula de música.
+- Permite la reflexión sobre los compases comppuestos, pues los compases simples suelen dominar el repertorio escolar.
+- Con ocasión de las fiestas navideñas, permite una situación social de referencia para trabajar aspectos musicales.
+- La letra es versátil, con lo que se puede alargar o acortar, incluso omitiendo o cambiando letra que no se considere oportuna.
+Así pues, se considera correcto el trabajo con esta obra por las posibilidades competenciales que ofrece. Incluso aun con personas que no festejen la Navidad, las posibilidades de aprendizaje musical o instrumental, omitiendo o cambiando la letra son numerosas.
+#bibliography("refs.bib",style: "american-psychological-association")
