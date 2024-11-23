@@ -20,6 +20,7 @@
   spacing: auto,
   marker: [-]
 )
+#show link: underline
 #align(top+center,[
   #image("../img/logounir.png", width:70%)
 ])
@@ -52,7 +53,8 @@ Vistas las próximas festividades escolares de Navidad, se han elegido dos villa
 Nos permiten trabajar distintos aspectos relacionados con la música para comentar con la clase y reflexionar.
 = Análisis de las obras musicales.
 Las obras musicales tienen las partituras siguientes:\
-#highlight(fill: gradient.linear(..color.map.spectral))[Buscar o hacer partituras.]
+- #link("https://jmarialearning.github.io/repo/acts/unir/menmusp/faa/act2/sheet/noche.pdf")[Noche de paz. Elaboración propia a partir de #cite(<gruberphoto>,form: "prose")]
+- #link("https://s9.imslp.org/files/imglnks/usimg/e/e9/IMSLP751173-PMLP1192884-austin_1909.pdf")[12 days of Christmas. Arreglo original de .]
 == Noche de paz.
 Podemos comenzar analizando la partitura a través de la tonalidad. La obra fue originalmente compuesta en Re Mayor, de acuerdo con lo que vemos en lo que parece su manuscrito por parte de #cite(<gruberphoto>,form: "prose"). Por otro lado, vemos que su compás es compuesto, #math.vec(delim: none,[$bold(6)$],[$bold(8)$]), con lo que cada tiempo del compás queda compuesto por una negra con puntillo (1,5 tiempos de negra). Se subdivide en 3 corcheas por tiempo.\
 === Acordes.
@@ -80,7 +82,7 @@ Esta canción es de utilidad en el aula de música por varias razones:
 - La letra es versátil, con lo que se puede alargar o acortar, incluso omitiendo o cambiando letra que no se considere oportuna.
 Así pues, se considera correcto el trabajo con esta obra por las posibilidades competenciales que ofrece. Incluso aun con personas que no festejen la Navidad, las posibilidades de aprendizaje musical o instrumental, omitiendo o cambiando la letra son numerosas.
 == 12 days of Christmas.
-En lo que a la tonalidad respecta, no podemos conocerla por su naturaleza tradicional. Sin embargo, se puede elegir una de forma arbitraria. Elegimos, pues, Fa mayor. Por otro lado, entendemos que su compás es simple, eligiendo un #math.vec(delim: none,[$bold(2)$],[$bold(4)$]). Igualmente se podría haber elegido el compás de #math.vec(delim: none,[$bold(4)$],[$bold(4)$]), pero nos decantamos por la primera opción. He #underline("aquí") la partitura arreglada por Frederic Austin.\
+En lo que a la tonalidad respecta, no podemos conocerla por su naturaleza tradicional. Sin embargo, se puede elegir una de forma arbitraria. Elegimos, pues, Fa mayor. Por otro lado, entendemos que su compás es simple, eligiendo un #math.vec(delim: none,[$bold(2)$],[$bold(4)$]). Igualmente se podría haber elegido el compás de #math.vec(delim: none,[$bold(4)$],[$bold(4)$]), pero nos decantamos por la primera opción.\
 === Acordes.
 Merecen mención también los acordes de la pieza musical. Estos son, en orden de importancia, sobre:
 - La tónica (F), con sus inversiones.
