@@ -54,7 +54,7 @@ Nos permiten trabajar distintos aspectos relacionados con la música para coment
 = Análisis de las obras musicales.
 Las obras musicales tienen las partituras siguientes:\
 - #link("https://jmarialearning.github.io/repo/acts/unir/menmusp/faa/act2/sheet/noche.pdf")[Noche de paz. Elaboración propia a partir de #cite(<gruberphoto>,form: "prose")]
-- #link("https://s9.imslp.org/files/imglnks/usimg/e/e9/IMSLP751173-PMLP1192884-austin_1909.pdf")[12 days of Christmas. Arreglo original de .]
+- #link("https://jmarialearning.github.io/repo/acts/unir/menmusp/faa/act2/sheet/12days.pdf")[12 days of Christmas. Arreglo original de Frederic Austin.]
 == Noche de paz.
 Podemos comenzar analizando la partitura a través de la tonalidad. La obra fue originalmente compuesta en Re Mayor, de acuerdo con lo que vemos en lo que parece su manuscrito por parte de #cite(<gruberphoto>,form: "prose"). Por otro lado, vemos que su compás es compuesto, #math.vec(delim: none,[$bold(6)$],[$bold(8)$]), con lo que cada tiempo del compás queda compuesto por una negra con puntillo (1,5 tiempos de negra). Se subdivide en 3 corcheas por tiempo.\
 === Acordes.
