@@ -68,3 +68,6 @@ Para la segunda parte del concierto:
 - José Mª Ferrero.
 Bajo la dirección de Juanjo Grande.
 == Primera pieza.
+La primera pieza viene nombrada como Naturaleza y Futuro. A partir de obras pictóricas realizadas por residentes del Centro Ocupacional Miguel de Montalvo de Aljavir, David Del Puerto, compuso una obra músical emanada de las creaciones. Se diferencian tres partes: _ayer_, _hoy_ y _mañana_. En _ayer_ vemos cómo era el mundo en armonía, antes de nuestra llegada, en _hoy_ vemos que nosotros somos culpables de lo que ocurra en el futuro, mientras que _mañana_ muestra dicho futuro, con un atisbo de esperanza.
+== Segunda pieza.
+Llamada _3 haikus_
