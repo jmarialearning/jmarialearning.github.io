@@ -35,3 +35,4 @@
 #set par(leading: 1.5em)
 #counter(page).update(1)
 = Diseño de una propuesta didáctica a partir del texto histórico.
+El texto escogido para el trabajo en esta sesión es un texto de Galileo Galilei.
