@@ -35,4 +35,5 @@
 #set par(leading: 1.5em)
 #counter(page).update(1)
 = Diseño de una propuesta didáctica a partir del texto histórico.
-El texto escogido para el trabajo en esta sesión es un texto de Galileo Galilei.
+El texto escogido para el trabajo en esta sesión es un texto de Galileo Galilei y su aportación en la mecánica clásica en contraposición a la concepción aristotélica.\
+Sabemos que Aristóteles consideraba que al dejar caer 
