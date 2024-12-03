@@ -36,4 +36,8 @@
 #counter(page).update(1)
 = Diseño de una propuesta didáctica a partir del texto histórico.
 El texto escogido para el trabajo en esta sesión es un texto de Galileo Galilei y su aportación en la mecánica clásica en contraposición a la concepción aristotélica.\
-Sabemos que Aristóteles consideraba que al dejar caer 
+Sabemos que Aristóteles consideraba que al dejar caer un objeto, este caía más rápido según fuese más masivo. Veamos cómo lo explica el propio Aristóteles en su tratado _Física_, así como en _Sobre el cielo_ y _Acerca de la generación y la producción_.
+En su libro _Física_, especifica Aristóteles diferentes nociones de mecánica. Entre ellas destacamos:
++ Existen dos tipos de movimiento, a saber: _violento_ o _antinatural_, generado _ad hoc_ y cesado cuando el agente deja de causarlo y _natural_, producido por aquellos entes que se mueven por su propia naturaleza (e.g. animales).
++ Aristóteles especifica que los objetos caen a una velocidad proporcional a su peso e inversamente proporcional a la densidad del fluido donde están inmersos.
+En lo que se refiere a estas teorías hubo ya distintos personajes que las testaron, llegando a concluir que eran incorrectas. Galileo fue el primero que consiguió 
