@@ -1,5 +1,5 @@
 #set document(
-  title: ["Actividad aplicativa 1 Complementos"],
+  title: [Actividad aplicativa 1 Complementos],
   author: "Jesús María Mora Mur",
   date: datetime.today(offset: auto)
 )
