@@ -65,6 +65,6 @@ En esta actividad se solicita investigar acerca del fenómeno de la caída de ob
 - ¿De qué depende que un objeto caiga al suelo si se deja libre?
 - ¿Esas relaciones de dependencia sirven en todo el _cosmos_?
 - Comprueba, intuitivamente, si las relaciones son directa o inversamente proporcionales. Genera una fórmula que describa cómo cambiaría la velocidad en función del tiempo para los objetos en caída libre.
-Como pista, se explicita que David Scott, en el transcurso de la misión lunar Apollo 15, realizó el experimento de Stevin, que se grabó en vídeo.
+Como pista, se explicita que David Scott, en el transcurso de la misión lunar Apollo 15, realizó el experimento de Stevin, que se grabó en #link("https://jmarialearning.github.io/repo/acts/viu/comp/aap1/hammer.gif",)[vídeo].
 #figure(caption: "Dave Scott tirando una pluma y un martillo en la Luna.",image("hammer.gif", format: "gif",))
 - ¿Qué ocurre en la Luna para que pase esto?
