@@ -60,7 +60,7 @@ Como vemos, la física aristotélica quedó desterrada al concluir estos experim
   radius: 4pt,
   text(font: "Times New Roman")[Sea una pluma con masa $m_1 = 1 space.nobreak.narrow upright(g) $. Sea también una bola  con masa $m_2 = 10 space.nobreak.narrow upright("kg")$. Si las dejamos caer de forma libre desde la misma altura, ¿cuál caerá antes?]
 )
-La experiencia nuestra nos dicta que la bola caerá antes, lo cual concuerda con lo que Aristóteles dijo y nos transporta a la edad Media. Dicha experiencia no se equivoca *en este caso*.\
+La experiencia nuestra nos dicta que la bola caerá antes, lo cual concuerda con lo que Aristóteles dijo y nos transporta a la edad Media. Dicha experiencia no se equivoca *en este caso*. ¿Qué estamos considerando de forma errónea? Es evidente que alguien miente. ¿Quién?\
 En esta actividad se solicita investigar acerca del fenómeno de la caída de objetos detectando qué ocurre en el caso propuesto para que se cumpla lo que Aristóteles definió. Para ello, se proporcionan varias preguntas:
 - ¿De qué depende que un objeto caiga al suelo si se deja libre?
 - ¿Esas relaciones de dependencia sirven en todo el _cosmos_?
@@ -68,3 +68,21 @@ En esta actividad se solicita investigar acerca del fenómeno de la caída de ob
 Como pista, se explicita que David Scott, en el transcurso de la misión lunar Apollo 15, realizó el experimento de Stevin, que se grabó en #link("https://jmarialearning.github.io/repo/acts/viu/comp/aap1/hammer.gif",)[vídeo].
 #figure(caption: "Dave Scott tirando una pluma y un martillo en la Luna.",image("hammer.gif", format: "gif",))
 - ¿Qué ocurre en la Luna para que pase esto?
+= Diseño de actividades CTS.
+En la presente tarea vamos a trabajar las actividades de Física y Química desde una perspectiva Ciencia-Tecnología-Sociedad. Para ello, vamos a trabajar cómo apareció la _World Wide Web_ y otros descubrimientos con alta utilidad en nuestros días.\
+Plantearemos las siguientes cuestiones al alumnado:\
+- ¿Utilizas Internet? ¿Con qué frecuencia?
+- Enumera las 5 razones por las que más utilizas Internet.
+- Cuando escribimos una dirección de Internet, ¿que tres letras utilizamos para empezar?
+- ¿Por qué crees que existe este protocolo? ¿Existe para todos los intercambios de Internet (correo electrónico, acceso a redes internas, entre otros)?
+- Infórmate sobre los creadores de la World Wide Web. ¿Dónde se creó? ¿Qué profesión tenían?
+Existen voces que critican la inversión de los países miembros en el CERN. Para hacernos a la idea, veamos la inversión española en la institución. España invirtió en 2019 72,6 millones de euros, lo cual supuso ligeramente más del 7% de inversión. En el año 2022 se incrementó esa cifra hasta los 85 millones de euros.
+- En la página del Ministerio de Ciencia, Innovación y Universidades podrás detectar el retorno del dinero invertido al estado español en forma de contratos con empresas. Con ayuda si necesitas, ¿cuánto dinero retorna en forma de contratos con empresas españolas desde el CERN?
+- En la página del CERN, comprueba qué descubrimientos de relevancia se han desarrollado. Enumera sistemas utilizados hoy (además de la WWW) que no tendríamos sin el CERN.
+Numerosos descubrimientos en computación y físca médica se deben a la inversión en la institución. Destacamos, directamente:
+- La tomografía por emisión de positrones (PET).
+- La _World Wide Web_.
+Además, de forma indirecta, el CERN ha propiciado la llegada al mundo de:
+- Mejores pantallas táctiles.
+- Tomografías Computarizadas en Color gracias a Spectral CT.
+- GPS, debido a los avances en Relatividad Especial y General que permiten sincronizar correctamente el tiempo entre satélites y receptores.
