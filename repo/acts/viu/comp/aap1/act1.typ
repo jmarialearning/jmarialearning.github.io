@@ -62,12 +62,15 @@ Como vemos, la física aristotélica quedó desterrada al concluir estos experim
 )
 La experiencia nuestra nos dicta que la bola caerá antes, lo cual concuerda con lo que Aristóteles dijo y nos transporta a la edad Media. Dicha experiencia no se equivoca *en este caso*. ¿Qué estamos considerando de forma errónea? Es evidente que alguien miente. ¿Quién?\
 En esta actividad se solicita investigar acerca del fenómeno de la caída de objetos detectando qué ocurre en el caso propuesto para que se cumpla lo que Aristóteles definió. Para ello, se proporcionan varias preguntas:
-- ¿De qué depende que un objeto caiga al suelo si se deja libre?
-- ¿Esas relaciones de dependencia sirven en todo el _cosmos_?
+- ¿De qué depende que un objeto caiga al suelo si se deja libre? Pretendemos que el alumnado especifique diferentes variables, entre ellas: la masa generadora del campo gravitatorio y la resistencia del aire.
+- ¿Esas relaciones de dependencia sirven en todo el _cosmos_? Sí son de utilidad en todo el _cosmos_. Ocurre que la Tierra está rodeada por una atmósfera gaseosa. No ocurre esto en todos los cuerpos.
 - Comprueba, intuitivamente, si las relaciones son directa o inversamente proporcionales. Genera una fórmula que describa cómo cambiaría la velocidad en función del tiempo para los objetos en caída libre.
 Como pista, se explicita que David Scott, en el transcurso de la misión lunar Apollo 15, realizó el experimento de Stevin, que se grabó en #link("https://jmarialearning.github.io/repo/acts/viu/comp/aap1/hammer.gif",)[vídeo].
 #figure(caption: "Dave Scott tirando una pluma y un martillo en la Luna.",image("hammer.gif", format: "gif",))
-- ¿Qué ocurre en la Luna para que pase esto?
+- ¿Qué ocurre en la Luna para que pase esto? En la Luna no hay atmósfera, por lo que el aire no resiste a la caída.
+== Vinculación curricular.
+Se vincula con el currículo aragonés.\
+
 = Diseño de actividades CTS.
 En la presente tarea vamos a trabajar las actividades de Física y Química desde una perspectiva Ciencia-Tecnología-Sociedad. Para ello, vamos a trabajar cómo apareció la _World Wide Web_ y otros descubrimientos con alta utilidad en nuestros días.\
 Plantearemos las siguientes cuestiones al alumnado:\
