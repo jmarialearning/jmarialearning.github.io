@@ -69,7 +69,7 @@ Como pista, se explicita que David Scott, en el transcurso de la misión lunar A
 #figure(caption: "Dave Scott tirando una pluma y un martillo en la Luna.",image("hammer.gif", format: "gif",))
 - ¿Qué ocurre en la Luna para que pase esto? En la Luna no hay atmósfera, por lo que el aire no resiste a la caída.
 == Vinculación curricular.
-Se vincula con el currículo aragonés.\
+Se vincula con el currículo aragonés, más en detalle con el segundo curso de la etapa de Bachillerato.\
 
 = Diseño de actividades CTS.
 En la presente tarea vamos a trabajar las actividades de Física y Química desde una perspectiva Ciencia-Tecnología-Sociedad. Para ello, vamos a trabajar cómo apareció la _World Wide Web_ y otros descubrimientos con alta utilidad en nuestros días.\
