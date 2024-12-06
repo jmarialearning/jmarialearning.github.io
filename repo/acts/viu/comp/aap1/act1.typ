@@ -69,8 +69,48 @@ Como pista, se explicita que David Scott, en el transcurso de la misión lunar A
 #figure(caption: "Dave Scott tirando una pluma y un martillo en la Luna.",image("hammer.gif", format: "gif",))
 - ¿Qué ocurre en la Luna para que pase esto? En la Luna no hay atmósfera, por lo que el aire no resiste a la caída.
 == Vinculación curricular.
-Se vincula con el currículo aragonés, más en detalle con el segundo curso de la etapa de Bachillerato.\
-
+Se vincula con el currículo aragonés, más en detalle con el segundo curso de la etapa de Bachillerato, en la asignatura de Física.\
+Se trabajan los siguientes criterios de evaluación, asociados a las competencias específicas:\
+#set par(leading: 1em)
+#table(
+  columns: 1,
+  table.cell(align: center, fill: blue.lighten(60%),[*Competencia Específica CE.F.1*]),
+  table.cell(align: left,fill: blue.lighten(85%),[_Utilizar las teorías, principios y leyes que rigen los procesos físicos más importantes, considerando su base experimental y desarrollo matemático en la resolución de problemas, para reconocer la Física como una ciencia relevante implicada en el desarrollo de la tecnología, de la economía, de la sociedad y la sostenibilidad ambiental._]),
+  [1.1. Reconocer la relevancia de la Física en el desarrollo de la ciencia, tecnología, la economía, la sociedad y la sostenibilidad ambiental, empleando adecuadamente los fundamentos científicos relativos a esos ámbitos.],
+)
+//
+#table(
+  columns: 1,
+  table.cell(align: center, fill: blue.lighten(60%),[*Competencia Específica CE.F.2*]),
+  table.cell(align: left,fill: blue.lighten(85%),[_Adoptar los modelos, teorías y leyes aceptados de la Física como base de estudio de los sistemas naturales y predecir su evolución para inferir soluciones generales a los problemas cotidianos relacionados con las aplicaciones prácticas demandadas por la sociedad en el campo tecnológico, industrial y biosanitario._]),
+  [2.1. Analizar y comprender la evolución de los sistemas naturales, utilizando modelos, leyes y teorías de la Física.\
+2.2. Inferir soluciones generales a problemas generales a partir del análisis de situaciones particulares y las variables de que dependen.\
+2.3. Conocer aplicaciones prácticas y productos útiles para la sociedad en el campo tecnológico, industrial y biosanitario, analizándolos en base a los modelos, las leyes y las teorías de la Física.
+],
+)
+// 
+#table(
+  columns: 1,
+  table.cell(align: center, fill: blue.lighten(60%),[*Competencia Específica CE.F.5*]),
+  table.cell(align: left,fill: blue.lighten(85%),[_Aplicar técnicas de trabajo e indagación propias de la Física, así como la experimentación, el razonamiento lógico-matemático y la cooperación, en la resolución de problemas y la interpretación de situaciones relacionadas, para poner en valor el papel de la Física en una sociedad basada en valores éticos y sostenibles._]),
+  [5.3. Valorar la Física, debatiendo de forma fundamentada sobre sus avances y la implicación en la sociedad desde el punto de vista de la ética y de la sostenibilidad.],
+)
+// 
+#table(
+  columns: 1,
+  table.cell(align: center, fill: blue.lighten(60%),[*Competencia Específica CE.F.6*]),
+  table.cell(align: left,fill: blue.lighten(85%),[_Reconocer y analizar el carácter multidisciplinar de la Física, considerando su relevante recorrido histórico y sus contribuciones al avance del conocimiento científico como un proceso en continua evolución e innovación, para establecer unas bases de conocimiento y relación con otras disciplinas científicas._]),
+  [6.1. Identificar los principales avances científicos relacionados con la Física que han contribuido a las leyes y teorías aceptadas actualmente en el conjunto de las disciplinas científicas, como las fases para el entendimiento de las metodologías de la ciencia, su evolución constante y su universalidad.],
+)
+En lo que respecta a los saberes básicos, vemos principalmente una referencia al bloque A:
+#table(
+  columns: 1,
+  table.cell(align: center, fill: blue.lighten(60%),[*Saber Básico A: Campo Gravitatorio*]),
+  table.cell(align: left,fill: blue.lighten(85%),[_La gravitación es una de las cuatro fuerzas o interacciones fundamentales del Universo conocidas hasta ahora, siendo en este curso el primer momento en el que se realiza su estudio formal desde el punto de vista de las fuerzas y de los campos. Así, se puede presentar el concepto de campo gravitatorio como aquel que permite encajar las piezas sueltas de la mecánica clásica relacionadas con la cinemática, la dinámica y la energía, vistas en cursos anteriores, dando respuesta matemática a afirmaciones que hasta ahora habían quedado sin una respuesta formal._]),
+  table.cell(align: center,fill: gray.lighten(60%),[_Conocimientos, destrezas y actitudes._]),
+  [Determinación, a través del cálculo vectorial, del campo gravitatorio producido por un sistema de masas. Efectos sobre las variables cinemáticas y dinámicas de objetos inmersos en el campo.],
+)
+#set par(leading: 1.5em)
 = Diseño de actividades CTS.
 En la presente tarea vamos a trabajar las actividades de Física y Química desde una perspectiva Ciencia-Tecnología-Sociedad. Para ello, vamos a trabajar cómo apareció la _World Wide Web_ y otros descubrimientos con alta utilidad en nuestros días.\
 Plantearemos las siguientes cuestiones al alumnado:\
@@ -89,3 +129,53 @@ Además, de forma indirecta, el CERN ha propiciado la llegada al mundo de:
 - Mejores pantallas táctiles.
 - Tomografías Computarizadas en Color gracias a Spectral CT.
 - GPS, debido a los avances en Relatividad Especial y General que permiten sincronizar correctamente el tiempo entre satélites y receptores.
+== Vinculación curricular.
+Se vincula con el currículo aragonés, más en detalle con el segundo curso de la etapa de Bachillerato, en la asignatura de Física.\
+Se trabajan los siguientes criterios de evaluación, asociados a las competencias específicas:\
+#set par(leading: 1em)
+#table(
+  columns: 1,
+  table.cell(align: center, fill: blue.lighten(60%),[*Competencia Específica CE.F.1*]),
+  table.cell(align: left,fill: blue.lighten(85%),[_Utilizar las teorías, principios y leyes que rigen los procesos físicos más importantes, considerando su base experimental y desarrollo matemático en la resolución de problemas, para reconocer la Física como una ciencia relevante implicada en el desarrollo de la tecnología, de la economía, de la sociedad y la sostenibilidad ambiental._]),
+  [1.1. Reconocer la relevancia de la Física en el desarrollo de la ciencia, tecnología, la economía, la sociedad y la sostenibilidad ambiental, empleando adecuadamente los fundamentos científicos relativos a esos ámbitos.],
+)
+//
+#table(
+  columns: 1,
+  table.cell(align: center, fill: blue.lighten(60%),[*Competencia Específica CE.F.2*]),
+  table.cell(align: left,fill: blue.lighten(85%),[_Adoptar los modelos, teorías y leyes aceptados de la Física como base de estudio de los sistemas naturales y predecir su evolución para inferir soluciones generales a los problemas cotidianos relacionados con las aplicaciones prácticas demandadas por la sociedad en el campo tecnológico, industrial y biosanitario._]),
+  [2.1. Analizar y comprender la evolución de los sistemas naturales, utilizando modelos, leyes y teorías de la Física.\
+2.2. Inferir soluciones generales a problemas generales a partir del análisis de situaciones particulares y las variables de que dependen.\
+2.3. Conocer aplicaciones prácticas y productos útiles para la sociedad en el campo tecnológico, industrial y biosanitario, analizándolos en base a los modelos, las leyes y las teorías de la Física.
+],
+)
+// 
+#table(
+  columns: 1,
+  table.cell(align: center, fill: blue.lighten(60%),[*Competencia Específica CE.F.5*]),
+  table.cell(align: left,fill: blue.lighten(85%),[_Aplicar técnicas de trabajo e indagación propias de la Física, así como la experimentación, el razonamiento lógico-matemático y la cooperación, en la resolución de problemas y la interpretación de situaciones relacionadas, para poner en valor el papel de la Física en una sociedad basada en valores éticos y sostenibles._]),
+  [5.3. Valorar la Física, debatiendo de forma fundamentada sobre sus avances y la implicación en la sociedad desde el punto de vista de la ética y de la sostenibilidad.],
+)
+// 
+#table(
+  columns: 1,
+  table.cell(align: center, fill: blue.lighten(60%),[*Competencia Específica CE.F.6*]),
+  table.cell(align: left,fill: blue.lighten(85%),[_Reconocer y analizar el carácter multidisciplinar de la Física, considerando su relevante recorrido histórico y sus contribuciones al avance del conocimiento científico como un proceso en continua evolución e innovación, para establecer unas bases de conocimiento y relación con otras disciplinas científicas._]),
+  [6.1. Identificar los principales avances científicos relacionados con la Física que han contribuido a las leyes y teorías aceptadas actualmente en el conjunto de las disciplinas científicas, como las fases para el entendimiento de las metodologías de la ciencia, su evolución constante y su universalidad.],
+)
+En lo que respecta a los saberes básicos, vemos principalmente una referencia a los bloques C y D:
+#table(
+  columns: 1,
+  table.cell(align: center, fill: blue.lighten(60%),[*Saber Básico C: Vibraciones y Ondas.*]),
+  table.cell(align: left,fill: blue.lighten(85%),[_El bloque de conocimientos, destrezas y actitudes dedicado al estudio del movimiento oscilatorio y las ondas engloba un amplio espectro de fenómenos físicos. En este sentido, podrían establecerse tres sub-bloques de conocimientos que de forma secuencial establezcan el desarrollo de todo el bloque. En primer lugar, se recomienda comenzar con el estudio del movimiento oscilatorio. En segundo lugar y partiendo de los conocimientos del primer sub-bloque se afronta el estudio del movimiento ondulatorio y los fenómenos naturales asociados a este (con una atención especial al estudio de las ondas de sonido). El último sub-bloque aborda el estudio de la naturaleza de la luz en su comportamiento ondulatorio, entre los que se encuentran los fenómenos más importantes relacionados con el estudio de la óptica._]),
+  table.cell(align: center,fill: gray.lighten(60%),[_Conocimientos, destrezas y actitudes._]),
+  [Naturaleza de la luz: controversias y debates históricos. La luz como onda electromagnética. Espectro electromagnético.],
+)
+// 
+#table(
+  columns: 1,
+  table.cell(align: center, fill: blue.lighten(60%),[*Saber Básico D: Física relativista, cuántica, nuclear y de partículas.*]),
+  table.cell(align: left,fill: blue.lighten(85%),[_Los contenidos desarrollados hasta este momento cierran los fundamentos del imponente edificio que se conoce como Física Clásica y corresponde a todos los saberes que implican a la Física, acumulados desde el principio de los tiempos hasta comienzos del siglo XX. En ese momento, nada indicaba que pudieran aparecer fisuras en este edificio, sin embargo, una serie de fenómenos sin explicar dan origen a lo que conocemos como revolución relativista y cuántica, asociadas a la formulación de la teoría de la relatividad y a la mecánica cuántica. Esta crisis en la concepción de la naturaleza y el universo durante el primer cuarto del siglo XX da origen al desarrollo de la Física Moderna._]),
+  table.cell(align: center,fill: gray.lighten(60%),[_Conocimientos, destrezas y actitudes._]),
+  [Principios de la relatividad, de la Física cuántica y de la Física de partículas en el estudio de las principales partículas involucradas en la Física atómica y nuclear: propiedades e interacciones. Implicaciones de la dualidad onda-corpúsculo y del principio de incertidumbre.],
+)
