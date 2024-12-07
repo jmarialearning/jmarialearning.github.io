@@ -179,4 +179,8 @@ En lo que respecta a los saberes básicos, vemos principalmente una referencia a
   table.cell(align: center,fill: gray.lighten(60%),[_Conocimientos, destrezas y actitudes._]),
   [Principios de la relatividad, de la Física cuántica y de la Física de partículas en el estudio de las principales partículas involucradas en la Física atómica y nuclear: propiedades e interacciones. Implicaciones de la dualidad onda-corpúsculo y del principio de incertidumbre.],
 )
-// Añadir demostración de la segunda ley de Kepler.
+#set par(leading: 1.5em)
+Esta actividad trabaja el aspecto 3: Realizar un tratamiento detenido de las relaciones ciencia-técnica.\
+Para los bloques de saberes A y B, realizaremos unas demostraciones como hicieran Newton y Kepler en su momento, así como un experimento.
+- Johannes Kepler demostró en 1619 que para un planeta cualquiera, el cuadrado de su periodo oribital dividido entre el semieje mayor de la órbita al cubo es constante. Si la fuerza gravitatoria es central, ¿cómo demostró Newton partiendo de la 3ª Ley de Kepler su *Ley de la gravitación universal*? Demuestra tú esa ley y explica por qué se necesita la 3ª Ley de Kepler para hacerlo. Trabajamos el aspecto 2 y 7: desmitificar tópicos de científicos y mostrar la ciencia como fruto del trabajo colectivo.
+- ¿Qué es la luz
