@@ -42,44 +42,31 @@
 #counter(page).update(1)
 = Determinación de la temática del festival.
 La temática del festival será la Jota. Con motivo del primer aniversario de su declaración como Patrimonio Cultural Inmaterial por el Gobierno de España, merece la pena remontarnos a los orígenes de la Jota. Así pues, trabajaremos las Jotas del territorio nacional y más en detalle, la aragonesa, por ser más cercana al alumnado de los colegios de la Comunidad Autónoma de Aragón.
-= Análisis del concierto.
-El día 2 de octubre de 2024 se publicó en _YouTube_ la grabación del concierto acaecido el día 4 de junio de 2024 en la sala de cámara del Auditorio Nacional de Música. Se presentan, a continuación a las personas integrantes de los conjuntos, a saber, en la primera pieza:
+= Justificación de la elección.
+Además de por el acontecimiento del Patrimonio Cultural Inmaterial se consderan varrias cuestiones que motivan la elección, a saber:
+- El fomento y la conservación del patrimonio aragonés y español.
+- La interpretación de canciones o danzas permite que el alumnado participe activamente en la tarea y refuerza el vínculo social del grupo a la vez que propicia que el alumnado coopere para conseguir un objetivo.
+Por otro lado, a nivel personal, el interés por la Jota aragonesa como patrimonio cercano que el alumnado debe conocer es más que evidente. Merece la pena que el alumnado, sin ser sometido a juicio cual profesional, cante, baile o acompañe la Jota para que comprenda la importancia de la Rondalla como agrupación instrumental y conozca de manera básica la manifestación cultural.
+= Objetivos del festival.
+Se enumeran los siguientes:
 #set par(leading: 1em)
-- Marta Santamaría, flauta travesera.
-- Mario Pérez, violín.
-- Josep Trescolí, violonchelo.
-- Eduardo Raimundo, clarinete.
-Para la segunda pieza:
-- Mario Pérez.
-- Bárbara Veiga, contrabajo.
-- Vicente Martínez, trompeta.
-- Antonio Martín, percusión.
-Bajo la dirección de Rogelio Anglada. Para la tercera pieza:
-- Mario Pérez.
-- Bárbara Veiga.
-- José Mª Ferrero, oboe.
-- Antonio Martín.
-Para la segunda parte del concierto:
-- Mario Pérez.
-- Josep Trescolí.
-- Eduardo Raimundo.
-- José Mª Ferrero.
-Bajo la dirección de Juanjo Grande.
+- Conocer el baile tradicional español de la jota, junto con la variante aragonesa.
+- Valorar la influencia de la Jota en el patrimonio musical español y aragonés.
+- Conocer las diferentes jotas aragonesas principales y sus características.
+- Conocer el acompañamiento instrumental y la estructura de la jota aragonesa.
+- Implementar una jota aragonesa en agrupación de canto, danza e instrumentos.
 #set par(leading: 1.5em)
-== Primera pieza.
-La primera pieza viene nombrada como Naturaleza y Futuro. A partir de obras pictóricas realizadas por residentes del Centro Ocupacional Miguel de Montalvo de Aljavir, David Del Puerto, compuso una obra músical emanada de las creaciones. Se diferencian tres partes: _ayer_, _hoy_ y _mañana_. En _ayer_ vemos cómo era el mundo en armonía, antes de nuestra llegada, en _hoy_ vemos que nosotros somos culpables de lo que ocurra en el futuro, mientras que _mañana_ muestra dicho futuro, con un atisbo de esperanza.
-== Segunda pieza.
-Llamada _3 haikus_, realizada a partir de 3 composiciones líricas breves de tipo _haiku_ que realizaron escolares. Las piezas, llamadas _Nit_, _Coral_ y _Fira_ (Noche, coral y feria en Lengua Catalana), vienen de una acción socioeducativa de la orquesta producida en 2022 con el compositor Benet Casablancas. Participaron centros de Sevilla, Toledo (Centro de Primaria) y Ciudad Real. Las piezas son muy cortas porque los _haikus_ también lo son: intentan transmitir mucho con pocas palabras.
-== Tercera pieza.
-En este caso, se ha hecho una pieza a partir de una obra de Jose Luis Turina, basada en otra de Alonso Mudarra, que a su vez relató que se había basado en un tañedor. A Turina se le solicitó que incluyese las propuestas de los escolares en una nueva obra versión de la suya, que es la que se representa. Se realizó la obra, denominada, _Fantasía Contrahecha_ en el año 2021.
-== Segunda parte.
-En esta parte se expone propiamente el proyecto en curso, _ITINERA_, con la colaboración de Federico Jusid, para la reflexión sobre los lenguajes musical y cinematográfico. Asistimos a la interpretación de 8 piezas realizadas por los centros siguientes:
-#list(tight: true,
-[IES Duque de Alburquerque, Segovia.],
-[IES Laurona, Liria.],
-[CEIP Nuestra Señora de La Paloma, Madrid.],
-[IES Jaime Ferrán, Collado Villalba.]
-)
-La primera obra se llama _La primera sinfonía en 4B_ y está compuesta por el CEIP Nuestra Señora de La Paloma, a partir de una melodía repetida. La segunda se llama _Tokio_, del IES Laurona. La tercera se ha nombrado _Éxtasis_, realizada por el IES Jaime Ferrán. Estas dos piezas, según el presentador del evento, son animadas. Por último, la última pieza es _Oasis de calma urbana_, del IES Duque de Alburquerque, para calmar la tensión de las dos obras anteriores. Después, vienen las últimas 4 obras, dos por parte del CEIP de La Paloma (_Melodía sin nombre_ y _Herbero's hour_) para finalizar con _Ludomila_ del IES Jaime Ferrán y _Vida Agitada_ del IES Duque de Alburquerque.
-= Conclusiones.
-El presentador del evento explica cómo la música puede permitir la formación integral del alumnado. Alude a distintas cuestiones, entre las que destacan la toma de decisiones del proceso creativo y el trabajo multidisciplinar y colaborativo que supone la escritura de una pieza musical con integrantes de la OCNE.
+= Metodología.
+Se realizará la preparación del festival como un proyecto entre las asignaturas de _Música y Danza_, _Educación Física_ y _Ciencias Sociales_. En la asignatura de _Música y Danza_ se trabajarán los aspectos instrumentales y analíticos de la jota, esto es, la estructura de una jota, el análisis musical de la pieza y el acompañamiento instrumental, así como las partes que se han de respetar y la forma de actuar ante un escenario.\
+Por otro lado, en _Educación Física_ se trabajará lo referente a la Danza _stricto sensu_, con ayuda de la asignatura de música si se requiere. Se pretende explicitar los diferentes pasos de la jota aragonesa y su forma de bailarlos, así como el baile individual o en parejas.\
+Por último, en _Ciencias Sociales_ se pretende trabajar la Jota como fenómeno histórico y realizar un estudio comparativo acerca de las diferentes manifestaciones de la Jota presentes en nuestro país, esto es, castellana, manchega, murciana, catalana o charra entre otras. Merece la pena también ver la influencia de la Jota en los territorios de ultramar que España conservó después de las Guerras de Independencia Sudamericanas (Filipinas).\
+Es conocido que la temática de la Jota puede ser religiosa cristiana católica en ciertos momentos. Se escogerán obras de temática costumbrista o laica para permitir la plena inclusión de todo el alumnado, sea cual sea su confesión. Damos una lista de obras para intepretar a continuación:
+#set par(leading: 1em)
+- Jota de Alarba. Con varias peculiaridades: solo tiene una copla y se baila en trío en vez de en pareja.
+- Jota de Cuatro: también peculiar por estar bailándola dos parejas en escena. Data de 1928.
+- Jota de Antillón: quizá la Jota más conocida, sencilla y primera en aprenderse.
+- Jota de Ansó.
+- Jota del Sobrarbe.
+- Seguidillas de Leciñena, sencillas y en especificación de tempo _andante_.
+#set par(leading: 1.5em)
+Se trabajan estas jotas por ser sencillas y factibles para el alumnado sin importar el nivel de conocimientos del alumnado. 
