@@ -20,7 +20,7 @@ Jmarialearning - Acceso a los enlaces de DRIVE</a>.
         var url = document.getElementById("url").value.toString();
         var urlCorrecta = url.substr(32,)
         var base = "https://drive.google.com/uc?export=download&";
-        var result = base + "id=" + urlCorrecta;
+        var result = base + "id=" + urlCorrecta.substr(0,urlCorrecta.length - 17);
         document.getElementById("linkgen").href = result;
         document.getElementById("linkgen").innerHTML = result
     }
