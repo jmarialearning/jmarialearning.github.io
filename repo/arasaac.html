@@ -22,7 +22,7 @@ Jmarialearning - Acceso a los enlaces de <a href="https://arasaac.org/">ARASAAC<
         <label for="2500">2500px</label>
     </p>
     <input type="button" value="Generar link" onclick="GenerarLink()"/>
-    <p style="font-family: Helvetica, Arial" id="linkgen"></p>
+    <p><a href="#" id="linkgen" style="font-family: Arial, Helvetica, sans-serif;"></a></p>
 </form>
 <script type="text/javascript">
     function GenerarLink() {
@@ -35,6 +35,7 @@ Jmarialearning - Acceso a los enlaces de <a href="https://arasaac.org/">ARASAAC<
         }
         var base = "https://static.arasaac.org/pictograms";
         var result = base + "/" + pictoid + "/" + pictoid + "_" + resol + ".png";
+        document.getElementById("linkgen").href = result;
         document.getElementById("linkgen").innerHTML = result;
     }
 </script>

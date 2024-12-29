@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Jmarialearning - Enlaces directos a DRIVE</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width">
+</head>
+<h1 span style="font-family: Helvetica, Arial">
+Jmarialearning - Acceso a los enlaces de DRIVE</a>.
+</h1>
+<body>
+<form>
+    <p><label span style="font-family: Helvetica, Arial" for="url">URL pública de Drive: </label>
+    <input type="text" id="url" size="50"></p>
+    <input type="button" value="Generar link" onclick="GenerarLink()"/>
+    <p><a href="#" id="linkgen" style="font-family: Arial, Helvetica, sans-serif;"></a></p>
+</form>
+<script type="text/javascript">
+    function GenerarLink() {
+        var url = document.getElementById("url").value.toString();
+        var urlCorrecta = url.substr(32,)
+        var base = "https://drive.google.com/uc?export=download&";
+        var result = base + "id=" + urlCorrecta;
+        document.getElementById("linkgen").href = result;
+        document.getElementById("linkgen").innerHTML = result
+    }
+</script>
+    <a span style="font-family: Helvetica, Arial" href="/..">Volver...</a>
+</body>
+</html>
