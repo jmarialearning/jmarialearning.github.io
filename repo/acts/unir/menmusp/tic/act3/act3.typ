@@ -55,3 +55,6 @@ Por otro lado, tendremos unos monitores de escenario para permitir que el alumna
 La grabación se realizará utilizando micrófonos de cinta cardioide para los momentos en los que se realicen solos. Para un momento _tutti_ se utilizarán los micrófonos omnidireccionales aéreos.
 Cuestión no banal será la mezcla de las fuentes y ganacias para evitar _feedback_, también conocido como acople. Los monitores de escenario, así como los micros de escena no podrán subir mucho la ganancia para evitar un molesto _feedback_. En su lugar, podemos aplicar ganancia al 5.1 que antes relatamos.
 == Promoción y difusión.
+Para difundir el festival se va a realizar una promoción como se explica:
+- Haciendo uso de las redes del centro, se publicitará el festival mediante publicaciones _transmedia_, para aprovechar las características diferenciales de las diferentes plataformas.
+- Por otro lado, se realizará una grabación que se distribuirá bajo la licencia Creative Commons CC-BY-NC 4.0. De esta manera aseguramos en buena medida que el trabajo se utilizará en obras no comerciales y siempre con atribución al autor.
