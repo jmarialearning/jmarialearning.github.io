@@ -1,5 +1,5 @@
 #set document(
-  title: ["Actividad 1 Educación Musical y formación integral"],
+  title: ["Actividad 3 TIC"],
   author: "Jesús María Mora Mur",
   date: datetime.today(offset: auto)
 )
