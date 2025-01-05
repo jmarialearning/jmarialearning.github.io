@@ -59,5 +59,11 @@ Como estructura rítmica trabajaremos según el ritmo del texto. Los monosílabo
   caption: "Ritmo utilizado para la melodía. Fuente: elaboración propia.",
 )
 = Determinación de las alturas musicales.
-Se ha intentado trabajar evitando los saltos entre notas, siendo el mayor salto el de una 5ª justa.
-= Enlace a la partitura.
+Se ha intentado trabajar evitando los saltos entre notas, siendo el mayor salto el de una 5ª justa. Los demás saltos son de segunda y tercera. La quinta justa se da para permitir el comienzo y fin en la nota _Do_.
+= Enlaces a la partitura.
+Se especifican a continaución los enlaces a la partitura en diversos formatos musicales:\
+#link("https://alumnosunir-my.sharepoint.com/:b:/g/personal/jesusmaria_mora212_comunidadunir_net/EZGK0RGUELNKrf_JBayudDkBR6oAve0AF1-k1ItG24KPeQ?e=eiCc8X", "Partitura en PDF")\
+#link("https://alumnosunir-my.sharepoint.com/:u:/g/personal/jesusmaria_mora212_comunidadunir_net/EYCDzExQoLZCp7drYhrhuqcBew0-1TlVSsSK8sx3jbXINg?e=A9cYZV", "Partitura en MusicXML")\
+#link("https://alumnosunir-my.sharepoint.com/:u:/g/personal/jesusmaria_mora212_comunidadunir_net/EU6dSSKpEY5Fu6wHF9qvEA8BRAV6MiMYDYHofAxOv0QjRw?e=lAiAZC", "Archivo MIDI")
+= Posibilidades didácticas de la melodía.
+Se pretende trabajar esta melodía en una sesión interdisciplinar con el tercer ciclo de Primaria, junto con la asignatura de Ciencias Naturales. Al hablar de los astros puede ser de utilidad hacer que la melodía sea un punto de partida para preguntas de mayor nivel en la asignatura de Ciencias Naturales. En lo que a música se refiere, podemos trabajar la partitura a nivel vocal e instrumental haciendo uso del ukelele y de la pequeña percusión, a la vez que nos sirve de inductor para la unidad de Ciencias Naturales. Se hará hincapié en los conceptos de _contratiempo_ y en la estructura de la melodía, así como en la letra y su análisis.
