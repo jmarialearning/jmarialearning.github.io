@@ -37,10 +37,10 @@
 #set par(leading: 1.5em)
 #counter(page).update(1)
 = Infografía.
-Se han escogido los estilos *autorizativo* e *indlugente* partiendo de la clasificación de #cite(<musitu2004consecuencias>, form: "prose"). El enlace al genially embebido es:
-
+Se han escogido los estilos *autorizativo* e *indulgente* partiendo de la clasificación de #cite(<musitu2004consecuencias>, form: "prose"). El enlace al genially embebido es:
+https://jmarialearning.github.io/repo/acts/viu/socfamed/aap1/genially.html
 = Resumen del texto científico.
-Se utilizará el texto de #cite(<villarejo_estilos_2020>, form: "prose")
+Se utilizará el texto de #cite(<villarejo_estilos_2020>, form: "prose").
 = Ejemplo de alumnado en clase.
 
 #bibliography("refs.bib", style: "american-psychological-association")
