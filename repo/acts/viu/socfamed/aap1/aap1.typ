@@ -37,7 +37,8 @@
 #set par(leading: 1.5em)
 #counter(page).update(1)
 = Infografía.
-Se han escogido los estilos *autorizativo* e *indlugente* partiendo de la clasificación de #cite(<musitu2004consecuencias>, form: "prose").
+Se han escogido los estilos *autorizativo* e *indlugente* partiendo de la clasificación de #cite(<musitu2004consecuencias>, form: "prose"). El enlace al genially embebido es:
+
 = Resumen del texto científico.
 Se utilizará el texto de #cite(<villarejo_estilos_2020>, form: "prose")
 = Ejemplo de alumnado en clase.
