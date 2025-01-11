@@ -58,3 +58,17 @@ Cuestión no banal será la mezcla de las fuentes y ganacias para evitar _feedba
 Para difundir el festival se va a realizar una promoción como se explica:
 - Haciendo uso de las redes del centro, se publicitará el festival mediante publicaciones _transmedia_, para aprovechar las características diferenciales de las diferentes plataformas.
 - Por otro lado, se realizará una grabación que se distribuirá bajo la licencia Creative Commons CC-BY-NC 4.0. De esta manera aseguramos en buena medida que el trabajo se utilizará en obras no comerciales y siempre con atribución al autor.
+=== Acciones antes del evento.
+Antes del evento hemos de considerar diferentes cuestiones, a saber:
+- La intención principal. En este caso, nuestra finalidad es brindar a las familias una posibilidad de comprobar el progreso en el aprendizaje en el año escolar.
+- El _target_ o público objetivo. Son los padres y madres del alumnado, que rondarán los 25 a 45 años.
+- El trabajo de narrativa _transmedia_, aprovechando las diferencias de las diferentes plataformas del centro para promocionar mejor el evento. Además se puede realizar un sitio web o un subdominio para el festival. Mediante WordPress o incluso otras alternativas como Sites podemos conseguirlo con menor dificultad.
+- En lo referente a esto se considera correcto realizar _teasers_ para promocionar el evento en base a lo visto otros años. No se considera necesario publicar en prensa por la poca relevancia que tendría el festival fuera del colegio. Si esto no fuese así y estuviese el festival enmarcado en un proyecto entre entidades o con colaboración, no se debe menospreciar esta posibilidad. Cabe también la posibilidad de realizar entrevistas asíncronas o síncronas.
+=== Acciones durante el evento.
+- Retransmisión en directo a través de YouTube, bajo la licencia CC-BY-NC 4.0. aseguramos así que el vídeo no se utilizará con fines comerciales y si se utiliza en cualquier circunstancia permitida, se atribuirá su autoría.
+- Merece la pena realizar actualizaciones mediante redes sociales y unas publicaciones de fotos, utilizando para ello Instagram, por su mejor capacidad de trabajo con la imagen.
+- Para canalizar las interacciones sobre el festival se utilizará un _hashtag_ propio, además de los de la imagen corporativa del colegio, si existen.
+=== Acciones después del evento.
+- Recopilar los momentos destacados para el _teaser_ del año que viene.
+- Realizaremos encuestas de satisfacción para ver cómo ha sentado el evento entre la audiencia.
+- Se utilizará también como fuente de información los _analytics_ de las Redes Sociales y plataformas. Así podemos comprobar si nuestra audiencia interactúa y si debemos cambiar algo a nivel de difusión en próximas ediciones.
