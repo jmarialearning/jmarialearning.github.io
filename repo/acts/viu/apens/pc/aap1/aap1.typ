@@ -34,10 +34,11 @@
 ])
 #pagebreak()
 #set page(numbering: "1")
-#set par(leading: 1.5em)
+#set par(leading: 1em)
 #counter(page).update(1)
 #outline()
 #pagebreak()
+#set par(leading: 1.5em)
 = Construcción de la situación de aprendizaje.
 El desafío que se ha escogido es el siguiente:
 #block(
@@ -55,3 +56,4 @@ Se iniciará la situación de aprendizaje mediante una sesión en la que se desc
 - Dónde se encuentran esos materiales. Intentaremos realizar la distinción entre compuestos naturales o sintetizados en laboratorio.
 A partir de este análisis, pretendemos que el alumnado detecte cuáles son las trazas de los diferentes elementos necesarios para el objeto, que quedarán anotadas en un documento parecido al que se adjunta a tal efecto. // Adjuntar documento aquí.
 #highlight(fill: gradient.linear(..color.map.rainbow))[Se trabajará con el comercio mundial. Hablamos de viajes, consumos, deslocalización, *La vuelta al mundo en un forro polar rojo.*]
+== Sesión 2.
