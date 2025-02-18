@@ -1,5 +1,5 @@
 #set document(
-  title: [Actividad aplicativa 1 Complementos],
+  title: [Actividad aplicativa 1 Aprendizaje y Enseñanza],
   author: "Jesús María Mora Mur",
   date: datetime.today(offset: auto)
 )
@@ -55,5 +55,7 @@ Se iniciará la situación de aprendizaje mediante una sesión en la que se desc
 - Qué materiales, compuestos o elementos utiliza.
 - Dónde se encuentran esos materiales. Intentaremos realizar la distinción entre compuestos naturales o sintetizados en laboratorio.
 A partir de este análisis, pretendemos que el alumnado detecte cuáles son las trazas de los diferentes elementos necesarios para el objeto, que quedarán anotadas en un documento parecido al que se adjunta a tal efecto. // Adjuntar documento aquí.
+== Sesión 2.
+Después de lo realizado en la primera sesión, en la que se trabajaron los antecedentes y el conocimiento general del hilo conductor del proyecto, se entra en materia de análisis más compleja en la que se trabajarán los conceptos de física y química asociados al cuarto curso de la ESO. Partiremos, para empezar, de lo que el alumnado creó en la sesión anterior. Mediante una dinámica _mayéutica_ de inducción trabajremos con el alumnado estos conceptos. El profesorado propondrá preguntas del orden de:
 #highlight(fill: gradient.linear(..color.map.rainbow))[Se trabajará con el comercio mundial. Hablamos de viajes, consumos, deslocalización, *La vuelta al mundo en un forro polar rojo.*]
 == Sesión 2.
