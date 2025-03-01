@@ -56,9 +56,18 @@ Se iniciará la situación de aprendizaje mediante una sesión en la que se desc
 - Dónde se encuentran esos materiales. Intentaremos realizar la distinción entre compuestos naturales o sintetizados en laboratorio.
 A partir de este análisis, pretendemos que el alumnado detecte cuáles son las trazas de los diferentes elementos necesarios para el objeto, que quedarán anotadas en un documento parecido al que se adjunta a tal efecto. // Adjuntar documento aquí.
 == Sesión 2.
-Después de lo realizado en la primera sesión, en la que se trabajaron los antecedentes y el conocimiento general del hilo conductor del proyecto, se entra en materia de análisis más compleja en la que se trabajarán los conceptos de física y química asociados al cuarto curso de la ESO. Partiremos, para empezar, de lo que el alumnado creó en la sesión anterior. Mediante una dinámica _mayéutica_ de inducción trabajremos con el alumnado estos conceptos. El profesorado propondrá preguntas como:
+Después de lo realizado en la primera sesión, en la que se trabajaron los antecedentes y el conocimiento general del hilo conductor del proyecto, se entra en materia de análisis más compleja en la que se trabajarán los conceptos de física y química asociados al cuarto curso de la ESO. Partiremos, para empezar, de lo que el alumnado creó en la sesión anterior. Mediante una dinámica _mayéutica_ de inducción trabajaremos con el alumnado estos conceptos. El profesorado propondrá preguntas como:
 - ¿Cómo llega el producto a las tiendas? ¿Qué vías o medios de transporte se ven involucrados?
 Pretendemos después que el alumnado realice un análisis del impacto de los objetos desde que se comienzan a manufacturar hasta que llegan a nuestras ciudades. Realizaremos esto en grupos base de 4 miembros mediante una dinámica inductiva a través de preguntas.\
 Deberá el alumnado escoger su objeto y la forma de transporte logístico nacional o internacional. Solicitaremos que el alumnado obtenga el consumo de combustible y el impacto en lo que a emisiones a la atmósfera respecta de dicho viaje. Además, solicitaremos al alumnado que estime los beneficios del viaje en el plano económico.\
-Pretendemos, con esto, que el alumnado detecte por qué las empresas deslocalizan la producción en aras de 
+Pretendemos, con esto, que el alumnado detecte por qué las empresas deslocalizan la producción en aras de mayores beneficios.
+== Sesión 3.
+En esta sesión, una vez trabajados estos conceptos, pretendemos que el alumnado reflexione acerca de diferentes posibilidades para consumir de forma responsable. Realizaremos una sesión en la que los grupos creados en el día anterior trabajarán diferentes formas de comprar de forma responsable, así como los beneficios de la compra en comercios de proximidad. Se propondrá un desafío como el que a continuación se expone:
+#block(
+  fill: luma(230),
+  inset: 8pt,
+  radius: 4pt,
+  text(font: "Times New Roman")[Supón que quieres comprar unos pantalones para una fiesta próxima. Puedes comprarlos por InterNET o en un comercio físico. Dos equipos deberéis articular un debate con posturas opuestas. En un caso, decidiréis y apostaréis por comprar en las plataformas de comercio en línea. En el otro, preferiréis acudir a una tienda física. Escoged cuidadosamente los argumentos e intentad prever qué se puede refutar en los mismos.]
+)
+Preparado el debate, se realizará y se concluirá de la siguiente manera.
 #highlight(fill: gradient.linear(..color.map.rainbow))[Se trabajará con el comercio mundial. Hablamos de viajes, consumos, deslocalización, *La vuelta al mundo en un forro polar rojo.*]
