@@ -69,5 +69,6 @@ En esta sesión, una vez trabajados estos conceptos, pretendemos que el alumnado
   radius: 4pt,
   text(font: "Times New Roman")[Supón que quieres comprar unos pantalones para una fiesta próxima. Puedes comprarlos por InterNET o en un comercio físico. Dos equipos deberéis articular un debate con posturas opuestas. En un caso, decidiréis y apostaréis por comprar en las plataformas de comercio en línea. En el otro, preferiréis acudir a una tienda física. Escoged cuidadosamente los argumentos e intentad prever qué se puede refutar en los mismos.]
 )
-Preparado el debate, se realizará y se concluirá de la siguiente manera.
-#highlight(fill: gradient.linear(..color.map.rainbow))[Se trabajará con el comercio mundial. Hablamos de viajes, consumos, deslocalización, *La vuelta al mundo en un forro polar rojo.*]
+Preparado el debate, se realizará y se concluirá de la siguiente manera. De forma individual se pedirá al alumnado que especifique cómo se puede mejorar el consumo de productos de proximidad y que ponga en común realizando la dinámica de 1-2-4 con el grupo base. Primero, se pone en común con la persona de codo y después con todo el grupo.\
+Se especificarán las conclusiones obtenidas en gran grupo, en último término.
+= Vinculación curricular de la situación
