@@ -71,4 +71,13 @@ En esta sesión, una vez trabajados estos conceptos, pretendemos que el alumnado
 )
 Preparado el debate, se realizará y se concluirá de la siguiente manera. De forma individual se pedirá al alumnado que especifique cómo se puede mejorar el consumo de productos de proximidad y que ponga en común realizando la dinámica de 1-2-4 con el grupo base. Primero, se pone en común con la persona de codo y después con todo el grupo.\
 Se especificarán las conclusiones obtenidas en gran grupo, en último término.
-= Vinculación curricular de la situación
+= Vinculación curricular de la situación.
+Se vinculará, mediante tabla, las competencias, criterios y saberes básicos.
+#table(
+  columns: 1,
+  align: center,
+  table.cell(
+    align: center,
+    fill: blue.lighten(60%),
+  )[*Competencia Específica 1*]
+)
