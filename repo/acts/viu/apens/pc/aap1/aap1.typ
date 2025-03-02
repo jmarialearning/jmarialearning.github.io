@@ -47,7 +47,7 @@ El desafío que se ha escogido es el siguiente:
   radius: 4pt,
   text(font: "Times New Roman")[Identificar los diferentes aspectos relacionados con el consumo responsable, valorando sus repercusiones sobre el bien individual y el común, juzgando críticamente las necesidades y los excesos y ejerciendo un control social frente a la vulneración de sus derechos.]
 )
-Se escoge la asignatura de _Física y Química_ en 4º de la ESO en una clase de 20 personas. Se especifica a continuación cómo se articulará la situación de aprendizaje.\
+Se escoge la asignatura de _Cultura Científica_ en 4º de la ESO en una clase de 20 personas. Se especifica a continuación cómo se articulará la situación de aprendizaje.\
 La situación de aprendizaje que se crea tiene como objetivo concienciar del consumo responsable y del impacto de los diferentes estados de creación de un bien de equipo a nivel ambiental.\
 == Sesión 1.
 Se iniciará la situación de aprendizaje mediante una sesión en la que se describirá el proyecto que se va a realizar. En grupos base de 4 integrantes, se pedirá al alumnado que elija un objeto de entre una batería previamente seleccionada por el docente. La selección se realiza con el objeto de acotar los objetos para permitir que dicha investigación sea más sencilla. El docente ha de asegurarse que dicha información se encuentre en la red. En concreto, se pretende que el alumnado encuentre los siguientes conceptos:
@@ -72,12 +72,101 @@ En esta sesión, una vez trabajados estos conceptos, pretendemos que el alumnado
 Preparado el debate, se realizará y se concluirá de la siguiente manera. De forma individual se pedirá al alumnado que especifique cómo se puede mejorar el consumo de productos de proximidad y que ponga en común realizando la dinámica de 1-2-4 con el grupo base. Primero, se pone en común con la persona de codo y después con todo el grupo.\
 Se especificarán las conclusiones obtenidas en gran grupo, en último término.
 = Vinculación curricular de la situación.
-Se vinculará, mediante tabla, las competencias, criterios y saberes básicos.
+Se vinculará, mediante tabla, las competencias, criterios y saberes básicos para la asignatura de _Cultura Científica_.
+#set par(leading: 1em)
 #table(
   columns: 1,
-  align: center,
+  align: horizon,
   table.cell(
     align: center,
     fill: blue.lighten(60%),
-  )[*Competencia Específica 1*]
+  )[*Competencia Específica 2*],
+  table.cell(
+    align: center,
+    fill: blue.lighten(85%),
+  )[_Identificar, localizar y seleccionar información, contrastando su veracidad, oragnizándola y evaluándola críticamente para resolver preguntas relacionadas con las ciencias y con su impacto en la vida cotidiana y en el desarrollo de la sociedad_],
+  [2.1. Resolver cuestiones y profundizar en aspectos relacionados con los saberes del ámbito de la ciencia localizando, seleccionando, 
+organizando y analizando críticamente la información de distintas fuentes citándolas con respeto por la propiedad intelectual.\
+],
+//
+table.cell(
+    align: center,
+    fill: blue.lighten(60%),
+  )[*Competencia Específica 3*],
+  table.cell(
+    align: center,
+    fill: blue.lighten(85%),
+  )[_Interpretar y transmitir información y datos científicos, contrastando previamente su veracidad, y argumentar sobre ellos utilizando diferentes 
+formatos y utilizando lenguaje verbal o gráfico apropiado, para adquirir y afianzar conocimientos y analizar conceptos y procesos del entorno 
+social y cultural_],
+  [3.1. Analizar conceptos y procesos relacionados con los saberes científicos interpretando información en diferentes formatos (modelos, 
+gráficos, tablas, diagramas, fórmulas, esquemas, símbolos, páginas web...), manteniendo una actitud crítica, obteniendo conclusiones y 
+formando opiniones propias fundamentadas. \
+3.2. Facilitar la comprensión y análisis de opiniones propias fundamentadas y de información relacionada con los saberes del ámbito de las 
+ciencias, transmitiéndola de forma clara y rigurosa utilizando la terminología y el formato adecuados (modelos, gráficos, tablas, vídeos, 
+informes, diagramas, fórmulas, esquemas, símbolos o contenidos digitales).\ 
+3.3. Analizar y explicar fenómenos científicos representándolos mediante el diseño y la realización de modelos y diagramas, utilizando, cuando 
+sea necesario, los pasos del diseño de ingeniería (identificación del problema, exploración, diseño, creación, evaluación y mejora. 
+],
+//
+table.cell(
+    align: center,
+    fill: blue.lighten(60%),
+  )[*Competencia Específica 4*],
+  table.cell(
+    align: center,
+    fill: blue.lighten(85%),
+  )[_Utilizar el razonamiento y el pensamiento computacional, para resolver problemas o dar explicación a procesos de la vida cotidiana relacionados con la ciencia, analizando críticamente las respuestas y soluciones y reformulando el procedimiento, si fuera necesario._],
+  [4.1. Resolver problemas o dar explicación a procesos científicos utilizando conocimientos, datos e información aportados, el razonamiento lógico, el pensamiento computacional o recursos digitales. 
+],
+//
+table.cell(
+    align: center,
+    fill: blue.lighten(60%),
+  )[*Competencia Específica 5*],
+  table.cell(
+    align: center,
+    fill: blue.lighten(85%),
+  )[_Utilizar de forma crítica, eficiente y segura plataformas digitales y recursos variados, tanto para el trabajo individual como en equipo, para 
+fomentar la creatividad, el desarrollo personal y el aprendizaje individual y social, mediante la consulta de información, la creación de 
+materiales y la comunicación efectiva en los diferentes entornos de aprendizaje._],
+  [5.2. Trabajar de forma versátil con medios variados, tradicionales y digitales, en la consulta de información y la creación de contenidos, 
+seleccionando y empleando con criterio las fuentes y herramientas más fiables y desechando las menos adecuadas para la mejora del aprendizaje propio y colectivo.
+],
+//
+table.cell(
+    align: center,
+    fill: blue.lighten(60%),
+  )[*Competencia Específica 6*],
+  table.cell(
+    align: center,
+    fill: blue.lighten(85%),
+  )[_Utilizar las estrategias propias del trabajo colaborativo que permitan potenciar el crecimiento entre iguales como base emprendedora de una 
+comunidad científica crítica, ética y eficiente, para comprender la importancia de la ciencia en la mejora de la sociedad, las aplicaciones y 
+repercusiones de los avances científicos, la preservación de la salud y la conservación sostenible del medio ambiente._],
+  [6.1. Establecer interacciones constructivas y coeducativas emprendiendo actividades de cooperación e iniciando el uso de las estrategias 
+propias del trabajo colaborativo, como forma de construir un medio de trabajo eficiente en la ciencia.
+],
+//
+table.cell(
+    align: center,
+    fill: blue.lighten(60%),
+  )[*Competencia Específica 7*],
+  table.cell(
+    align: center,
+    fill: blue.lighten(85%),
+  )[_Analizar los efectos de determinadas acciones sobre la salud, el medio ambiente natural y social y el patrimonio cultural, basándose en los 
+fundamentos científicos, para promover, adoptar y valorar hábitos que mejoren la salud individual y colectiva, eviten o minimicen los impactos 
+medioambientales negativos, sean compatibles con un desarrollo sostenible y permitan mantener y mejorar el patrimonio cultural._],
+  [7.1. Relacionar con fundamentos científicos la preservación de la biodiversidad, la conservación del medio ambiente, la protección de los 
+seres vivos del entorno, el desarrollo sostenible, la calidad de vida y el patrimonio cultural.\
+7.2. Proponer y adoptar hábitos sostenibles analizando de una manera crítica las actividades propias y ajenas y basándose en los propios 
+razonamientos, conocimientos adquiridos e información disponible.\
+7.3. Evaluar los efectos de determinadas acciones individuales sobre el organismo y el medio natural y social y proponer hábitos saludables y 
+sostenibles basados en los conocimientos adquiridos y la información disponible.
+],
 )
+Además de las competencias y criterios, podemos definir también los saberes básicos para la programación, a saber:
+- Bloque D: Ciencia y futuro: contribución a los ODS.
+- Bloque B: Ciencia y comunicación.
+- Bloque C: La repercusión de la ciencia.
