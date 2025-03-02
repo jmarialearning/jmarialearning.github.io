@@ -170,3 +170,10 @@ Además de las competencias y criterios, podemos definir también los saberes b�
 - Bloque D: Ciencia y futuro: contribución a los ODS.
 - Bloque B: Ciencia y comunicación.
 - Bloque C: La repercusión de la ciencia.
+En lo referente a las competencias clave y al perfil de salida podemos nombrar los diferentes descriptores operativos, a saber:
+- Competencia en Comunicación Lingüística: descriptores CCL1, CCL2, CCL3, CCL5.
+- Competencia STEM: descriptores STEM2, STEM4.
+- Competencia Digital: descriptores CD1, CD2, CD3.
+- Competencia Personal, Social y Aprender a Aprender: descriptores CPSAA1, CPSAA3, CPSAA5.
+- Competencia Ciudadana: descriptores CC3, CC4.
+- Competencia Emprendedora: descriptores CE1, CE3.
