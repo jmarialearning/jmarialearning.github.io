@@ -40,6 +40,7 @@
 #pagebreak()
 #set par(leading: 1.5em)
 = Creación del programa de actividades con el trabajo práctico.
+Se creará un programa de actividades en base a un trabajo práctico para trabajar los conocimientos de física en la `especificar etapa`. Específicamente, se trabajará `especificar conceptos trabajados`.
 == Objetivos.
 == Competencias específicas y criterios de evaluación trabajados.
 == Saberes básicos.
