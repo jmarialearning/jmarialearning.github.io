@@ -130,10 +130,16 @@ table.cell(
   + Principales fuerzas del entorno cotidiano: reconocimiento del peso, la normal, el rozamiento, la tensión o el empuje, y su uso en la explicación de fenómenos físicos en distintos escenarios.
   + Ley de la gravitación universal: atracción entre los cuerpos que componen el universo. Concepto de peso.
   + Fuerzas y presión en los fluidos: efectos de las fuerzas y la presión sobre los líquidos y los gases, estudiando los principios fundamentales que las describen.
-
 == Vinculación con las competencias clave y el perfil de salida.
+- Competencia en comunicación lingüística: CCL1.
+- Competencia matemática y competencia en ciencia, tecnología e ingeniería: STEM1, STEM2, STEM4.
+- Competencia personal, social y de aprender a aprender: CPSAA1, CPSAA3, CPSAA4, CPSAA5.
+- Competencia emprendedora: CE2, CE3.
 == Actividades
 === Actividades iniciales.
+// Detectar Concepciones Alternativas e introducir.
 === Actividades de desarrollo.
+// Derribar CA y trabajar.
 === Actividades de conclusión.
+// Cerrar.
 == Perspectivas.
