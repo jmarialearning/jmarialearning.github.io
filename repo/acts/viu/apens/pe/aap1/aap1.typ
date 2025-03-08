@@ -138,6 +138,9 @@ table.cell(
 == Actividades
 === Actividades iniciales.
 // Detectar Concepciones Alternativas e introducir.
+El propósito de las actividades iniciales es el de detectar posibles concepciones erróneas para posibilitar su modificación en favor de las tesis aceptadas por la ciencia. Se realizarán como sigue:
+==== Actividad 1.
+Comenzaremos con una dinámica mayéutica 
 === Actividades de desarrollo.
 // Derribar CA y trabajar.
 === Actividades de conclusión.
