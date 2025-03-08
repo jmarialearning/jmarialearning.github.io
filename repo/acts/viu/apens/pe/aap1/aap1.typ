@@ -40,10 +40,15 @@
 #pagebreak()
 #set par(leading: 1.5em)
 = Creación del programa de actividades con el trabajo práctico.
-Se creará un programa de actividades en base a un trabajo práctico para trabajar los conocimientos de física en la `especificar etapa`. Específicamente, se trabajará `especificar conceptos trabajados`.
+Se creará un programa de actividades en base a un trabajo práctico para trabajar los conocimientos de física en el cuarto curso de Educación Secundaria Obligatoria. Específicamente, se trabajará la cinemática y la dinámica desde un enfoque experimental mediante trabajos prácticos en el laboratorio, entre otras técnicas didácticas.
 == Objetivos.
+- Experimentar con la cinemática y la dinámica sobre un sistema.
+- Deducir la dependencia de las diferentes magnitudes en la mecánica del sistema.
+- Estudiar la aceleración, comprendiendo la relación que existe con la fuerza sufrida por el sistema.
 == Competencias específicas y criterios de evaluación trabajados.
+
 == Saberes básicos.
+Bloques A y C.
 == Vinculación con las competencias clave y el perfil de salida.
 == Actividades
 === Actividades iniciales.
