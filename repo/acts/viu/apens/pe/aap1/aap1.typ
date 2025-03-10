@@ -168,8 +168,10 @@ Cabe destacar que existen varios, como el _lanzamiento de proyectiles_ de tipos 
     - _Si quiero alcanzar una posición horizontal más alejada de la posición inicial, describe modificaciones que podría realizar en el sistema para conseguir ese propósito._
     ]
 )
+Se espera, en este caso, que el alumnado especifique qu modificar el ángulo de ataque permitirá más o menos alejamiento de la posición inicial en el eje horizontal.
 === Actividades de desarrollo.
 // Derribar CA y trabajar.
+En las actividades de desarrollo, se preparará un trabajo práctico con el objeto de derribar ciertas concepciones erróneas en el alumnado y permitir la comprensión del fenómeno.
 === Actividades de conclusión.
 // Cerrar.
 == Perspectivas.
