@@ -40,12 +40,10 @@
 #pagebreak()
 #set par(leading: 1.5em)
 = Creación del programa de actividades con el trabajo práctico.
-Se creará un programa de actividades en base a un trabajo práctico para trabajar los conocimientos de física en el cuarto curso de Educación Secundaria Obligatoria. Específicamente, se trabajará la cinemática y la dinámica desde un enfoque experimental mediante trabajos prácticos en el laboratorio, entre otras técnicas didácticas.
+Se creará un programa de actividades en base a un trabajo práctico para trabajar los conocimientos de física en el segundo curso de Educación Secundaria Obligatoria. Específicamente, se trabajará la electricidad desde un enfoque experimental mediante trabajos prácticos en el laboratorio, entre otras técnicas didácticas.
 == Objetivos.
-- Experimentar con la cinemática y la dinámica sobre un sistema.
-- Deducir la dependencia de las diferentes magnitudes en la mecánica del sistema.
-- Estudiar la aceleración, comprendiendo la relación que existe con la fuerza sufrida por el sistema.
-- Comprender el movimiento en dos dimensiones.
+- Experimentar con la electricidad y los circuitos eléctricos.
+- Conocer las magnitudes 
 == Competencias específicas y criterios de evaluación trabajados.
 #set par(leading: 1em)
 #table(
