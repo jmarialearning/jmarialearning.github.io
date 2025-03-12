@@ -137,23 +137,25 @@ table.cell(
 === Actividades iniciales.
 // Detectar Concepciones Alternativas e introducir.
 El propósito de las actividades iniciales es el de detectar posibles concepciones erróneas para posibilitar su modificación en favor de las tesis aceptadas por la ciencia. Comenzaremos con una dinámica mayéutica para detectar concepciones alternativas en el alumnado. Seguiremos la secuencia siguiente:
--  Preguntaremos en primer lugar al alumnado qué especifique tres palabras que relacione con el movimiento. Se comprende que al conocer el alumnado el movimiento rectilíneo en una dimensión, así como sus causas, de cursos y secuencias pasadas. Por ende, se esperan respuestas relativamente elaboradas, que se mostrarán en un diagrama tipo nube de palabras. Así, podremos detectar los conocimientos e ideas previas del alumnado, sean estos correctos o no.
+-  Preguntaremos en primer lugar al alumnado qué especifique tres palabras que relacione con la electricidad. Se comprende que el alumnado recuerda los conocimientos de otras asignaturas como tecnología, así como lo aprendido en Educación Primaria. Por ende, se esperan respuestas relativamente elaboradas, que se mostrarán en un diagrama tipo nube de palabras. Así, podremos detectar los conocimientos e ideas previas del alumnado, sean estos correctos o no.
 - Continuaremos con unas preguntas al alumnado.
 #block(
   fill: luma(230),
   inset: 8pt,
   radius: 4pt,
   text(font: "Times New Roman")[
-    - _Si se aplica una única fuerza a un móvil, ¿qué tipo de movimiento tendrá el móvil?_
+    - _Imagina un circuito con una sola bombilla conectada a una fuente de alimentación de corriente continua. ¿Dónde se invierte la energía de la fuente?_
+    - _Si deseo controlar si un dispositivo eléctrico (como una bombilla) esté encendido o apagado, ¿cómo puedo hacerlo?_
+    - _¿Existe un modo para calcular el consumo energético de un aparato eléctrico?_
     ]
 )
-Mediante esta pregunta, pretendemos que el alumnado recuerde los conocimientos previos vistos en cursos anteriores. Procedemos a introducir la nueva materia mediante la pregunta siguiente:
+Mediante estas preguntas, pretendemos que el alumnado recuerde los conocimientos previos. Procedemos a introducir la nueva materia mediante la pregunta siguiente:
 #block(
   fill: luma(230),
   inset: 8pt,
   radius: 4pt,
   text(font: "Times New Roman")[
-    - _Hay movimientos en los que la trayectoria no es rectilínea, si no parabólica. ¿Se te ocurre alguno?_
+    - _¿Cómo crees que podremos calcular el consumo de un aparato electrónico? ¿Qué magnitudes crees que estarán involucradas? ¿Cómo estarán relacionadas?_
     ]
 )
 Cabe destacar que existen varios, como el _lanzamiento de proyectiles_ de tipos varios, pero este, en concreto, podría omitirse en favor de otros. En cualquier caso, proseguimos la dinámica inductiva.
