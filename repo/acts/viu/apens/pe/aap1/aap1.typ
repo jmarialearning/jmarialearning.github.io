@@ -158,20 +158,37 @@ Mediante estas preguntas, pretendemos que el alumnado recuerde los conocimientos
     - _¿Cómo crees que podremos calcular el consumo de un aparato electrónico? ¿Qué magnitudes crees que estarán involucradas? ¿Cómo estarán relacionadas?_
     ]
 )
-Cabe destacar que existen varios, como el _lanzamiento de proyectiles_ de tipos varios, pero este, en concreto, podría omitirse en favor de otros. En cualquier caso, proseguimos la dinámica inductiva.
+Se considera esta cuestión fácilmente precisable por el alumnado por lo anteriormente comentado. Debería conocer el alumnado el funcionamiento de un circuito eléctrico simple.
 #block(
   fill: luma(230),
   inset: 8pt,
   radius: 4pt,
   text(font: "Times New Roman")[
-    - _Dibuja la trayectoria de un movimiento parabólico. Como puedes imaginar, consideraremos cambios en dos posiciones, la horizontal y la vertical._
-    - _Si quiero alcanzar una posición horizontal más alejada de la posición inicial, describe modificaciones que podría realizar en el sistema para conseguir ese propósito._
+    - _Dibuja un circuito eléctrico e intenta dirimir el comportamiento de los elementos que coloques en él. ¿Cuándo funcionarán? ¿Cómo pararán? Comprueba qué recursos necesitas para construir el circuito que has propuesto._
     ]
 )
-Se espera, en este caso, que el alumnado especifique qu modificar el ángulo de ataque permitirá más o menos alejamiento de la posición inicial en el eje horizontal.
+Se espera, en este caso, que el alumnado especifique los elementos básicos de los circuitos eléctricos. En primer lugar, una *fuente de alimentación* para posibilitar que el circuito funcione. Por otro lado, se necesitan *conductores* para posibilitar la unión entre los elementos y la fuente. Por último, se requerirán todos aquellos *componentes* propuestos.\
+Terminamos con una última pregunta:
+#block(
+  fill: luma(230),
+  inset: 8pt,
+  radius: 4pt,
+  text(font: "Times New Roman")[
+    - _El gasto energético del circuito, ¿de qué crees que dependerá: de los componentes que conectes o de la fuente de alimentación?_
+    ]
+)
 === Actividades de desarrollo.
 // Derribar CA y trabajar.
-En las actividades de desarrollo, se preparará un trabajo práctico con el objeto de derribar ciertas concepciones erróneas en el alumnado y permitir la comprensión del fenómeno.
+En las actividades de desarrollo, se preparará un trabajo práctico con el objeto de derribar ciertas concepciones erróneas en el alumnado y permitir la comprensión del fenómeno. Se pretende medir las magnitudes integradas en un circuito eléctrico con el objetivo de caracterizar el circuito y detectar su gasto energético.\
+Para realizar el trabajo práctico, utilizaremos los materiales siguientes:
+- Una placa _breadboard_, donde realizaremos las conexiones.
+- Cables de cobre.
+- Resistencias varias.
+- Una bombilla de 5 voltios, junto con otros componentes eléctricos u electrónicos analógicos.
+- Como fuente de alimentación se pueden utilizar diferentes componentes. Utilizaremos por conveniencia los 5 voltios de VCC que proporciona una _Arduino UNO_, aunque podemos utilizar como fuente cualquier cargador y un cable USB de carga con los pines 1 y 4 pelados, así como una fuente de alimentación regulable, presente en los laboratorios de cualquier instituto.
+- Un polímetro, para extraer medidas de voltaje, intensidad y resistencia.
+Realizaremos en primer lugar el diseño de los circuitos permitiendo que el alumnado elija los componentes que va a utilizar. Dejaremos que el alumnado elija los componentes sin resistencias en primer lugar y que genere su circuito, que ensamblará.\
+Procederemos a medir el voltaje entre bornes para ver que será cercano a 5 voltios. Comprobaremos también el voltaje entre bornes de la bombilla para probar que la práctica totalidad de
 === Actividades de conclusión.
 // Cerrar.
 == Perspectivas.
