@@ -184,11 +184,18 @@ Para realizar el trabajo práctico, utilizaremos los materiales siguientes:
 - Una placa _breadboard_, donde realizaremos las conexiones.
 - Cables de cobre.
 - Resistencias varias.
-- Una bombilla de 5 voltios, junto con otros componentes eléctricos u electrónicos analógicos.
+- Un motor de 5 voltios, junto con otros componentes eléctricos u electrónicos analógicos.
 - Como fuente de alimentación se pueden utilizar diferentes componentes. Utilizaremos por conveniencia los 5 voltios de VCC que proporciona una _Arduino UNO_, aunque podemos utilizar como fuente cualquier cargador y un cable USB de carga con los pines 1 y 4 pelados, así como una fuente de alimentación regulable, presente en los laboratorios de cualquier instituto.
 - Un polímetro, para extraer medidas de voltaje, intensidad y resistencia.
-Realizaremos en primer lugar el diseño de los circuitos permitiendo que el alumnado elija los componentes que va a utilizar. Dejaremos que el alumnado elija los componentes sin resistencias en primer lugar y que genere su circuito, que ensamblará.\
-Procederemos a medir el voltaje entre bornes para ver que será cercano a 5 voltios. Comprobaremos también el voltaje entre bornes de la bombilla para probar que la práctica totalidad de
+Realizaremos en primer lugar el diseño de los circuitos permitiendo que el alumnado elija los componentes que va a utilizar. Dejaremos que el alumnado elija los componentes sin resistencias en primer lugar y que genere su circuito, que ensamblará. Supongamos que ha elegido el alumnado un motor de corriente continua de 5 voltios.\
+Procederemos a medir el voltaje entre bornes para ver que será cercano a 5 voltios. Comprobaremos también el voltaje entre bornes del motor para probar que la práctica totalidad del voltaje se utiliza para dar corriente al motor. Podremos detectar también qué intesidad pasa por el circuito y deducir la _resistencia equivalente_ del motor. Ello lo realizaremos deduciendo la ley de Ohm experimentalmente mediante una actividad práctica de toma y análisis de datos, según sigue:
++ Conectamos unas resistencias a los 5 voltios. Manteniendo el voltaje constante, apuntamos valores de la resistencia y de la intensidad que pasa por la misma.
++ Si modificas una resistencia por otra, ¿qué ocurre con la intesidad? Cambia una resistencia por otra y comprueba la corriente. La intensidad y la resistencia, ¿son directa o inversamente proporcionales?
++ Intenta averiguar la constante de proporcionalidad. ¿Corresponde a algún valor concreto o relevante?
+Con esto, pretendemos que el alumnado detecte que la intensidad y la resistencia son inversamente proporcionales. Matemáticamente:
+$ I dot R = k $
+Donde dicha constante $k$ es el voltaje. He aquí la ley de Ohm.\
+Ahora que el alumnado ha podido deducir la Ley de Ohm, se pretende que calcule la resistencia para un diodo LED.
 === Actividades de conclusión.
 // Cerrar.
 == Perspectivas.
