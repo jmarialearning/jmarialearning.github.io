@@ -57,9 +57,9 @@ Se creará un programa de actividades en base a un trabajo práctico para trabaj
     align: center,
     fill: blue.lighten(85%),
   )[_Comprender y relacionar los motivos por los que ocurren los principales fenómenos fisicoquímicos del entorno, explicándolos en términos de las leyes y teorías científicas adecuadas, para resolver problemas con el fin de aplicarlas para mejorar la realidad cercana y la calidad de vida humana._],
-  [1.1. Comprender y explicar con rigor los fenómenos fisicoquímicos cotidianos a partir de los principios, teorías y leyes científicas adecuadas, expresándolos de manera argumentada, utilizando diversidad de soportes y medios de comunicación.\
-1.2. Resolver problemas fisicoquímicos planteados mediante las leyes y teorías científicas adecuadas, razonando los procedimientos utilizados para encontrar las soluciones y expresando los resultados con corrección y precisión.\
-1.3. Reconocer y describir situaciones problemáticas reales de índole científica y emprender iniciativas colaborativas en las que la ciencia, y en particular la física y la química, pueden contribuir a su solución, analizando críticamente su impacto en la sociedad y el medio ambiente.
+  [1.1. Identificar, comprender y explicar los fenómenos fisicoquímicos cotidianos más relevantes a partir de los principios, teorías y leyes científicas adecuadas, expresándolos, de manera argumentada, utilizando diversidad de soportes y medios de comunicación.\
+1.2. Resolver los problemas fisicoquímicos planteados utilizando las leyes y teorías científicas adecuadas, razonando los procedimientos utilizados para encontrar las soluciones y expresando adecuadamente los resultados.\
+1.3. Reconocer y describir en el entorno inmediato situaciones problemáticas reales de índole científica y emprender iniciativas en las que la ciencia, y en particular la física y la química, pueden contribuir a su solución, analizando críticamente su impacto en la sociedad.
 ],
 //
 table.cell(
@@ -70,9 +70,7 @@ table.cell(
     align: center,
     fill: blue.lighten(85%),
   )[_Expresar las observaciones realizadas por el alumnado en forma de preguntas, formular hipótesis para explicarlas y demostrar dichas hipótesis a través de la experimentación científica, la indagación y la búsqueda de evidencias, para desarrollar los razonamientos propios del pensamiento científico y mejorar las destrezas en el uso de las metodologías científicas._],
-  [2.1. Emplear las metodologías propias de la ciencia en la identificación y descripción de  fenómenos científicos a partir de situaciones tanto observadas en el mundo natural como planteadas a través de enunciados con información textual, gráfica o numérica.\
-2.2. Predecir, para las cuestiones planteadas, respuestas que se puedan comprobar con las herramientas y conocimientos adquiridos, tanto de forma experimental como deductiva, aplicando el razonamiento lógico-matemático en su proceso de validación.\
-2.3. Aplicar las leyes y teorías científicas más importantes para validar hipótesis de manera informada y coherente con el conocimiento científico existente, diseñando los procedimientos experimentales o deductivos necesarios para resolverlas y analizar los resultados críticamente.
+  [2.3. Aplicar las leyes y teorías científicas conocidas al formular cuestiones e hipótesis, siendo coherente con el conocimiento científico existente y diseñando los procedimientos experimentales o deductivos necesarios para resolverlas o comprobarlas.\
 ],
 //
 table.cell(
@@ -83,9 +81,9 @@ table.cell(
     align: center,
     fill: blue.lighten(85%),
   )[_Manejar con soltura las reglas y normas básicas de la física y la química en lo referente al lenguaje de la IUPAC, al lenguaje matemático, al empleo de unidades de medida correctas, al uso seguro del laboratorio y a la interpretación y producción de datos e información en diferentes formatos y fuentes (textos, enunciados, tablas, gráficas, informes, manuales, diagramas, fórmulas, esquemas, modelos, símbolos, etc.), para reconocer el carácter universal y transversal del lenguaje científico y la necesidad de una comunicación fiable en investigación y ciencia entre diferentes países y culturas._],
-  [3.1. Emplear fuentes variadas, fiables y seguras para seleccionar, interpretar, organizar y comunicar información relativa a un proceso fisicoquímico concreto, relacionando entre sí lo que cada una de ellas contiene, extrayendo en cada caso lo más relevante para la resolución de un problema y desechando todo lo que sea irrelevante.\
-3.2. Utilizar adecuadamente las reglas básicas de la física y la química, incluyendo el uso correcto de varios sistemas de unidades, las herramientas matemáticas necesarias y las reglas de nomenclatura avanzadas, consiguiendo una comunicación efectiva con toda la comunidad científica.\
-3.3. Aplicar con rigor las normas de uso de los espacios específicos de la ciencia, como el laboratorio de Física y Química, asegurando la salud propia y colectiva, la conservación sostenible del medio ambiente y el cuidado por las instalaciones.
+  [3.1. Emplear datos en diferentes formatos para interpretar y comunicar información relativa a un proceso fisicoquímico concreto, relacionando entre sí lo que cada uno de ellos contiene, y extrayendo en cada caso lo más relevante para la resolución de un problema.\
+3.2. Utilizar adecuadamente las reglas básicas de la física y la química, incluyendo el uso de unidades de medida, las herramientas matemáticas y las reglas de nomenclatura, consiguiendo una comunicación efectiva con toda la comunidad científica.\
+3.3. Poner en práctica las normas de uso de los espacios específicos de la ciencia, como el laboratorio de Física y Química, asegurando la salud propia y colectiva, la conservación sostenible del medio ambiente y el cuidado de las instalaciones.\
 ],
 //
 table.cell(
@@ -96,8 +94,8 @@ table.cell(
     align: center,
     fill: blue.lighten(85%),
   )[_Utilizar de forma crítica, eficiente y segura plataformas digitales y recursos variados, tanto para el trabajo individual como en equipo, para fomentar la creatividad, el desarrollo personal y el aprendizaje individual y social, mediante la consulta de información, la creación de materiales y la comunicación efectiva en los diferentes entornos de aprendizaje._],
-  [4.1. Utilizar de forma eficiente recursos variados, tradicionales y digitales, mejorando el aprendizaje autónomo y la interacción con otros miembros de la comunidad educativa, de forma rigurosa y respetuosa y analizando críticamente las aportaciones de todos.\
-4.2. Trabajar de forma versátil con medios variados, tradicionales y digitales, en la consulta de información y la creación de contenidos, seleccionando y empleando con criterio las fuentes y herramientas más fiables, desechando las menos adecuadas y mejorando el aprendizaje propio y colectivo.
+  [4.1. Utilizar recursos variados, tradicionales y digitales, mejorando el aprendizaje autónomo y la interacción con otros miembros de la comunidad educativa, con respeto hacia docentes y estudiantes y analizando críticamente las aportaciones de cada participante.\
+4.2. Trabajar de forma adecuada con medios variados, tradicionales y digitales, en la consulta de información y la creación de contenidos, seleccionando con criterio las fuentes más fiables y desechando las menos adecuadas y mejorando el aprendizaje propio y colectivo.
 ],
 //
 table.cell(
@@ -108,26 +106,24 @@ table.cell(
     align: center,
     fill: blue.lighten(85%),
   )[_Utilizar las estrategias propias del trabajo colaborativo que permitan potenciar el crecimiento entre iguales como base emprendedora de una comunidad científica crítica, ética y eficiente, para comprender la importancia de la ciencia en la mejora de la sociedad, las aplicaciones y repercusiones de los avances científicos, la preservación de la salud y la conservación sostenible del medio ambiente._],
-  [5.1. Establecer interacciones constructivas y coeducativas, emprendiendo actividades de cooperación e iniciando el uso de las estrategias propias del trabajo colaborativo, como forma de construir un medio de trabajo eficiente en la ciencia.\
-5.2. Emprender, de forma autónoma y de acuerdo a la metodología adecuada, proyectos científicos que involucren al alumnado en la mejora de la sociedad y que creen valor para el individuo y para la comunidad.
+  [5.1. Establecer interacciones constructivas y coeducativas, emprendiendo actividades de cooperación como forma de construir un medio de trabajo eficiente en la ciencia.\
+5.2. Emprender, de forma guiada y de acuerdo a la metodología adecuada, proyectos científicos que involucren al alumnado en la mejora de la sociedad y que creen valor para el individuo y para la comunidad.
 ],
 )
 == Saberes básicos.
 #set enum(numbering: "A.i.")
 + Las destrezas científicas básicas.
-  + Trabajo experimental y  proyectos de investigación: estrategias en la resolución de problemas y el tratamiento del error mediante la indagación, la deducción, la búsqueda de evidencias y el razonamiento lógico-matemático, haciendo inferencias válidas de las observaciones y obteniendo conclusiones que vayan más allá de las condiciones experimentales para aplicarlas a nuevos escenarios.
-  + Diversos entornos y recursos de aprendizaje científico como el laboratorio o los entornos virtuales: materiales, sustancias y herramientas tecnológicas. 
-  + Normas de uso de cada espacio, asegurando y protegiendo así la saludo propia y comunitaria, la seguridad en redes y el respeto hacia el medio ambiente.
-  +	El lenguaje científico: manejo adecuado de distintos sistemas de unidades y sus símbolos. Herramientas matemáticas adecuadas en diferentes escenarios  científicos y de aprendizaje.
-  +	Estrategias de interpretación y producción de información científica en diferentes formatos y a partir de diferentes medios: desarrollo del criterio propio basado en lo que el pensamiento científico aporta a la mejora de la sociedad para hacerla más justa, equitativa e igualitaria.
-  +	Valoración de la cultura científica y del papel de científicos y científicas en los principales hitos históricos y actuales de la física y la química para el avance y la mejora de la sociedad.
-3. La interacción.
-  + Predicción y comprobación, utilizando la experimentación y el razonamiento matemático, de las principales magnitudes, ecuaciones y gráficas que describen el movimiento de un cuerpo, relacionándolo con situaciones cotidianas y con la mejora de la calidad de vida.
-  + La fuerza como agente de cambios en los cuerpos: principio fundamental de la Física que se aplica a otros campos como el diseño, el deporte o la ingeniería.
-  + Carácter vectorial de las fuerzas: uso del álgebra vectorial básica para la realización gráfica y numérica de operaciones con fuerzas y su aplicación a la resolución de problemas relacionados con sistemas sometidos a conjuntos de fuerzas, valorando su importancia en situaciones cotidianas.
-  + Principales fuerzas del entorno cotidiano: reconocimiento del peso, la normal, el rozamiento, la tensión o el empuje, y su uso en la explicación de fenómenos físicos en distintos escenarios.
-  + Ley de la gravitación universal: atracción entre los cuerpos que componen el universo. Concepto de peso.
-  + Fuerzas y presión en los fluidos: efectos de las fuerzas y la presión sobre los líquidos y los gases, estudiando los principios fundamentales que las describen.
+  + Metodologías de la investigación científica: identificación y formulación de cuestiones, elaboración de hipótesis y comprobación experimental de las mismas.
+  + Trabajo experimental y proyectos de investigación: estrategias en la resolución de problemas y en el desarrollo de investigaciones mediante la indagación, la deducción, la búsqueda de evidencias y el razonamiento lógico-matemático, haciendo inferencias válidas de las observaciones y obteniendo conclusiones.
+  + Diversos entornos y recursos de aprendizaje científico como el laboratorio o los entornos virtuales: materiales, sustancias y herramientas tecnológicas.
+  + Normas de uso de cada espacio, asegurando y protegiendo así la salud propia y comunitaria, la seguridad en redes y el respeto hacia el medio ambiente.
+  + El lenguaje científico: unidades del Sistema Internacional y sus símbolos. Herramientas matemáticas básicas en diferentes escenarios científicos  y de aprendizaje.
+  + Estrategias de interpretación y producción de información científica utilizando diferentes formatos y diferentes medios: desarrollo del criterio propio basado en lo que el pensamiento científico aporta a la mejora de la sociedad para hacerla más justa, equitativa e igualitaria.
+4. La energía.
+  + La energía: formulación de cuestiones e hipótesis sobre la energía, propiedades y manifestaciones que la describan como la causa de todos los procesos de cambio.
+  + Diseño y comprobación experimental de hipótesis relacionadas con el uso doméstico e industrial de la energía en sus distintas formas y las transformaciones entre ellas.
+  + Naturaleza eléctrica de la materia: electrización de los cuerpos, circuitos eléctricos y la obtención de energía eléctrica. Concienciación sobre la necesidad del ahorro energético y la conservación sostenible del medio ambiente.
+
 == Vinculación con las competencias clave y el perfil de salida.
 - Competencia en comunicación lingüística: CCL1.
 - Competencia matemática y competencia en ciencia, tecnología e ingeniería: STEM1, STEM2, STEM4.
@@ -195,11 +191,10 @@ Procederemos a medir el voltaje entre bornes para ver que será cercano a 5 volt
 Con esto, pretendemos que el alumnado detecte que la intensidad y la resistencia son inversamente proporcionales. Matemáticamente:
 $ I dot R = k $
 Donde dicha constante $k$ es el voltaje. He aquí la ley de Ohm.\
+=== Actividades de conclusión.
+En estas actividades pretendemos que el alumnado establezca estrategias metacognitivas, siendo consciente de lo que ha aprendido y generalizando a otras situaciones afines.
 Ahora que el alumnado ha podido deducir la Ley de Ohm, se pretende que calcule la resistencia para un diodo LED siguiendo la siguiente secuencia.
 + Debes generar un circuito con un diodo LED. Los diodos LED tienen dos características que se han de considerar cuando se introducen en circuitos:
   - El diodo tiene patas de diferente longitud: la más larga indica el polo positivo (+) y la más corta, el negativo (-). Si se conecta un LED al revés, como cualquier diodo, no deja pasar corriente eléctrica.
   - El diodo LED es muy sensible y solo admite intensidades en el rango entre $0,005 "A"$ y $0,05 "A"$. Si la intensidad es mayor que 0,05 A, el LED se quema. Si es menor, no se enciende. Como puedes imaginar, hemos de introducir una resistencia entre la fuente y el LED para asegurar que la corriente que pasa por el LED está en ese rango de intensidades.
 + Calcula una resistencia que se puede utilizar en el circuito para que el LED funcione sin peligro.
-=== Actividades de conclusión.
-En estas actividades pretendemos que el alumnado establezca estrategias metacognitivas, siendo consciente de lo que ha aprendido y generalizando a otras situaciones afines.
-== Perspectivas.

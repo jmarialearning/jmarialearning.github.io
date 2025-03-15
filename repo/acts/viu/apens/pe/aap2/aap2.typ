@@ -41,6 +41,7 @@
 #set par(leading: 1.5em)
 = Creación del problema como investigación.
 == Interés de la situación.
+Conocer cuántas toneladas de grava necesito para tapar un pozo de prospección
 == Estudio cualitativo.
 == Construcción de la hipótesis.
 == Estrategias de resolución.
