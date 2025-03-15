@@ -195,7 +195,11 @@ Procederemos a medir el voltaje entre bornes para ver que será cercano a 5 volt
 Con esto, pretendemos que el alumnado detecte que la intensidad y la resistencia son inversamente proporcionales. Matemáticamente:
 $ I dot R = k $
 Donde dicha constante $k$ es el voltaje. He aquí la ley de Ohm.\
-Ahora que el alumnado ha podido deducir la Ley de Ohm, se pretende que calcule la resistencia para un diodo LED.
+Ahora que el alumnado ha podido deducir la Ley de Ohm, se pretende que calcule la resistencia para un diodo LED siguiendo la siguiente secuencia.
++ Debes generar un circuito con un diodo LED. Los diodos LED tienen dos características que se han de considerar cuando se introducen en circuitos:
+  - El diodo tiene patas de diferente longitud: la más larga indica el polo positivo (+) y la más corta, el negativo (-). Si se conecta un LED al revés, como cualquier diodo, no deja pasar corriente eléctrica.
+  - El diodo LED es muy sensible y solo admite intensidades en el rango entre $0,005 "A"$ y $0,05 "A"$. Si la intensidad es mayor que 0,05 A, el LED se quema. Si es menor, no se enciende. Como puedes imaginar, hemos de introducir una resistencia entre la fuente y el LED para asegurar que la corriente que pasa por el LED está en ese rango de intensidades.
++ Calcula una resistencia que se puede utilizar en el circuito para que el LED funcione sin peligro.
 === Actividades de conclusión.
-// Cerrar.
+En estas actividades pretendemos que el alumnado establezca estrategias metacognitivas, siendo consciente de lo que ha aprendido y generalizando a otras situaciones afines.
 == Perspectivas.
