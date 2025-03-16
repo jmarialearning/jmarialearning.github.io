@@ -77,5 +77,16 @@ Para un tiempo medido $t_"medido" = 15 space.thin "s"$, obtenemos unos datos de 
 $ t_"caida" = 8,86 space.thin "s" $
 lo cual nos permite conocer la profundidad del pozo, siendo esta de:
 $ arrow(r_"finp") = 385.4 space.thin "m" $
+=== Estrategia 2.
+En este caso tenemos un MRU en el que el sonido recorre dos veces la profundidad del pozo. Manteniendo el mismo convenio de signos, con la posición final del sonido positiva, tenemos que:
+$ arrow(r_"finp") = arrow(v_s) dot.op t $
+Sabemos que en el tiempo medido el sonido sale de la fuente, rebota y es captado por el micrófono. Así nuestro tiempo de caída es la mitad del que medimos, pues el sonido no varía la velocidad y se desplaza en línea recta.
+$ arrow(r_"finp") = arrow(v_s) dot.op frac(t,2) $
+Para un tiempo $t = 1.135 space.thin "s"$ tenemos que la profundidad del pozo son $arrow(r_"finp") = 385.9 space.thin "m"$
 == Análisis de resultados.
+Los resultados tienen sentido físico, pero la hipótesis no había considerado que el sonido también tiene una velocidad, finita, y desde luego, no despreciable. Quizá la segunda forma de resolver es mejor, pues podemos utilizar equipos informáticos para calcular cuándo se recibe la onda sonora y se disminuye el error, si bien no es nulo.\
+En otro orden de cosas, no hemos de olvidar que dichas profundidades sirven para calcular el volumen de grava para el pozo. Extruyendo el círculo de radio conocido para la altura obtenida el volumen de grava que se obtiene es:
+- Estrategia 1: $V = pi dot.op r^2 dot.op h = pi dot.op (0.35 space.thin "m")^2 dot.op 385.4 space.thin "m" = 148.3 space.thin "m"^3 equiv 148.3 dot.op 10^3 space.thin "L"$
+- Estrategia 2: $V = pi dot.op r^2 dot.op h = pi dot.op (0.35 space.thin "m")^2 dot.op 385.9 space.thin "m" = 148.5 space.thin "m"^3 equiv 148.5 dot.op 10^3 space.thin "L"$
 == Perspectivas abiertas.
+El problema restringe sustancialmente el abordaje de situaciones más complejas pues la situación es ya, por si misma, compleja. Cabe poca posibilidad de realizar una situación más compleja. Es cierto que se podrían considerar las imperfecciones del pozo, pero la afección al resolución del problema será mínima. Los conceptos en los que se puede profundizar son los movimientos rectilíneos y el análisis vectorial y dimensional del problema.
