@@ -62,7 +62,20 @@ Similar a la estrategia 1 pero solamente utilizando sonido. Podemos emitir un so
 Inicia nuestra piedra la caída libre con posición inicial nula. Así, sabemos que:
 $ arrow(r_"finp")=frac(1,2) dot.op arrow(g) dot.op attach(t,tr: 2,br: "caída") $
 Por otro lado, sabemos que en $t = attach(t,br: "caída")$ se produce un MRU cuya posición inicial es $arrow(r_0) = arrow(r_"finp")$. Considerando que la base de nuestro sistema de referencia es la parte de arriba del pozo, la posición final será 0. De esta manera:\
-$ 0 = arrow(r_"finp") + arrow(v_"s") dot.op t_"sonido" $ y $ t_"sonido" + t_"caida" = t_"medido" $.
-
+$ 0 = arrow(r_"finp") + arrow(v_"s") dot.op t_"sonido" $ y $ t_"sonido" + t_"caida" = t_"medido" $
+Sustituimos $t_"sonido"$ por $t_"medido" - t_"caida"$ en la segunda ecuación para generar un sistema de dos ecuaciones con dos incógnitas como el que sigue:
+$ cases(
+  arrow(r_"finp") = -arrow(v_s) dot.op (t_"medido"- t_"caida")\
+  arrow(r_"finp")=frac(1,2) dot.op arrow(g) dot.op attach(t,tr: 2,br: "caída")
+) $
+Igualando, tenemos que:
+$  -arrow(v_s) dot.op (t_"medido"- t_"caida") = frac(1,2) dot.op arrow(g) dot.op attach(t,tr: 2,br: "caída") $
+Resolviendo para $t_"caida"$, obtenemos un valor de:
+$ t_"caida" = frac(v_s plus.minus sqrt(v_s^2-2g v_s t),g) $
+Lo cual arroja dos resultados para $t_"caida"$. Uno implicará que dicha magnitud es negativa, lo cual descartaremos por no tener sentido físico.
+Para un tiempo medido $t_"medido" = 15 space.thin "s"$, obtenemos unos datos de tiempo de caída de:
+$ t_"caida" = 8,86 space.thin "s" $
+lo cual nos permite conocer la profundidad del pozo, siendo esta de:
+$ arrow(r_"finp") = 385.4 space.thin "m" $
 == Análisis de resultados.
 == Perspectivas abiertas.
