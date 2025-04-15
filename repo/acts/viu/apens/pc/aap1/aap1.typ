@@ -49,12 +49,13 @@ El desafío que se ha escogido es el siguiente:
 )
 Se escoge la asignatura de _Cultura Científica_ en 4º de la ESO en una clase de 20 personas. Se especifica a continuación cómo se articulará la situación de aprendizaje.\
 La situación de aprendizaje que se crea tiene como objetivo concienciar del consumo responsable y del impacto de los diferentes estados de creación de un bien de equipo a nivel ambiental.\
+Se justifica, asimismo, la elección del desafío al detectar que en los últimos años, se ha producido un proceso de deslocalización de la industria de la moda de Europa a otros países con diferente legislación y cultura de trabajo. @modaArt @sostenibilidadModa @socialCampaigns
 == Sesión 1.
 Se iniciará la situación de aprendizaje mediante una sesión en la que se describirá el proyecto que se va a realizar. En grupos base de 4 integrantes, se pedirá al alumnado que elija un objeto de entre una batería previamente seleccionada por el docente. La selección se realiza con el objeto de acotar los objetos para permitir que dicha investigación sea más sencilla. El docente ha de asegurarse que dicha información se encuentre en la red. En concreto, se pretende que el alumnado encuentre los siguientes conceptos:
 - Dónde se ha ensamblado el objeto.
 - Qué materiales, compuestos o elementos utiliza.
 - Dónde se encuentran esos materiales. Intentaremos realizar la distinción entre compuestos naturales o sintetizados en laboratorio.
-A partir de este análisis, pretendemos que el alumnado detecte cuáles son las trazas de los diferentes elementos necesarios para el objeto, que quedarán anotadas en un documento parecido al que se adjunta a tal efecto. // Adjuntar documento aquí.
+A partir de este análisis, pretendemos que el alumnado detecte cuáles son las trazas de los diferentes elementos necesarios para el objeto, que quedarán anotadas en un documento parecido al que se adjunta a tal efecto.
 == Sesión 2.
 Después de lo realizado en la primera sesión, en la que se trabajaron los antecedentes y el conocimiento general del hilo conductor del proyecto, se entra en materia de análisis más compleja en la que se trabajarán los conceptos de física y química asociados al cuarto curso de la ESO. Partiremos, para empezar, de lo que el alumnado creó en la sesión anterior. Mediante una dinámica _mayéutica_ de inducción trabajaremos con el alumnado estos conceptos. El profesorado propondrá preguntas como:
 - ¿Cómo llega el producto a las tiendas? ¿Qué vías o medios de transporte se ven involucrados?
@@ -72,7 +73,7 @@ En esta sesión, una vez trabajados estos conceptos, pretendemos que el alumnado
 Preparado el debate, se realizará y se concluirá de la siguiente manera. De forma individual se pedirá al alumnado que especifique cómo se puede mejorar el consumo de productos de proximidad y que ponga en común realizando la dinámica de 1-2-4 con el grupo base. Primero, se pone en común con la persona de codo y después con todo el grupo.\
 Se especificarán las conclusiones obtenidas en gran grupo, en último término.
 = Vinculación curricular de la situación.
-Se vinculará, mediante tabla, las competencias, criterios y saberes básicos para la asignatura de _Cultura Científica_.
+Se vinculará, mediante tabla, las competencias, criterios y saberes básicos para la asignatura de _Cultura Científica_ @ordenAntigua @orden.
 #set par(leading: 1em)
 #table(
   columns: 1,
@@ -166,14 +167,32 @@ razonamientos, conocimientos adquiridos e información disponible.\
 sostenibles basados en los conocimientos adquiridos y la información disponible.
 ],
 )
-Además de las competencias y criterios, podemos definir también los saberes básicos para la programación, a saber:
-- Bloque D: Ciencia y futuro: contribución a los ODS.
-- Bloque B: Ciencia y comunicación.
-- Bloque C: La repercusión de la ciencia.
-En lo referente a las competencias clave y al perfil de salida podemos nombrar los diferentes descriptores operativos, a saber:
-- Competencia en Comunicación Lingüística: descriptores CCL1, CCL2, CCL3, CCL5.
-- Competencia STEM: descriptores STEM2, STEM4.
-- Competencia Digital: descriptores CD1, CD2, CD3.
-- Competencia Personal, Social y Aprender a Aprender: descriptores CPSAA1, CPSAA3, CPSAA5.
-- Competencia Ciudadana: descriptores CC3, CC4.
-- Competencia Emprendedora: descriptores CE1, CE3.
+@leyOrganica
+@rdecreto
+#set page(flipped: true)
+#pagebreak()
+#table(
+  columns: 4,
+  align: horizon+center,
+  table.cell(
+    colspan: 4,
+  )[*Vinculación entre Ssaberes Básicos, Competencias Específicas, Criterios de Evaluación y Descriptores Operativos para el área de Cultura Científica.*],
+  [_Competencias Específicas_],[_Criterios de Evaluación_], [_Saberes básicos_], [_Descriptores operativos_],
+  [Competencia Específica 2], [2.1], [B, C, D], [CCL2, CCL3, STEM4, CD1, CPSAA4],
+  table.cell(
+    rowspan: 3,
+  )[Competencia específica 3],
+  [3.1],[B],[CCL1, CCL2, CCL5, CP1, STEM4, CD1, CPSAA4],
+  [3.2],[B],[CCL1, CCL5, STEM4, CD1, CD3, CPSAA4, CCEC4],
+  [3.3],[B],[CCL1, CCL5, STEM4, CD1, CD3, CPSAA4, CCEC4],
+  [Competencia Específica 4],[4.1],[C, D],[STEM1, STEM2, CPSAA5, CE1],
+  [Competencia Específica 5],[5.2],[B, C, D],[CCL2, CCL3, STEM4, CD1, CD2],
+  [Competencia Específica 6],[6.1],[B, C, D], [STEM3, CD3, CPSAA3],
+  table.cell(
+    rowspan: 3,
+  )[Competencia Específica 7],
+  [7.1],[C, D],[CCL3, STEM5, CPSAA2, CC4, CE1],
+  [7.2],[C, D],[CCL3, STEM5, CPSAA2, CC4, CE1],
+  [7.3],[C, D],[CCL3, STEM5, CPSAA2, CC4, CE1]
+)
+#bibliography("refs.yml", style: "american-psychological-association", full: true)
