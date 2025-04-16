@@ -1,0 +1,30 @@
+orden:
+  type: legislation
+  title: ORDEN ECD/867/2024, de 25 de julio, por la que se modifica la Orden ECD/1172/2022,  de 2 de agosto, por la que se aprueban el currículo y las características de la evaluación  de la Educación Secundaria Obligatoria y se autoriza su aplicación en los centros docentes de la Comunidad  Autónoma de Aragón.
+  serial-number: ECD/867/2024
+  date: 2024
+  page-total: 165
+rdecreto:
+  type: legislation
+  title: Real Decreto 217/2022, de 29 de marzo, por el que se establece la  ordenación y las enseñanzas mínimas de la Educación Secundaria  Obligatoria.
+  serial-number: 217/2022
+  date: 2022
+  page-total: 219
+ordenAntigua:
+  type: legislation
+  title: Orden ECD/1172/2022, de 2 de agosto, por la que se aprueban el currículo y las características de la evaluación de la Educación Secundaria Obligatoria y se autoriza su aplicación en los centros docentes de la Comunidad Autónoma de Aragón.
+  serial-number: ECD/1172/2022
+  date: 2022
+  page-total: 1191
+leyOrganica:
+  type: legislation
+  title: Ley Orgánica 3/2020, de 29 de diciembre, por la que se modifica la Ley Orgánica 2/2006, de 3 de mayo, de Educación.
+  serial-number: 3/2020
+  date: 2020
+  page-total: 86
+leyOrganicaAntigua:
+  type: legislation
+  title: Ley Orgánica 2/2006, de 3 de mayo, de Educación.
+  serial-number: 2/2006
+  date: 2006
+  page-total: 112

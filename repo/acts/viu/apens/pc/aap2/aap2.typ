@@ -81,3 +81,6 @@ table.cell(
 )[Proceso seguido en los grupos base],
 [El grupo funciona correctamente, con todos sus miembros aportando en colaboración.],[El grupo debve hacer frente a dificultades, que soluciona mediante la práctica dialógica y, si se precisa, ayuda docente.],[El grupo llega a realizar el trabajo pero sin colaboración. En su lugar, se ve una mera asignación de tareas que dista del aprendizaje colaborativo],[El grupo se ha intervenido por el profesorado para salvaguardar el correcto funcionamiento de la clase, no obteniéndose conclusiones óptimas.]
 )
+#set page(flipped: false)
+#pagebreak()
+= Atención a la diversidad.
