@@ -64,3 +64,69 @@ socialCampaigns:
     type: periodical
     title: Communication and Society
     serial-number: {issn: 2386-7876}
+fletcher15:
+  type: article
+  title: "Slow Fashion: An Invitation for Systems Change"
+  author:
+    - Fletcher, Kate
+  date: 2010
+  serial-number:
+    doi: 10.2752/175693810X12774625387594
+  page-range: 259-266
+  parent:
+    type: periodical
+    title: Fashion Practice
+    volume: 2
+    issue: 2
+jungJin2016b:
+  type: article
+  title: "Sustainable Development of Slow Fashion Businesses: Customer Value Approach"
+  author:
+    - Jung, Sojin
+    - Jin,  Byoungho
+  date: 2016
+  serial-number:
+    doi: 10.3390/su8060540
+  page-range: 540
+  parent:
+    type: periodical
+    title: Sustainability
+    volume: 8
+    issue: 6
+    serial-number: {issn: 2071-1050}
+jungJin2016a:
+  type: article
+  title: "From quantity to quality: understanding slow fashion consumers for sustainability and consumer education"
+  author:
+    - Jung, Sojin
+    - Jin,  Byoungho
+  date: 2016
+  serial-number: 
+    doi: 10.1111/ijcs.12276
+  page-range: 410-421
+  parent:
+    type: periodical
+    title: International Journal of Consumer Studies
+    volume: 40
+    issue: 4
+    serial-number: {issn: 1470-6431}
+environmentFast:
+  type: article
+  title: The environmental price of fast fashion
+  author:
+    - Niinimäki, Kirsi
+    - Peters, Greg
+    - Dahlbo, Helena
+    - Perry, Patsy
+    - Rissanen, Timo
+    - Gwilt, Alison
+  date: 2020
+  serial-number:
+    doi: 10.1038/s43017-020-0039-9
+  page-range: 189-200
+  parent:
+    type: periodical
+    title: Nature Reviews Earth & Environment
+    volume: 1
+    issue: 4
+    serial-number: {issn: 2662-138X}
