@@ -40,16 +40,35 @@
 #pagebreak()
 #set par(leading: 1.5em)
 = Creación del problema como investigación.
-Se crea el problema como investigación atendiendo a las siguientes cuestiones
+Se crea el problema como investigación atendiendo a las siguientes cuestiones:
+#block(
+  fill: luma(230),
+  inset: 8pt,
+  radius: 4pt,
+  text(font: "Times New Roman")[Una central quema fuel para conseguir electricidad con un porcentaje de $0,70 space.thin %$ en azufre. Si la central quema 21 toneladas de fuel y todo el azufre se convierte en $"SO"_2$, ¿qué volumen de $"SO"_2$ se va a emitir a la atmósfera con unas condiciones de $100 space.hair degree "C"$ y $730 space.thin "mmHg"$?]
+)
+Transformado, el enunciado queda como sigue:
+#block(
+  fill: luma(230),
+  inset: 8pt,
+  radius: 4pt,
+  text(font: "Times New Roman")[_¿Cuánto contamina una central térmica que funciona con fuel?_]
+)// Preguntar esto... ¿Cómo se redacta el problema?
 == Interés de la situación.
-El interés de la situación nace de conocer cuánta grava necesitamos para tapar por completo un pozo de profundidad indeterminada. Podemos conocer, evidentemente las dimensiones del ojo, circular, pero desconocemos la profundidad, como se ha especificado.
+El interés de la situación aflora ante las siguientes apreciaciones:
+- _Sostenibilidad_ y _contaminación_: según lo que se especifica en el propio enunciado. Hemos de saber si la emisión de $"SO"_2$ a la atmósfera es contaminante o inocua.
+- _Problemas de salud_ derivados de su presencia en el aire.
+- _Impacto medioambiental_ de la posible lluvia ácida derivada de la presencia de gases en la atmósfera.
+- _Necesidad de transición energética_ a energías totalmente renovables.
+- Cuestiones económicas en lo referente a los combustibles.
+La magnitud que vamos a cuantificar para considerar la pregunta es el _volumen_ de azufre emitido al día. Por otro lado, el $"SO"_2$ se comporta como un gas ideal y reacciona completamente.
 == Estudio cualitativo.
 Tenemos un pozo cilíndrico cuyas medidas son:
 - Profundidad: indeterminada.
 - Radio del ojo circular: 35 centímetros.
 Necesitamos cegarlo y se ha considerado la grava por su capacidad de drenaje. 
 == Construcción de la hipótesis.
-- La profundidad puede calcularse tiempo que tarde un objeto en llegar abajo únicamente, además de la velocidad del sonido en el aire.
+Se considera que la emisión de dióxido de azufre viene dada por el volumen de fuel, temperatura y presión de salida, de la riqueza de azufre.
 == Estrategias de resolución.
 === Estrategia 1.
 Realizaremos en esta estrategia una aproximación a través del movimiento. Podemos dejar caer una piedra desde arriba, esperar a que caiga, contando el tiempo y cuando oigamos el golpe en el suelo, parar el cronómetro. Sabemos que la caída libre de la piedra es:

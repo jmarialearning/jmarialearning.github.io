@@ -40,6 +40,25 @@
 #pagebreak()
 #set par(leading: 1.5em)
 = Construcción de la situación de aprendizaje.
+\
+*Desafío*: Identificar los diferentes aspectos relacionados con el consumo responsable, valorando sus repercusiones sobre el bien individual y el común, juzgando críticamente las necesidades y los excesos y ejerciendo un control social frente a la vulneración de sus derechos @leyOrganica @rdecreto\
+Se justifica, asimismo, la elección del desafío al detectar que en los últimos años, se ha producido un proceso de deslocalización de la industria de la moda de Europa a otros países con diferente legislación y cultura de trabajo. @modaArt @sostenibilidadModa @socialCampaigns\
+La moda rápida permite ofrecer la vanguardia a precios asequibles y, sobre todo, muy rápido. Los tiempos de producción son cortos y se reducen costes en materiales y mano de obra. En lo referente a la demanda, la _obsolescencia_ de las prendas por el cambio de moda y su baja calidad. Ello estimula el consumo, con un cambio de temporada cada 6 semanas. @fletcher15 @jungJin2016b @jungJin2016a.
+El impacto ambiental de este fenómeno de consumo es alto, según demuestran #cite(<environmentFast>, form: "prose"), dando a conocer las rutas comerciales que se siguen para traer ropa desde los países de producción hasta los consumidores. Dichas rutas implican un alto consumo de combustible en el transporte y manufactura de los productos.\
+\
+*Materia*: Cultura científica.\
+*Curso*: 4º Educación Secundaria Obligatoria (ESO).\
+*Bloque B: Ciencia y comunicación.*\
+#highlight(fill: blue.lighten(80%))[Niveles de comunicación de la ciencia: investigación, difusión, divulgación e información general.]\
+#highlight(fill: blue.lighten(80%))[Uso de herramientas de comunicación de información: gráficos, tablas, etc.]\
+#highlight(fill: blue.lighten(80%))[Reconocimiento y utilización de fuentes veraces de información científica.]\
+#highlight(fill: blue.lighten(80%))[Estrategias de utilización de herramientas digitales para la búsqueda de información, la colaboración y la comunicación de procesos, resultados o ideas en diferentes formatos (presentación, gráfica, vídeo, póster, informe…).]\
+*Bloque C: La repercusión de la ciencia.*\
+#highlight(fill: blue.lighten(80%))[Análisis de algún principio científico que tenga aplicación directa en la vida cotidiana del alumnado.]\
+#highlight(fill: blue.lighten(80%))[Análisis de algún principio científico o de algún tema de actualidad científica que genere debate en la sociedad actual.]\
+*Bloque D: Ciencia y futuro: contribución a los ODS.*\
+#highlight(fill: blue.lighten(80%))[Los ODS como modelo de desarollo para el futuro.]\
+#highlight(fill: blue.lighten(80%))[La posible aportación de la ciencia al logro de los objetivos de desarrollo sostenible.]\
 El desafío que se ha escogido es el siguiente:
 #block(
   fill: luma(230),
@@ -49,22 +68,19 @@ El desafío que se ha escogido es el siguiente:
 )
 Se escoge la asignatura de _Cultura Científica_ en 4º de la ESO en una clase de 20 personas. Se especifica a continuación cómo se articulará la situación de aprendizaje.\
 La situación de aprendizaje que se crea tiene como objetivo concienciar del consumo responsable y del impacto de los diferentes estados de creación de un bien de equipo a nivel ambiental.\
-Se justifica, asimismo, la elección del desafío al detectar que en los últimos años, se ha producido un proceso de deslocalización de la industria de la moda de Europa a otros países con diferente legislación y cultura de trabajo. @modaArt @sostenibilidadModa @socialCampaigns\
-La moda rápida permite ofrecer la vanguardia a precios asequibles y, sobre todo, muy rápido. Los tiempos de producción son cortos y se reducen costes en materiales y mano de obra. En lo referente a la demanda, la _obsolescencia_ de las prendas por el cambio de moda y su baja calidad. Ello estimula el consumo, con un cambio de temporada cada 6 semanas. @fletcher15 @jungJin2016b @jungJin2016a.
-El impacto ambiental de este fenómeno de consumo es alto, según demuestran #cite(<environmentFast>, form: "prose"), dando a conocer las rutas comerciales que se siguen para traer ropa desde los países de producción hasta los consumidores. Dichas rutas implican un alto consumo de combustible en el transporte y manufactura de los productos.
-== Sesión 1.
+== Sesión 1. 
 Se iniciará la situación de aprendizaje mediante una sesión en la que se describirá el proyecto que se va a realizar. En grupos base de 4 integrantes, se pedirá al alumnado que elija un objeto de entre una batería previamente seleccionada por el docente. La selección se realiza con el objeto de acotar los objetos para permitir que dicha investigación sea más sencilla. El docente ha de asegurarse que dicha información se encuentre en la red. En concreto, se pretende que el alumnado encuentre los siguientes conceptos:
 - Dónde se ha ensamblado el objeto.
 - Qué materiales, compuestos o elementos utiliza.
 - Dónde se encuentran esos materiales. Intentaremos realizar la distinción entre compuestos naturales o sintetizados en laboratorio.
 A partir de este análisis, pretendemos que el alumnado detecte cuáles son las trazas de los diferentes elementos necesarios para el objeto, que quedarán anotadas en un documento parecido al que se adjunta a tal efecto.
-== Sesión 2.
+== Sesión 2. 
 Después de lo realizado en la primera sesión, en la que se trabajaron los antecedentes y el conocimiento general del hilo conductor del proyecto, se entra en materia de análisis más compleja en la que se trabajarán los conceptos de física y química asociados al cuarto curso de la ESO. Partiremos, para empezar, de lo que el alumnado creó en la sesión anterior. Mediante una dinámica _mayéutica_ de inducción trabajaremos con el alumnado estos conceptos. El profesorado propondrá preguntas como:
 - ¿Cómo llega el producto a las tiendas? ¿Qué vías o medios de transporte se ven involucrados?
 Pretendemos después que el alumnado realice un análisis del impacto de los objetos desde que se comienzan a manufacturar hasta que llegan a nuestras ciudades. Realizaremos esto en grupos base de 4 miembros mediante una dinámica inductiva a través de preguntas.\
 Deberá el alumnado escoger su objeto y la forma de transporte logístico nacional o internacional. Solicitaremos que el alumnado obtenga el consumo de combustible y el impacto en lo que a emisiones a la atmósfera respecta de dicho viaje. Además, solicitaremos al alumnado que estime los beneficios del viaje en el plano económico.\
 Pretendemos, con esto, que el alumnado detecte por qué las empresas deslocalizan la producción en aras de mayores beneficios.
-== Sesión 3.
+== Sesión 3. 
 En esta sesión, una vez trabajados estos conceptos, pretendemos que el alumnado reflexione acerca de diferentes posibilidades para consumir de forma responsable. Realizaremos una sesión en la que los grupos creados en el día anterior trabajarán diferentes formas de comprar de forma responsable, así como los beneficios de la compra en comercios de proximidad. Se propondrá un desafío como el que a continuación se expone:
 #block(
   fill: luma(230),
@@ -197,4 +213,4 @@ sostenibles basados en los conocimientos adquiridos y la información disponible
   [7.2],[C, D],[CCL3, STEM5, CPSAA2, CC4, CE1],
   [7.3],[C, D],[CCL3, STEM5, CPSAA2, CC4, CE1]
 )
-#bibliography("refs.yml", style: "american-psychological-association", full: true)
+#bibliography("refs.yml", style: "american-psychological-association")
