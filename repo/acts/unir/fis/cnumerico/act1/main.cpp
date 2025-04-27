@@ -1,4 +1,7 @@
-// Cálculo numérico. Crear dos funciones llamadas _muller_ y _ridders_ para trabajar con estos métodos.
+// CÃ¡lculo numÃ©rico. Crear dos funciones llamadas _muller_ y _ridders_ para trabajar con estos mï¿½todos.
 #include <iostream>
 #include "muller.h"
 #include "ridders.h"
+int main(){
+    std::cout << "Hola";
+}
