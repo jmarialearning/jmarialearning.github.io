@@ -1,6 +1,15 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
+int signo(float num){
+    if (num > 0){
+        return 1;
+    }
+    if (num < 0){
+        return -1;
+    }
+    return 0;
+}
 float f(float x){
     return 2*x;
 }
@@ -21,6 +30,6 @@ int main(){
         return 1;
     }
     for(iteraciones = 1; iteraciones <= 25; iteraciones++){
-        
+        float cuartoPunto = pmedio + (pmedio - extinf) * (signo(f(extinf) - f(extsup)) * f(pmedio));
     }
 }
