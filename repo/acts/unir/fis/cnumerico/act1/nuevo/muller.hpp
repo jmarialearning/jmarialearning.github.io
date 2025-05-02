@@ -30,7 +30,7 @@ int muller(double extinf, double extsup, int unsigned iteraciones){
         extsup = pmedio;
         pmedio = xr;
     }
-    printf("\n%f", xr);
+    printf("\nMuller %u: %lf", its, xr);
     }
     return 0;
 }

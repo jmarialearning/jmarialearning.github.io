@@ -5,7 +5,7 @@
 using namespace std;
 int ridders(double extinf, double extsup, int unsigned iteraciones){
     double pmedio = (extinf + extsup) / 2;
-    for(iteraciones = 1; iteraciones <= 25; iteraciones++){
+    for(int its = 1; its <= iteraciones; its++){
         double cuartoPunto = pmedio + (pmedio - extinf) * (signo(f(extinf) - f(extsup)) * f(pmedio)) / sqrt(pow(f(pmedio),2) - f(extinf) * f(extsup));
         if (f(cuartoPunto) * f(pmedio) < 0){
             extinf = pmedio;
@@ -31,7 +31,7 @@ int ridders(double extinf, double extsup, int unsigned iteraciones){
                 }
             }
         }
-        printf("\n%f", cuartoPunto);
+        printf("\nRidders %u: %lf", iteraciones, cuartoPunto);
     }
     return 0;
 }
