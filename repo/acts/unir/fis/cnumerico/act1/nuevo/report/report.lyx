@@ -167,7 +167,21 @@ Descripción de la actividad.
 \end_layout
 
 \begin_layout Standard
-En la presente actividad se han trabajado los métodos de Muller y Ridders para la resolución de ecuaciones 
+En la presente actividad se han trabajado los métodos de Muller y Ridders para la resolución de ecuaciones.
+ Dichos métodos son numéricos y utilizan la interpolación cuadrática y exponencial,
+ respectivamente,
+ para posibilitar la resolución de la ecuación siguiente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(x)=\mathrm{e}^{0.75\cdot x}-3\cdot\sin\left(1.25\cdot x\right)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_body
