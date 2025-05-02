@@ -3,6 +3,8 @@
 #include <iostream>
 #include <cmath>
 #include <algorithm>
+#include "funcion.hpp"
+#include "signo.hpp"
 
 using namespace std;
 
@@ -21,8 +23,9 @@ using namespace std;
 // y toma un argumento de tipo double, devolviendo su resultado como double.
 
 
-void regula_falsi(double &a, double &b, double (*f)(double), double &c, int &its, int &error)
+void regula_falsi(double a, double b, double c, int its)
 {
+	int error = 0;
 	// Precision deseada
 	const double epsilon = 1.0e-14;
 
@@ -84,6 +87,7 @@ void regula_falsi(double &a, double &b, double (*f)(double), double &c, int &its
 			a = c;
 			fa = fc;
 		}
+		printf("\nRF %d: %f", i, c);
 	}
 
 	// Llegados a este punto se han agotado las iteraciones sin haber encontrado la raiz

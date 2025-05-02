@@ -1,12 +1,16 @@
 #include <iostream>
-#include <unistd.h>
 #include "muller.hpp"
 #include "ridders.hpp"
+#include "regula_falsi.hpp"
+#include "biseccion.hpp"
 using namespace std;
 int main(){
-    muller(0,1,1000);
+    muller(0,1,130);
     printf("\n\n");
     ridders(0,1,1000);
     printf("\n\n");
+    regula_falsi(0,1,0,1000);
+    printf("\n\n");
+    biseccion(0,1,0,1000);
     return 0;
 }

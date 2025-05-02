@@ -3,6 +3,7 @@
 #include <iostream>
 #include <cmath>
 #include <algorithm>
+#include "funcion.hpp"
 
 using namespace std;
 
@@ -20,8 +21,9 @@ using namespace std;
 // La funcion f apunta (*) a la funcion de la que se desea obtener la raiz
 // y toma un argumento de tipo double, devolviendo su resultado como double.
 
-void biseccion(double &a, double &b, double (*f)(double), double &c, int &its, int &error)
+void biseccion(double a, double b, double c, int its)
 {
+	int error;
 	// Precision deseada
 	const double epsilon = 1.0e-14;
 
@@ -80,6 +82,7 @@ void biseccion(double &a, double &b, double (*f)(double), double &c, int &its, i
 			a = c;
 			fa = fc;
 		}
+		printf("\nBiseccion %d: %f", i, c);
 	}
 
 	// Llegados a este punto se han agotado las iteraciones sin haber encontrado la raiz
