@@ -29,11 +29,11 @@ int muller(double extinf, double extsup, int unsigned iteraciones){
     }
     if (xr > pmedio){
         extinf = pmedio;
-        pmedio = (extinf + extsup) / 2;
+        pmedio = xr;
     }
     if (xr < pmedio){
         extsup = pmedio;
-        pmedio = (extinf + extsup) / 2;
+        pmedio = xr;
     }
     printf("\nMuller %u: %lf", its, xr);
     }

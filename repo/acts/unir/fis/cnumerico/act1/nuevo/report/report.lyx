@@ -212,5 +212,9 @@ El método de Muller pretende interpolar la función a una parábola en un entor
  pero de manera lenta.
 \end_layout
 
+\begin_layout Subsection
+Método de Ridders.
+\end_layout
+
 \end_body
 \end_document
