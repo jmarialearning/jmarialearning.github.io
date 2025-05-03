@@ -184,5 +184,33 @@ f(x)=\mathrm{e}^{0.75\cdot x}-3\cdot\sin\left(1.25\cdot x\right)
 
 \end_layout
 
+\begin_layout Standard
+Se evaluará la rapidez de los métodos en base a las iteraciones que realizan hasta llegar a la solución con una precisión de 
+\begin_inset Formula $10^{-6}$
+\end_inset
+
+unidades.
+ Se exponen a continuación los parámetros necesarios para que los métodos realicen correctamente la tarea encomendada.
+\end_layout
+
+\begin_layout Subsection
+Método de Muller.
+\end_layout
+
+\begin_layout Standard
+El método de Muller pretende interpolar la función a una parábola en un entorno localizado de una función 
+\begin_inset Formula $f(x)$
+\end_inset
+
+.
+ Dados dos puntos extremos y su punto medio,
+ es posible obtener una parábola que se acerque a la función.
+ Encontrando las soluciones a la anulación de la parábola conseguimos una aproximación.
+ En función de en qué subintervalo se encuentre la solución,
+ se escoge para conseguir acotar más la solución.
+ El método converge,
+ pero de manera lenta.
+\end_layout
+
 \end_body
 \end_document
