@@ -163,7 +163,7 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Section
-Descripción de la actividad.
+Descripción de la actividad
 \end_layout
 
 \begin_layout Standard
@@ -194,7 +194,7 @@ unidades.
 \end_layout
 
 \begin_layout Subsection
-Método de Muller.
+Método de Muller
 \end_layout
 
 \begin_layout Standard
@@ -210,6 +210,95 @@ El método de Muller pretende interpolar la función a una parábola en un entor
  se escoge para conseguir acotar más la solución.
  El método converge,
  pero de manera lenta.
+\end_layout
+
+\begin_layout Subsection
+Método de Ridders
+\end_layout
+
+\begin_layout Standard
+El método de Ridders pretende aproximar la función a una exponencial a la que se le aplica el método 
+\emph on
+regula falsi
+\emph default
+.
+ Con cuatro puntos obtenemos una aproximación correcta de la solución a nuestra función.
+\end_layout
+
+\begin_layout Standard
+Así pues,
+ se han creado dos funciones en C++ llamadas 
+\family typewriter
+muller
+\family default
+ y 
+\family typewriter
+ridders
+\family default
+ para implementar dichos métodos.
+ Han de recibir como argumentos el 
+\emph on
+extremo inferior
+\emph default
+,
+ el 
+\emph on
+extremo superior
+\emph default
+ y el 
+\emph on
+número de iteraciones 
+\emph default
+que se realizarán.
+\end_layout
+
+\begin_layout Section
+Implementación
+\end_layout
+
+\begin_layout Standard
+Para implementar los métodos se han realizado sendos ficheros de cabecera con formato 
+\family typewriter
+.hpp
+\family default
+ en los que se da cuenta de la implementación del método.
+ Para acceder a ellos se puede utilizar los enlaces siguientes:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "muller"
+target "https://jmarialearning.github.io/repo/acts/unir/fis/cnumerico/act1/nuevo/muller.hpp"
+type "file:"
+literal "false"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset href
+LatexCommand href
+name "ridders"
+target "https://jmarialearning.github.io/repo/acts/unir/fis/cnumerico/act1/nuevo/ridders.hpp"
+type "file:"
+literal "false"
+
+\end_inset
+
+.
+ Asimismo,
+ se ha creado un programa principal en el que se compara estos dos métodos con otros conocidos utilizando como medición el número de iteraciones que se deben realizar para obtener el resultado con una precisión de 
+\begin_inset Formula $10^{-6}$
+\end_inset
+
+ unidades.
+ Se dan cuenta de los resultados en los párrafos venideros.
+\end_layout
+
+\begin_layout Section
+Resultados
+\end_layout
+
+\begin_layout Standard
+Los resultados de la implementación son los siguientes:
 \end_layout
 
 \end_body

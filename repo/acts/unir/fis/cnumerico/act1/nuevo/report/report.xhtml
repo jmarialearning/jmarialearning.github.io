@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es-ES">
+<head>
+<meta name="generator" content="LyX 2.4.0~RC3" />
+<title>Actividad: métodos numéricos en C++</title>
+<style>
+/* Layout-provided Styles */
+div.standard {
+	margin-bottom: 2ex;
+}
+h1.title {
+font-size: x-large;
+margin-bottom: 1ex;
+text-align: center;
+
+}
+div.author {
+font-size: large;
+margin-top: 1.3ex;
+margin-bottom: 0.7ex;
+text-align: center;
+
+}
+div.date {
+font-size: large;
+margin-top: 0.9ex;
+margin-bottom: 0.5ex;
+text-align: center;
+
+}
+h2.section {
+font-weight: bold;
+font-size: x-large;
+margin-top: 1.3ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+h3.subsection {
+font-weight: bold;
+font-size: large;
+margin-top: 0.9ex;
+margin-bottom: 0.5ex;
+text-align: left;
+
+}
+div.toc {
+  margin: 2em 0em;
+  border-style: solid;
+  border-width: 2px 0px;
+  padding: 1em 0em;
+}
+h2.tochead { font-size: x-large; font-weight: bold; }
+div.lyxtoc-0 {
+  margin: 2em 0em 0em 0em;
+  font-size: xx-large;
+  font-weight: bold;
+}
+div.lyxtoc-1 {
+  margin: 1em 0em 0em 0em;
+  font-size: x-large;
+  font-weight: bold;
+}
+div.lyxtoc-2 {
+  margin: 0.5em 0.1em 0em 1em;
+  font-size: large;
+  font-weight: normal;
+}
+div.lyxtoc-3 { margin: 0.2em 0.1em 0em 0.5em; font-size: medium; }
+div.lyxtoc-4 { margin: 0em 0.1em 0em 0.5em; }
+div.lyxtoc-5 { margin: 0em 0.1em 0em 0.5em; }
+div.lyxtoc-6 { margin: 0em 0.1em 0em 0.5em; }
+a.tocentry {
+  text-decoration: none;
+  color: black;
+}
+a.tocentry:visited { color: black; }
+
+
+</style>
+</head>
+<body dir="auto">
+<div class='standard' id='magicparlabel-1'><div style='height:1em'></div></div>
+<h1 class='title' id='magicparlabel-2'>Actividad: métodos numéricos en C++</h1>
+<div class='author' id='magicparlabel-3'>Jesús María Mora Mur</div>
+
+<div class='standard' id='magicparlabel-9'><div style='height:1em'></div></div>
+
+<div class='standard' id='magicparlabel-10'><br /></div>
+
+
+<div class='toc'><h2 class='tochead section'>Índice general</h2>
+<div class='lyxtoc-1'>
+<div class='lyxtoc-2'>
+<a href='#magicparlabel-13' class='tocentry'>1 <span style='font-family:serif;'>Descripción de la actividad</span></a>
+
+<div class='lyxtoc-3'>
+<a href='#magicparlabel-17' class='tocentry'>1.1 <span style='font-family:serif;'>Método de Muller</span></a>
+</div>
+<div class='lyxtoc-3'>
+<a href='#magicparlabel-19' class='tocentry'>1.2 <span style='font-family:serif;'>Método de Ridders</span></a>
+</div>
+</div>
+<div class='lyxtoc-2'>
+<a href='#magicparlabel-125' class='tocentry'>2 <span style='font-family:serif;'>Implementación</span></a>
+</div>
+<div class='lyxtoc-2'>
+<a href='#magicparlabel-220' class='tocentry'>3 <span style='font-family:serif;'>Resultados</span></a>
+</div>
+</div>
+</div>
+
+
+<div class='standard' id='magicparlabel-12'><br /></div>
+<section>
+<h2 class='section' id='magicparlabel-13'><span class="section_label">1</span> Descripción de la actividad</h2>
+<div class='standard' id='magicparlabel-14'>En la presente actividad se han trabajado los métodos de Muller y Ridders para la resolución de ecuaciones. Dichos métodos son numéricos y utilizan la interpolación cuadrática y exponencial, respectivamente, para posibilitar la resolución de la ecuación siguiente:</div>
+
+<div class='standard' id='magicparlabel-15'>
+<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>
+<mrow>
+ <mi>f</mi>
+ <mrow>
+  <mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+  <mi>x</mi>
+  <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+ </mrow>
+ <mo>=</mo>
+ <msup>
+  <mstyle mathvariant='normal'>
+   <mi>e</mi>
+  </mstyle>
+  <mrow>
+   <mn>0.75</mn>
+   <mo>&#x22C5;</mo>
+   <mi>x</mi>
+  </mrow>
+ </msup>
+ <mo>-</mo>
+ <mn>3</mn>
+ <mo>&#x22C5;</mo>
+ <mo>sin</mo>
+ <mrow>
+  <mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+  <mrow>
+   <mn>1.25</mn>
+   <mo>&#x22C5;</mo>
+   <mi>x</mi>
+  </mrow>
+  <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+ </mrow>
+</mrow>
+</math>
+</div>
+
+<div class='standard' id='magicparlabel-16'>Se evaluará la rapidez de los métodos en base a las iteraciones que realizan hasta llegar a la solución con una precisión de <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>1</mn>
+ <msup>
+  <mn>0</mn>
+  <mrow>
+   <mo>-</mo>
+   <mn>6</mn>
+  </mrow>
+ </msup>
+</mrow>
+</math>
+unidades. Se exponen a continuación los parámetros necesarios para que los métodos realicen correctamente la tarea encomendada.</div>
+<section>
+<h3 class='subsection' id='magicparlabel-17'><span class="subsection_label">1.1</span> Método de Muller</h3>
+<div class='standard' id='magicparlabel-18'>El método de Muller pretende interpolar la función a una parábola en un entorno localizado de una función <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mi>f</mi>
+ <mrow>
+  <mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+  <mi>x</mi>
+  <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+ </mrow>
+</mrow>
+</math>
+. Dados dos puntos extremos y su punto medio, es posible obtener una parábola que se acerque a la función. Encontrando las soluciones a la anulación de la parábola conseguimos una aproximación. En función de en qué subintervalo se encuentre la solución, se escoge para conseguir acotar más la solución. El método converge, pero de manera lenta.</div>
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-19'><span class="subsection_label">1.2</span> Método de Ridders</h3>
+<div class='standard' id='magicparlabel-20'>El método de Ridders pretende aproximar la función a una exponencial a la que se le aplica el método <em>regula falsi</em>. Con cuatro puntos obtenemos una aproximación correcta de la solución a nuestra función.</div>
+
+<div class='standard' id='magicparlabel-33'>Así pues, se han creado dos funciones en C++ llamadas <span style='font-family:monospace;'>muller</span> y <span style='font-family:monospace;'>ridders</span> para implementar dichos métodos. Han de recibir como argumentos el <em>extremo inferior</em>, el <em>extremo superior</em> y el <em>número de iteraciones </em>que se realizarán.</div>
+</section>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-125'><span class="section_label">2</span> Implementación</h2>
+<div class='standard' id='magicparlabel-131'>Para implementar los métodos se han realizado sendos ficheros de cabecera con formato <span style='font-family:monospace;'>.hpp</span> en los que se da cuenta de la implementación del método. Para acceder a ellos se puede utilizar los enlaces siguientes: <a href="https://jmarialearning.github.io/repo/acts/unir/fis/cnumerico/act1/nuevo/muller.hpp">muller</a> y <a href="https://jmarialearning.github.io/repo/acts/unir/fis/cnumerico/act1/nuevo/ridders.hpp">ridders</a>. Asimismo, se ha creado un programa principal en el que se compara estos dos métodos con otros conocidos utilizando como medición el número de iteraciones que se deben realizar para obtener el resultado con una precisión de <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>1</mn>
+ <msup>
+  <mn>0</mn>
+  <mrow>
+   <mo>-</mo>
+   <mn>6</mn>
+  </mrow>
+ </msup>
+</mrow>
+</math>
+ unidades. Se dan cuenta de los resultados en los párrafos venideros.</div>
+</section>
+<section>
+<h2 class='section' id='magicparlabel-220'><span class="section_label">3</span> Resultados</h2>
+<div class='standard' id='magicparlabel-233'>Los resultados de la implementación son los siguientes:</div>
+</section>
+</body>
+</html>

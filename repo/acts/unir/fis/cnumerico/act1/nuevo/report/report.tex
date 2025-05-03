@@ -1,0 +1,63 @@
+%% LyX 2.4.0~RC3 created this file.  For more info, see https://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[spanish]{article}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+\deactivatequoting
+
+\usepackage[bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{pdftitle={Actividad 1 Cálculo Numérico},
+ pdfauthor={Jesús María Mora Mur},
+ pdfsubject={Cálculo Numérico}}
+\begin{document}
+\vfill{}
+
+\title{Actividad: métodos numéricos en C++}
+\author{Jesús María Mora Mur}
+\date{\today}
+
+\maketitle
+\vfill{}
+
+\pagebreak{}
+
+\tableofcontents{}
+
+\pagebreak{}
+
+\section{Descripción de la actividad.}
+
+En la presente actividad se han trabajado los métodos de Muller y
+Ridders para la resolución de ecuaciones. Dichos métodos son numéricos
+y utilizan la interpolación cuadrática y exponencial, respectivamente,
+para posibilitar la resolución de la ecuación siguiente:
+
+\[
+f(x)=\mathrm{e}^{0.75\cdot x}-3\cdot\sin\left(1.25\cdot x\right)
+\]
+
+Se evaluará la rapidez de los métodos en base a las iteraciones que
+realizan hasta llegar a la solución con una precisión de $10^{-6}$unidades.
+Se exponen a continuación los parámetros necesarios para que los métodos
+realicen correctamente la tarea encomendada.
+
+\subsection{Método de Muller.}
+
+El método de Muller pretende interpolar la función a una parábola
+en un entorno localizado de una función $f(x)$. Dados dos puntos
+extremos y su punto medio, es posible obtener una parábola que se
+acerque a la función. Encontrando las soluciones a la anulación de
+la parábola conseguimos una aproximación. En función de en qué subintervalo
+se encuentre la solución, se escoge para conseguir acotar más la solución.
+El método converge, pero de manera lenta.
+
+\subsection{Método de Ridders.}
+
+El método de Ridders pretende aproximar la función a una exponencial
+a la que se le aplica el método \emph{regula falsi}.
+\end{document}
