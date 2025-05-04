@@ -177,9 +177,9 @@ En la presente actividad se han trabajado los métodos de Muller y Ridders para 
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-f(x)=\mathrm{e}^{0.75\cdot x}-3\cdot\sin\left(1.25\cdot x\right)
-\]
+\begin{equation}
+f(x)=\mathrm{e}^{0.75\cdot x}-3\cdot\sin\left(1.25\cdot x\right)\label{eq:1}
+\end{equation}
 
 \end_inset
 
@@ -306,7 +306,43 @@ Método de Muller
 \end_layout
 
 \begin_layout Standard
-ss
+El método de Muller obtiene los resultados siguientes por iteración:
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Muller 1:
+ 0.349278
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Muller 2:
+ 0.362391
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Muller 3:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Muller 4:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+Se obtiene el resultado correcto con 4 iteraciones.
 \end_layout
 
 \begin_layout Subsection
@@ -428,8 +464,10 @@ Ridders 13:
 \end_layout
 
 \begin_layout Standard
-A la decimotercera iteración,
- el método consigue la precisión deseada.
+Como se ve,
+ no se llega al número deseado,
+ pero se obtienen unos resultados buenos,
+ con precisión hasta el quinto decimal.
 \end_layout
 
 \begin_layout Subsection
@@ -587,10 +625,7 @@ RF 17:
 \end_layout
 
 \begin_layout Standard
-Como se ve,
- no se llega al número deseado,
- pero se obtienen unos resultados buenos,
- con precisión hasta el quinto decimal.
+Pasadas 17 iteraciones se obtiene el número esperado.
 \end_layout
 
 \begin_layout Subsubsection
@@ -763,231 +798,43 @@ Bisección 20:
 \end_layout
 
 \begin_layout Standard
-\align center
+Pasadas 20 iteraciones se consigue el número buscado.
+\end_layout
 
-\family typewriter
-Bisección 21:
- 0.362119
+\begin_layout Subsubsection
+Método de Newton-Raphson
+\end_layout
+
+\begin_layout Standard
+El método de Newton-Raphson es muy rápido:
 \end_layout
 
 \begin_layout Standard
 \align center
 
 \family typewriter
-Bisección 22:
- 0.362119
+Newton 1:
+ 0.333333
 \end_layout
 
 \begin_layout Standard
 \align center
 
 \family typewriter
-Bisección 23:
- 0.362119
+Newton 2:
+ 0.361670
 \end_layout
 
 \begin_layout Standard
 \align center
 
 \family typewriter
-Bisección 24:
+Newton 3:
  0.362119
 \end_layout
 
 \begin_layout Standard
-\align center
-
-\family typewriter
-Bisección 25:
- 0.362119
-\end_layout
-
-\begin_layout Standard
-\align center
-
-\family typewriter
-Bisección 26:
- 0.362119
-\end_layout
-
-\begin_layout Standard
-\align center
-
-\family typewriter
-Bisección 27:
- 0.362119
-\end_layout
-
-\begin_layout Standard
-\align center
-
-\family typewriter
-Bisección 28:
- 0.362119
-\end_layout
-
-\begin_layout Standard
-\align center
-
-\family typewriter
-Bisección 29:
- 0.362119
-\end_layout
-
-\begin_layout Standard
-\align center
-
-\family typewriter
-Bisección 30:
- 0.362119
-\end_layout
-
-\begin_layout Standard
-\align center
-
-\family typewriter
-Bisección 31:
- 0.362119
-\end_layout
-
-\begin_layout Standard
-\align center
-
-\family typewriter
-Bisección 32:
- 0.362119
-\end_layout
-
-\begin_layout Standard
-\align center
-
-\family typewriter
-Bisección 33:
- 0.362119
-\end_layout
-
-\begin_layout Standard
-\align center
-
-\family typewriter
-Bisección 34:
- 0.362119
-\end_layout
-
-\begin_layout Standard
-\align center
-
-\family typewriter
-Bisección 35:
- 0.362119
-\end_layout
-
-\begin_layout Standard
-\align center
-
-\family typewriter
-Bisección 36:
- 0.362119
-\end_layout
-
-\begin_layout Standard
-\align center
-
-\family typewriter
-Bisección 37:
- 0.362119
-\end_layout
-
-\begin_layout Standard
-\align center
-
-\family typewriter
-Bisección 38:
- 0.362119
-\end_layout
-
-\begin_layout Standard
-\align center
-
-\family typewriter
-Bisección 39:
- 0.362119
-\end_layout
-
-\begin_layout Standard
-\align center
-
-\family typewriter
-Bisección 40:
- 0.362119
-\end_layout
-
-\begin_layout Standard
-\align center
-
-\family typewriter
-Bisección 41:
- 0.362119
-\end_layout
-
-\begin_layout Standard
-\align center
-
-\family typewriter
-Bisección 42:
- 0.362119
-\end_layout
-
-\begin_layout Standard
-\align center
-
-\family typewriter
-Bisección 43:
- 0.362119
-\end_layout
-
-\begin_layout Standard
-\align center
-
-\family typewriter
-Bisección 44:
- 0.362119
-\end_layout
-
-\begin_layout Standard
-\align center
-
-\family typewriter
-Bisección 45:
- 0.362119
-\end_layout
-
-\begin_layout Standard
-\align center
-
-\family typewriter
-Bisección 46:
- 0.362119
-\end_layout
-
-\begin_layout Standard
-\align center
-
-\family typewriter
-Bisección 47:
- 0.362119
-\end_layout
-
-\begin_layout Standard
-Como se ve,
- tampoco llega el método de la bisección a conseguir la aproximación hasta el sexto decimal.
- Sin embargo,
- consigue 5 cifras significativas correctas,
- al igual que el 
-\emph on
-regula falsi
-\emph default
-.
+Se consigue el número con 3 iteraciones.
 \end_layout
 
 \begin_layout Section
@@ -996,15 +843,61 @@ Conclusiones.
 
 \begin_layout Standard
 A la vista de los resultados obtenidos,
- vemos como los métodos de Ridders y 
+ establecemos la siguiente clasificación en los métodos.
+\end_layout
+
+\begin_layout Enumerate
+Método de Newton-Raphson,
+ con 3 iteraciones.
+\end_layout
+
+\begin_layout Enumerate
+Método de Muller,
+ con 4.
+\end_layout
+
+\begin_layout Enumerate
+Método de Ridders,
+ con 13 iteraciones,
+ aunque con imprecisión.
+\end_layout
+
+\begin_layout Enumerate
+Método 
 \emph on
 Regula Falsi
 \emph default
- son mucho más rápidos que los otros (bisección y Muller).
- Esto ocurre por las características de dichos métodos y su convergencia en función del tiempo.
- Considerando que a nivel computacional,
- ninguna implementación destaca por su dificultad,
- el método de Ridders demuestra ser sencillo a la vez que muy potente para obtener cortes con el eje horizontal en funciones de una variable.
+,
+ con 17 iteraciones.
+\end_layout
+
+\begin_layout Enumerate
+Método de la Bisección,
+ con 20 iteraciones.
+\end_layout
+
+\begin_layout Standard
+Así,
+ destacan los métodos estudiados por conseguir rápidamente los ceros de la función 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:1"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+.
+ En otro orden de cuestiones,
+ los códigos han necesitado de 37 líneas para Newton-Raphson,
+ 41 para Muller y 43 para Ridders.
+ Se comparan solo estos por estar hechos con el mismo estilo entre sí,
+ sin comentarios ni líneas en blanco que modifican el recuento,
+ como es evidente.
+ Se confirman así dichos métodos como buenos en lo que a eficiencia respecta,
+ consiguiendo buenos resultados en poco tiempo y con relativamente poca carga computacional.
 \end_layout
 
 \end_body

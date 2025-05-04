@@ -37,9 +37,9 @@ Ridders para la resolución de ecuaciones. Dichos métodos son numéricos
 y utilizan la interpolación cuadrática y exponencial, respectivamente,
 para posibilitar la resolución de la ecuación siguiente:
 
-\[
-f(x)=\mathrm{e}^{0.75\cdot x}-3\cdot\sin\left(1.25\cdot x\right)
-\]
+\begin{equation}
+f(x)=\mathrm{e}^{0.75\cdot x}-3\cdot\sin\left(1.25\cdot x\right)\label{eq:1}
+\end{equation}
 
 Se evaluará la rapidez de los métodos en base a las iteraciones que
 realizan hasta llegar a la solución con una precisión de $10^{-6}$unidades.
@@ -86,7 +86,24 @@ Los resultados de la implementación son los siguientes:
 
 \subsection{Método de Muller}
 
-ss
+El método de Muller obtiene los resultados siguientes por iteración:
+\begin{center}
+\texttt{Muller 1: 0.349278}
+\par\end{center}
+
+\begin{center}
+\texttt{Muller 2: 0.362391}
+\par\end{center}
+
+\begin{center}
+\texttt{Muller 3: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{Muller 4: 0.362119}
+\par\end{center}
+
+Se obtiene el resultado correcto con 4 iteraciones.
 
 \subsection{Método de Ridders}
 
@@ -145,7 +162,8 @@ estos:
 \texttt{Ridders 13: 0.362118}
 \par\end{center}
 
-A la decimotercera iteración, el método consigue la precisión deseada.
+Como se ve, no se llega al número deseado, pero se obtienen unos resultados
+buenos, con precisión hasta el quinto decimal.
 
 \subsection{Comparación con métodos conocidos}
 
@@ -221,8 +239,7 @@ los siguientes resultados.
 \texttt{RF 17: 0.362119}
 \par\end{center}
 
-Como se ve, no se llega al número deseado, pero se obtienen unos resultados
-buenos, con precisión hasta el quinto decimal.
+Pasadas 17 iteraciones se obtiene el número esperado.
 
 \subsubsection{Bisección}
 
@@ -308,125 +325,42 @@ anteriores, obteniendo los siguientes resultados:
 \texttt{Bisección 20: 0.362119}
 \par\end{center}
 
+Pasadas 20 iteraciones se consigue el número buscado.
+
+\subsubsection{Método de Newton-Raphson}
+
+El método de Newton-Raphson es muy rápido:
 \begin{center}
-\texttt{Bisección 21: 0.362119}
+\texttt{Newton 1: 0.333333}
 \par\end{center}
 
 \begin{center}
-\texttt{Bisección 22: 0.362119}
+\texttt{Newton 2: 0.361670}
 \par\end{center}
 
 \begin{center}
-\texttt{Bisección 23: 0.362119}
+\texttt{Newton 3: 0.362119}
 \par\end{center}
 
-\begin{center}
-\texttt{Bisección 24: 0.362119}
-\par\end{center}
-
-\begin{center}
-\texttt{Bisección 25: 0.362119}
-\par\end{center}
-
-\begin{center}
-\texttt{Bisección 26: 0.362119}
-\par\end{center}
-
-\begin{center}
-\texttt{Bisección 27: 0.362119}
-\par\end{center}
-
-\begin{center}
-\texttt{Bisección 28: 0.362119}
-\par\end{center}
-
-\begin{center}
-\texttt{Bisección 29: 0.362119}
-\par\end{center}
-
-\begin{center}
-\texttt{Bisección 30: 0.362119}
-\par\end{center}
-
-\begin{center}
-\texttt{Bisección 31: 0.362119}
-\par\end{center}
-
-\begin{center}
-\texttt{Bisección 32: 0.362119}
-\par\end{center}
-
-\begin{center}
-\texttt{Bisección 33: 0.362119}
-\par\end{center}
-
-\begin{center}
-\texttt{Bisección 34: 0.362119}
-\par\end{center}
-
-\begin{center}
-\texttt{Bisección 35: 0.362119}
-\par\end{center}
-
-\begin{center}
-\texttt{Bisección 36: 0.362119}
-\par\end{center}
-
-\begin{center}
-\texttt{Bisección 37: 0.362119}
-\par\end{center}
-
-\begin{center}
-\texttt{Bisección 38: 0.362119}
-\par\end{center}
-
-\begin{center}
-\texttt{Bisección 39: 0.362119}
-\par\end{center}
-
-\begin{center}
-\texttt{Bisección 40: 0.362119}
-\par\end{center}
-
-\begin{center}
-\texttt{Bisección 41: 0.362119}
-\par\end{center}
-
-\begin{center}
-\texttt{Bisección 42: 0.362119}
-\par\end{center}
-
-\begin{center}
-\texttt{Bisección 43: 0.362119}
-\par\end{center}
-
-\begin{center}
-\texttt{Bisección 44: 0.362119}
-\par\end{center}
-
-\begin{center}
-\texttt{Bisección 45: 0.362119}
-\par\end{center}
-
-\begin{center}
-\texttt{Bisección 46: 0.362119}
-\par\end{center}
-
-\begin{center}
-\texttt{Bisección 47: 0.362119}
-\par\end{center}
-
-Como se ve, tampoco llega el método de la bisección a conseguir la
-aproximación hasta el sexto decimal. Sin embargo, consigue 5 cifras
-significativas correctas, al igual que el \emph{regula falsi}.
+Se consigue el número con 3 iteraciones.
 
 \section{Conclusiones.}
 
-A la vista de los resultados obtenidos, vemos como los métodos de
-Ridders y \emph{Regula Falsi} son mucho más rápidos que los otros
-(bisección y Muller). Esto ocurre por las características de dichos
-métodos y su convergencia en función del tiempo. Considerando que
-a nivel computacional, ninguna implementación destaca por su dificultad,
-el método de Ridders demuestra ser sencillo a la vez que muy potente
-para obtener cortes con el eje horizontal en funciones de una variable.
+A la vista de los resultados obtenidos, establecemos la siguiente
+clasificación en los métodos.
+\begin{enumerate}
+\item Método de Newton-Raphson, con 3 iteraciones.
+\item Método de Muller, con 4.
+\item Método de Ridders, con 13 iteraciones, aunque con imprecisión.
+\item Método \emph{Regula Falsi}, con 17 iteraciones.
+\item Método de la Bisección, con 20 iteraciones.
+\end{enumerate}
+Así, destacan los métodos estudiados por conseguir rápidamente los
+ceros de la función \ref{eq:1}. En otro orden de cuestiones, los
+códigos han necesitado de 37 líneas para Newton-Raphson, 41 para Muller
+y 43 para Ridders. Se comparan solo estos por estar hechos con el
+mismo estilo entre sí, sin comentarios ni líneas en blanco que modifican
+el recuento, como es evidente. Se confirman así dichos métodos como
+buenos en lo que a eficiencia respecta, consiguiendo buenos resultados
+en poco tiempo y con relativamente poca carga computacional.
 \end{document}
