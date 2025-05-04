@@ -46,7 +46,7 @@ void biseccion(double a, double b, double c, int its)
 	double eps = epsilon * max(fabs(a - b), fabs(0.5 * (a + b)));
 
 	// Comienza el proceso iterativo
-	for (int i = 0; i < maxits; i++)
+	for (int i = 1; i < maxits; i++)
 	{
 		// Longitud del intervalo menor que la tolerancia?
 		if (fabs(a - b) <= eps)
