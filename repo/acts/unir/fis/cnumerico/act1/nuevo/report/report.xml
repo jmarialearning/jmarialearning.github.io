@@ -227,4 +227,8 @@
 </section>
 </section>
 </section>
+<section>
+<title>Conclusiones.</title>
+<para>A la vista de los resultados obtenidos, vemos como los métodos de Ridders y <emphasis>Regula Falsi</emphasis> son mucho más rápidos que los otros (bisección y Muller). Esto ocurre por las características de dichos métodos y su convergencia en función del tiempo. Considerando que a nivel computacional, ninguna implementación destaca por su dificultad, el método de Ridders demuestra ser sencillo a la vez que muy potente para obtener cortes con el eje horizontal en funciones de una variable.</para>
+</section>
 </article>
