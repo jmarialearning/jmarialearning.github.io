@@ -268,7 +268,6 @@ Para implementar los métodos se han realizado sendos ficheros de cabecera con f
 LatexCommand href
 name "muller"
 target "https://jmarialearning.github.io/repo/acts/unir/fis/cnumerico/act1/nuevo/muller.hpp"
-type "file:"
 literal "false"
 
 \end_inset
@@ -278,7 +277,6 @@ literal "false"
 LatexCommand href
 name "ridders"
 target "https://jmarialearning.github.io/repo/acts/unir/fis/cnumerico/act1/nuevo/ridders.hpp"
-type "file:"
 literal "false"
 
 \end_inset
