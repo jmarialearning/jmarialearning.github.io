@@ -16,13 +16,13 @@ int muller(double extinf, double extsup, int unsigned iteraciones){
     }
     for (int its = 1; its <=iteraciones; its++){
         if(extinf > extsup){
-        //swap(extinf,extsup);
+        swap(extinf,extsup);
     }
     double c = f(pmedio);
     double gamma = (pmedio - extinf) / (extsup - pmedio);
     double a = (gamma * f(extsup) - (1 + gamma) * f(pmedio) + f(extinf)) / (gamma * (1 + gamma) * pow(extsup - pmedio,2));
     double b = (f(extsup) - f(extinf) - a * pow(extsup - pmedio, 2)) / (extsup - pmedio);
-    double xr = pmedio - (2 * c) / (b + signo(b) * sqrt(pow(b,2) - 4 * a * c));
+    double xr = pmedio - ((2 * c) / (b + signo(b) * sqrt(pow(b,2) - 4 * a * c)));
     double delta = min(fabs(xr - extsup), fabs(xr - extinf));
     if (epsilon >= delta){
         return 0; 
