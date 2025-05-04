@@ -75,6 +75,8 @@
 \shortcut idx
 \color #008000
 \end_index
+\spellchecker_ignore spanish Ridders
+\spellchecker_ignore spanish RF
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -300,7 +302,7 @@ Los resultados de la implementación son los siguientes:
 \end_layout
 
 \begin_layout Subsection
-Método de Muller.
+Método de Muller
 \end_layout
 
 \begin_layout Standard
@@ -308,7 +310,7 @@ ss
 \end_layout
 
 \begin_layout Subsection
-Método de Ridders.
+Método de Ridders
 \end_layout
 
 \begin_layout Standard
@@ -431,15 +433,13 @@ A la decimotercera iteración,
 \end_layout
 
 \begin_layout Subsection
-Comparación con métodos conocidos.
+Comparación con métodos conocidos
 \end_layout
 
 \begin_layout Subsubsection
 
 \emph on
 Regula Falsi
-\emph default
-.
 \end_layout
 
 \begin_layout Standard
@@ -454,7 +454,7 @@ regula falsi
 \align center
 
 \family typewriter
-RF 0:
+RF 1:
  0.578050
 \end_layout
 
@@ -462,7 +462,7 @@ RF 0:
 \align center
 
 \family typewriter
-RF 1:
+RF 2:
  0.401083
 \end_layout
 
@@ -470,7 +470,7 @@ RF 1:
 \align center
 
 \family typewriter
-RF 2:
+RF 3:
  0.367668
 \end_layout
 
@@ -478,7 +478,7 @@ RF 2:
 \align center
 
 \family typewriter
-RF 3:
+RF 4:
  0.362875
 \end_layout
 
@@ -486,7 +486,7 @@ RF 3:
 \align center
 
 \family typewriter
-RF 4:
+RF 5:
  0.362222
 \end_layout
 
@@ -494,7 +494,7 @@ RF 4:
 \align center
 
 \family typewriter
-RF 5:
+RF 6:
  0.362133
 \end_layout
 
@@ -502,7 +502,7 @@ RF 5:
 \align center
 
 \family typewriter
-RF 6:
+RF 7:
  0.362121
 \end_layout
 
@@ -510,16 +510,8 @@ RF 6:
 \align center
 
 \family typewriter
-RF 7:
- 0.362120
-\end_layout
-
-\begin_layout Standard
-\align center
-
-\family typewriter
 RF 8:
- 0.362119
+ 0.362120
 \end_layout
 
 \begin_layout Standard
@@ -587,10 +579,415 @@ RF 16:
 \end_layout
 
 \begin_layout Standard
+\align center
+
+\family typewriter
+RF 17:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
 Como se ve,
  no se llega al número deseado,
  pero se obtienen unos resultados buenos,
  con precisión hasta el quinto decimal.
+\end_layout
+
+\begin_layout Subsubsection
+Bisección
+\end_layout
+
+\begin_layout Standard
+El método de la bisección es bastante lento en comparación con los anteriores,
+ obteniendo los siguientes resultados:
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 1:
+ 0.500000
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 2:
+ 0.250000
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 3:
+ 0.375000
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 4:
+ 0.312500
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 5:
+ 0.343750
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 6:
+ 0.359375
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 7:
+ 0.367188
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 8:
+ 0.363281
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 9:
+ 0.361328
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 10:
+ 0.362305
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 11:
+ 0.361816
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 12:
+ 0.362061
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 13:
+ 0.362183
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 14:
+ 0.362122
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 15:
+ 0.362091
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 16:
+ 0.362106
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 17:
+ 0.362114
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 18:
+ 0.362118
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 19:
+ 0.362120
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 20:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 21:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 22:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 23:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 24:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 25:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 26:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 27:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 28:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 29:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 30:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 31:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 32:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 33:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 34:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 35:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 36:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 37:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 38:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 39:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 40:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 41:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 42:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 43:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 44:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 45:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 46:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 47:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+Como se ve,
+ tampoco llega el método de la bisección a conseguir la aproximación hasta el sexto decimal.
+ Sin embargo,
+ consigue 5 cifras significativas correctas,
+ al igual que el 
+\emph on
+regula falsi
+\emph default
+.
 \end_layout
 
 \end_body

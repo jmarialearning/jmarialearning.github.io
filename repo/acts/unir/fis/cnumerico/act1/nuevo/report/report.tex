@@ -30,7 +30,7 @@
 
 \pagebreak{}
 
-\section{Descripción de la actividad.}
+\section{Descripción de la actividad}
 
 En la presente actividad se han trabajado los métodos de Muller y
 Ridders para la resolución de ecuaciones. Dichos métodos son numéricos
@@ -46,7 +46,7 @@ realizan hasta llegar a la solución con una precisión de $10^{-6}$unidades.
 Se exponen a continuación los parámetros necesarios para que los métodos
 realicen correctamente la tarea encomendada.
 
-\subsection{Método de Muller.}
+\subsection{Método de Muller}
 
 El método de Muller pretende interpolar la función a una parábola
 en un entorno localizado de una función $f(x)$. Dados dos puntos
@@ -56,8 +56,367 @@ la parábola conseguimos una aproximación. En función de en qué subintervalo
 se encuentre la solución, se escoge para conseguir acotar más la solución.
 El método converge, pero de manera lenta.
 
-\subsection{Método de Ridders.}
+\subsection{Método de Ridders}
 
 El método de Ridders pretende aproximar la función a una exponencial
-a la que se le aplica el método \emph{regula falsi}.
+a la que se le aplica el método \emph{regula falsi}. Con cuatro puntos
+obtenemos una aproximación correcta de la solución a nuestra función.
+
+Así pues, se han creado dos funciones en C++ llamadas \texttt{muller}
+y \texttt{ridders} para implementar dichos métodos. Han de recibir
+como argumentos el \emph{extremo inferior}, el \emph{extremo superior}
+y el \emph{número de iteraciones }que se realizarán.
+
+\section{Implementación}
+
+Para implementar los métodos se han realizado sendos ficheros de cabecera
+con formato \texttt{.hpp} en los que se da cuenta de la implementación
+del método. Para acceder a ellos se puede utilizar los enlaces siguientes:
+\href{https://jmarialearning.github.io/repo/acts/unir/fis/cnumerico/act1/nuevo/muller.hpp}{muller}
+y \href{https://jmarialearning.github.io/repo/acts/unir/fis/cnumerico/act1/nuevo/ridders.hpp}{ridders}.
+Asimismo, se ha creado un programa principal en el que se compara
+estos dos métodos con otros conocidos utilizando como medición el
+número de iteraciones que se deben realizar para obtener el resultado
+con una precisión de $10^{-6}$ unidades. Se dan cuenta de los resultados
+en los párrafos venideros.
+
+\section{Resultados}
+
+Los resultados de la implementación son los siguientes:
+
+\subsection{Método de Muller}
+
+ss
+
+\subsection{Método de Ridders}
+
+El método de Ridders consigue una precisión de $10^{-6}$ unidades
+con necesidad de pocas iteraciones. En concreto, los resultados son
+estos:
+\begin{center}
+\texttt{Ridders 1: 0.334200}
+\par\end{center}
+
+\begin{center}
+\texttt{Ridders 2: 0.350235}
+\par\end{center}
+
+\begin{center}
+\texttt{Ridders 3: 0.356890}
+\par\end{center}
+
+\begin{center}
+\texttt{Ridders 4: 0.359785}
+\par\end{center}
+
+\begin{center}
+\texttt{Ridders 5: 0.361070}
+\par\end{center}
+
+\begin{center}
+\texttt{Ridders 6: 0.361647}
+\par\end{center}
+
+\begin{center}
+\texttt{Ridders 7: 0.361906}
+\par\end{center}
+
+\begin{center}
+\texttt{Ridders 8: 0.362023}
+\par\end{center}
+
+\begin{center}
+\texttt{Ridders 9: 0.362076}
+\par\end{center}
+
+\begin{center}
+\texttt{Ridders 10: 0.362100}
+\par\end{center}
+
+\begin{center}
+\texttt{Ridders 11: 0.362110}
+\par\end{center}
+
+\begin{center}
+\texttt{Ridders 12: 0.362115}
+\par\end{center}
+
+\begin{center}
+\texttt{Ridders 13: 0.362118}
+\par\end{center}
+
+A la decimotercera iteración, el método consigue la precisión deseada.
+
+\subsection{Comparación con métodos conocidos}
+
+\subsubsection{\emph{Regula Falsi}}
+
+El método \emph{regula falsi} converge con cierta rapidez como demuestran
+los siguientes resultados.
+\begin{center}
+\texttt{RF 1: 0.578050}
+\par\end{center}
+
+\begin{center}
+\texttt{RF 2: 0.401083}
+\par\end{center}
+
+\begin{center}
+\texttt{RF 3: 0.367668}
+\par\end{center}
+
+\begin{center}
+\texttt{RF 4: 0.362875}
+\par\end{center}
+
+\begin{center}
+\texttt{RF 5: 0.362222}
+\par\end{center}
+
+\begin{center}
+\texttt{RF 6: 0.362133}
+\par\end{center}
+
+\begin{center}
+\texttt{RF 7: 0.362121}
+\par\end{center}
+
+\begin{center}
+\texttt{RF 8: 0.362120}
+\par\end{center}
+
+\begin{center}
+\texttt{RF 9: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{RF 10: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{RF 11: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{RF 12: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{RF 13: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{RF 14: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{RF 15: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{RF 16: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{RF 17: 0.362119}
+\par\end{center}
+
+Como se ve, no se llega al número deseado, pero se obtienen unos resultados
+buenos, con precisión hasta el quinto decimal.
+
+\subsubsection{Bisección}
+
+El método de la bisección es bastante lento en comparación con los
+anteriores, obteniendo los siguientes resultados:
+\begin{center}
+\texttt{Bisección 1: 0.500000}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 2: 0.250000}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 3: 0.375000}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 4: 0.312500}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 5: 0.343750}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 6: 0.359375}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 7: 0.367188}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 8: 0.363281}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 9: 0.361328}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 10: 0.362305}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 11: 0.361816}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 12: 0.362061}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 13: 0.362183}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 14: 0.362122}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 15: 0.362091}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 16: 0.362106}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 17: 0.362114}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 18: 0.362118}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 19: 0.362120}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 20: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 21: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 22: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 23: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 24: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 25: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 26: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 27: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 28: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 29: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 30: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 31: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 32: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 33: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 34: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 35: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 36: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 37: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 38: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 39: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 40: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 41: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 42: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 43: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 44: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 45: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 46: 0.362119}
+\par\end{center}
+
+\begin{center}
+\texttt{Bisección 47: 0.362119}
+\par\end{center}
+
+Como se ve, tampoco llega el método de la bisección a conseguir la
+aproximación hasta el sexto decimal. Sin embargo, consigue 5 cifras
+significativas correctas, al igual que el \emph{regula falsi}.
 \end{document}

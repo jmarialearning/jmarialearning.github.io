@@ -44,6 +44,14 @@ margin-bottom: 0.5ex;
 text-align: left;
 
 }
+h4.subsubsection {
+font-weight: bold;
+font-size: medium;
+margin-top: 0.7ex;
+margin-bottom: 0.4ex;
+text-align: left;
+
+}
 div.toc {
   margin: 2em 0em;
   border-style: solid;
@@ -102,10 +110,20 @@ a.tocentry:visited { color: black; }
 </div>
 </div>
 <div class='lyxtoc-2'>
-<a href='#magicparlabel-125' class='tocentry'>2 <span style='font-family:serif;'>Implementación</span></a>
+<a href='#magicparlabel-22' class='tocentry'>2 <span style='font-family:serif;'>Implementación</span></a>
 </div>
 <div class='lyxtoc-2'>
-<a href='#magicparlabel-220' class='tocentry'>3 <span style='font-family:serif;'>Resultados</span></a>
+<a href='#magicparlabel-24' class='tocentry'>3 <span style='font-family:serif;'>Resultados</span></a>
+
+<div class='lyxtoc-3'>
+<a href='#magicparlabel-26' class='tocentry'>3.1 <span style='font-family:serif;'>Método de Muller</span></a>
+</div>
+<div class='lyxtoc-3'>
+<a href='#magicparlabel-28' class='tocentry'>3.2 <span style='font-family:serif;'>Método de Ridders</span></a>
+</div>
+<div class='lyxtoc-3'>
+<a href='#magicparlabel-44' class='tocentry'>3.3 <span style='font-family:serif;'>Comparación con métodos conocidos</span></a>
+</div>
 </div>
 </div>
 </div>
@@ -184,12 +202,12 @@ unidades. Se exponen a continuación los parámetros necesarios para que los mé
 <h3 class='subsection' id='magicparlabel-19'><span class="subsection_label">1.2</span> Método de Ridders</h3>
 <div class='standard' id='magicparlabel-20'>El método de Ridders pretende aproximar la función a una exponencial a la que se le aplica el método <em>regula falsi</em>. Con cuatro puntos obtenemos una aproximación correcta de la solución a nuestra función.</div>
 
-<div class='standard' id='magicparlabel-33'>Así pues, se han creado dos funciones en C++ llamadas <span style='font-family:monospace;'>muller</span> y <span style='font-family:monospace;'>ridders</span> para implementar dichos métodos. Han de recibir como argumentos el <em>extremo inferior</em>, el <em>extremo superior</em> y el <em>número de iteraciones </em>que se realizarán.</div>
+<div class='standard' id='magicparlabel-21'>Así pues, se han creado dos funciones en C++ llamadas <span style='font-family:monospace;'>muller</span> y <span style='font-family:monospace;'>ridders</span> para implementar dichos métodos. Han de recibir como argumentos el <em>extremo inferior</em>, el <em>extremo superior</em> y el <em>número de iteraciones </em>que se realizarán.</div>
 </section>
 </section>
 <section>
-<h2 class='section' id='magicparlabel-125'><span class="section_label">2</span> Implementación</h2>
-<div class='standard' id='magicparlabel-131'>Para implementar los métodos se han realizado sendos ficheros de cabecera con formato <span style='font-family:monospace;'>.hpp</span> en los que se da cuenta de la implementación del método. Para acceder a ellos se puede utilizar los enlaces siguientes: <a href="https://jmarialearning.github.io/repo/acts/unir/fis/cnumerico/act1/nuevo/muller.hpp">muller</a> y <a href="https://jmarialearning.github.io/repo/acts/unir/fis/cnumerico/act1/nuevo/ridders.hpp">ridders</a>. Asimismo, se ha creado un programa principal en el que se compara estos dos métodos con otros conocidos utilizando como medición el número de iteraciones que se deben realizar para obtener el resultado con una precisión de <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<h2 class='section' id='magicparlabel-22'><span class="section_label">2</span> Implementación</h2>
+<div class='standard' id='magicparlabel-23'>Para implementar los métodos se han realizado sendos ficheros de cabecera con formato <span style='font-family:monospace;'>.hpp</span> en los que se da cuenta de la implementación del método. Para acceder a ellos se puede utilizar los enlaces siguientes: <a href="https://jmarialearning.github.io/repo/acts/unir/fis/cnumerico/act1/nuevo/muller.hpp">muller</a> y <a href="https://jmarialearning.github.io/repo/acts/unir/fis/cnumerico/act1/nuevo/ridders.hpp">ridders</a>. Asimismo, se ha creado un programa principal en el que se compara estos dos métodos con otros conocidos utilizando como medición el número de iteraciones que se deben realizar para obtener el resultado con una precisión de <math xmlns='http://www.w3.org/1998/Math/MathML'>
 <mrow>
  <mn>1</mn>
  <msup>
@@ -204,8 +222,199 @@ unidades. Se exponen a continuación los parámetros necesarios para que los mé
  unidades. Se dan cuenta de los resultados en los párrafos venideros.</div>
 </section>
 <section>
-<h2 class='section' id='magicparlabel-220'><span class="section_label">3</span> Resultados</h2>
-<div class='standard' id='magicparlabel-233'>Los resultados de la implementación son los siguientes:</div>
+<h2 class='section' id='magicparlabel-24'><span class="section_label">3</span> Resultados</h2>
+<div class='standard' id='magicparlabel-25'>Los resultados de la implementación son los siguientes:</div>
+<section>
+<h3 class='subsection' id='magicparlabel-26'><span class="subsection_label">3.1</span> Método de Muller</h3>
+<div class='standard' id='magicparlabel-27'>ss</div>
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-28'><span class="subsection_label">3.2</span> Método de Ridders</h3>
+<div class='standard' id='magicparlabel-29'>El método de Ridders consigue una precisión de <math xmlns='http://www.w3.org/1998/Math/MathML'>
+<mrow>
+ <mn>1</mn>
+ <msup>
+  <mn>0</mn>
+  <mrow>
+   <mo>-</mo>
+   <mn>6</mn>
+  </mrow>
+ </msup>
+</mrow>
+</math>
+ unidades con necesidad de pocas iteraciones. En concreto, los resultados son estos:</div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-30'><span style='font-family:monospace;'>Ridders 1: 0.334200</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-31'><span style='font-family:monospace;'>Ridders 2: 0.350235</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-32'><span style='font-family:monospace;'>Ridders 3: 0.356890</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-33'><span style='font-family:monospace;'>Ridders 4: 0.359785</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-34'><span style='font-family:monospace;'>Ridders 5: 0.361070</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-35'><span style='font-family:monospace;'>Ridders 6: 0.361647</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-36'><span style='font-family:monospace;'>Ridders 7: 0.361906</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-37'><span style='font-family:monospace;'>Ridders 8: 0.362023</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-38'><span style='font-family:monospace;'>Ridders 9: 0.362076</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-39'><span style='font-family:monospace;'>Ridders 10: 0.362100</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-40'><span style='font-family:monospace;'>Ridders 11: 0.362110</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-41'><span style='font-family:monospace;'>Ridders 12: 0.362115</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-42'><span style='font-family:monospace;'>Ridders 13: 0.362118</span></div>
+
+<div class='standard' id='magicparlabel-43'>A la decimotercera iteración, el método consigue la precisión deseada.</div>
+</section>
+<section>
+<h3 class='subsection' id='magicparlabel-44'><span class="subsection_label">3.3</span> Comparación con métodos conocidos</h3>
+<section>
+<h4 class='subsubsection' id='magicparlabel-45'><span class="subsubsection_label">3.3.1</span> <em>Regula Falsi</em></h4>
+<div class='standard' id='magicparlabel-46'>El método <em>regula falsi</em> converge con cierta rapidez como demuestran los siguientes resultados.</div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-781'><span style='font-family:monospace;'>RF 1: 0.578050</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-867'><span style='font-family:monospace;'>RF 2: 0.401083</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-868'><span style='font-family:monospace;'>RF 3: 0.367668</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-869'><span style='font-family:monospace;'>RF 4: 0.362875</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-870'><span style='font-family:monospace;'>RF 5: 0.362222</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-871'><span style='font-family:monospace;'>RF 6: 0.362133</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-872'><span style='font-family:monospace;'>RF 7: 0.362121</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-873'><span style='font-family:monospace;'>RF 8: 0.362120</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-874'><span style='font-family:monospace;'>RF 9: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-875'><span style='font-family:monospace;'>RF 10: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-876'><span style='font-family:monospace;'>RF 11: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-877'><span style='font-family:monospace;'>RF 12: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-878'><span style='font-family:monospace;'>RF 13: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-879'><span style='font-family:monospace;'>RF 14: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-880'><span style='font-family:monospace;'>RF 15: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-881'><span style='font-family:monospace;'>RF 16: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-882'><span style='font-family:monospace;'>RF 17: 0.362119</span></div>
+
+<div class='standard' id='magicparlabel-64'>Como se ve, no se llega al número deseado, pero se obtienen unos resultados buenos, con precisión hasta el quinto decimal.</div>
+</section>
+<section>
+<h4 class='subsubsection' id='magicparlabel-66'><span class="subsubsection_label">3.3.2</span> Bisección</h4>
+<div class='standard' id='magicparlabel-75'>El método de la bisección es bastante lento en comparación con los anteriores, obteniendo los siguientes resultados:</div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-95'><span style='font-family:monospace;'>Bisección 1: 0.500000</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-332'><span style='font-family:monospace;'>Bisección 2: 0.250000</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-333'><span style='font-family:monospace;'>Bisección 3: 0.375000</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-334'><span style='font-family:monospace;'>Bisección 4: 0.312500</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-335'><span style='font-family:monospace;'>Bisección 5: 0.343750</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-336'><span style='font-family:monospace;'>Bisección 6: 0.359375</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-337'><span style='font-family:monospace;'>Bisección 7: 0.367188</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-338'><span style='font-family:monospace;'>Bisección 8: 0.363281</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-339'><span style='font-family:monospace;'>Bisección 9: 0.361328</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-340'><span style='font-family:monospace;'>Bisección 10: 0.362305</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-341'><span style='font-family:monospace;'>Bisección 11: 0.361816</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-342'><span style='font-family:monospace;'>Bisección 12: 0.362061</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-343'><span style='font-family:monospace;'>Bisección 13: 0.362183</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-344'><span style='font-family:monospace;'>Bisección 14: 0.362122</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-345'><span style='font-family:monospace;'>Bisección 15: 0.362091</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-346'><span style='font-family:monospace;'>Bisección 16: 0.362106</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-347'><span style='font-family:monospace;'>Bisección 17: 0.362114</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-348'><span style='font-family:monospace;'>Bisección 18: 0.362118</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-349'><span style='font-family:monospace;'>Bisección 19: 0.362120</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-350'><span style='font-family:monospace;'>Bisección 20: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-351'><span style='font-family:monospace;'>Bisección 21: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-352'><span style='font-family:monospace;'>Bisección 22: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-353'><span style='font-family:monospace;'>Bisección 23: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-354'><span style='font-family:monospace;'>Bisección 24: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-355'><span style='font-family:monospace;'>Bisección 25: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-356'><span style='font-family:monospace;'>Bisección 26: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-357'><span style='font-family:monospace;'>Bisección 27: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-358'><span style='font-family:monospace;'>Bisección 28: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-359'><span style='font-family:monospace;'>Bisección 29: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-360'><span style='font-family:monospace;'>Bisección 30: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-361'><span style='font-family:monospace;'>Bisección 31: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-362'><span style='font-family:monospace;'>Bisección 32: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-363'><span style='font-family:monospace;'>Bisección 33: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-364'><span style='font-family:monospace;'>Bisección 34: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-365'><span style='font-family:monospace;'>Bisección 35: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-366'><span style='font-family:monospace;'>Bisección 36: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-367'><span style='font-family:monospace;'>Bisección 37: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-368'><span style='font-family:monospace;'>Bisección 38: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-369'><span style='font-family:monospace;'>Bisección 39: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-370'><span style='font-family:monospace;'>Bisección 40: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-371'><span style='font-family:monospace;'>Bisección 41: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-372'><span style='font-family:monospace;'>Bisección 42: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-373'><span style='font-family:monospace;'>Bisección 43: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-374'><span style='font-family:monospace;'>Bisección 44: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-375'><span style='font-family:monospace;'>Bisección 45: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-376'><span style='font-family:monospace;'>Bisección 46: 0.362119</span></div>
+
+<div class='standard' style='text-align: center;' id='magicparlabel-377'><span style='font-family:monospace;'>Bisección 47: 0.362119</span></div>
+
+<div class='standard' id='magicparlabel-1118'>Como se ve, tampoco llega el método de la bisección a conseguir la aproximación hasta el sexto decimal. Sin embargo, consigue 5 cifras significativas correctas, al igual que el <em>regula falsi</em>.</div>
+</section>
+</section>
 </section>
 </body>
 </html>
