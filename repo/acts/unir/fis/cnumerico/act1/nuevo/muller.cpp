@@ -24,7 +24,7 @@ void Muller(double extremoInferior, double extremoSuperior, int iteraciones){
         swap(extremoInferior,extremoSuperior);
     }
     //El tercer punto para calcular la parabola lo sacamos con el punto medio entre los extremos.
-    double puntoMedio = (extremoInferior + extremoSuperior) / 2;
+    double puntoMedio = (extremoInferior + extremoSuperior) * 0.5;
     // A partir de aqui gestionamos la parabola y = ax^2+bx+c.
     double constanteComun = (extremoInferior - extremoSuperior) / (puntoMedio - extremoInferior);
     double coeficienteCuadratico = (constanteComun * funcion(puntoMedio) - funcion(extremoInferior) * (1 + constanteComun) + funcion(extremoSuperior)) / (constanteComun * pow(puntoMedio-extremoInferior,2) * (1 + constanteComun));
