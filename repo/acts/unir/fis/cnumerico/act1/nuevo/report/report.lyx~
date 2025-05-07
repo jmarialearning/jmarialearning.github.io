@@ -1,0 +1,1011 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children no
+\language spanish
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family sfdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_title "Actividad 1 Cálculo Numérico"
+\pdf_author "Jesús María Mora Mur"
+\pdf_subject "Cálculo Numérico"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\spellchecker_ignore spanish Ridders
+\spellchecker_ignore spanish RF
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content true
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Actividad:
+ métodos numéricos en C++
+\end_layout
+
+\begin_layout Author
+Jesús María Mora Mur
+\end_layout
+
+\begin_layout Date
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Descripción de la actividad
+\end_layout
+
+\begin_layout Standard
+En la presente actividad se han trabajado los métodos de Muller y Ridders para la resolución de ecuaciones.
+ Dichos métodos son numéricos y utilizan la interpolación cuadrática y exponencial,
+ respectivamente,
+ para posibilitar la resolución de la ecuación siguiente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(x)=\mathrm{e}^{0.75\cdot x}-3\cdot\sin\left(1.25\cdot x\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se evaluará la rapidez de los métodos en base a las iteraciones que realizan hasta llegar a la solución con una precisión de 
+\begin_inset Formula $10^{-6}$
+\end_inset
+
+unidades.
+ Se exponen a continuación los parámetros necesarios para que los métodos realicen correctamente la tarea encomendada.
+\end_layout
+
+\begin_layout Subsection
+Método de Muller
+\end_layout
+
+\begin_layout Standard
+El método de Muller pretende interpolar la función a una parábola en un entorno localizado de una función 
+\begin_inset Formula $f(x)$
+\end_inset
+
+.
+ Dados dos puntos extremos y su punto medio,
+ es posible obtener una parábola que se acerque a la función.
+ Encontrando las soluciones a la anulación de la parábola conseguimos una aproximación.
+ En función de en qué subintervalo se encuentre la solución,
+ se escoge para conseguir acotar más la solución.
+ El método converge,
+ pero de manera lenta.
+\end_layout
+
+\begin_layout Subsection
+Método de Ridders
+\end_layout
+
+\begin_layout Standard
+El método de Ridders pretende aproximar la función a una exponencial a la que se le aplica el método 
+\emph on
+regula falsi
+\emph default
+.
+ Con cuatro puntos obtenemos una aproximación correcta de la solución a nuestra función.
+\end_layout
+
+\begin_layout Standard
+Así pues,
+ se han creado dos funciones en C++ llamadas 
+\family typewriter
+muller
+\family default
+ y 
+\family typewriter
+ridders
+\family default
+ para implementar dichos métodos.
+ Han de recibir como argumentos el 
+\emph on
+extremo inferior
+\emph default
+,
+ el 
+\emph on
+extremo superior
+\emph default
+ y el 
+\emph on
+número de iteraciones 
+\emph default
+que se realizarán.
+\end_layout
+
+\begin_layout Section
+Implementación
+\end_layout
+
+\begin_layout Standard
+Para implementar los métodos se han realizado sendos ficheros de cabecera con formato 
+\family typewriter
+.hpp
+\family default
+ en los que se da cuenta de la implementación del método.
+ Para acceder a ellos se puede utilizar los enlaces siguientes:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "muller"
+target "https://jmarialearning.github.io/repo/acts/unir/fis/cnumerico/act1/nuevo/muller.hpp"
+literal "false"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset href
+LatexCommand href
+name "ridders"
+target "https://jmarialearning.github.io/repo/acts/unir/fis/cnumerico/act1/nuevo/ridders.hpp"
+literal "false"
+
+\end_inset
+
+.
+ Asimismo,
+ se ha creado un programa principal en el que se compara estos dos métodos con otros conocidos utilizando como medición el número de iteraciones que se deben realizar para obtener el resultado con una precisión de 
+\begin_inset Formula $10^{-6}$
+\end_inset
+
+ unidades.
+ Se dan cuenta de los resultados en los párrafos venideros.
+\end_layout
+
+\begin_layout Section
+Resultados
+\end_layout
+
+\begin_layout Standard
+Los resultados de la implementación son los siguientes:
+\end_layout
+
+\begin_layout Subsection
+Método de Muller
+\end_layout
+
+\begin_layout Standard
+ss
+\end_layout
+
+\begin_layout Subsection
+Método de Ridders
+\end_layout
+
+\begin_layout Standard
+El método de Ridders consigue una precisión de 
+\begin_inset Formula $10^{-6}$
+\end_inset
+
+ unidades con necesidad de pocas iteraciones.
+ En concreto,
+ los resultados son estos:
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Ridders 1:
+ 0.334200
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Ridders 2:
+ 0.350235
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Ridders 3:
+ 0.356890
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Ridders 4:
+ 0.359785
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Ridders 5:
+ 0.361070
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Ridders 6:
+ 0.361647
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Ridders 7:
+ 0.361906
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Ridders 8:
+ 0.362023
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Ridders 9:
+ 0.362076
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Ridders 10:
+ 0.362100
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Ridders 11:
+ 0.362110
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Ridders 12:
+ 0.362115
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Ridders 13:
+ 0.362118
+\end_layout
+
+\begin_layout Standard
+A la decimotercera iteración,
+ el método consigue la precisión deseada.
+\end_layout
+
+\begin_layout Subsection
+Comparación con métodos conocidos
+\end_layout
+
+\begin_layout Subsubsection
+
+\emph on
+Regula Falsi
+\end_layout
+
+\begin_layout Standard
+El método 
+\emph on
+regula falsi
+\emph default
+ converge con cierta rapidez como demuestran los siguientes resultados.
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+RF 1:
+ 0.578050
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+RF 2:
+ 0.401083
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+RF 3:
+ 0.367668
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+RF 4:
+ 0.362875
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+RF 5:
+ 0.362222
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+RF 6:
+ 0.362133
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+RF 7:
+ 0.362121
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+RF 8:
+ 0.362120
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+RF 9:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+RF 10:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+RF 11:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+RF 12:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+RF 13:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+RF 14:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+RF 15:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+RF 16:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+RF 17:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+Como se ve,
+ no se llega al número deseado,
+ pero se obtienen unos resultados buenos,
+ con precisión hasta el quinto decimal.
+\end_layout
+
+\begin_layout Subsubsection
+Bisección
+\end_layout
+
+\begin_layout Standard
+El método de la bisección es bastante lento en comparación con los anteriores,
+ obteniendo los siguientes resultados:
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 1:
+ 0.500000
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 2:
+ 0.250000
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 3:
+ 0.375000
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 4:
+ 0.312500
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 5:
+ 0.343750
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 6:
+ 0.359375
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 7:
+ 0.367188
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 8:
+ 0.363281
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 9:
+ 0.361328
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 10:
+ 0.362305
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 11:
+ 0.361816
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 12:
+ 0.362061
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 13:
+ 0.362183
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 14:
+ 0.362122
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 15:
+ 0.362091
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 16:
+ 0.362106
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 17:
+ 0.362114
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 18:
+ 0.362118
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 19:
+ 0.362120
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 20:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 21:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 22:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 23:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 24:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 25:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 26:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 27:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 28:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 29:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 30:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 31:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 32:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 33:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 34:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 35:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 36:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 37:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 38:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 39:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 40:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 41:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 42:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 43:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 44:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 45:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 46:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\family typewriter
+Bisección 47:
+ 0.362119
+\end_layout
+
+\begin_layout Standard
+Como se ve,
+ tampoco llega el método de la bisección a conseguir la aproximación hasta el sexto decimal.
+ Sin embargo,
+ consigue 5 cifras significativas correctas,
+ al igual que el 
+\emph on
+regula falsi
+\emph default
+.
+\end_layout
+
+\begin_layout Section
+Conclusiones.
+\end_layout
+
+\begin_layout Standard
+A la vista de los resultados obtenidos,
+ vemos como los métodos de Ridders y 
+\emph on
+Regula Falsi
+\emph default
+ son mucho más rápidos que los otros (bisección y Muller).
+ Esto ocurre por las características de dichos métodos y su convergencia en función del tiempo.
+ Considerando que a nivel computacional,
+ ninguna implementación destaca por su dificultad,
+ el método de Ridders demuestra ser sencillo a la vez que muy potente para obtener cortes con el eje horizontal en funciones de una variable.
+\end_layout
+
+\end_body
+\end_document

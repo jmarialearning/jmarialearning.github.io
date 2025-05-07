@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This DocBook file was created by LyX 2.4.0~RC3
+  See https://www.lyx.org/ for more information -->
+<article xml:lang="es-ES" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2">
+<info>
+<title>Actividad: métodos numéricos en C++</title>
+<author>
+<personname>Jesús María Mora Mur</personname>
+</author>
+<date><!-- \today --></date>
+</info>
+<section>
+<title>Descripción de la actividad</title>
+<para>En la presente actividad se han trabajado los métodos de Muller y Ridders para la resolución de ecuaciones. Dichos métodos son numéricos y utilizan la interpolación cuadrática y exponencial, respectivamente, para posibilitar la resolución de la ecuación siguiente:</para>
+<informalequation xml:id="eq.1">
+<alt role='tex'>f(x)=\mathrm{e}^{0.75\cdot x}-3\cdot\sin\left(1.25\cdot x\right)\label{eq:1}</alt>
+<m:math display="block">
+ 
+<m:mtable displaystyle='true'>
+ <m:mtr>
+  <m:mtd>
+   <m:mrow>
+    <m:mi>f</m:mi>
+    <m:mrow>
+     <m:mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</m:mo>
+     <m:mi>x</m:mi>
+     <m:mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</m:mo>
+    </m:mrow>
+    <m:mo>=</m:mo>
+    <m:msup>
+     <m:mstyle mathvariant='normal'>
+      <m:mi>e</m:mi>
+     </m:mstyle>
+     <m:mrow>
+      <m:mn>0.75</m:mn>
+      <m:mo>&#x22C5;</m:mo>
+      <m:mi>x</m:mi>
+     </m:mrow>
+    </m:msup>
+    <m:mo>-</m:mo>
+    <m:mn>3</m:mn>
+    <m:mo>&#x22C5;</m:mo>
+    <m:mo>sin</m:mo>
+    <m:mrow>
+     <m:mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</m:mo>
+     <m:mrow>
+      <m:mn>1.25</m:mn>
+      <m:mo>&#x22C5;</m:mo>
+      <m:mi>x</m:mi>
+     </m:mrow>
+     <m:mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</m:mo>
+    </m:mrow>
+   </m:mrow>
+  </m:mtd>
+  <m:mtd>
+   <m:mtext>(1)</m:mtext>
+  </m:mtd>
+ </m:mtr>
+</m:mtable>
+</m:math>
+</informalequation>
+
+<para>Se evaluará la rapidez de los métodos en base a las iteraciones que realizan hasta llegar a la solución con una precisión de <inlineequation>
+<alt role='tex'>10^{-6}</alt>
+<m:math display="inline">
+ 
+<m:mrow>
+ <m:mn>1</m:mn>
+ <m:msup>
+  <m:mn>0</m:mn>
+  <m:mrow>
+   <m:mo>-</m:mo>
+   <m:mn>6</m:mn>
+  </m:mrow>
+ </m:msup>
+</m:mrow>
+</m:math>
+</inlineequation>unidades. Se exponen a continuación los parámetros necesarios para que los métodos realicen correctamente la tarea encomendada.</para>
+<section>
+<title>Método de Muller</title>
+<para>El método de Muller pretende interpolar la función a una parábola en un entorno localizado de una función <inlineequation>
+<alt role='tex'>f(x)</alt>
+<m:math display="inline">
+ 
+<m:mrow>
+ <m:mi>f</m:mi>
+ <m:mrow>
+  <m:mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</m:mo>
+  <m:mi>x</m:mi>
+  <m:mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</m:mo>
+ </m:mrow>
+</m:mrow>
+</m:math>
+</inlineequation>. Dados dos puntos extremos y su punto medio, es posible obtener una parábola que se acerque a la función. Encontrando las soluciones a la anulación de la parábola conseguimos una aproximación. En función de en qué subintervalo se encuentre la solución, se escoge para conseguir acotar más la solución. El método converge, pero de manera lenta.</para>
+</section>
+<section>
+<title>Método de Ridders</title>
+<para>El método de Ridders pretende aproximar la función a una exponencial a la que se le aplica el método <emphasis>regula falsi</emphasis>. Con cuatro puntos obtenemos una aproximación correcta de la solución a nuestra función.</para>
+<para>Así pues, se han creado dos funciones en C++ llamadas <code>muller</code> y <code>ridders</code> para implementar dichos métodos. Han de recibir como argumentos el <emphasis>extremo inferior</emphasis>, el <emphasis>extremo superior</emphasis> y el <emphasis>número de iteraciones</emphasis> que se realizarán.</para>
+</section>
+</section>
+<section>
+<title>Implementación</title>
+<para>Para implementar los métodos se han realizado sendos ficheros de cabecera con formato <code>.hpp</code> en los que se da cuenta de la implementación del método. Para acceder a ellos se puede utilizar los enlaces siguientes: <link xlink:href="https://jmarialearning.github.io/repo/acts/unir/fis/cnumerico/act1/nuevo/muller.hpp">muller</link> y <link xlink:href="https://jmarialearning.github.io/repo/acts/unir/fis/cnumerico/act1/nuevo/ridders.hpp">ridders</link>. Asimismo, se ha creado un programa principal en el que se compara estos dos métodos con otros conocidos utilizando como medición el número de iteraciones que se deben realizar para obtener el resultado con una precisión de <inlineequation>
+<alt role='tex'>10^{-6}</alt>
+<m:math display="inline">
+ 
+<m:mrow>
+ <m:mn>1</m:mn>
+ <m:msup>
+  <m:mn>0</m:mn>
+  <m:mrow>
+   <m:mo>-</m:mo>
+   <m:mn>6</m:mn>
+  </m:mrow>
+ </m:msup>
+</m:mrow>
+</m:math>
+</inlineequation> unidades. Se dan cuenta de los resultados en los párrafos venideros.</para>
+</section>
+<section>
+<title>Resultados</title>
+<para>Los resultados de la implementación son los siguientes:</para>
+<section>
+<title>Método de Muller</title>
+<para>El método de Muller obtiene los resultados siguientes por iteración:</para>
+<para><code>Muller 1: 0.349278</code></para>
+<para><code>Muller 2: 0.362391</code></para>
+<para><code>Muller 3: 0.362119</code></para>
+<para><code>Muller 4: 0.362119</code></para>
+<para>Se obtiene el resultado correcto con 4 iteraciones.</para>
+</section>
+<section>
+<title>Método de Ridders</title>
+<para>El método de Ridders consigue una precisión de <inlineequation>
+<alt role='tex'>10^{-6}</alt>
+<m:math display="inline">
+ 
+<m:mrow>
+ <m:mn>1</m:mn>
+ <m:msup>
+  <m:mn>0</m:mn>
+  <m:mrow>
+   <m:mo>-</m:mo>
+   <m:mn>6</m:mn>
+  </m:mrow>
+ </m:msup>
+</m:mrow>
+</m:math>
+</inlineequation> unidades con necesidad de pocas iteraciones. En concreto, los resultados son estos:</para>
+<para><code>Ridders 1: 0.334200</code></para>
+<para><code>Ridders 2: 0.350235</code></para>
+<para><code>Ridders 3: 0.356890</code></para>
+<para><code>Ridders 4: 0.359785</code></para>
+<para><code>Ridders 5: 0.361070</code></para>
+<para><code>Ridders 6: 0.361647</code></para>
+<para><code>Ridders 7: 0.361906</code></para>
+<para><code>Ridders 8: 0.362023</code></para>
+<para><code>Ridders 9: 0.362076</code></para>
+<para><code>Ridders 10: 0.362100</code></para>
+<para><code>Ridders 11: 0.362110</code></para>
+<para><code>Ridders 12: 0.362115</code></para>
+<para><code>Ridders 13: 0.362118</code></para>
+<para>Como se ve, no se llega al número deseado, pero se obtienen unos resultados buenos, con precisión hasta el quinto decimal.</para>
+</section>
+<section>
+<title>Comparación con métodos conocidos</title>
+<section>
+<title><emphasis>Regula Falsi</emphasis></title>
+<para>El método <emphasis>regula falsi</emphasis> converge con cierta rapidez como demuestran los siguientes resultados.</para>
+<para><code>RF 1: 0.578050</code></para>
+<para><code>RF 2: 0.401083</code></para>
+<para><code>RF 3: 0.367668</code></para>
+<para><code>RF 4: 0.362875</code></para>
+<para><code>RF 5: 0.362222</code></para>
+<para><code>RF 6: 0.362133</code></para>
+<para><code>RF 7: 0.362121</code></para>
+<para><code>RF 8: 0.362120</code></para>
+<para><code>RF 9: 0.362119</code></para>
+<para><code>RF 10: 0.362119</code></para>
+<para><code>RF 11: 0.362119</code></para>
+<para><code>RF 12: 0.362119</code></para>
+<para><code>RF 13: 0.362119</code></para>
+<para><code>RF 14: 0.362119</code></para>
+<para><code>RF 15: 0.362119</code></para>
+<para><code>RF 16: 0.362119</code></para>
+<para><code>RF 17: 0.362119</code></para>
+<para>Pasadas 17 iteraciones se obtiene el número esperado.</para>
+</section>
+<section>
+<title>Bisección</title>
+<para>El método de la bisección es bastante lento en comparación con los anteriores, obteniendo los siguientes resultados:</para>
+<para><code>Bisección 1: 0.500000</code></para>
+<para><code>Bisección 2: 0.250000</code></para>
+<para><code>Bisección 3: 0.375000</code></para>
+<para><code>Bisección 4: 0.312500</code></para>
+<para><code>Bisección 5: 0.343750</code></para>
+<para><code>Bisección 6: 0.359375</code></para>
+<para><code>Bisección 7: 0.367188</code></para>
+<para><code>Bisección 8: 0.363281</code></para>
+<para><code>Bisección 9: 0.361328</code></para>
+<para><code>Bisección 10: 0.362305</code></para>
+<para><code>Bisección 11: 0.361816</code></para>
+<para><code>Bisección 12: 0.362061</code></para>
+<para><code>Bisección 13: 0.362183</code></para>
+<para><code>Bisección 14: 0.362122</code></para>
+<para><code>Bisección 15: 0.362091</code></para>
+<para><code>Bisección 16: 0.362106</code></para>
+<para><code>Bisección 17: 0.362114</code></para>
+<para><code>Bisección 18: 0.362118</code></para>
+<para><code>Bisección 19: 0.362120</code></para>
+<para><code>Bisección 20: 0.362119</code></para>
+<para>Pasadas 20 iteraciones se consigue el número buscado.</para>
+</section>
+<section>
+<title>Método de Newton-Raphson</title>
+<para>El método de Newton-Raphson es muy rápido:</para>
+<para><code>Newton 1: 0.333333</code></para>
+<para><code>Newton 2: 0.361670</code></para>
+<para><code>Newton 3: 0.362119</code></para>
+<para>Se consigue el número con 3 iteraciones.</para>
+</section>
+</section>
+</section>
+<section>
+<title>Conclusiones.</title>
+<para>A la vista de los resultados obtenidos, establecemos la siguiente clasificación en los métodos.</para>
+<orderedlist>
+<listitem>
+<para>Método de Newton-Raphson, con 3 iteraciones.</para>
+</listitem>
+<listitem>
+<para>Método de Muller, con 4.</para>
+</listitem>
+<listitem>
+<para>Método de Ridders, con 13 iteraciones, aunque con imprecisión.</para>
+</listitem>
+<listitem>
+<para>Método <emphasis>Regula Falsi</emphasis>, con 17 iteraciones.</para>
+</listitem>
+<listitem>
+<para>Método de la Bisección, con 20 iteraciones.</para>
+</listitem>
+</orderedlist>
+<para>Así, destacan los métodos estudiados por conseguir rápidamente los ceros de la función <xref linkend="eq.1" />. En otro orden de cuestiones, los códigos han necesitado de 37 líneas para Newton-Raphson, 41 para Muller y 43 para Ridders. Se comparan solo estos por estar hechos con el mismo estilo entre sí, sin comentarios ni líneas en blanco que modifican el recuento, como es evidente. Se confirman así dichos métodos como buenos en lo que a eficiencia respecta, consiguiendo buenos resultados en poco tiempo y con relativamente poca carga computacional.</para>
+</section>
+</article>
