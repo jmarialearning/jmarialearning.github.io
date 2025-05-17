@@ -14,16 +14,24 @@ int newtonND(vector <double> extinf, vector <double> extsup, vector <double> apr
         printf("Los extremos no permiten concluir la existencia de un cambio de signo. Escoge otros.\n");
         return 1;
     }*/
-    if (extinf[0] > extsup[0]){
-        swap(extinf, extsup);
-    }
     // Calcular matriz jacobiana.
-    double x = aproxInicial[0];
-    double y = aproxInicial[1];
-    vector <double> funcion = {f1(x,y),f2(x,y)};
-    double jacobiana[2][2] = {2 * x + pow(y,3), 3 * pow(y,2) * x,6 * x * y, 3 * pow(x,2) - 3 * pow(y,2)};
-    double jacobianaInvertida[2][2] = {0,0,0,0};
-    vector <double> aproxSucesiva = aproxInicial - jacobianaInvertida /* * */ funcion;
-    aproxInicial = aproxSucesiva;
+    for(int unsigned i = 0;i<=iteraciones; i++){
+        double x = aproxInicial[0];
+        double y = aproxInicial[1];
+        vector <double> funcion = {f1(x,y),f2(x,y)};
+        Matrix jacobiana = {
+            {2 * x + pow(y,3), 3 * pow(y,2) * x},
+            {6 * x * y, 3 * pow(x,2) - 3 * pow(y,2)}
+        };
+        Matrix jacobianaInvertida = inversaMatriz(jacobiana);
+        Matrix funcionEx = {
+            {pow(x,2) + x * pow(y,3) - 9},
+            {3 *  pow(x,2) * y - pow(y,3) - 4}
+        };
+        Matrix productoRes = productoMatrices(jacobianaInvertida, funcionEx);
+        vector <double> productoResEx = matrixColumnToVector(productoRes);
+        vector <double> aproxSucesiva = restarVectores(aproxInicial,productoResEx);
+        aproxInicial = aproxSucesiva;
+    }
     return 0;
 }
