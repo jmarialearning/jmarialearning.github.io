@@ -32,6 +32,8 @@ int newtonND(vector <double> extinf, vector <double> extsup, vector <double> apr
         vector <double> productoResEx = matrixColumnToVector(productoRes);
         vector <double> aproxSucesiva = restarVectores(aproxInicial,productoResEx);
         aproxInicial = aproxSucesiva;
+        printf("\n%lf", aproxSucesiva[0]);
+        printf("\n%lf", aproxSucesiva[1]);
     }
     return 0;
 }
