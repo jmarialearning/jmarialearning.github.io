@@ -1,12 +1,12 @@
 #include <iostream>
 #include "multinewton.hpp"
 int main(){
-    newtonND({-10,10},{10,-10},{-3,1},23,1);
+    newtonND({-3,1},23,1e-12);
     printf("\n\n");
-    newtonND({-10,10},{10,-10},{1,1},23,1);
+    newtonND({1,1},23,1e-12);
     printf("\n\n");
-    newtonND({-10,10},{10,-10},{-1,-1},23,1);
+    newtonND({-1,-1},23,1e-12);
     printf("\n\n");
-    newtonND({-10,10},{10,-10},{2,1},23,1);
+    newtonND({2,1},23,1e-12);
     printf("\n\n");
 }

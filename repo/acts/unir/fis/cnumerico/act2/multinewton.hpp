@@ -3,8 +3,7 @@
 #include <vector> // Para clase std::vector
 #include "funcion.hpp"
 using namespace std;
-int newtonND(vector <double> extinf, vector <double> extsup, vector <double> aproxInicial, int unsigned iteraciones, double eps){
-    const double epsilon = eps;
+int newtonND(vector <double> aproxInicial, int unsigned iteraciones, double eps){
     // Cambiamos los extremos si procede.
     /*if (extsup < extinf){
         swap(extinf,extsup);
@@ -15,7 +14,7 @@ int newtonND(vector <double> extinf, vector <double> extsup, vector <double> apr
         return 1;
     }*/
     // Calcular matriz jacobiana.
-    for(int unsigned i = 0;i<=iteraciones; i++){
+    for(int unsigned i = 1;i<=iteraciones; i++){
         double x = aproxInicial[0];
         double y = aproxInicial[1];
         vector <double> funcion = {f1(x,y),f2(x,y)};
@@ -31,9 +30,27 @@ int newtonND(vector <double> extinf, vector <double> extsup, vector <double> apr
         Matrix productoRes = productoMatrices(jacobianaInvertida, funcionEx);
         vector <double> productoResEx = matrizAVector(productoRes);
         vector <double> aproxSucesiva = restarVectores(aproxInicial,productoResEx);
-        aproxInicial = aproxSucesiva;
-        printf("\n%lf", aproxSucesiva[0]);
-        printf("\n%lf", aproxSucesiva[1]);
+        double a = fabs(f1(aproxSucesiva[0], aproxSucesiva[1]));
+        double b = fabs(f2(aproxSucesiva[0], aproxSucesiva[1]));
+        if(a <= eps){
+            if (b <= eps){
+                return 0;
+            }
+            else{
+                aproxInicial = aproxSucesiva;
+                printf("\nNewton %u: (%lf, %lf)",i, aproxSucesiva[0], aproxSucesiva[1]);
+            }
+        }
+        else{
+            aproxInicial = aproxSucesiva;
+            printf("\nNewton %u: (%lf, %lf)",i, aproxSucesiva[0], aproxSucesiva[1]);
+        }
+        /*if (f1(aproxSucesiva[0],aproxSucesiva[1]) <= eps && f2(aproxSucesiva[0],aproxSucesiva[1]) <= eps){
+            return 0;
+        }
+        else{
+            
+        }*/
     }
     return 0;
 }
