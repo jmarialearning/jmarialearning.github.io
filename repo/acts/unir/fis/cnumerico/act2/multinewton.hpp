@@ -29,7 +29,7 @@ int newtonND(vector <double> extinf, vector <double> extsup, vector <double> apr
             {3 *  pow(x,2) * y - pow(y,3) - 4}
         };
         Matrix productoRes = productoMatrices(jacobianaInvertida, funcionEx);
-        vector <double> productoResEx = matrixColumnToVector(productoRes);
+        vector <double> productoResEx = matrizAVector(productoRes);
         vector <double> aproxSucesiva = restarVectores(aproxInicial,productoResEx);
         aproxInicial = aproxSucesiva;
         printf("\n%lf", aproxSucesiva[0]);

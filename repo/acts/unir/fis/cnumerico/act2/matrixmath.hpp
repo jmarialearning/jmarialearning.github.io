@@ -136,7 +136,7 @@ Matrix inversaMatriz(const Matrix& A) {
 
     return inversa;
 }
-std::vector<double> matrixColumnToVector(const Matrix& colMatrix) {
+std::vector<double> matrizAVector(const Matrix& colMatrix) {
     if (colMatrix.empty()) {
         // Podrías devolver un vector vacío o lanzar un error dependiendo de la necesidad
         // Lanzar un error es más seguro si esperas un vector no vacío
