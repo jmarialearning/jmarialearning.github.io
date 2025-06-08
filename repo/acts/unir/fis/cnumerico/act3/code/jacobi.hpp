@@ -1,6 +1,9 @@
+#ifndef JACOBI_H
+#define JACOBI_H
 #include <iostream>
 #include <vector>
 #include <cmath>
+#include <iterator>
 #include "predominanteDiagonal.hpp"
 
 using namespace std;
@@ -13,7 +16,7 @@ vector<double> jacobi(const Matrix& A, const vector<double>& b, int maxits, doub
     int n = A.size();
     if (predominanteDiagonal(A) != true){
         printf("Matriz no predominante diagonal.");
-        return;
+        return {0,0};
     }
     vector<double> x(n, 0.0); // Aproximación inicial
     vector<double> nuevoX(n, 0.0); // Nuevo valor
@@ -40,7 +43,10 @@ vector<double> jacobi(const Matrix& A, const vector<double>& b, int maxits, doub
         if (errorMax < tol) {
             break; // Convergencia conseguida
         }
+        printf("Jacobi %d: ", k);
+        copy(x.begin(),x.end(), ostream_iterator<double>(cout, " "));
+        printf("\n");
     }
-
     return x;
 }
+#endif /*JACOBI_H*/

@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <cmath>
+#include "predominanteDiagonal.hpp"
 
 using namespace std;
 
@@ -11,6 +12,10 @@ using Matrix = vector<vector<double>>;
 // Función para el método de relajación
 void metodoRelajacion(const Matrix& A, const vector<double>& b, vector<double>& x, double omega, int maxIteraciones, double tolerancia) {
     int n = A.size();
+    if (predominanteDiagonal(A) != true){
+        printf("Matriz no predominante diagonal.");
+        return;
+    }
     vector<double> x_nueva(n);
 
     for (int k = 0; k < maxIteraciones; ++k) {
@@ -30,8 +35,11 @@ void metodoRelajacion(const Matrix& A, const vector<double>& b, vector<double>& 
         x = x_nueva;
 
         if (maxError < tolerancia) {
-            break;
+            break; //Converge
         }
+        printf("Relajación %d: ", k);
+        copy(x.begin(),x.end(), ostream_iterator<double>(cout, " "));
+        printf("\n");
     }
 }
 

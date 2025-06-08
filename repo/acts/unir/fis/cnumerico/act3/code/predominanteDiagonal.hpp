@@ -1,3 +1,5 @@
+#ifndef PREDDIAG_H
+#define PREDDIAG_H
 #include <iostream>
 #include <vector>
 #include <cmath>
@@ -28,3 +30,4 @@ bool predominanteDiagonal(const Matrix &matriz){
     // Definir treshold?
     return sumaNoDiagonal < sumaDiagonal; //por treshold?
 }
+#endif /*PREDDIAG_H*/

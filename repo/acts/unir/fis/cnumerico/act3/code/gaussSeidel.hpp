@@ -1,6 +1,8 @@
+#ifndef GAUSS_H
+#define GAUSS_H
 #include <vector>
 #include <cmath>
-
+#include "predominanteDiagonal.hpp"
 using namespace std;
 
 // Definir un alias para la matriz
@@ -9,6 +11,10 @@ using Matrix = vector<vector<double>>;
 // Función para realizar el método de Gauss-Seidel
 vector<double> gaussSeidel(const Matrix& A, const vector<double>& b, int maxIteraciones, double tolerancia) {
     int n = A.size(); // Tamaño de la matriz
+    if (predominanteDiagonal(A) != true){
+        printf("Matriz no predominante diagonal.");
+        return {0,0};
+    }
     vector<double> x(n, 0.0); // Suposición inicial
 
     for (int k = 0; k < maxIteraciones; ++k) {
@@ -35,7 +41,11 @@ vector<double> gaussSeidel(const Matrix& A, const vector<double>& b, int maxIter
         if (errorMaximo < tolerancia) {
             break; // Converge
         }
+        printf("Gauss-Seidel %d: ", k);
+        copy(x.begin(),x.end(), ostream_iterator<double>(cout, " "));
+        printf("\n");
     }
 
     return x; // Retornar la solución
 }
+#endif /*GAUSS_H*/
