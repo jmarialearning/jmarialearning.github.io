@@ -63,39 +63,22 @@ El interés de la situación aflora ante las siguientes apreciaciones:
 - Cuestiones económicas en lo referente a los combustibles.
 La magnitud que vamos a cuantificar para considerar la pregunta es el _volumen_ de azufre emitido al día. Por otro lado, el $"SO"_2$ se comporta como un gas ideal y reacciona completamente.
 == Estudio cualitativo.
-Tenemos un pozo cilíndrico cuyas medidas son:
-- Profundidad: indeterminada.
-- Radio del ojo circular: 35 centímetros.
-Necesitamos cegarlo y se ha considerado la grava por su capacidad de drenaje. 
+Tenemos una central que emite azufre, fruto de impurezas en el fuel que se quema. En lo respectivo a los casos límite, tenemos que si la riqueza fuese del 0% no habria contaminación al no haber emisiones
 == Construcción de la hipótesis.
 Se considera que la emisión de dióxido de azufre viene dada por el volumen de fuel, temperatura y presión de salida, de la riqueza de azufre.
 == Estrategias de resolución.
 === Estrategia 1.
-Realizaremos en esta estrategia una aproximación a través del movimiento. Podemos dejar caer una piedra desde arriba, esperar a que caiga, contando el tiempo y cuando oigamos el golpe en el suelo, parar el cronómetro. Sabemos que la caída libre de la piedra es:
-$ arrow(r_f)=frac(1,2) dot.op arrow(g) dot.op t^2 $
-Además sabemos que el sonido llega a nuestra posición siguiendo un MRU con una velocidad de $arrow(v)=340 space.thin frac("m","s")$. Así pues, hemos de conocer cuánto tarda el sonido en llegar desde que tiramos la piedra.
+Usamos la Ley de Lavoisier en el caso, a saber:
+$ frac(M_"S",M_"SO"_2) = frac(m_"S",m_"SO"_2) $
+donde $M$ representa las masas moleculares y $m$ las masas de cada elemento o compuesto. Se obtienen los moles de $"SO"_2$ y se calcula su volumen mediante la _Ecuación de los Gases Ideales_.
 === Estrategia 2.
-Similar a la estrategia 1 pero solamente utilizando sonido. Podemos emitir un sonido mediante un altavoz y captar la vuelta mediante un micrófono. Si la intensidad sonora jugase un papel en el problema, esto sería imposible de realizar por la capacidad de absorción del pozo. Sin embargo, el sonido, intenso o débil, se mueve a la misma velocidad, por lo que podemos mandar una onda sinusoidal a 440 hercios, comenzar a contar y detectar cómo se recibe la onda mediante un microfono unidireccional hipocardioide. El sonido habría recorrido el doble de la altura del pozo, permitiendo el cálculo de la altura conociendo la velocidad.
+Se utiliza la estequiometría para obtener el número de moles de $"SO"_2$ para proceder análogamente a la estrategia 1 a partir de dicho dato. Tenemos la reacción:
+$ "S" + "O"_2 arrow "SO"_2 $
+Con lo que sabemos que por cada mol de azufre tenemos un mol de $"SO"_2$ expulsado. Particularizando esta cuestión para las toneladas de fuel quemadas, considerando la riqueza de azufre en el fuel tendremos los moles de azufre que se convertirán en dióxido.
 == Resolución.
 === Estrategia 1.
-Inicia nuestra piedra la caída libre con posición inicial nula. Así, sabemos que:
-$ arrow(r_"finp")=frac(1,2) dot.op arrow(g) dot.op attach(t,tr: 2,br: "caída") $
-Por otro lado, sabemos que en $t = attach(t,br: "caída")$ se produce un MRU cuya posición inicial es $arrow(r_0) = arrow(r_"finp")$. Considerando que la base de nuestro sistema de referencia es la parte de arriba del pozo, la posición final será 0. De esta manera:\
-$ 0 = arrow(r_"finp") + arrow(v_"s") dot.op t_"sonido" $ y $ t_"sonido" + t_"caida" = t_"medido" $
-Sustituimos $t_"sonido"$ por $t_"medido" - t_"caida"$ en la segunda ecuación para generar un sistema de dos ecuaciones con dos incógnitas como el que sigue:
-$ cases(
-  arrow(r_"finp") = -arrow(v_s) dot.op (t_"medido"- t_"caida")\
-  arrow(r_"finp")=frac(1,2) dot.op arrow(g) dot.op attach(t,tr: 2,br: "caída")
-) $
-Igualando, tenemos que:
-$  -arrow(v_s) dot.op (t_"medido"- t_"caida") = frac(1,2) dot.op arrow(g) dot.op attach(t,tr: 2,br: "caída") $
-Resolviendo para $t_"caida"$, obtenemos un valor de:
-$ t_"caida" = frac(v_s plus.minus sqrt(v_s^2-2g v_s t),g) $
-Lo cual arroja dos resultados para $t_"caida"$. Uno implicará que dicha magnitud es negativa, lo cual descartaremos por no tener sentido físico.
-Para un tiempo medido $t_"medido" = 15 space.thin "s"$, obtenemos unos datos de tiempo de caída de:
-$ t_"caida" = 8,86 space.thin "s" $
-lo cual nos permite conocer la profundidad del pozo, siendo esta de:
-$ arrow(r_"finp") = 385.4 space.thin "m" $
+Hemos de obtener primeramente la masa de azufre, considerando la riqueza en el fuel:
+$ m_"fuel" = %_frac(m,m) dot.op m_"azufre" $
 === Estrategia 2.
 En este caso tenemos un MRU en el que el sonido recorre dos veces la profundidad del pozo. Manteniendo el mismo convenio de signos, con la posición final del sonido positiva, tenemos que:
 $ arrow(r_"finp") = arrow(v_s) dot.op t $
