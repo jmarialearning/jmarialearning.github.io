@@ -78,20 +78,35 @@ Con lo que sabemos que por cada mol de azufre tenemos un mol de $"SO"_2$ expulsa
 == Resolución.
 === Estrategia 1.
 Hemos de obtener primeramente la masa de azufre, considerando la riqueza en el fuel:
-$ m_"azufre" = %_frac(m,m) dot.op m_"fuel" = 0,7% dot.op 21 space.hair "tm" = 0,147 space.hair "tm"_"azufre" equiv 147 space.hair "kg"_"azufre" $
+$ m_"azufre" = %_frac(m,m) dot.op m_"fuel" $
 Aplicamos, pues, la ley de Lavoisier según lo especificado:
-$ frac(M_"S",M_"SO"_2) = frac(m_"S",m_"SO"_2) arrow m_"SO"_2 = frac(M_"SO"_2,M_"S") dot.op m_"S" = frac(64 space.thin frac("g"_"SO"_2,"mol"),32 space.thin frac("g"_"S","mol")) dot.op 147000 space.thin "g"_"azufre" = 294000 space.thin "g"_"SO"_2 equiv 294 space.thin "kg"_"SO"_2 $
-A partir de aquí, pasamos a moles la masa de dióxido
+$ frac(M_"S",M_"SO"_2) = frac(m_"S",m_"SO"_2) arrow m_"SO"_2 = frac(M_"SO"_2,M_"S") dot.op m_"S" $
+A partir de aquí, pasamos a moles la masa de dióxido para aplicar la _Ecuación de los gases ideales_ para obtener el volumen:
+$ p dot.op V = n dot.op R dot.op T arrow V = frac(n dot.op R dot.op T,p) $
+Obteniendo el volumen de dióxido emitido.
 === Estrategia 2.
-En este caso tenemos un MRU en el que el sonido recorre dos veces la profundidad del pozo. Manteniendo el mismo convenio de signos, con la posición final del sonido positiva, tenemos que:
-$ arrow(r_"finp") = arrow(v_s) dot.op t $
-Sabemos que en el tiempo medido el sonido sale de la fuente, rebota y es captado por el micrófono. Así nuestro tiempo de caída es la mitad del que medimos, pues el sonido no varía la velocidad y se desplaza en línea recta.
-$ arrow(r_"finp") = arrow(v_s) dot.op frac(t,2) $
-Para un tiempo $t = 1.135 space.thin "s"$ tenemos que la profundidad del pozo son $arrow(r_"finp") = 385.9 space.thin "m"$
+Consideremos la reacción de oxidación del azufre:
+$ "S" + "O"_2 arrow "SO"_2 $
+Vemos, por estequiometría de la reacción que por cada mol de azufre que reacciona, tenemos que se genera un mol de dióxido. Así pues, sabemos que reaccionan:
+$ m_"azufre" = %_frac(m,m) dot.op m_"fuel" $
+lo cual, en moles, es:
+$ m_"azufre" space.thin "g"_"S" dot.op frac(1 space.thin "mol" "S", 32 space.thin "g"space.thin "S") = "n"_"azufre" $
+Procederemos con la _Ecuación de los gases ideales_:
+$ p dot.op V = n dot.op R dot.op T arrow V = frac(n dot.op R dot.op T,p) = frac(n dot.op R dot.op T,p) $
 == Análisis de resultados.
-Los resultados tienen sentido físico, pero la hipótesis no había considerado que el sonido también tiene una velocidad, finita, y desde luego, no despreciable. Quizá la segunda forma de resolver es mejor, pues podemos utilizar equipos informáticos para calcular cuándo se recibe la onda sonora y se disminuye el error, si bien no es nulo.\
-En otro orden de cosas, no hemos de olvidar que dichas profundidades sirven para calcular el volumen de grava para el pozo. Extruyendo el círculo de radio conocido para la altura obtenida el volumen de grava que se obtiene es:
-- Estrategia 1: $V = pi dot.op r^2 dot.op h = pi dot.op (0.35 space.thin "m")^2 dot.op 385.4 space.thin "m" = 148.3 space.thin "m"^3 equiv 148.3 dot.op 10^3 space.thin "L"$
-- Estrategia 2: $V = pi dot.op r^2 dot.op h = pi dot.op (0.35 space.thin "m")^2 dot.op 385.9 space.thin "m" = 148.5 space.thin "m"^3 equiv 148.5 dot.op 10^3 space.thin "L"$
+Las dos estrategias concluyen las mismas cuestiones, con sentido y relevancia física. Además, dichas estrategias demuestran la correcta enunciación de las magnitudes intervinientes en el problema y su dependencia para con la solución. Las expresiones literales son resueltas en el apartado anterior, pasando un análisis dimensional con éxito. Además, nos damos cuenta como, para el caso límite, no habría existido masa de azufre, no existiendo por consguinete moles de azufre, moles de dióxido y, por ende, volumen de azufre.
+=== Estrategia 1.
+$ m_"azufre" = 0,7% dot.op 21 space.hair "tm" = 0,147 space.hair "tm"_"azufre" equiv 147 space.hair "kg"_"azufre" $
+Aplicamos la Ley de Lavoisier:
+$ m_"SO"_2 = frac(64 space.thin frac("g"_"SO"_2,"mol"),32 space.thin frac("g"_"S","mol")) dot.op 147000 space.thin "g"_"azufre" = 294000 space.thin "g"_"SO"_2 equiv 294 space.thin "kg"_"SO"_2 $
+Pasando los gramos a moles, aplicamos la _Ecuación de los gases ideales_:
+$ 294000 space.thin "g"_"SO"_2 dot.op frac(1 space.thin "mol" "SO"_2, 64 space.thin "g"space.thin "SO"_2) = 4593,75 space.thin "mol" $
+$ V = (4593,75 space.thin "mol" dot.op 0,082057 space.thin frac("atm" dot.op "L", "mol" dot.op "K") dot.op 373,15 space.thin "K")/(730 space.thin "mmHg" dot.op frac(1 space.thin "atm", 760 "mmHg")) approx 146439 space.thin "L" equiv 146,4 space.thin "m"^3 $
+=== Estrategia 2.
+$ m_"azufre" = 0,7% dot.op 21 space.hair "tm" = 0,147 space.hair "tm"_"azufre" equiv 147 space.hair "kg"_"azufre" $
+Pasamos los gramos a moles y por estequiometría extrapolamos a dióxido de azufre:
+$ 147000 space.thin "g"_"S" dot.op frac(1 space.thin "mol" "S", 32 space.thin "g"space.thin "S") = 4593,75 space.thin "mol" $
+Aplicamos a partir de aquí la _Ecuación de los gases ideales_:
+$ V = (4593,75 space.thin "mol" dot.op 0,082057 space.thin frac("atm" dot.op "L", "mol" dot.op "K") dot.op 373,15 space.thin "K")/(730 space.thin "mmHg" dot.op frac(1 space.thin "atm", 760 "mmHg")) approx 146439 space.thin "L" equiv 146,4 space.thin "m"^3 $
 == Perspectivas abiertas.
-El problema restringe sustancialmente el abordaje de situaciones más complejas pues la situación es ya, por si misma, compleja. Cabe poca posibilidad de realizar una situación más compleja. Es cierto que se podrían considerar las imperfecciones del pozo, pero la afección al resolución del problema será mínima. Los conceptos en los que se puede profundizar son los movimientos rectilíneos y el análisis vectorial y dimensional del problema.
+La situación planteada es sustancialmete complicada. Sin embargo, se puede plantear una nueva línea de investigación, considerando que se queda parte del fuel o del azufre sin quemar. Eliminamos así una capa de simplificación en tanto en cuanto obligamos al alumnado a tener en cuenta conceptos de cinética química y reactivo limitante, entre otras cuestiones.
