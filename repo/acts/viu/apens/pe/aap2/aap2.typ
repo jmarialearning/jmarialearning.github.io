@@ -78,7 +78,10 @@ Con lo que sabemos que por cada mol de azufre tenemos un mol de $"SO"_2$ expulsa
 == Resolución.
 === Estrategia 1.
 Hemos de obtener primeramente la masa de azufre, considerando la riqueza en el fuel:
-$ m_"fuel" = %_frac(m,m) dot.op m_"azufre" $
+$ m_"azufre" = %_frac(m,m) dot.op m_"fuel" = 0,7% dot.op 21 space.hair "tm" = 0,147 space.hair "tm"_"azufre" equiv 147 space.hair "kg"_"azufre" $
+Aplicamos, pues, la ley de Lavoisier según lo especificado:
+$ frac(M_"S",M_"SO"_2) = frac(m_"S",m_"SO"_2) arrow m_"SO"_2 = frac(M_"SO"_2,M_"S") dot.op m_"S" = frac(64 space.thin frac("g"_"SO"_2,"mol"),32 space.thin frac("g"_"S","mol")) dot.op 147000 space.thin "g"_"azufre" = 294000 space.thin "g"_"SO"_2 equiv 294 space.thin "kg"_"SO"_2 $
+A partir de aquí, pasamos a moles la masa de dióxido
 === Estrategia 2.
 En este caso tenemos un MRU en el que el sonido recorre dos veces la profundidad del pozo. Manteniendo el mismo convenio de signos, con la posición final del sonido positiva, tenemos que:
 $ arrow(r_"finp") = arrow(v_s) dot.op t $
