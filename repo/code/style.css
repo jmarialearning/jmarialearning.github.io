@@ -1,0 +1,118 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #282c34; /* Dark background */
+    color: #abb2bf; /* Light text */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1600px;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.editor-panel, .output-panel {
+    flex: 1;
+    min-width: 45%; /* Adjust as needed */
+    background-color: #21252b; /* Slightly lighter dark */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    color: #61afef; /* A nice blue for headings */
+    margin-top: 0;
+    border-bottom: 1px solid #3e4451;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+textarea {
+    width: calc(100% - 10px); /* Account for padding */
+    height: 180px; /* Fixed height for each editor */
+    background-color: #1a1e23; /* Even darker for editor */
+    border: 1px solid #3e4451;
+    border-radius: 4px;
+    color: #abb2bf;
+    padding: 10px;
+    font-family: 'Fira Code', 'Cascadia Code', monospace; /* Monospaced font for code */
+    font-size: 1rem;
+    resize: vertical; /* Allow vertical resizing */
+    margin-bottom: 15px;
+    outline: none; /* Remove default focus outline */
+}
+
+textarea:focus {
+    border-color: #61afef; /* Highlight on focus */
+}
+
+button {
+    background-color: #98c379; /* Greenish for run button */
+    color: #21252b;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #7fac68;
+}
+
+.preview-container, .console-container {
+    background-color: #21252b;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.output-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+#preview-frame {
+    width: 100%;
+    height: 300px; /* Height for the preview iframe */
+    border: 1px solid #3e4451;
+    border-radius: 4px;
+    background-color: #ffffff; /* White background for preview */
+}
+
+#console-output {
+    background-color: #1a1e23;
+    border: 1px solid #3e4451;
+    border-radius: 4px;
+    color: #e06c75; /* Reddish for console output */
+    padding: 10px;
+    min-height: 100px;
+    max-height: 200px; /* Limit console height */
+    overflow-y: auto; /* Scroll for overflow */
+    white-space: pre-wrap; /* Preserve whitespace and wrap long lines */
+    font-family: 'Fira Code', 'Cascadia Code', monospace;
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+    }
+    .editor-panel, .output-panel {
+        min-width: 100%;
+    }
+}

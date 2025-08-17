@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDE Web Simple</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="editor-panel">
+            <h2>HTML</h2>
+            <textarea id="html-code" spellcheck="false">&lt;h1&gt;¡Hola, Mundo!&lt;/h1&gt;
+&lt;p&gt;Este es tu IDE web simple.&lt;/p&gt;</textarea>
+
+            <h2>CSS</h2>
+            <textarea id="css-code" spellcheck="false">body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+h1 {
+    color: #333;
+}</textarea>
+
+            <h2>JavaScript</h2>
+            <textarea id="js-code" spellcheck="false">console.log("¡JavaScript cargado!");
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("DOM completamente cargado y parseado.");
+});</textarea>
+            <button id="run-code">Ejecutar Código</button>
+        </div>
+
+        <div class="output-panel">
+            <div class="preview-container">
+                <h2>Vista Previa</h2>
+                <iframe id="preview-frame"></iframe>
+            </div>
+
+            <div class="console-container">
+                <h2>Consola JS</h2>
+                <pre id="console-output"></pre>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
