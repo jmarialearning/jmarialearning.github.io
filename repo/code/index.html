@@ -3,60 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IDE Web Simple</title>
+    <title>IDE Web Vertical</title>
     <style>
         /* Estilos CSS básicos para compatibilidad con Edge antiguo */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            display: table; /* Usamos display:table para un layout simple y compatible */
-            width: 100%;
             height: 100vh; /* Altura completa de la ventana */
             box-sizing: border-box; /* Incluir padding y borde en el tamaño */
+            display: flex; /* Usamos flexbox para el layout principal */
+            flex-direction: column; /* Apilamos elementos verticalmente */
+            overflow: hidden; /* Evita barras de desplazamiento no deseadas en el body */
         }
 
-        .container {
-            display: table-row;
-            height: 100%;
+        /* Contenedor principal de los editores (arriba) */
+        .editors-container {
+            display: flex; /* Usamos flexbox para los editores en horizontal */
+            flex-grow: 1; /* Permite que ocupe el espacio disponible */
+            height: 50%; /* Ocupa la mitad superior de la pantalla */
+            border-bottom: 1px solid #ccc; /* Separador entre editores y salida */
+            box-sizing: border-box;
+            overflow: hidden; /* Oculta el desbordamiento si los textareas son muy grandes */
         }
 
         .editor-panel {
-            display: table-cell;
-            width: 33.33%; /* Dividimos el espacio para los editores */
-            vertical-align: top; /* Alinear el contenido en la parte superior */
+            flex-grow: 1; /* Cada editor ocupa el mismo espacio horizontal */
+            width: 33.33%; /* Ancho base para los 3 editores */
             padding: 10px;
-            border-right: 1px solid #ccc;
+            border-right: 1px solid #ddd;
             box-sizing: border-box;
+            display: flex;
+            flex-direction: column; /* Permite que el textarea crezca */
         }
 
-        .output-panel {
-            display: table-cell;
-            width: 66.66%; /* Mayor espacio para la salida */
-            vertical-align: top;
-            padding: 10px;
-            box-sizing: border-box;
+        .editor-panel:last-child {
+            border-right: none; /* Eliminar borde derecho del último editor */
         }
 
         h2 {
             margin-top: 0;
+            margin-bottom: 5px;
             font-size: 1.2em;
             color: #333;
         }
 
         textarea {
             width: 100%;
-            height: 300px; /* Altura fija para los editores */
-            min-height: 150px;
+            flex-grow: 1; /* Permite que el textarea ocupe el espacio vertical restante */
+            min-height: 100px; /* Altura mínima para asegurar visibilidad */
             border: 1px solid #ddd;
             padding: 8px;
             font-family: 'Courier New', Courier, monospace;
             font-size: 14px;
-            resize: vertical; /* Permitir redimensionar verticalmente */
+            resize: none; /* Deshabilitamos resize manual en los textareas */
             background-color: #f9f9f9;
+            box-sizing: border-box;
+            line-height: 1.5; /* Espaciado entre líneas */
+        }
+
+        /* Contenedor de la salida (abajo) */
+        .output-container {
+            flex-grow: 1; /* Permite que ocupe el espacio disponible */
+            height: 50%; /* Ocupa la mitad inferior de la pantalla */
+            padding: 10px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden; /* Oculta el desbordamiento si el iframe es muy grande */
+        }
+
+        iframe {
+            width: 100%;
+            flex-grow: 1; /* El iframe ocupa el espacio vertical restante */
+            border: 1px solid #ddd;
+            background-color: #fff;
             box-sizing: border-box;
         }
 
+        /* Grupo de botones para ejecutar */
         .button-group {
             text-align: center;
             padding: 10px;
@@ -72,34 +97,32 @@
             color: white;
             border: none;
             border-radius: 4px;
-            -webkit-border-radius: 4px; /* Prefijo para Edge antiguo */
-            -moz-border-radius: 4px; /* Prefijo para Edge antiguo */
+            /* Prefijos para compatibilidad con navegadores antiguos */
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
         }
 
         button:hover {
             background-color: #0056b3;
         }
 
-        iframe {
-            width: 100%;
-            height: calc(100vh - 70px); /* Ajustar la altura de la salida */
-            border: 1px solid #ddd;
-            background-color: #fff;
-        }
-
-        /* Estilos para navegadores más pequeños */
+        /* Media Queries para pantallas más pequeñas (vertical) */
         @media (max-width: 768px) {
-            body {
-                display: block; /* Volvemos a display:block para layout en columnas */
+            .editors-container {
+                flex-direction: column; /* Apila los editores verticalmente */
+                height: auto; /* Altura automática en pantallas pequeñas */
             }
-            .editor-panel, .output-panel {
-                display: block;
-                width: 100%;
+            .editor-panel {
+                width: 100%; /* Cada editor ocupa todo el ancho */
                 border-right: none;
-                border-bottom: 1px solid #ccc;
+                border-bottom: 1px solid #ddd; /* Separador entre editores apilados */
+                height: 200px; /* Altura fija para cada editor en móvil */
             }
-            iframe {
-                height: 400px; /* Ajustar altura en pantallas pequeñas */
+            .editor-panel:last-child {
+                border-bottom: none; /* Sin borde inferior en el último editor */
+            }
+            .output-container {
+                height: 50vh; /* La salida ocupa la mitad inferior de la vista */
             }
         }
     </style>
@@ -109,20 +132,47 @@
         <button onclick="runCode()">Ejecutar Código</button>
     </div>
 
-    <div class="container">
+    <div class="editors-container">
         <div class="editor-panel">
             <h2>HTML</h2>
             <textarea id="htmlEditor">&lt;h1&gt;¡Hola, Mundo!&lt;/h1&gt;
-&lt;p&gt;Este es un párrafo de ejemplo.&lt;/p&gt;</textarea>
+&lt;p&gt;Este es un párrafo de ejemplo.&lt;/p&gt;
+&lt;button onclick="alert('Botón clicado!')"&gt;Haz clic&lt;/button&gt;</textarea>
         </div>
         <div class="editor-panel">
             <h2>CSS</h2>
             <textarea id="cssEditor">body {
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
 }
 h1 {
-    color: #007bff;
+    color: #E67E22; /* Naranja */
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+p {
+    font-size: 1.1em;
+    color: #555;
+}
+button {
+    background-color: #2ECC71; /* Verde */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #27AE60;
 }</textarea>
         </div>
         <div class="editor-panel">
@@ -130,14 +180,16 @@ h1 {
             <textarea id="jsEditor">document.addEventListener('DOMContentLoaded', function() {
     var h1Element = document.querySelector('h1');
     if (h1Element) {
-        h1Element.innerText += ' desde JS!';
+        h1Element.innerText += ' (¡Cargado por JS!)';
     }
+    console.log('Script JavaScript ejecutado en el iframe.');
 });</textarea>
         </div>
-        <div class="output-panel">
-            <h2>Salida</h2>
-            <iframe id="outputFrame"></iframe>
-        </div>
+    </div>
+
+    <div class="output-container">
+        <h2>Salida</h2>
+        <iframe id="outputFrame"></iframe>
     </div>
 
     <script>
@@ -161,15 +213,17 @@ h1 {
                 '</head>' +
                 '<body>' +
                 htmlCode +
-                '<script>' + jsCode + '<\/script>' +
+                '<script>' + jsCode + '<\/script>' + 
                 '</body>' +
-                '</html>' // Se escapea el script para que no cierre la etiqueta
+                '</html>'
             );
             iframeDoc.close();
         }
 
         // Ejecutar el código inicial al cargar la página
+        // Escapeamos script para evitar que cierre la etiqueta actual
         runCode();
     </script>
+    
 </body>
 </html>
