@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/repo/academic.css">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width">
+        <script src="https://polyfill.io/v3/polyfill.js?features=es5,es6,es7"></script>
+        <script>
+        MathJax = {
+          tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+        };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <style>
+            table{
+                width: auto;
+                max-width: 100%;
+                min-width: 50%;
+            }
+        </style>
+    </head>
+    <h1>Laboratorio de Teledetección y procesado de imágenes</h1>
+    <p id="enunciado" style="text-align: center; font-size: larger;">Visualización de imágenes DICOM</p>
+    <footer>Jesús María Mora Mur</footer>
+    <!---->
+    <h2>Introducción</h2>
+    <p>Para realizar el visualizador de imágenes DICOM se ha utilizado el lenguaje Python por su diseño modular y su orientación a objetos. Aun así, el código es fácilmente modificable para que se adapte a lenguajes como MATLAB u Octave.</p>
+    <p>Específicamente, se han utilizado las librerías siguientes:</p>
+    <ul>
+        <li><code>tkinter</code>, para generar Interfaces de Usuario Gráficas (GUI) con el uso del kit de herramientas <i>Tk</i>. Merecen mención las librerías <code>font</code>, <code>filedialog</code>, <code>ttk</code> y <code>messagebox</code>, que permiten acceder a elementos gráficos más avanzados, interactuar con el sistema de archivos y generar tipografías.</li>
+        <li><code>pydicom</code>, como marco para leer y decodificar imágenes en estándar DICOM.</li>
+        <li><code>PIL</code>. La librería <i>pillow</i> permite la manipulación de imágenes mediante las clases <code>Image</code>, <code>ImageTk</code> e <code>ImageFilter</code>.</li>
+        <li><code>os</code>, para poder trabajar con llamadas a sistema y rutas de acceso a disco.</li>
+    </ul>
+    <p>Podemos resumir la funcionalidad de la aplicación de la siguiente forma:</p>
+    <ul>
+        <li>La aplicación muestra la imagen antes y después de procesar.</li>
+        <li>La aplicación permite importar archivos locales DICOM.</li>
+        <li>Se pueden aplicar tres filtros:</li>
+        <ul>
+            <li>Gaussiano</li>
+            <li>Lineal</li>
+            <li>De mediana</li>
+        </ul>
+        <li>Modificando un control selector, podemos dar cuenta de la cantidad de filtro que se aplicará.</li>
+        <li>Cabe la posibilidad de eliminar los filtros aplicados y hacer que la imagen procesada sea idéntica a la imagen original. Asimismo, la imagen procesada puede hacerse original para aplicar filtros sobre ella.</li>
+        <li>La aplicación permite la salida y la ventana puede minimizarse, aunque no permite que el usuario modifique sus dimensiones o geometría. Las modificaciones requeridas se realizan de forma directa. Se ha tenido en cuenta una resolución inicial de 1152 por 864 píxeles, con relación de aspecto 4:3.</li>
+    </ul>
+    <p>Vistas las características de la aplicación, procedemos a explicar el <a href="../dicom.py">código</a>:</p>
+    <h2>Explicación del código de la aplicación</h2>
+    <p>Al trabajar en un lenguaje interpretado como Python, es preciso que las declaraciones de clases, métodos y funciones se hagan antes de su llamada desde el programa principal. Así comienza el archivo con la creación de una clase llamada <code>Dicom</code>. Esta clase se encargará de cargar, procesar y modificar los archivos que se visualizan. Entre los métodos de la clase se encuentran los siguientes:</p>
+    <ul>
+        <li><code>cargarDicom()</code>, encargado de mostrar un diálogo para abrir un archivo, comprobando su correcta apertura. Se genera una matriz de píxeles y una imagen manipulable. Por último, se genera una fotografía para actualizar el <i>label</i> correspondiente a la imagen, almacenado en <code>labelOriginal</code>.</li>
+    </ul>
+</html>

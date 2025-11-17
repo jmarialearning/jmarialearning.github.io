@@ -3,7 +3,6 @@ from tkinter import font, ttk, filedialog, messagebox
 import pydicom
 from PIL import Image, ImageTk, ImageFilter
 import os
-import io
 global rutaArchivo
 rutaArchivo = ""
 global imagenOriginal
@@ -40,7 +39,7 @@ class Dicom:
     def filtroMediana(cant):
         imagenManipulableDicom = ImageTk.getimage(imagenOriginal.image) # Cambio de tipo de objeto. Desde tipo ImageTk.PhotoImage a PIL.Image. Así podemos trabajar y transformar la imagen. Si no es una simple fotografía.
         if cant % 2 == 0:
-            messagebox.showerror("Visualizador y procesador de imágenes - Error", "Seleccione un valor impar")
+            messagebox.showerror("Visualizador y procesador de DICOM - Error", "Seleccione un valor impar")
         else:
             imagenDicomProcesada = imagenManipulableDicom.filter(ImageFilter.MedianFilter(size=int(cant)))
             fotoProcesada = ImageTk.PhotoImage(imagenDicomProcesada)
