@@ -3,32 +3,18 @@
         <link rel="stylesheet" href="/repo/academic.css">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width">
-        <script src="https://polyfill.io/v3/polyfill.js?features=es5,es6,es7"></script>
-        <script>
-        MathJax = {
-          tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-        };
-        </script>
-        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-        <style>
-            table{
-                width: auto;
-                max-width: 100%;
-                min-width: 50%;
-            }
-        </style>
     </head>
     <h1>Laboratorio de Teledetección y procesado de imágenes</h1>
     <p id="enunciado" style="text-align: center; font-size: larger;">Visualización de imágenes DICOM</p>
     <footer>Jesús María Mora Mur</footer>
     <!---->
     <h2>Introducción</h2>
-    <p>Para realizar el visualizador de imágenes DICOM se ha utilizado el lenguaje Python por su diseño modular y su orientación a objetos. Aun así, el código es fácilmente modificable para que se adapte a lenguajes como MATLAB u Octave.</p>
+    <p>Para realizar el visualizador de imágenes DICOM se ha utilizado el lenguaje Python por su diseño modular y su orientación a objetos. Aun así, el código es fácilmente modificable para que se adapte a lenguajes como MATLAB u Octave <a href="#generalpython" class="cita">(General Python FAQ - Python 3.14.0., s.f.)</a></p>
     <p>Específicamente, se han utilizado las librerías siguientes:</p>
     <ul>
-        <li><code>tkinter</code>, para generar Interfaces de Usuario Gráficas (GUI) con el uso del kit de herramientas <i>Tk</i>. Merecen mención las librerías <code>font</code>, <code>filedialog</code>, <code>ttk</code> y <code>messagebox</code>, que permiten acceder a elementos gráficos más avanzados, interactuar con el sistema de archivos y generar tipografías.</li>
-        <li><code>pydicom</code>, como marco para leer y decodificar imágenes en estándar DICOM.</li>
-        <li><code>PIL</code>. La librería <i>pillow</i> permite la manipulación de imágenes mediante las clases <code>Image</code>, <code>ImageTk</code> e <code>ImageFilter</code>.</li>
+        <li><code>tkinter</code>, para generar Interfaces de Usuario Gráficas (GUI) con el uso del kit de herramientas <i>Tk</i>. Merecen mención las librerías <code>font</code>, <code>filedialog</code>, <code>ttk</code> y <code>messagebox</code>, que permiten acceder a elementos gráficos más avanzados, interactuar con el sistema de archivos y generar tipografías <a href="#tkinter" class="cita">(Tkinter - Python Interface to Tcl/Tk, s.f.)</a></li>
+        <li><code>pydicom</code>, como marco para leer y decodificar imágenes en estándar DICOM</li>
+        <li><code>PIL</code>. La librería <i>pillow</i> permite la manipulación de imágenes mediante las clases <code>Image</code>, <code>ImageTk</code> e <code>ImageFilter</code> <a href="#pillow" class="cita">(Pillow (PIL Fork) 12.0.0 documentation, s.f.)</a></li>
         <li><code>os</code>, para poder trabajar con llamadas a sistema y rutas de acceso a disco.</li>
     </ul>
     <p>Podemos resumir la funcionalidad de la aplicación de la siguiente forma:</p>
@@ -45,10 +31,100 @@
         <li>Cabe la posibilidad de eliminar los filtros aplicados y hacer que la imagen procesada sea idéntica a la imagen original. Asimismo, la imagen procesada puede hacerse original para aplicar filtros sobre ella.</li>
         <li>La aplicación permite la salida y la ventana puede minimizarse, aunque no permite que el usuario modifique sus dimensiones o geometría. Las modificaciones requeridas se realizan de forma directa. Se ha tenido en cuenta una resolución inicial de 1152 por 864 píxeles, con relación de aspecto 4:3.</li>
     </ul>
-    <p>Vistas las características de la aplicación, procedemos a explicar el <a href="../dicom.py">código</a>:</p>
+    <p>Vistas las características de la aplicación, procedemos a explicar el <a href="../dicom.py">código del programa</a>:</p>
     <h2>Explicación del código de la aplicación</h2>
     <p>Al trabajar en un lenguaje interpretado como Python, es preciso que las declaraciones de clases, métodos y funciones se hagan antes de su llamada desde el programa principal. Así comienza el archivo con la creación de una clase llamada <code>Dicom</code>. Esta clase se encargará de cargar, procesar y modificar los archivos que se visualizan. Entre los métodos de la clase se encuentran los siguientes:</p>
     <ul>
         <li><code>cargarDicom()</code>, encargado de mostrar un diálogo para abrir un archivo, comprobando su correcta apertura. Se genera una matriz de píxeles y una imagen manipulable. Por último, se genera una fotografía para actualizar el <i>label</i> correspondiente a la imagen, almacenado en <code>labelOriginal</code>.</li>
+        <li><code>copiaOriginal()</code>, que permite que la imagen original (sea procesada o no) pase a ser la procesada. A nivel práctico, elimina todos los filtros puestos después de introducir una imagen como original.</li>
+        <li><code>hacerOriginal()</code>, que permite aplicar filtros sobre una imagen procesada, convirtiéndola en original. Una vez hecha una imagen original, no es posible recuperar la anterior.</li>
+        <li>Métodos con la notación <code>filtro*()</code>:</li>
+        <ul>
+            <li><code>filtroGaussiano()</code>. Toma un argumento, <code>cant</code>, que se introduce con una escala. Este argumento permite definir la intensidad del filtro Gaussiano que realiza la función, para saber cuántas filas tendrá la matriz cuadrada de filtrado de la imagen.</li>
+            <li><code>filtroLineal()</code>. Función idéntica a la descrita con anterioridad, con la excepción de que el filtro no pondera los píxeles entorno al centro.</li>
+            <li><code>filtroMediana()</code>, que realiza un filtro de mediana, especificando con el parámetro el número de elementos de la distribución. Nótese la necesidad de especificar un parámetro impar. Si no ocurre esto, se muestra un error, instando al cambio.</li>
+        </ul>
     </ul>
+    <p>Estos filtros han podido hacerse gracias a la clase <code>ImageFilter</code> que incorpora la librería <i>Pillow</i>. Dentro de esta clase se encuentran distintos métodos para filtrar imágenes.</p>
+    <h2>Limitaciones de la aplicación</h2>
+    <p>Daremos cuenta a continuación de las limitaciones de la aplicación:</p>
+    <ul>
+        <li>La aplicación solo funciona en sistemas basados en UNIX. En Windows, <i>Pillow</i> aqueja un problema con las librerías para manipular imágenes del tipo JPEG. Python ha generado complementos para MacOS, pero no para el sistema desarrollado por Microsoft.</li>
+        <li>La aplicación es capaz de abrir, pero no de guardar imágenes. Se plantearon, sin éxito, dos alternativas. Por un lado, cabe la posibilidad de iniciar un cuadro de guardado y por otro cabe copiar la imagen procesada al portapapeles. Resulta difícil realizar esta cuestión teniendo en cuenta el desarrollo multiplataforma.</li>
+        <li>La aplicación no puede modificar su geometría fácilmente. Así, se han generado fuentes distintas para posibilitar un mejor trato a pantallas de alta densidad de puntos por pulgada (DPI). Aun así, el diseño aqueja de cuestiones generadas en ciertos aspectos, por limitaciones propias de la tecnología <code>grid</code> de <code>tkinter</code>. Se podría considerar una aproximación diferente mediante otro tipo de trabajo con la tecnología <code>pack</code>.</li>
+    </ul>
+    <p>Vistas algunas de las limitaciones del aplicativo, procedemos a enlazar algunas capturas de pantalla de la aplicación. Todas ellas se han realizado en un equipo corriendo Debian 13 con arquitectura de 64 bits:</p>
+    <figure class="responsive">
+        <img src="img/pantallaPrincipal.png" class="responsive">
+        <figcaption>Figura 1: Pantalla principal del programa. Sin imágenes cargadas. Se distinguen dos regiones para la imagen original y procesada, así como los diferentes <i>widgets</i> de escritorio.</figcaption>
+    </figure>
+    <p>Para trabajar con las imágenes abrimos una imagen haciendo clic sobre el botón <i>Abrir imagen</i>:</p>
+    <figure class="responsive">
+        <img src="img/selectorArchivo.png" class="responsive">
+        <figcaption>Figura 2: Cuadro de dialogo generado con la clase <code>filedialog</code> para abrir un archivo.</figcaption>
+    </figure>
+    <p>La imagen abierta queda de la siguiente forma:</p>
+    <figure class="responsive">
+        <img src="img/imagenCargada.png" class="responsive">
+        <figcaption>Figura 3: Imagen cargada en la interfaz. La imagen cargada queda citada en el apartado generado a tal efecto. Vemos cómo queda en la parte original y la ventana modifica su geometría para introducir la imagen.</figcaption>
+    </figure>
+    <p>A partir de aquí, se pueden introducir filtros, obteniendo los siguientes resultados:</p>
+    <figure class="responsive">
+        <table class="sinborde sinhover">
+        <tr>
+            <td class="sinborde">
+                <figure class="responsive">
+                    <img src="img/gaussiano1.png" class="responsive">
+                </figure>
+            </td>
+            <td class="sinborde">
+                <figure class="responsive">
+                    <img src="img/gaussiano16.png" class="responsive">
+                </figure>
+            </td>
+        </tr>
+        <tr>
+            <td class="sinborde">
+                <figure class="responsive">
+                    <img src="img/lineal6.png" class="responsive" id="figura43ai">
+                </figure>
+            </td>
+            <td class="sinborde">
+                <figure class="responsive">
+                    <img class="responsive" src="img/mediana17.png">
+                </figure>
+            </td>
+        </tr>
+    </table>
+    <figcaption>Figura 4: Filtros realizados. Arriba izquierda: gaussiano con radio 1. Arriba derecha: gaussiano con radio 16. Abajo izquierda: lineal con radio 6, abajo derecha: mediana con tamaño 17.</figcaption>
+    </figure>
+    <p>Podemos también ver cómo se utilizan las funcionalidades <i>Hacer original</i> y <i>Quitar filtros</i>:</p>
+    <figure class="responsive">
+        <table class="sinborde sinhover">
+            <tr>
+                <td class="sinborde">
+                    <figure class="responsive">
+                        <img class="responsive" src="img/dosFiltros.png">
+                    </figure>
+                </td>
+                <td class="sinborde">
+                    <figure class="responsive">
+                        <img class="responsive" src="img/hacerOriginal.png">
+                    </figure>
+                </td>
+            </tr>
+        </table>
+        <figcaption>Figura 5: Funcionalidades para aplicar filtros recursivos. Derecha: la imagen había sido procesada como en <a href="#figura43ai">esta</a> figura. Al hacerla original, permitimos aplicar filtros sobre la imagen procesada. Izquierda: aplicación de un filtro lineal de radio 15 a la imagen descrita.</figcaption>
+    </figure>
+    <p>Por último se muestra el error generado cuando intentamos trabajar con el filtro de mediana en tamaños pares:</p>
+    <figure class="responsive">
+        <img class="responsive" src="img/medianaPar.png">
+        <figcaption>Figura 6: Error de filtro de mediana. Cuando los conjuntos tienen un tamaño par, la mediana no queda definida con sentido en esta aplicación. Con tamaños impares, el tamaño del conjunto permite definir con sentido para el caso que nos ocupa el parámetro de la mediana.</figcaption>
+    </figure>
+<h2>Conclusiones del laboratorio</h2>
+<p>Este laboratorio ha permitido el acercamiento a la realidad del procesado de imágenes mediante el desarrollo e implementación de una interfaz gráfica de usuario para procesar imágenes médicas en el archivo estándar <i>DICOM</i>. Se ha dado cuenta de los pasos, cuestiones relevantes y dependencias del programa, con el objeto de permitir la reproducción de la aplicación en ocasiones futuras. Se adjunta, asimismo, el código de la aplicación para su visualización.</p>
+<h2>Referencias</h2>
+<p class="francesa" id="generalpython">General Python FAQ - Python 3.14.0. (s.f). Python Documentation. <a href="https://docs.python.org/3/faq/general.html">https://docs.python.org/3/faq/general.html</a></p>
+<p class="francesa" id="tkinter">Tkinter - Python interface to Tcl/Tk. (s.f). Python Documentation. <a href="https://docs.python.org/3/library/tkinter.html">https://docs.python.org/3/library/tkinter.html</a></p>
+<p class="francesa" id="pillow">Pillow. (s.f.). Pillow (PIL Fork). <a href="https://pillow.readthedocs.io/en/stable/index.html">https://pillow.readthedocs.io/en/stable/index.html</a></p>
 </html>
