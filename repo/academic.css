@@ -31,7 +31,24 @@
 			margin-left: 10%;
 		}
 
+		#cita {
+			color: blue;
+			text-decoration: none;
+		}
+		#cita40p {
+			font-family: 'Times New Roman', Times, serif;
+			font-size: medium;
+			font-style: italic;
+			margin-left: 10%;
+		}
+
 		#remark {
+			background-color: rgb(188, 110, 110);
+			font-weight: bold;
+			text-align: center;
+		}
+
+		.remark {
 			background-color: rgb(188, 110, 110);
 			font-weight: bold;
 			text-align: center;
