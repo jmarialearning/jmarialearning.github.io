@@ -20,6 +20,11 @@
 			text-align: justify;
 			text-justify: auto;
 		}
+		.enunciado {
+			font-size: larger;
+			font-style: italic;
+			text-align: center;
+		}
 		.cita {
 			color: blue;
 			text-decoration: none;
