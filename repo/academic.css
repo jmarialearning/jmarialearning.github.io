@@ -25,6 +25,9 @@
 			font-style: italic;
 			text-align: center;
 		}
+		p.respuesta{
+			line-height: 1.5;
+		}
 		.cita {
 			color: blue;
 			text-decoration: none;
