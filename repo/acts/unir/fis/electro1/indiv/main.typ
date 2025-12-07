@@ -48,5 +48,19 @@ $ d q = lambda dot d accent(l, arrow) $
 Por ende, sabemos que la fuerza en el eje $y$ se calculará integrando, según sigue:
 $ accent(F_y, arrow) = integral.cont frac(k dot q dot lambda dot d accent(l, arrow), d^2) dot cos alpha $
 Donde $alpha$ es el ángulo entre la fuerza y el eje $y$. Sabemos que su coseno es igual a: $ cos alpha =frac(a,d) $
-Por ende, sustituimos y obtenemos una expresión para la fuerza:
+Por ende, sustituimos y obtenemos una expresión para la fuerza que se ejerce sobre $q$:
 $ accent(F_y, arrow) = integral.cont frac(k dot q dot lambda dot d accent(l, arrow), d^3) dot a = frac(k dot q dot lambda dot 2pi R a,d^3) $
+= Ejercicio 3
+Para calcular el campo eléctrico utilizaremos la ley de Gauss:
+$ Phi = integral.cont accent(E, arrow) dot.c d accent(S, arrow) = accent(E, arrow) dot 4 pi a^2 $
+Sabemos que, por la ley de Gauss:
+$ Phi = frac(q_"enc", epsilon_0) $
+Despejando el campo eléctrico:
+$ accent(E, arrow) = frac(q_"enc",epsilon_0 dot 4 pi a^2) $
+= Ejercicio 4
+Aplicamos el Teorema de Gauss al cilindro exterior:
+$ Phi = integral.cont accent(E, arrow) dot d accent(S, arrow) = accent(E, arrow) dot 2 pi R l $
+Donde $l$ es la longitud del cilindro. Sabiendo que:
+$ accent(E, arrow) dot 2 pi R l = frac(q_"enc", epsilon_0) $
+Despejamos $accent(E, arrow)$. La carga será $rho dot 4 pi R^2 l$. Despejamos:
+$ accent(E, arrow) dot 2 pi R l = frac(rho 4 pi R^2 l, epsilon_0) $
