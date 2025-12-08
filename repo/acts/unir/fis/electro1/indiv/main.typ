@@ -101,3 +101,14 @@ $ Delta V_"C2" = frac(Q_2, 4 pi epsilon_0) dot limits(integral)^(R_2)_r frac(1, 
 Además sabemos que $C = frac(style: "horizontal", Q, Delta V)$. Por otro lado, según especifica el problema $frac(1, C_"eq", style: "horizontal") = frac(1, C_1, style: "horizontal") + frac(1, C_2, style: "horizontal")$. Esto nos lleva a obtener la capacidad del condensador, que queda regida por la expresión siguiente:
 $ C_"eq" = frac(4 pi epsilon_0, frac(1, r_2) - frac(1, r_1)) $
 = Ejercicio 9
+El campo eléctrico dentro sigue la ley de Coulomb:
+$ accent(E, arrow)_"dentro" = frac(k dot q, r^2) $
+Dicho campo carga la superficie de frontera, cuyo campo en superficie es:
+$ accent(E, arrow)_"esfera" = frac(k dot q, r_"esf"^2) $
+Al tener una cavidad cargada con densidad superficial $sigma = q dot 4 pi r_"esf"^2$, aplicamos la ley de Gauss:
+$ Phi = integral.cont accent(E, arrow) dot d accent(S, arrow) = frac(q_"encerrada", epsilon) $
+Despejamos el campo eléctrico 2 fuera de la cavidad:
+$ E dot 4 pi r^2 = frac(q_"encerrada", epsilon) arrow.double E_"fuera" = frac(q_"encerrada", 4 pi r^2 epsilon) $
+Calculamos también los campos $accent(D, arrow)$ como $accent(D, arrow) = epsilon dot accent(E, arrow)$:
+$ accent(D, arrow)_" dentro" = frac(q,4 pi r^2) $
+$ accent(D, arrow)_" fuera" = frac(q,4 pi r^2) $
