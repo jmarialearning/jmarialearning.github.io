@@ -3,6 +3,10 @@ from tkinter import font, ttk, filedialog, messagebox
 import pydicom
 from PIL import Image, ImageTk, ImageFilter
 import os
+import matplotlib.pyplot
+import numpy
+import matplotlib.widgets
+from matplotlib.patches import Rectangle
 global rutaArchivo
 rutaArchivo = ""
 global imagenOriginal
@@ -13,7 +17,16 @@ class Dicom:
         if rutaArchivo:
             print("Archivo seleccionado: ", rutaArchivo)
         archivoDicom = pydicom.dcmread(rutaArchivo)
-        pixelArray = archivoDicom.pixel_array
+        level = archivoDicom.WindowCenter
+        window = archivoDicom.WindowWidth
+        print("Level: ", level)
+        print("Window: ", window)
+        minWindow = level - window/2
+        maxwindow = level + window/2
+        pixelArrayOriginal = archivoDicom.pixel_array
+        pixelArray = pixelArrayOriginal
+        #pixelArray = numpy.clip(pixelArrayOriginal, minWindow, maxwindow)
+        pixelArray = (pixelArray - minWindow) / (maxwindow - minWindow)
         imagenDicom = Image.fromarray(pixelArray)
         fotoDicom = ImageTk.PhotoImage(imagenDicom)
         imagenOriginal.config(image=fotoDicom)
@@ -24,16 +37,30 @@ class Dicom:
     def hacerOriginal():
         imagenOriginal.config(image=imagenProcesada.image)
         imagenOriginal.image = imagenProcesada.image
-    def validarUmbral(arg):
+    def aplicarUmbral(arg):
         if not(arg.isdigit()):
-            messagebox.showerror("Error", "Comprueba la correcta escritura de un número, con el punto como separador decimal.")
+            messagebox.showerror("Error", "Comprueba la correcta escritura de un número natural entre 1 y 255.")
         else:
             imagenManipulableDicom = ImageTk.getimage(imagenOriginal.image)
             imagenDicomProcesada = imagenManipulableDicom.point(lambda p: p > int(arg) and 255)
             fotoProcesada = ImageTk.PhotoImage(imagenDicomProcesada)
             imagenProcesada.config(image=fotoProcesada)
             imagenProcesada.image = fotoProcesada
+    def AplicarVentana(image_data, window_center, window_width):
+        min_val = window_center - window_width / 2
+        max_val = window_center + window_width / 2
 
+    # Clip pixel values to the defined window range
+        display_image = numpy.clip(image_data, min_val, max_val)
+
+    # Normalize the clipped values to a 0-1 range for proper visualization
+    # Avoid division by zero if window_width is 0
+        if window_width == 0:
+            display_image = numpy.zeros_like(display_image)
+        else:
+            display_image = (display_image - min_val) / (max_val - min_val)
+
+        return display_image
 # Diseño de interfaz con formato GRID de TKInter
 raiz = tkinter.Tk()
 raiz.geometry("1152x864")
@@ -61,7 +88,7 @@ imagenProcesada = ttk.Label(form)
 treshold = 1
 cuadroUmbral = ttk.Entry(form,textvariable=treshold)
 cuadroUmbral.insert(0,treshold)
-botonAplicaUmbral = ttk.Button(form, text="Aplicar umbral", command=lambda: Dicom.validarUmbral(cuadroUmbral.get())) # Recordar la llamada con expresiones lambda si hay que insertar argumentos.
+botonAplicaUmbral = ttk.Button(form, text="Aplicar umbral", command=lambda: Dicom.aplicarUmbral(cuadroUmbral.get())) # Recordar la llamada con expresiones lambda si hay que insertar argumentos.
 # Situar en la geometría grid.
 filaBotones = 2
 botonAbrir.grid(row=filaBotones, column=0, padx=paddingDefecto, pady=paddingDefecto, sticky=tkinter.S)
