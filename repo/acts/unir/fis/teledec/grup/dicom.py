@@ -1,126 +1,163 @@
-import tkinter
-from tkinter import font, ttk, filedialog, messagebox
-import pydicom
-from PIL import Image, ImageTk, ImageFilter
-import os
-import matplotlib.pyplot
-import numpy
-import matplotlib.widgets
+import pydicom, matplotlib, numpy, os
+import matplotlib.pyplot, matplotlib.widgets
+from tkinter import filedialog
 from matplotlib.patches import Rectangle
 global rutaArchivo
 rutaArchivo = ""
-global imagenOriginal
-global imagenProcesada
 class Dicom:
-    def cargarDicom():
+    """
+    Clase con varios métodos:
+        aplicarVentana:
+            Función que aplica la ventana a la imagen, según la entrada del usuario.
+            Argumentos:
+                archivoDicom: el archivoDicom procesado y devuelto en tipo FileDataset
+                windowCenter: también llamado Level en algunos programas.
+                windowWidth: también llamado Window en algunos programas.
+            Funcionamiento:
+                Las variables minWindow y maxWindow definen la ventana para que mediante el método clip del módulo NumPy se limiten los valores de la matriz de píxeles. Si la anchura de ventana es 0, la matriz se anula para evitar errores de división.
+            Retorno:
+                Retorna un array con la imagen que se debe representar.
+        cargarDicom:
+            Función para cargar el archivo DICOM.
+            Sin argumentos.
+            Funcionamiento:
+                La función abre, mediante un objeto filedialog de TKinter, un selector de archivo para seleccionar el archivo DICOM. Su directorio de inicio es la carpeta personal del usuario, habitualmente siguiendo la ruta /home/$USER. Comprueba la correcta apertura del archivo.
+            Retorno:
+                La función retorna una cadena de caracteres con la ruta al archivo y la imprime por la consola.
+        aplicarUmbral:
+            Función para aplicar el umbral a un archivo DICOM.
+            Argumentos:
+                archivoDicom: el archivo DICOM leído por Python, con el tipo FileDataset
+                nuevoUmbral: el valor del umbral que introduce el usuario.
+            Funcionamiento:
+                Se aplica la condición para saber si el pixel tiene una intensidad mayor al umbral, en cuyo caso se devuelve 1. En caso contrario se devuelve 0. Se multiplica el valor por 255 para dar la intensidad máxima.
+    """
+    def aplicarVentana(archivoDicom, windowCenter, windowWidth):
+        minWindow = windowCenter - windowWidth / 2
+        maxWindow = windowCenter + windowWidth / 2
+        imagenRepresentar = numpy.clip(archivoDicom, minWindow, maxWindow)
+    # Para evitar divisiones por 0 se introduce la condicional.
+        if windowWidth == 0:
+            imagenRepresentar = numpy.zeros_like(imagenRepresentar)
+        else:
+            imagenRepresentar = (imagenRepresentar - minWindow) / (maxWindow - minWindow)
+        return imagenRepresentar
+
+    def cargarDicom(): # carga Dicom
         rutaArchivo = filedialog.askopenfilename(initialdir=os.path.expanduser('~'))
         if rutaArchivo:
             print("Archivo seleccionado: ", rutaArchivo)
-        archivoDicom = pydicom.dcmread(rutaArchivo)
-        level = archivoDicom.WindowCenter
-        window = archivoDicom.WindowWidth
-        print("Level: ", level)
-        print("Window: ", window)
-        minWindow = level - window/2
-        maxwindow = level + window/2
+            return rutaArchivo
+        else:
+            return
+    def aplicarUmbral(archivoDicom, nuevoUmbral):
         pixelArray = archivoDicom.pixel_array
-        if 'RescaleIntercept' in archivoDicom and 'RescaleSlope' in archivoDicom:
-            rescale_intercept = archivoDicom.RescaleIntercept
-            rescale_slope = archivoDicom.RescaleSlope
-            pixelArray = pixelArray * rescale_slope + rescale_intercept
-            print(f"Applied Rescale Slope ({rescale_slope}) and Rescale Intercept ({rescale_intercept}). "
-              "Pixel values are now likely in Hounsfield Units (HU).")
-        else:
-            print("No Rescale Slope or Intercept found. Using raw pixel values.")
+        pixelArrayModificado = (pixelArray > nuevoUmbral) * 255 # Si la condición se cumple, devuelve 1 -> Intensidad 255 (máxima).
+        # Si no, 0 -> Sin intensidad.
+        return pixelArrayModificado
+    ##
+# Muestra figura y aplica ventana
+    #Leemos el DICOM
+
+def main():
+    try:
+        archivoDicom = pydicom.dcmread(Dicom.cargarDicom()) # Leemos el DICOM y gestionamos el error.
+        print("Archivo DICOM cargado.")
+    except Exception as e:
+        print(f"Error de lectura del archivo DICOM: ", e)
 
 
-        if 'WindowCenter' in archivoDicom and 'WindowWidth' in archivoDicom:
-            initial_window_center = archivoDicom.WindowCenter[0] if isinstance(archivoDicom.WindowCenter, pydicom.multival.MultiValue) else archivoDicom.WindowCenter
-            initial_window_width = archivoDicom.WindowWidth[0] if isinstance(archivoDicom.WindowWidth, pydicom.multival.MultiValue) else archivoDicom.WindowWidth
-            print(f"Using DICOM-specified Window Center: {initial_window_center:.0f}, Window Width: {initial_window_width:.0f}")
-        else:
-        # Provide sensible default values if DICOM tags are missing.
-        # These defaults are typical for a general CT abdomen window.
-            initial_window_center = 40.0
-            initial_window_width = 400.0
-        print(f"DICOM WindowCenter/Width not found. Using default values: "
-              f"Center={initial_window_center:.0f}, Width={initial_window_width:.0f}")
+    pixelArray = archivoDicom.pixel_array
+    # Escala. Miramos si viene en el archivo.
+    if 'RescaleIntercept' in archivoDicom and 'RescaleSlope' in archivoDicom:
+        rescaleIntercept = archivoDicom.RescaleIntercept
+        recaleSlope = archivoDicom.RescaleSlope
+        pixelArray = pixelArray * recaleSlope + rescaleIntercept
+        print("Se aplicó la escala con pendiente {rescaleSlope} y ordenada origen {rescaleIntercept}.")  # Encontrada la escala en el archivo. Así podemos cambiar la unidad a HU, propia de TCs.
+        print("Píxeles en unidades Hounsfield (HU)")
+    else:
+        print("No se ha encontrado la escala. Utilizando píxeles brutos.")
+    # Miramos Window y Level desde el DICOM. Traerá unos valores por defecto que permitirán ver bien la imagen.
+    if 'WindowCenter' in archivoDicom and 'WindowWidth' in archivoDicom:
+        level0 = archivoDicom.WindowCenter[0] if  isinstance(archivoDicom.WindowCenter, pydicom.multival.MultiValue) else archivoDicom.WindowCenter
+        window0 = archivoDicom.WindowCenter[0] if  isinstance(archivoDicom.WindowCenter, pydicom.multival.MultiValue) else archivoDicom.WindowCenter
+        print(f"Usando valores de level ({level0}) y window ({window0}) del archivo.")
+    else:
+        level0 = 40.0 # Ponemos unos por defecto...
+        window0 = 400.0
+        print("No se encuentran datos de level y window. Se usan valores por defecto. Level 40 y window 400.")
+    level = level0
+    window = window0
+    nombreFigura = "Visor DICOM"
+    figura, ejes = matplotlib.pyplot.subplots(1,2, figsize=(14,7), num=nombreFigura)
+    ejeImagen = ejes[0]
+    ejeHistograma = ejes[1]
+    # Evitar superposición de controles con padding
+    figura.subplots_adjust(bottom=0.25)
+    # 
+    imagen = ejeImagen.imshow(Dicom.aplicarVentana(pixelArray, level, window), cmap='gray')
+    ejeImagen.axis('off') # Para que se vea más limpia el output
+    ejeImagen.set_title(f"Imagen DICOM\n Level : {level:.0f}, Window: {window:.0f}")
+    n_bins = 256  # para el histograma
+    hist_values, bin_edges = numpy.histogram(pixelArray.flatten(), bins=n_bins)
+    bin_centers = (bin_edges[:-1] + bin_edges[1:]) / 2
+    ejeHistograma.plot(bin_centers, hist_values, color='blue', linewidth=1.5)
+    ejeHistograma.set_title("Histograma de píxeles")
+    ejeHistograma.set_xlabel("Valor del Píxel o HU")
+    ejeHistograma.set_ylabel("Frecuencia")
+    ejeHistograma.grid(True, linestyle='--', alpha=0.7)
+    ejeHistograma.set_facecolor('#f5f5f5')
+    rectanguloVentana = Rectangle((level - window / 2, 0),
+                                window, ejeHistograma.get_ylim()[1],
+                                facecolor='red', alpha=0.3, edgecolor='red', linewidth=1, linestyle='--')
+    ejeHistograma.add_patch(rectanguloVentana)
+    # Sliders
+    colorEje = '#f0f0f0'
+    ejeLevel = matplotlib.pyplot.axes([0.15, 0.17, 0.65, 0.03], facecolor=colorEje) # Posiciones relativas
+    ejeWindow = matplotlib.pyplot.axes([0.15, 0.12, 0.65, 0.03], facecolor=colorEje)
+    ejeUmbral = matplotlib.pyplot.axes([0.15, 0.07, 0.65, 0.03], facecolor=colorEje)
+    minPixel = pixelArray.min()
+    maxPixel = pixelArray.max()
+    sliderLevel = matplotlib.widgets.Slider(ejeLevel, 'Level',
+                                minPixel - (maxPixel - minPixel) * 0.5,
+                                maxPixel + (maxPixel - minPixel) * 0.5,
+                                valinit=level0, valfmt="%0.0f")
+    sliderWindow = matplotlib.widgets.Slider(ejeWindow, 'Window',
+                                1,  # La dejamos en 1 para evitar un posible 0, daría error
+                                (maxPixel - minPixel) * 2,
+                                valinit=window0, valfmt="%0.0f")
+    sliderUmbral = matplotlib.widgets.Slider(ejeUmbral, 'Umbral', 1,255, valinit=100, valfmt="%0d")
 
+    def actualizarLevelWindow(val):
+    # Conseguir los valores de los sliders.
+        nuevoLevel = sliderLevel.val
+        nuevaVentana = sliderWindow.val
 
-        current_window_center = initial_window_center
-        current_window_width = initial_window_width
+    # Modificamos la imagen llamando al método.
+        imagen.set_data(Dicom.aplicarVentana(pixelArray, nuevoLevel, nuevaVentana))
+    # Modificamos también el título
+        ejeImagen.set_title(f"DICOM Image\nWC: {nuevoLevel:.0f}, WW: {nuevaVentana:.0f}")
 
-        pixelArray = (pixelArray - minWindow) / (maxwindow - minWindow)
-        imagenDicom = Image.fromarray(pixelArray)
-        fotoDicom = ImageTk.PhotoImage(imagenDicom)
-        imagenOriginal.config(image=fotoDicom)
-        imagenOriginal.image = fotoDicom
-    def copiaOriginal():
-        imagenProcesada.config(image=imagenOriginal.image)
-        imagenProcesada.image = imagenOriginal.image
-    def hacerOriginal():
-        imagenOriginal.config(image=imagenProcesada.image)
-        imagenOriginal.image = imagenProcesada.image
-    def aplicarUmbral(arg):
-        if not(arg.isdigit()):
-            messagebox.showerror("Error", "Comprueba la correcta escritura de un número natural entre 1 y 255.")
-        else:
-            imagenManipulableDicom = ImageTk.getimage(imagenOriginal.image)
-            imagenDicomProcesada = imagenManipulableDicom.point(lambda p: p > int(arg) and 255)
-            fotoProcesada = ImageTk.PhotoImage(imagenDicomProcesada)
-            imagenProcesada.config(image=fotoProcesada)
-            imagenProcesada.image = fotoProcesada
-    def AplicarVentana(image_data, window_center, window_width):
-        min_val = window_center - window_width / 2
-        max_val = window_center + window_width / 2
+        # Modificamos el rectángulo del histograma para que coja los valores
 
-    # Clip pixel values to the defined window range
-        display_image = numpy.clip(image_data, min_val, max_val)
+        rectanguloVentana.set_x(nuevoLevel - nuevaVentana / 2)
+        rectanguloVentana.set_width(nuevaVentana)
 
-    # Normalize the clipped values to a 0-1 range for proper visualization
-    # Avoid division by zero if window_width is 0
-        if window_width == 0:
-            display_image = numpy.zeros_like(display_image)
-        else:
-            display_image = (display_image - min_val) / (max_val - min_val)
+    # Hacemos un redraw para que aparezcan los cambios
+        figura.canvas.draw_idle()
+    
+    def actualizarUmbral(val):
+        nuevoUmbral = sliderUmbral.val # Cogemos el valor
+        imagen.set_data(Dicom.aplicarUmbral(archivoDicom, nuevoUmbral)) # Llamada a la función
+        figura.canvas.draw_idle() # Redraw para verlo
 
-        return display_image
-# Diseño de interfaz con formato GRID de TKInter
-raiz = tkinter.Tk()
-raiz.geometry("1152x864")
-raiz.title("Visualizador y procesador de imágenes")
-raiz.resizable(width=False, height=False)
-paddingDefecto = 10
-form = ttk.Frame(raiz, padding=(paddingDefecto,paddingDefecto,paddingDefecto,paddingDefecto))
-form.grid()
-fuenteHIDPI = font.Font(size=18) # Para que se vea mejor en pantallas HiDPI
+    ####
+    sliderLevel.on_changed(actualizarLevelWindow) # Hook ante cambio de sliders. Llamamos a las funciones descritas anteriormente.
+    sliderWindow.on_changed(actualizarLevelWindow)
+    sliderUmbral.on_changed(actualizarUmbral)
 
-# Declaración de widgets Tkinter
-raiz.rowconfigure(0, weight=1) # Responsivo
-raiz.rowconfigure(2, weight=1) # Responsivo
-raiz.columnconfigure(0, weight=1) # Responsivo
-raiz.columnconfigure(1, weight=1) # Responsivo
-raiz.columnconfigure(2, weight=1) # Responsivo
-raiz.columnconfigure(3, weight=1) # Responsivo
-raiz.rowconfigure(1, weight=6) # La segunda fila debe tener 6 veces más altura que las demás. Van las imagenes ahí.
-botonSalir = ttk.Button(form, text="Salir", command=raiz.destroy)
-botonAbrir = ttk.Button(form, text="Abrir imagen", command=Dicom.cargarDicom)
-botonQuitaFiltro = ttk.Button(form, text="Quitar filtros", command=Dicom.copiaOriginal)
-botonCopiaProcesada = ttk.Button(form, text="Hacer original", command=Dicom.hacerOriginal)
-imagenOriginal = ttk.Label(form)
-imagenProcesada = ttk.Label(form)
-treshold = 1
-cuadroUmbral = ttk.Entry(form,textvariable=treshold)
-cuadroUmbral.insert(0,treshold)
-botonAplicaUmbral = ttk.Button(form, text="Aplicar umbral", command=lambda: Dicom.aplicarUmbral(cuadroUmbral.get())) # Recordar la llamada con expresiones lambda si hay que insertar argumentos.
-# Situar en la geometría grid.
-filaBotones = 2
-botonAbrir.grid(row=filaBotones, column=0, padx=paddingDefecto, pady=paddingDefecto, sticky=tkinter.S)
-botonSalir.grid(row=filaBotones, column=1, padx=paddingDefecto, pady=paddingDefecto, sticky=tkinter.S)
-botonQuitaFiltro.grid(row=filaBotones, column=3, padx=paddingDefecto, pady=paddingDefecto, sticky=tkinter.S)
-imagenOriginal.grid(row=1, column=0, columnspan=2, padx=paddingDefecto, pady=paddingDefecto)
-imagenProcesada.grid(row=1, column=2,columnspan=2, padx=paddingDefecto, pady=paddingDefecto)
-botonCopiaProcesada.grid(row=filaBotones+1, column=3, padx=paddingDefecto, pady=paddingDefecto, sticky=tkinter.S)
-botonAplicaUmbral.grid(row=filaBotones, column=2, padx=paddingDefecto, pady=paddingDefecto, sticky=tkinter.S)
-cuadroUmbral.grid(row=filaBotones+2, column=0, padx=paddingDefecto, pady=paddingDefecto, sticky=tkinter.S)
-raiz.mainloop()
+    # --- 7. Display the Plot ---
+    matplotlib.pyplot.show() # Para que aparezca la ventana.
+
+if __name__ == "__main__":
+    main() # Para generar el punto de entrada a la app, al haber varias funciones.
