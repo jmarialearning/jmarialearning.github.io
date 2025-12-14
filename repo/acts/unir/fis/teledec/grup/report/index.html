@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/repo/academic.css">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width">
+        <title>Grupal Teledetección</title>
+    </head>
+    <h1>Actividad Grupal de Teledetección y procesado de imágenes</h1>
+    <p id="enunciado" style="text-align: center; font-size: larger;">Procesado de imágenes DICOM</p>
+    <footer>Jesús María Mora Mur</footer>
+    <!---->
+    <h2>Introducción</h2>
+    <p>Hemos realizado el proyecto en Python por el conocimiento generado en anteriores entregas de la asignatura. Python ofrece una orientación a objetos beneficiosa para programar de forma modular y permite el acceso a librerías de gestión para el trabajo que nos ocupa <a href="#generalpython" class="cita">(General Python FAQ - Python 3.14.0., s.f.)</a>.</p>
+    <p>Específicamente, se han utilizado las librerías siguientes:</p>
+    <ul>
+        <li><code>matplotlib</code>, para generar Interfaces de Usuario Gráficas (GUI) con el uso del kit de herramientas <i>widgets</i>. Para el cuadro de diálogo inicial se utiliza <code>tkinter.filedialog</code> <a href="#tkinter" class="cita">(Tkinter - Python Interface to Tcl/Tk, s.f.)</a> <a class="cita" href="#matplotlib">(Matplotlib Documentation - Matplotlib 3.10.8 Documentation, s.f.)</a></li>
+        <li><code>pydicom</code>, como marco para leer y decodificar imágenes en estándar DICOM</li>
+        <li><code>numpy</code>. La librería <i>numpy</i> permite la gestión y análisis de objetos numéricos. Utilizaremos su capacidad para trabajar con <i>arrays</i> o matrices <a href="#numpy" class="cita">(Numpy Documentation, s.f.)</a></li>
+        <li><code>os</code>, para poder trabajar con llamadas a sistema y rutas de acceso a disco.</li>
+    </ul>
+    <p>Podemos resumir la funcionalidad de la aplicación de la siguiente forma:</p>
+    <ul>
+        <li>La aplicación pide una imagen mediante un cuadro de diálogo.</li>
+        <li>La aplicación importa y lee el archivo DICOM respetando los parámetros de visualización por defecto. Permite también su modificación.</li>
+        <li>Poddemos aplicar una segmentación por umbral, dando cuenta de la magnitud mediante un control de tipo <code>Slider</code>.</li>
+        <li>La aplicación muestra también un histograma para ver las regiones que se visualizan, haciendo uso del método <code>flatten</code> de NumPy, para pasar los datos a una dimensión.</li>
+    </ul>
+    <p>Vistas las características de la aplicación, procedemos a explicar el <a href="../dicom.py">código del programa</a>:</p>
+    <h2>Explicación del código de la aplicación</h2>
+    <p>Al trabajar en un lenguaje interpretado como Python, es preciso que las declaraciones de clases, métodos y funciones se hagan antes de su llamada. Se considera innecesaria la documentación de la aplicación, existiendo para ello comentarios y bloques de documentación en el fichero fuente.</p>
+    <h2>Capturas de pantalla</h2>
+    <p>Considerando que la aplicación funciona únicamente en sistemas UNIX, se adjuntan las siguientes capturas de pantalla en una instalación de Debian 13 con arquitectura de 64 bits:</p>
+    <p>La primera pantalla que aparece es el selector de archivo:</p>
+    <figure class="responsive">
+        <img src="img/selectorArchivo.png" class="responsive">
+        <figcaption>Figura 1: Primera pantalla del programa, que permite la selección de archivos DICOM.</figcaption>
+    </figure>
+    <p>Después la imagen se procesa, llegando a la pantalla principal del programa:</p>
+    <figure class="responsive">
+        <img src="img/pantallaPrincipal.png" class="responsive">
+        <figcaption>Figura 2: Cuadro de dialogo generado con la clase <code>filedialog</code> para abrir un archivo.</figcaption>
+    </figure>
+    <p>Modificando los <i>sliders</i>, se pueden modificar las propiedades y aplicar la segmentación:</p>
+    <figure class="responsive">
+        <table class="sinborde sinhover">
+        <tr>
+            <td class="sinborde">
+                <figure class="responsive">
+                    <img src="img/originalDefault.png" class="responsive">
+                </figure>
+            </td>
+            <td class="sinborde">
+                <figure class="responsive">
+                    <img src="img/imposibleVer.png" class="responsive">
+                </figure>
+            </td>
+        </tr>
+        <tr>
+            <td class="sinborde">
+                <figure class="responsive">
+                    <img src="img/muchaWindow.png" class="responsive" id="figura43ai">
+                </figure>
+            </td>
+            <td class="sinborde">
+                <figure class="responsive">
+                    <img class="responsive" src="img/bienDefinido.png">
+                </figure>
+            </td>
+        </tr>
+    </table>
+    <figcaption>Figura 4: Visualización de la misma imagen modificando parámetros. Arriba izquierda: parámetros por defecto. Arriba derecha: parámetros exagerados no permiten detectar hallazgos. Abajo izquierda: la ventana es demasiado amplia y el fondo es demasiado claro desvirtuando la imagen, abajo derecha: se diferencian más regiones.</figcaption>
+    </figure>
+    <p>Como vemos a utilidad de los sliders de <i>level</i> y <i>window</i> es importante para posibilitar una correcta definición de diferentes regiones según su intensidad. Ello permitirá también saber el tipo de tejido al que miramos.</p>
+    <p>Comprobamos también la función del <i>umbral</i>:</p>
+    <figure class="responsive">
+        <table class="sinborde sinhover">
+            <tr>
+                <td class="sinborde">
+                    <figure class="responsive">
+                        <img class="responsive" src="img/originalDefault.png">
+                    </figure>
+                </td>
+                <td class="sinborde">
+                    <figure class="responsive">
+                        <img class="responsive" src="img/umbralAplicado.png">
+                    </figure>
+                </td>
+            </tr>
+        </table>
+        <figcaption>Figura 5: Funcionalidad del filtro de umbral.</figcaption>
+    </figure>
+<h2>Conclusiones</h2>
+<p>Esta actividad ha permitido el acercamiento a la realidad del procesado de imágenes mediante el desarrollo e implementación de una interfaz gráfica de usuario para procesar imágenes médicas en el archivo estándar <i>DICOM</i>. Se han implementado técnicas de segmentación para las imágenes, así como una posibilidad para mejorar la visualización de las mismas, priorizando estructuras.</p>
+<p>Las imágenes se han obtenido de <a href="#jasonadam" class="cita">(Adam, s.f.)</a>. El propio autor de la página especifica que no son suyas. El enlace que facilita (<a href="http://headctstudy.qure.ai/#dataset">http://headctstudy.qure.ai/#dataset</a>) está caído a fecha actual. Sin embargo, proporciona un <a href="https://s3.ap-south-1.amazonaws.com/qure.headct.study/CQ500-CT-108.zip">enlace</a> <i>permalink</i> en su página que aún funciona.</p>
+<h2>Referencias</h2>
+<p class="francesa" id="jasonadam">Adam, J. (s.f.). Dicom processing. Retrieved December 14, 2025, from <a href="https://jason-adam.github.io/dicom/">https://jason-adam.github.io/dicom/</a></p>
+<p class="francesa" id="generalpython">General Python FAQ - Python 3.14.0. (s.f). Python Documentation. <a href="https://docs.python.org/3/faq/general.html">https://docs.python.org/3/faq/general.html</a></p>
+<p class="francesa" id="matplotlib">Matplotlib documentation—Matplotlib 3.10.8 documentation. (s.f.). Retrieved December 14, 2025, from <a href="https://matplotlib.org/stable/index.html">https://matplotlib.org/stable/index.html</a></p>
+<p class="francesa" id="numpy">Numpy documentation. (s.f.). Retrieved December 14, 2025, from <a href="https://numpy.org/doc/">https://numpy.org/doc/</a></p>
+<p class="francesa" id="tkinter">Tkinter - Python interface to Tcl/Tk. (s.f). Python Documentation. <a href="https://docs.python.org/3/library/tkinter.html">https://docs.python.org/3/library/tkinter.html</a></p>
+</html>

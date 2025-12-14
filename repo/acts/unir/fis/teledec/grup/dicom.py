@@ -71,9 +71,9 @@ def main():
     # Escala. Miramos si viene en el archivo.
     if 'RescaleIntercept' in archivoDicom and 'RescaleSlope' in archivoDicom:
         rescaleIntercept = archivoDicom.RescaleIntercept
-        recaleSlope = archivoDicom.RescaleSlope
-        pixelArray = pixelArray * recaleSlope + rescaleIntercept
-        print("Se aplicó la escala con pendiente {rescaleSlope} y ordenada origen {rescaleIntercept}.")  # Encontrada la escala en el archivo. Así podemos cambiar la unidad a HU, propia de TCs.
+        rescaleSlope = archivoDicom.RescaleSlope
+        pixelArray = pixelArray * rescaleSlope + rescaleIntercept
+        print(f"Se aplicó la escala con pendiente {rescaleSlope} y ordenada origen {rescaleIntercept}.")  # Encontrada la escala en el archivo. Así podemos cambiar la unidad a HU, propia de TCs.
         print("Píxeles en unidades Hounsfield (HU)")
     else:
         print("No se ha encontrado la escala. Utilizando píxeles brutos.")

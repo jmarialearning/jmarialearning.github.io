@@ -137,8 +137,7 @@
 			padding-left: 2em;
 		}
 		figcaption{
-			text-align: justify;
-			text-justify: auto;
+			text-align: center;
 		}
 		.sinborde{
 			border:0;
