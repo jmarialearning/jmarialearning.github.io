@@ -23,9 +23,33 @@ class Dicom:
         print("Window: ", window)
         minWindow = level - window/2
         maxwindow = level + window/2
-        pixelArrayOriginal = archivoDicom.pixel_array
-        pixelArray = pixelArrayOriginal
-        #pixelArray = numpy.clip(pixelArrayOriginal, minWindow, maxwindow)
+        pixelArray = archivoDicom.pixel_array
+        if 'RescaleIntercept' in archivoDicom and 'RescaleSlope' in archivoDicom:
+            rescale_intercept = archivoDicom.RescaleIntercept
+            rescale_slope = archivoDicom.RescaleSlope
+            pixelArray = pixelArray * rescale_slope + rescale_intercept
+            print(f"Applied Rescale Slope ({rescale_slope}) and Rescale Intercept ({rescale_intercept}). "
+              "Pixel values are now likely in Hounsfield Units (HU).")
+        else:
+            print("No Rescale Slope or Intercept found. Using raw pixel values.")
+
+
+        if 'WindowCenter' in archivoDicom and 'WindowWidth' in archivoDicom:
+            initial_window_center = archivoDicom.WindowCenter[0] if isinstance(archivoDicom.WindowCenter, pydicom.multival.MultiValue) else archivoDicom.WindowCenter
+            initial_window_width = archivoDicom.WindowWidth[0] if isinstance(archivoDicom.WindowWidth, pydicom.multival.MultiValue) else archivoDicom.WindowWidth
+            print(f"Using DICOM-specified Window Center: {initial_window_center:.0f}, Window Width: {initial_window_width:.0f}")
+        else:
+        # Provide sensible default values if DICOM tags are missing.
+        # These defaults are typical for a general CT abdomen window.
+            initial_window_center = 40.0
+            initial_window_width = 400.0
+        print(f"DICOM WindowCenter/Width not found. Using default values: "
+              f"Center={initial_window_center:.0f}, Width={initial_window_width:.0f}")
+
+
+        current_window_center = initial_window_center
+        current_window_width = initial_window_width
+
         pixelArray = (pixelArray - minWindow) / (maxwindow - minWindow)
         imagenDicom = Image.fromarray(pixelArray)
         fotoDicom = ImageTk.PhotoImage(imagenDicom)
