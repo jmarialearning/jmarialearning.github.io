@@ -3,6 +3,7 @@ import matplotlib.pyplot, matplotlib.widgets
 import tkinter, tkinter.ttk
 from tkinter import filedialog, font
 from matplotlib.patches import Rectangle
+from PIL import Image, ImageTk, ImageFilter
 global rutaArchivo
 rutaArchivo = ""
 class Dicom:
@@ -58,19 +59,26 @@ class Dicom:
         return pixelArrayModificado
     def mostrarInfo(archivoDicom):
         root = tkinter.Tk()
-        root.geometry("864x1152")
         paddingDefecto = 10
         form = tkinter.ttk.Frame(root, padding=(paddingDefecto,paddingDefecto,paddingDefecto,paddingDefecto))
-        form.grid()
-        fuenteHIDPI = font.Font(size=18)
-        root.rowconfigure(0, weight=3)
+        root.title("Información DICOM")
+        form.pack()
         botonSalir = tkinter.ttk.Button(form, text="Salir", command=root.destroy)
-        labelInfo = tkinter.ttk.Label(form)
-        labelInfo.config(text=str(archivoDicom))
-        labelInfo.text = str(archivoDicom)
-        labelInfo.grid(row=0, column=0, padx=paddingDefecto, pady=paddingDefecto, sticky=tkinter.N)
-        botonSalir.grid(row=1, column=0, padx=paddingDefecto, pady=paddingDefecto, sticky=tkinter.S)
+        labelInfo = tkinter.Text(form)
+        labelInfo.insert('1.0', archivoDicom)
+        labelInfo.pack(side='top', fill='both', expand=True)
+        labelInfo.config(state=tkinter.DISABLED)
+        botonSalir.pack(fill='x',side='bottom', padx=paddingDefecto, pady=paddingDefecto)
         root.mainloop()
+    def aplicarGaussiano(archivoDicom, nuevoSigma):
+        pixelArray = archivoDicom.pixel_array
+        imagen = Image.fromarray(pixelArray, mode='L')
+        imagenModificada = imagen.filter(ImageFilter.GaussianBlur(radius=nuevoSigma))
+        datos = imagenModificada.getdata()
+        pixelArrayModificado = numpy.array(datos).reshape(datos.size[::-1]+(-1,))
+        pixelArrayModificado = pixelArrayModificado.astype(numpy.uint8)
+        return pixelArrayModificado
+
     ##
 # Muestra figura y aplica ventana
     #Leemos el DICOM
@@ -133,7 +141,9 @@ def main():
     ejeLevel = matplotlib.pyplot.axes([0.15, 0.27, 0.65, 0.03], facecolor=colorEje) # Posiciones relativas
     ejeWindow = matplotlib.pyplot.axes([0.15, 0.22, 0.65, 0.03], facecolor=colorEje)
     ejeUmbral = matplotlib.pyplot.axes([0.15, 0.17, 0.65, 0.03], facecolor=colorEje)
-    ejeBotones = matplotlib.pyplot.axes([0.15, 0.12, 0.65, 0.03], facecolor=colorEje)
+    ejeSigma = matplotlib.pyplot.axes([0.15, 0.12, 0.65, 0.03], facecolor=colorEje)
+    ejeInfo = matplotlib.pyplot.axes([0.15, 0.07, 0.325, 0.03], facecolor=colorEje)
+    ejeGaussiano = matplotlib.pyplot.axes([0.476, 0.07, 0.325, 0.03], facecolor=colorEje)
     minPixel = pixelArray.min()
     maxPixel = pixelArray.max()
     sliderLevel = matplotlib.widgets.Slider(ejeLevel, 'Level',
@@ -145,7 +155,9 @@ def main():
                                 (maxPixel - minPixel) * 2,
                                 valinit=window0, valfmt="%0.0f")
     sliderUmbral = matplotlib.widgets.Slider(ejeUmbral, 'Umbral', 1,255, valinit=100, valfmt="%0d")
-    botonInfo = matplotlib.widgets.Button(ejeBotones, "Información...")
+    sliderSigma = matplotlib.widgets.Slider(ejeSigma, 'Sigma', 1, 50, valinit=1, valfmt="%0d")
+    botonInfo = matplotlib.widgets.Button(ejeInfo, "Información...")
+    botonGaussiano = matplotlib.widgets.Button(ejeGaussiano, "Aplicar Gaussiano")
 
     def actualizarLevelWindow(val):
     # Conseguir los valores de los sliders.
@@ -158,7 +170,8 @@ def main():
         ejeImagen.set_title(f"Imagen DICOM\nLevel: {nuevoLevel:.0f}, Window: {nuevaVentana:.0f}")
 
         # Modificamos el rectángulo del histograma para que coja los valores
-
+        rectanguloVentana.set_x(nuevoLevel - nuevaVentana / 2)
+        rectanguloVentana.set_width(nuevaVentana)
 
     # Hacemos un redraw para que aparezcan los cambios
         figura.canvas.draw_idle()
@@ -167,12 +180,17 @@ def main():
         nuevoUmbral = sliderUmbral.val # Cogemos el valor
         imagen.set_data(Dicom.aplicarUmbral(archivoDicom, nuevoUmbral)) # Llamada a la función
         figura.canvas.draw_idle() # Redraw para verlo
+    def actualizarGaussiano(val):
+        nuevoSigma = sliderSigma.val
+        imagen.set_data(Dicom.aplicarGaussiano(archivoDicom, nuevoSigma))
+        figura.canvas.draw_idle()
 
     ####
     sliderLevel.on_changed(actualizarLevelWindow) # Hook ante cambio de sliders. Llamamos a las funciones descritas anteriormente.
     sliderWindow.on_changed(actualizarLevelWindow)
     sliderUmbral.on_changed(actualizarUmbral)
-    botonInfo.on_clicked(Dicom.mostrarInfo)
+    botonInfo.on_clicked(lambda event: Dicom.mostrarInfo(archivoDicom))
+    botonGaussiano.on_clicked(actualizarGaussiano)
 
     # --- 7. Display the Plot ---
     matplotlib.pyplot.show() # Para que aparezca la ventana.
