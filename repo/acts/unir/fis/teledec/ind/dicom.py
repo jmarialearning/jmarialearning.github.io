@@ -1,6 +1,7 @@
-import pydicom, matplotlib, numpy, os, sys
+import pydicom, matplotlib, numpy, os
 import matplotlib.pyplot, matplotlib.widgets
-from tkinter import filedialog
+import tkinter, tkinter.ttk
+from tkinter import filedialog, font
 from matplotlib.patches import Rectangle
 global rutaArchivo
 rutaArchivo = ""
@@ -55,6 +56,21 @@ class Dicom:
         pixelArrayModificado = (pixelArray > nuevoUmbral) * 255 # Si la condición se cumple, devuelve 1 -> Intensidad 255 (máxima).
         # Si no, 0 -> Sin intensidad.
         return pixelArrayModificado
+    def mostrarInfo(archivoDicom):
+        root = tkinter.Tk()
+        root.geometry("864x1152")
+        paddingDefecto = 10
+        form = tkinter.ttk.Frame(root, padding=(paddingDefecto,paddingDefecto,paddingDefecto,paddingDefecto))
+        form.grid()
+        fuenteHIDPI = font.Font(size=18)
+        root.rowconfigure(0, weight=3)
+        botonSalir = tkinter.ttk.Button(form, text="Salir", command=root.destroy)
+        labelInfo = tkinter.ttk.Label(form)
+        labelInfo.config(text=str(archivoDicom))
+        labelInfo.text = str(archivoDicom)
+        labelInfo.grid(row=0, column=0, padx=paddingDefecto, pady=paddingDefecto, sticky=tkinter.N)
+        botonSalir.grid(row=1, column=0, padx=paddingDefecto, pady=paddingDefecto, sticky=tkinter.S)
+        root.mainloop()
     ##
 # Muestra figura y aplica ventana
     #Leemos el DICOM
@@ -91,24 +107,33 @@ def main():
     nombreFigura = "Visor DICOM"
     figura, ejes = matplotlib.pyplot.subplots(1,2, figsize=(14,7), num=nombreFigura)
     ejeImagen = ejes[0]
-    ejeInfo = ejes[1]
+    ejeHistograma = ejes[1]
     # Evitar superposición de controles con padding
-    figura.subplots_adjust(bottom=0.25)
+    figura.subplots_adjust(bottom=0.35)
     # 
     imagen = ejeImagen.imshow(Dicom.aplicarVentana(pixelArray, level, window), cmap='gray')
     ejeImagen.axis('off') # Para que se vea más limpia el output
     ejeImagen.set_title(f"Imagen DICOM\n Level : {level:.0f}, Window: {window:.0f}")
-    ejeInfo.set_title("Información del archivo DICOM")
-    # Creamos un cuadro de texto:
-    cuadroInfo = matplotlib.widgets.TextBox(ejeInfo, "", textalignment="left")
-    cuadroInfo.set_val(archivoDicom)
-    cuadroInfo.on_submit(lambda x : None)
-    cuadroInfo.set_active(False)
+    # Sacamos la información por la consola. Es demasiada para la ventana.
+    n_bins = 256  # para el histograma
+    hist_values, bin_edges = numpy.histogram(pixelArray.flatten(), bins=n_bins)
+    bin_centers = (bin_edges[:-1] + bin_edges[1:]) / 2
+    ejeHistograma.plot(bin_centers, hist_values, color='blue', linewidth=1.5)
+    ejeHistograma.set_title("Histograma de píxeles")
+    ejeHistograma.set_xlabel("Valor del Píxel o HU")
+    ejeHistograma.set_ylabel("Frecuencia")
+    ejeHistograma.grid(True, linestyle='--', alpha=0.7)
+    ejeHistograma.set_facecolor('#f5f5f5')
+    rectanguloVentana = Rectangle((level - window / 2, 0),
+                                window, ejeHistograma.get_ylim()[1],
+                                facecolor='red', alpha=0.3, edgecolor='red', linewidth=1, linestyle='--')
+    ejeHistograma.add_patch(rectanguloVentana)
     # Sliders
     colorEje = '#f0f0f0'
-    ejeLevel = matplotlib.pyplot.axes([0.15, 0.17, 0.65, 0.03], facecolor=colorEje) # Posiciones relativas
-    ejeWindow = matplotlib.pyplot.axes([0.15, 0.12, 0.65, 0.03], facecolor=colorEje)
-    ejeUmbral = matplotlib.pyplot.axes([0.15, 0.07, 0.65, 0.03], facecolor=colorEje)
+    ejeLevel = matplotlib.pyplot.axes([0.15, 0.27, 0.65, 0.03], facecolor=colorEje) # Posiciones relativas
+    ejeWindow = matplotlib.pyplot.axes([0.15, 0.22, 0.65, 0.03], facecolor=colorEje)
+    ejeUmbral = matplotlib.pyplot.axes([0.15, 0.17, 0.65, 0.03], facecolor=colorEje)
+    ejeBotones = matplotlib.pyplot.axes([0.15, 0.12, 0.65, 0.03], facecolor=colorEje)
     minPixel = pixelArray.min()
     maxPixel = pixelArray.max()
     sliderLevel = matplotlib.widgets.Slider(ejeLevel, 'Level',
@@ -120,6 +145,7 @@ def main():
                                 (maxPixel - minPixel) * 2,
                                 valinit=window0, valfmt="%0.0f")
     sliderUmbral = matplotlib.widgets.Slider(ejeUmbral, 'Umbral', 1,255, valinit=100, valfmt="%0d")
+    botonInfo = matplotlib.widgets.Button(ejeBotones, "Información...")
 
     def actualizarLevelWindow(val):
     # Conseguir los valores de los sliders.
@@ -129,7 +155,7 @@ def main():
     # Modificamos la imagen llamando al método.
         imagen.set_data(Dicom.aplicarVentana(pixelArray, nuevoLevel, nuevaVentana))
     # Modificamos también el título
-        ejeImagen.set_title(f"DICOM Image\nWC: {nuevoLevel:.0f}, WW: {nuevaVentana:.0f}")
+        ejeImagen.set_title(f"Imagen DICOM\nLevel: {nuevoLevel:.0f}, Window: {nuevaVentana:.0f}")
 
         # Modificamos el rectángulo del histograma para que coja los valores
 
@@ -146,6 +172,7 @@ def main():
     sliderLevel.on_changed(actualizarLevelWindow) # Hook ante cambio de sliders. Llamamos a las funciones descritas anteriormente.
     sliderWindow.on_changed(actualizarLevelWindow)
     sliderUmbral.on_changed(actualizarUmbral)
+    botonInfo.on_clicked(Dicom.mostrarInfo)
 
     # --- 7. Display the Plot ---
     matplotlib.pyplot.show() # Para que aparezca la ventana.
