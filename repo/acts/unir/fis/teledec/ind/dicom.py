@@ -5,6 +5,8 @@ from tkinter import filedialog, font
 from matplotlib.patches import Rectangle
 from PIL import Image, ImageTk, ImageFilter
 import cv2
+import skimage
+import scipy.ndimage
 global rutaArchivo
 rutaArchivo = ""
 class Dicom:
@@ -46,11 +48,31 @@ class Dicom:
         root.mainloop()
     def aplicarGaussiano(archivoDicom, nuevoSigma):
         pixelArray = archivoDicom.pixel_array
-        imagen = Image.fromarray(pixelArray).convert('L')
-        imagenModificada = imagen.filter(ImageFilter.MedianFilter(nuevoSigma))
-        pixelArrayModificado = numpy.asarray(imagenModificada, dtype=numpy.uint8)
-        matplotlib.pyplot.imshow(pixelArrayModificado)
-        matplotlib.pyplot.show() #No funciona por nada del mundo... Ni idea de por qué....
+        kernel = (nuevoSigma, nuevoSigma)
+        arrayModificado = skimage.filters.gaussian(pixelArray, kernel, preserve_range=True)
+        matplotlib.pyplot.figure(figsize=(10,10))
+        matplotlib.pyplot.imshow(arrayModificado, cmap="gray")
+        matplotlib.pyplot.show()
+
+    def aplicarMediana(archivoDicom, nuevoSigma):
+        pixelArray = archivoDicom.pixel_array
+        kernel = (nuevoSigma, nuevoSigma)
+        arrayModificado = skimage.filters.median(pixelArray)
+        matplotlib.pyplot.figure(figsize=(10,10))
+        matplotlib.pyplot.imshow(arrayModificado, cmap="gray")
+        matplotlib.pyplot.show()
+    def aplicarTraslacion(archivoDicom, pixelesX, pixelesY):
+        pixelArray = archivoDicom.pixel_array
+        pixelArrayModificado = scipy.ndimage.shift(pixelArray, pixelesX)
+        matplotlib.pyplot.figure(figsize=(10,10))
+        matplotlib.pyplot.imshow(pixelArrayModificado, cmap="gray")
+        matplotlib.pyplot.show()
+    def aplicarEscalado(archivoDicom, escala):
+        pixelArray = archivoDicom.pixel_array
+        pixelArrayModificado = scipy.ndimage.zoom(pixelArray, escala)
+        matplotlib.pyplot.figure(figsize=(10,10))
+        matplotlib.pyplot.imshow(pixelArrayModificado, cmap="gray")
+        matplotlib.pyplot.show()
         
 def main():
     try:
@@ -86,7 +108,7 @@ def main():
     ejeImagen = ejes[0]
     ejeHistograma = ejes[1]
     # Evitar superposición de controles con padding
-    figura.subplots_adjust(bottom=0.35)
+    figura.subplots_adjust(bottom=0.45)
     # 
     imagen = ejeImagen.imshow(Dicom.aplicarVentana(pixelArray, level, window), cmap='gray')
     ejeImagen.axis('off') # Para que se vea más limpia el output
@@ -107,12 +129,18 @@ def main():
     ejeHistograma.add_patch(rectanguloVentana)
     # Sliders
     colorEje = '#f0f0f0'
-    ejeLevel = matplotlib.pyplot.axes([0.15, 0.27, 0.65, 0.03], facecolor=colorEje) # Posiciones relativas
-    ejeWindow = matplotlib.pyplot.axes([0.15, 0.22, 0.65, 0.03], facecolor=colorEje)
-    ejeUmbral = matplotlib.pyplot.axes([0.15, 0.17, 0.65, 0.03], facecolor=colorEje)
-    ejeSigma = matplotlib.pyplot.axes([0.15, 0.12, 0.65, 0.03], facecolor=colorEje)
-    ejeInfo = matplotlib.pyplot.axes([0.15, 0.07, 0.325, 0.03], facecolor=colorEje)
-    ejeGaussiano = matplotlib.pyplot.axes([0.476, 0.07, 0.325, 0.03], facecolor=colorEje)
+    ejeLevel = matplotlib.pyplot.axes([0.15, 0.37, 0.65, 0.03], facecolor=colorEje) # Posiciones relativas
+    ejeWindow = matplotlib.pyplot.axes([0.15, 0.32, 0.65, 0.03], facecolor=colorEje)
+    ejeUmbral = matplotlib.pyplot.axes([0.15, 0.27, 0.65, 0.03], facecolor=colorEje)
+    ejeSigma = matplotlib.pyplot.axes([0.15, 0.22, 0.65, 0.03], facecolor=colorEje)
+    ejeInfo = matplotlib.pyplot.axes([0.15, 0.17, 0.163, 0.03], facecolor=colorEje)
+    ejeGaussiano = matplotlib.pyplot.axes([0.314, 0.17, 0.163, 0.03], facecolor=colorEje)
+    ejeMediana = matplotlib.pyplot.axes([0.477, 0.17, 0.163, 0.03], facecolor=colorEje)
+    ejeSNR = matplotlib.pyplot.axes([0.64, 0.17, 0.163, 0.03], facecolor=colorEje)
+    ejeCuadroX = matplotlib.pyplot.axes([0.15, 0.12, 0.217, 0.03], facecolor=colorEje)
+    ejeEscala = matplotlib.pyplot.axes([0.368, 0.12, 0.217, 0.03], facecolor=colorEje)
+    ejeBotonEscala = matplotlib.pyplot.axes([0.585, 0.12, 0.217, 0.03], facecolor=colorEje)
+    ejeBotonTraslacion = matplotlib.pyplot.axes([0.15, 0.07, 0.65, 0.03], facecolor=colorEje)
     minPixel = pixelArray.min()
     maxPixel = pixelArray.max()
     sliderLevel = matplotlib.widgets.Slider(ejeLevel, 'Level',
@@ -127,6 +155,12 @@ def main():
     sliderSigma = matplotlib.widgets.Slider(ejeSigma, 'Sigma', 1, 49, valinit=1, valfmt="%0d", valstep=2)
     botonInfo = matplotlib.widgets.Button(ejeInfo, "Información...")
     botonGaussiano = matplotlib.widgets.Button(ejeGaussiano, "Aplicar Gaussiano")
+    botonMediana = matplotlib.widgets.Button(ejeMediana, "Aplicar Mediana")
+    botonSNR = matplotlib.widgets.Button(ejeSNR, "Calcular SNR")
+    cuadroX = matplotlib.widgets.Slider(ejeCuadroX, "X", 1, 200, valinit=1, valfmt="%0d", valstep=10)
+    escala = matplotlib.widgets.Slider(ejeEscala, "Escala", 0, 1, valinit=1, valfmt="%0.0f", valstep= 0.1)
+    botonEscala = matplotlib.widgets.Button(ejeBotonEscala, "Modificar resolución")
+    botonTraslacion = matplotlib.widgets.Button(ejeBotonTraslacion, "Aplicar Traslación")
 
     def actualizarLevelWindow(val):
     # Conseguir los valores de los sliders.
@@ -153,6 +187,33 @@ def main():
         nuevoSigma = sliderSigma.val
         imagen.set_data(Dicom.aplicarGaussiano(archivoDicom, nuevoSigma))
         figura.canvas.draw_idle()
+    def actualizarMediana(val):
+        nuevoSigma = sliderSigma.val
+        imagen.set_data(Dicom.aplicarMediana(archivoDicom, nuevoSigma))
+        figura.canvas.draw_idle()
+    def calcularSNR(archivoDicom):
+        mediaArray = numpy.mean(pixelArray)
+        desviacionArray = numpy.std(pixelArray)
+        snr = numpy.where(desviacionArray == 0, 0, mediaArray / desviacionArray)
+        root = tkinter.Tk()
+        paddingDefecto = 10
+        form = tkinter.ttk.Frame(root, padding=(paddingDefecto,paddingDefecto,paddingDefecto,paddingDefecto))
+        root.title("Valor SNR")
+        form.pack()
+        botonSalir = tkinter.ttk.Button(form, text="Salir", command=root.destroy)
+        labelInfo = tkinter.Text(form)
+        labelInfo.insert('1.0', snr)
+        labelInfo.pack(side='top', fill='both', expand=True)
+        labelInfo.config(state=tkinter.DISABLED)
+        botonSalir.pack(fill='x',side='bottom', padx=paddingDefecto, pady=paddingDefecto)
+        root.mainloop()
+    def actualizarEscala(val):
+        nuevaEscala = escala.val
+        imagen.set_data(Dicom.aplicarEscalado(archivoDicom, nuevaEscala))
+        figura.canvas.draw_idle()
+    def actualizarTraslacion(val):
+        pixelesX = cuadroX.val
+        imagen.set_data(Dicom.aplicarTraslacion(archivoDicom, pixelesX, pixelesX))
 
     ####
     sliderLevel.on_changed(actualizarLevelWindow) # Hook ante cambio de sliders. Llamamos a las funciones descritas anteriormente.
@@ -160,6 +221,10 @@ def main():
     sliderUmbral.on_changed(actualizarUmbral)
     botonInfo.on_clicked(lambda event: Dicom.mostrarInfo(archivoDicom))
     botonGaussiano.on_clicked(actualizarGaussiano)
+    botonMediana.on_clicked(actualizarMediana)
+    botonSNR.on_clicked(lambda event: calcularSNR(archivoDicom))
+    botonEscala.on_clicked(actualizarEscala)
+    botonTraslacion.on_clicked(actualizarTraslacion)
 
     # --- 7. Display the Plot ---
     matplotlib.pyplot.show() # Para que aparezca la ventana.
