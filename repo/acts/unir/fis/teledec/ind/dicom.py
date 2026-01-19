@@ -4,36 +4,10 @@ import tkinter, tkinter.ttk
 from tkinter import filedialog, font
 from matplotlib.patches import Rectangle
 from PIL import Image, ImageTk, ImageFilter
+import cv2
 global rutaArchivo
 rutaArchivo = ""
 class Dicom:
-    """
-    Clase con varios métodos:
-        aplicarVentana:
-            Función que aplica la ventana a la imagen, según la entrada del usuario.
-            Argumentos:
-                archivoDicom: el archivoDicom procesado y devuelto en tipo FileDataset
-                windowCenter: también llamado Level en algunos programas.
-                windowWidth: también llamado Window en algunos programas.
-            Funcionamiento:
-                Las variables minWindow y maxWindow definen la ventana para que mediante el método clip del módulo NumPy se limiten los valores de la matriz de píxeles. Si la anchura de ventana es 0, la matriz se anula para evitar errores de división.
-            Retorno:
-                Retorna un array con la imagen que se debe representar.
-        cargarDicom:
-            Función para cargar el archivo DICOM.
-            Sin argumentos.
-            Funcionamiento:
-                La función abre, mediante un objeto filedialog de TKinter, un selector de archivo para seleccionar el archivo DICOM. Su directorio de inicio es la carpeta personal del usuario, habitualmente siguiendo la ruta /home/$USER. Comprueba la correcta apertura del archivo.
-            Retorno:
-                La función retorna una cadena de caracteres con la ruta al archivo y la imprime por la consola.
-        aplicarUmbral:
-            Función para aplicar el umbral a un archivo DICOM.
-            Argumentos:
-                archivoDicom: el archivo DICOM leído por Python, con el tipo FileDataset
-                nuevoUmbral: el valor del umbral que introduce el usuario.
-            Funcionamiento:
-                Se aplica la condición para saber si el pixel tiene una intensidad mayor al umbral, en cuyo caso se devuelve 1. En caso contrario se devuelve 0. Se multiplica el valor por 255 para dar la intensidad máxima.
-    """
     def aplicarVentana(archivoDicom, windowCenter, windowWidth):
         minWindow = windowCenter - windowWidth / 2
         maxWindow = windowCenter + windowWidth / 2
@@ -73,10 +47,11 @@ class Dicom:
     def aplicarGaussiano(archivoDicom, nuevoSigma):
         pixelArray = archivoDicom.pixel_array
         imagen = Image.fromarray(pixelArray).convert('L')
-        imagenModificada = imagen.filter(ImageFilter.GaussianBlur(radius=nuevoSigma))
-        pixelArrayModificado = numpy.array(imagenModificada)
-        return pixelArrayModificado
-
+        imagenModificada = imagen.filter(ImageFilter.MedianFilter(nuevoSigma))
+        pixelArrayModificado = numpy.asarray(imagenModificada, dtype=numpy.uint8)
+        matplotlib.pyplot.imshow(pixelArrayModificado)
+        matplotlib.pyplot.show() #No funciona por nada del mundo... Ni idea de por qué....
+        
 def main():
     try:
         archivoDicom = pydicom.dcmread(Dicom.cargarDicom()) # Leemos el DICOM y gestionamos el error.
@@ -149,7 +124,7 @@ def main():
                                 (maxPixel - minPixel) * 2,
                                 valinit=window0, valfmt="%0.0f")
     sliderUmbral = matplotlib.widgets.Slider(ejeUmbral, 'Umbral', 1,255, valinit=100, valfmt="%0d")
-    sliderSigma = matplotlib.widgets.Slider(ejeSigma, 'Sigma', 1, 50, valinit=1, valfmt="%0d")
+    sliderSigma = matplotlib.widgets.Slider(ejeSigma, 'Sigma', 1, 49, valinit=1, valfmt="%0d", valstep=2)
     botonInfo = matplotlib.widgets.Button(ejeInfo, "Información...")
     botonGaussiano = matplotlib.widgets.Button(ejeGaussiano, "Aplicar Gaussiano")
 
