@@ -72,16 +72,10 @@ class Dicom:
         root.mainloop()
     def aplicarGaussiano(archivoDicom, nuevoSigma):
         pixelArray = archivoDicom.pixel_array
-        imagen = Image.fromarray(pixelArray, mode='L')
+        imagen = Image.fromarray(pixelArray).convert('L')
         imagenModificada = imagen.filter(ImageFilter.GaussianBlur(radius=nuevoSigma))
-        datos = imagenModificada.getdata()
-        pixelArrayModificado = numpy.array(datos).reshape(datos.size[::-1]+(-1,))
-        pixelArrayModificado = pixelArrayModificado.astype(numpy.uint8)
+        pixelArrayModificado = numpy.array(imagenModificada)
         return pixelArrayModificado
-
-    ##
-# Muestra figura y aplica ventana
-    #Leemos el DICOM
 
 def main():
     try:
