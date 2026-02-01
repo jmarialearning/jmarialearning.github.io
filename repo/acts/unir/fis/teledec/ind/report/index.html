@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/repo/academic.css">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width">
+        <title>Individual Teledetección</title>
+    </head>
+    <h1>Actividad Individual de Teledetección y procesado de imágenes</h1>
+    <p id="enunciado" style="text-align: center; font-size: larger;">Transformaciones de imágenes DICOM</p>
+    <footer>Jesús María Mora Mur</footer>
+    <!---->
+    <h2>Introducción</h2>
+    <p>Para realizar el visualizador de imágenes DICOM se ha utilizado el lenguaje Python por su diseño modular y su orientación a objetos. Aun así, el código es fácilmente modificable para que se adapte a lenguajes como MATLAB u Octave <a href="#generalpython" class="cita">(General Python FAQ - Python 3.14.0., s.f.)</a></p>
+    <p>Específicamente, se han utilizado las librerías siguientes:</p>
+    <ul>
+        <li><code>matplotlib</code>, para generar Interfaces de Usuario Gráficas (GUI) con el uso del kit de herramientas <i>widgets</i>. Para el cuadro de diálogo inicial se utiliza <code>tkinter.filedialog</code> <a href="#tkinter" class="cita">(Tkinter - Python Interface to Tcl/Tk, s.f.)</a> <a class="cita" href="#matplotlib">(Matplotlib Documentation - Matplotlib 3.10.8 Documentation, s.f.)</a></li>
+        <li><code>pydicom</code>, como marco para leer y decodificar imágenes en estándar DICOM</li>
+        <li><code>numpy</code>. La librería <i>numpy</i> permite la gestión y análisis de objetos numéricos. Utilizaremos su capacidad para trabajar con <i>arrays</i> o matrices <a href="#numpy" class="cita">(Numpy Documentation, s.f.)</a></li>
+        <li><code>os</code>, para poder trabajar con llamadas a sistema y rutas de acceso a disco.</li>
+        <li><code>PIL</code>. La librería <i>pillow</i> permite la manipulación de imágenes mediante las clases <code>Image</code>, <code>ImageTk</code> e <code>ImageFilter</code> <a href="#pillow" class="cita">(Pillow (PIL Fork) 12.0.0 documentation, s.f.)</a></li>
+    </ul>
+    <p>Podemos resumir la funcionalidad de la aplicación de la siguiente forma:</p>
+    <ul>
+        <li>La aplicación pide una imagen mediante un cuadro de diálogo.</li>
+        <li>La aplicación importa y lee el archivo DICOM respetando los parámetros de visualización por defecto. Permite también su modificación.</li>
+        <li>Poddemos aplicar una segmentación por umbral, dando cuenta de la magnitud mediante un control de tipo <code>Slider</code>.</li>
+        <li>La aplicación muestra también un histograma para ver las regiones que se visualizan, haciendo uso del método <code>flatten</code> de NumPy, para pasar los datos a una dimensión.</li>
+        <li>Se pueden aplicar filtros Gaussiano y de mediana, acceder a los metadatos del archivo y aplicar transformaciones de tamaño y traslación.</li>
+    </ul>
+    <p>Vistas las características de la aplicación, procedemos a mostrar las capturas de pantalla del programa, del que se puede obtener el <a href="../dicom.py">código</a>:</p>
+    <h2>Capturas de pantalla de la aplicación</h2>
+    <p>Considerando que la aplicación es multiplataforma, se adjuntan las siguientes capturas de pantalla en una instalación de Windows 10.0.19044 de 64 bits:</p>
+    <p>La primera pantalla que aparece es el selector de archivo:</p>
+    <figure class="responsive">
+        <img src="img/selectorArchivo.png" class="responsive">
+        <figcaption>Figura 1: Primera pantalla del programa, que permite la selección de archivos DICOM.</figcaption>
+    </figure>
+    <p>Después la imagen se procesa, llegando a la pantalla principal del programa:</p>
+    <figure class="responsive">
+        <img src="img/pantallaPrincipal.png" class="responsive">
+        <figcaption>Figura 2: Pantalla principal del programa.</figcaption>
+    </figure>
+    <p>Modificando los <i>sliders</i>, se pueden modificar las propiedades y aplicar la segmentación:</p>
+    <figure class="responsive">
+        <table class="sinborde sinhover">
+        <tr>
+            <td class="sinborde">
+                <figure class="responsive">
+                    <img src="img/pantallaPrincipal.png" class="responsive">
+                </figure>
+            </td>
+            <td class="sinborde">
+                <figure class="responsive">
+                    <img src="img/imposibleVer.png" class="responsive">
+                </figure>
+            </td>
+        </tr>
+    </table>
+    <figcaption>Figura 4: Visualización de la misma imagen modificando parámetros. Izquierda: parámetros por defecto. Derecha: parámetros exagerados no permiten detectar hallazgos.</figcaption>
+    </figure>
+    <p>Como vemos a utilidad de los sliders de <i>level</i> y <i>window</i> es importante para posibilitar una correcta definición de diferentes regiones según su intensidad. Ello permitirá también saber el tipo de tejido al que miramos.</p>
+    <p>Comprobamos también la función del <i>umbral</i>:</p>
+    <figure class="responsive">
+        <table class="sinborde sinhover">
+            <tr>
+                <td class="sinborde">
+                    <figure class="responsive">
+                        <img class="responsive" src="img/pantallaPrincipal.png">
+                    </figure>
+                </td>
+                <td class="sinborde">
+                    <figure class="responsive">
+                        <img class="responsive" src="img/umbralAplicado.png">
+                    </figure>
+                </td>
+            </tr>
+        </table>
+        <figcaption>Figura 5: Funcionalidad del filtro de umbral.</figcaption>
+    </figure>
+    <p>Se da cuenta también de los filtros y transformaciones:</p>
+    <figure class="responsive">
+        <table class="sinborde sinhover">
+        <tr>
+            <td class="sinborde">
+                <figure class="responsive">
+                    <img src="img/gaussiano.png" class="responsive">
+                </figure>
+            </td>
+            <td class="sinborde">
+                <figure class="responsive">
+                    <img src="img/mediana.png" class="responsive">
+                </figure>
+            </td>
+        </tr>
+        <tr>
+            <td class="sinborde">
+                <figure class="responsive">
+                    <img src="img/traslacion.png" class="responsive" id="figura43ai">
+                </figure>
+            </td>
+            <td class="sinborde">
+                <figure class="responsive">
+                    <img class="responsive" src="img/escala.png">
+                </figure>
+            </td>
+        </tr>
+    </table>
+    <figcaption>Figura 4: Visualización de la misma imagen aplicando filtros y transformaciones. Arriba izquierda: filtro gaussiano. Arriba derecha: filtro de mediana. Abajo izquierda: transformación por traslación, igual en ambos ejes, abajo derecha: disminución de tamaño de imagen.</figcaption>
+    </figure>
+<h2>Conclusiones</h2>
+<p>Esta actividad ha permitido el acercamiento a la realidad del procesado de imágenes mediante el desarrollo e implementación de una interfaz gráfica de usuario para procesar imágenes médicas en el archivo estándar <i>DICOM</i>. Se han implementado técnicas de segmentación para las imágenes, así como una posibilidad para mejorar la visualización de las mismas, priorizando estructuras. Además, se han programado diferentes transformaciones geométricas que se pueden aplicar a las imágenes para gestionarlas según proceda.</p>
+<h2>Referencias</h2>
+<p class="francesa" id="generalpython">General Python FAQ - Python 3.14.0. (s.f). Python Documentation. <a href="https://docs.python.org/3/faq/general.html">https://docs.python.org/3/faq/general.html</a></p>
+<p class="francesa" id="tkinter">Tkinter - Python interface to Tcl/Tk. (s.f). Python Documentation. <a href="https://docs.python.org/3/library/tkinter.html">https://docs.python.org/3/library/tkinter.html</a></p>
+<p class="francesa" id="pillow">Pillow. (s.f.). Pillow (PIL Fork). <a href="https://pillow.readthedocs.io/en/stable/index.html">https://pillow.readthedocs.io/en/stable/index.html</a></p>
+<p class="francesa" id="numpy">Numpy documentation. (s.f.). Retrieved January 19, 2026, from <a href="https://numpy.org/doc/">https://numpy.org/doc/</a></p>
+<p class="francesa" id="matplotlib">Matplotlib documentation—Matplotlib 3.10.8 documentation. (s.f.). Retrieved December 14, 2025, from <a href="https://matplotlib.org/stable/index.html">https://matplotlib.org/stable/index.html</a></p>
+</html>
