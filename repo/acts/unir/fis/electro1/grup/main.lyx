@@ -1,0 +1,303 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children no
+\language spanish
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family sfdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content true
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Actividad 3 Electromagnetismo I
+\end_layout
+
+\begin_layout Author
+Jesús María Mora Mur
+\end_layout
+
+\begin_layout Date
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Densidad de corriente superficial
+\end_layout
+
+\begin_layout Standard
+Para describir la densidad de corriente superficial,
+ 
+\begin_inset Formula $\vec{K}$
+\end_inset
+
+,
+ partimos de la expresión siguiente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vec{K}=nI
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+donde 
+\begin_inset Formula $n$
+\end_inset
+
+ es el número de vueltas por unidad de longitud.
+ Así,
+ sabemos que 
+\begin_inset Formula $K=\frac{N\cdot I}{L}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Por otro lado,
+ dicha densidad seguirá la dirección del eje axial y el sentido de la corriente.
+ Por ende:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vec{K}=\frac{N\cdot I}{L}\hat{z}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Cálculo del campo magnético
+\end_layout
+
+\begin_layout Standard
+Partimos de la 
+\emph on
+Ley de Biot-Savart
+\emph default
+ en su forma diferencial:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+d\vec{B}=\frac{\mu_{0}}{4\pi}\cdot\frac{I\cdot d\vec{l}\times\hat{r}}{r^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Considerando que el elemento de longitud se circunscribe al eje z:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+d\vec{l}=dz^{\prime}\hat{z}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por otro lado,
+ la distancia desde el elemento hasta un punto 
+\begin_inset Formula $z$
+\end_inset
+
+ del eje axial será:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+r=\sqrt{\left(z-z^{\prime}\right)^{2}+r_{0}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El vector 
+\begin_inset Formula $\vec{r}$
+\end_inset
+
+ en cilíndricas vendrá dado por una componente radial y una axial:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vec{r}=(z-z^{\prime})\hat{z}+r_{0}\hat{r_{\phi}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El producto vectorial tendrá un resultado de:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+d\vec{l}\times\hat{r}=dz^{\prime}\frac{r_{0}}{\sqrt{(z-z^{\prime})^{2}+r_{0}^{2}}}\hat{r_{\phi}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sustituyendo en la 
+\emph on
+Ley de Biot-Savart
+\emph default
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+d\vec{B}=\frac{\mu_{0}}{4\pi}\cdot\frac{I\cdot dz^{\prime}\frac{r_{0}}{\sqrt{(z-z^{\prime})^{2}+r_{0}^{2}}}\hat{r_{\phi}}}{(z-z^{\prime})^{2}+r_{0}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por simetría la componente radial se cancelará.
+ La integral queda reducida:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vec{B}(z)=\frac{\mu_{0}Ir_{0}}{4\pi}\int_{-\nicefrac{L}{2}}^{\nicefrac{L}{2}}\frac{dz^{\prime}}{(z-z^{\prime})^{2}+r_{0}^{2}}=\frac{\mu_{0}NI}{2L}\left(1-\frac{z}{\sqrt{z^{2}+r_{0}^{2}}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_body
+\end_document
