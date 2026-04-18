@@ -279,6 +279,80 @@ Segundo ejercicio
 
 \begin_layout Enumerate
 
+\emph on
+Verdadero
+\emph default
+.
+ La corriente de conducción se mide en amperios,
+ al igual que la de desplazamiento.
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Verdadero
+\emph default
+.
+ Sabemos que la corriente de desplazamiento es directamente proporcional a la tasa de cambio del flujo eléctrico a lo largo del tiempo en una región definida.
+ Si el flujo cambia,
+ el campo ha de modificarse.
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Falso
+\emph default
+.
+ Las ecuaciones de Maxwell pueden adaptarse a campos no estáticos.
+ En concreto,
+ la Ley de Gauss:
+\begin_inset Formula 
+\[
+\nabla\bullet\vec{E}=\frac{\rho}{\epsilon_{0}}
+\]
+
+\end_inset
+
+ sigue siendo válida,
+ así como:
+\begin_inset Formula 
+\[
+\nabla\bullet\vec{H}=0
+\]
+
+\end_inset
+
+ al no existir fuentes o sumideros magnéticos.
+ Por otro lado,
+ las ecuaciones que implican a los rotacionales varían añadiendo términos diferenciales que definen el dinamismo de los campos.
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Verdadero
+\emph default
+.
+ Mediante la ley de Ampère-Maxwell se predice la existencia de ondas electromagnéticas y puede obtenerse su ecuación.
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Verdadero
+\emph default
+.
+ Las ondas electromagnéticas son transversales al ser la dirección de propagación perpendicular a la oscilación de 
+\begin_inset Formula $\vec{B}$
+\end_inset
+
+ y 
+\begin_inset Formula $\vec{E}$
+\end_inset
+
+.
 \end_layout
 
 \end_body

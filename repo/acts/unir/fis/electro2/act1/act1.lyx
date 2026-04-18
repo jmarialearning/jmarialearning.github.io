@@ -278,7 +278,14 @@ Segundo ejercicio
 \end_layout
 
 \begin_layout Enumerate
-ss
+
+\emph on
+Verdadero
+\emph default
+.
+ La corriente de conducción se mide en amperios,
+ al igual que la de desplazamiento.
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -324,6 +331,68 @@ Falso
 
 \begin_layout Enumerate
 
+\emph on
+Verdadero
+\emph default
+.
+ Mediante la ley de Ampère-Maxwell se predice la existencia de ondas electromagnéticas y puede obtenerse su ecuación.
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+Verdadero
+\emph default
+.
+ Las ondas electromagnéticas son transversales al ser la dirección de propagación perpendicular a la oscilación de 
+\begin_inset Formula $\vec{B}$
+\end_inset
+
+ y 
+\begin_inset Formula $\vec{E}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Tercer ejercicio
+\end_layout
+
+\begin_layout Standard
+Viendo la ecuación,
+ tenemos que:
+\end_layout
+
+\begin_layout Itemize
+La frecuencia de la onda es 
+\begin_inset Formula $2\pi\cdot10^{6}\:\mathrm{hz}$
+\end_inset
+
+,
+ al multiplicar al tiempo.
+\end_layout
+
+\begin_layout Itemize
+El número de onda es 
+\begin_inset Formula $\nicefrac{\pi}{2}$
+\end_inset
+
+,
+ al multiplicar a la coordenada de propagación 
+\begin_inset Formula $z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Esta onda se propaga en el sentido positivo del eje,
+ por llevar delante de 
+\begin_inset Formula $z$
+\end_inset
+
+ un signo negativo.
 \end_layout
 
 \end_body
