@@ -7,7 +7,7 @@
 \textclass article
 \use_default_options true
 \maintain_unincluded_children no
-\language american
+\language spanish
 \language_package default
 \inputencoding utf8
 \fontencoding auto
@@ -15,7 +15,7 @@
 \font_sans "default" "default"
 \font_typewriter "default" "default"
 \font_math "auto" "auto"
-\font_default_family default
+\font_default_family sfdefault
 \use_non_tex_fonts false
 \font_sc false
 \font_roman_osf false
@@ -33,7 +33,20 @@
 \float_placement class
 \float_alignment class
 \paperfontsize default
-\use_hyperref false
+\spacing single
+\use_hyperref true
+\pdf_title "Actividad 1"
+\pdf_author "Jesús María Mora Mur"
+\pdf_subject "Electromagnetismo II"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry false
 \use_package amsmath 1
@@ -48,6 +61,7 @@
 \use_package undertilde 1
 \cite_engine basic
 \cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -67,7 +81,7 @@
 \paragraph_indentation default
 \is_math_indent 0
 \math_numbering_side default
-\quotes_style english
+\quotes_style french
 \dynamic_quotes 0
 \papercolumns 1
 \papersides 1
@@ -86,7 +100,184 @@
 
 \begin_body
 
+\begin_layout Title
+Ejercicios sobre ondas electromagnéticas.
+\end_layout
+
+\begin_layout Author
+Jesús María Mora Mur
+\end_layout
+
+\begin_layout Date
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Primer ejercicio
+\end_layout
+
 \begin_layout Standard
+Comprobaremos en primer lugar,
+ que 
+\begin_inset Formula $\nabla\times\vec{E}=\vec{0}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\nabla\times\vec{E}=\begin{vmatrix}\hat{i} & \hat{j} & \hat{k}\\
+\nicefrac{\partial}{\partial x} & \nicefrac{\partial}{\partial y} & \nicefrac{\partial}{\partial z}\\
+2xy-z^{3} & x^{2} & -3xz^{2}
+\end{vmatrix}=\vec{0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Comprobaremos también que el campo magnético es solenoidal,
+ es decir que 
+\begin_inset Formula $\nabla\bullet\vec{B}=0$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\nabla\bullet\vec{B}=\left(\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z}\right)\bullet\left(2xy,-y^{2},1\right)=2y-2y=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo que vemos que los campos 
+\begin_inset Formula $\vec{E}$
+\end_inset
+
+ y 
+\begin_inset Formula $\vec{B}$
+\end_inset
+
+ son estáticos.
+ Para calcular la densidad volumétrica recurrimos a la 
+\emph on
+Ley de Gauss
+\emph default
+ en su forma diferencial:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\nabla\bullet\vec{E}=\frac{\rho}{\epsilon_{0}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Calculando la divergencia obtenemos que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\nabla\bullet\vec{E}=2y-6z
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Igualando,
+ obtenemos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\rho=2\epsilon_{0}\cdot\left(y-3z\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para calcular 
+\begin_inset Formula $\vec{J}$
+\end_inset
+
+,
+ seguimos la 
+\emph on
+Ley de Ampère
+\emph default
+,
+ donde 
+\begin_inset Formula $\vec{H}=\frac{1}{\mu}\vec{B}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\nabla\times\vec{H}=\vec{J}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vec{J}=\begin{vmatrix}\hat{i} & \hat{j} & \hat{k}\\
+\nicefrac{\partial}{\partial x} & \nicefrac{\partial}{\partial y} & \nicefrac{\partial}{\partial z}\\
+\frac{2xy}{\mu_{0}} & \frac{-y^{2}}{\mu_{0}} & \frac{1}{\mu_{0}}
+\end{vmatrix}=-\frac{2x}{\mu_{0}}\hat{k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Segundo ejercicio
+\end_layout
+
+\begin_layout Enumerate
 
 \end_layout
 
