@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This DocBook file was created by LyX 2.4.3
+  See https://www.lyx.org/ for more information -->
+<article xml:lang="es-ES" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:xi="http://www.w3.org/2001/XInclude" version="5.2">
+<info>
+<title>Ejercicios sobre ondas electromagnéticas.</title>
+<author>
+<personname>Jesús María Mora Mur</personname>
+</author>
+<date><!-- current-date -->2026-04-19</date>
+</info>
+<section>
+<title>Primer ejercicio</title>
+<para>Comprobaremos en primer lugar, que <inlineequation>
+<alt role='tex'>\nabla\times\vec{E}=\vec{0}</alt>
+<m:math display="inline">
+ 
+<m:mrow>
+ <m:mi>&#x2207;</m:mi>
+ <m:mo>&#x00D7;</m:mo>
+ <m:mover>
+  <m:mi>E</m:mi>
+  <m:mo stretchy='true'>&#x2192;</m:mo>
+ </m:mover>
+ <m:mo stretchy='false'>=</m:mo>
+ <m:mover>
+  <m:mn>0</m:mn>
+  <m:mo stretchy='true'>&#x2192;</m:mo>
+ </m:mover>
+</m:mrow>
+</m:math>
+</inlineequation>:</para>
+<informalequation>
+<alt role='tex'>\nabla\times\vec{E}=\begin{vmatrix}\hat{i} &amp; \hat{j} &amp; \hat{k}\\
+\nicefrac{\partial}{\partial x} &amp; \nicefrac{\partial}{\partial y} &amp; \nicefrac{\partial}{\partial z}\\
+2xy-z^{3} &amp; x^{2} &amp; -3xz^{2}
+\end{vmatrix}=\vec{0}</alt>
+<m:math display="block">
+ 
+<m:mrow>
+ <m:mi>&#x2207;</m:mi>
+ <m:mo>&#x00D7;</m:mo>
+ <m:mover>
+  <m:mi>E</m:mi>
+  <m:mo stretchy='true'>&#x2192;</m:mo>
+ </m:mover>
+ <m:mo stretchy='false'>=</m:mo>
+ <m:mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>|</m:mo>
+ <m:mtable>
+  <m:mtr>
+   <m:mtd>
+    <m:mover>
+     <m:mi>i</m:mi>
+     <m:mo stretchy='true'>&#x02C6;</m:mo>
+    </m:mover>
+   </m:mtd>
+   <m:mtd>
+    <m:mover>
+     <m:mi>j</m:mi>
+     <m:mo stretchy='true'>&#x02C6;</m:mo>
+    </m:mover>
+   </m:mtd>
+   <m:mtd>
+    <m:mover>
+     <m:mi>k</m:mi>
+     <m:mo stretchy='true'>&#x02C6;</m:mo>
+    </m:mover>
+   </m:mtd>
+  </m:mtr>
+  <m:mtr>
+   <m:mtd>
+    <m:mfrac bevelled='true'>
+     <m:mi>&#x2202;</m:mi>
+     <m:mrow>
+      <m:mi>&#x2202;</m:mi>
+      <m:mi>x</m:mi>
+     </m:mrow>
+    </m:mfrac>
+   </m:mtd>
+   <m:mtd>
+    <m:mfrac bevelled='true'>
+     <m:mi>&#x2202;</m:mi>
+     <m:mrow>
+      <m:mi>&#x2202;</m:mi>
+      <m:mi>y</m:mi>
+     </m:mrow>
+    </m:mfrac>
+   </m:mtd>
+   <m:mtd>
+    <m:mfrac bevelled='true'>
+     <m:mi>&#x2202;</m:mi>
+     <m:mrow>
+      <m:mi>&#x2202;</m:mi>
+      <m:mi>z</m:mi>
+     </m:mrow>
+    </m:mfrac>
+   </m:mtd>
+  </m:mtr>
+  <m:mtr>
+   <m:mtd>
+    <m:mrow>
+     <m:mn>2</m:mn>
+     <m:mi>x</m:mi>
+     <m:mi>y</m:mi>
+     <m:mo stretchy='false'>-</m:mo>
+     <m:msup>
+      <m:mi>z</m:mi>
+      <m:mn>3</m:mn>
+     </m:msup>
+    </m:mrow>
+   </m:mtd>
+   <m:mtd>
+    <m:msup>
+     <m:mi>x</m:mi>
+     <m:mn>2</m:mn>
+    </m:msup>
+   </m:mtd>
+   <m:mtd>
+    <m:mrow>
+     <m:mo stretchy='false'>-</m:mo>
+     <m:mn>3</m:mn>
+     <m:mi>x</m:mi>
+     <m:msup>
+      <m:mi>z</m:mi>
+      <m:mn>2</m:mn>
+     </m:msup>
+    </m:mrow>
+   </m:mtd>
+  </m:mtr>
+ </m:mtable>
+ <m:mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>|</m:mo>
+ <m:mo stretchy='false'>=</m:mo>
+ <m:mover>
+  <m:mn>0</m:mn>
+  <m:mo stretchy='true'>&#x2192;</m:mo>
+ </m:mover>
+</m:mrow>
+</m:math>
+</informalequation>
+
+<para>Comprobaremos también que el campo magnético es solenoidal, es decir que <inlineequation>
+<alt role='tex'>\nabla\bullet\vec{B}=0</alt>
+<m:math display="inline">
+ 
+<m:mrow>
+ <m:mi>&#x2207;</m:mi>
+ <m:mo>&#x2022;</m:mo>
+ <m:mover>
+  <m:mi>B</m:mi>
+  <m:mo stretchy='true'>&#x2192;</m:mo>
+ </m:mover>
+ <m:mo stretchy='false'>=</m:mo>
+ <m:mn>0</m:mn>
+</m:mrow>
+</m:math>
+</inlineequation>:</para>
+<informalequation>
+<alt role='tex'>\nabla\bullet\vec{B}=\left(\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z}\right)\bullet\left(2xy,-y^{2},1\right)=2y-2y=0</alt>
+<m:math display="block">
+ 
+<m:mrow>
+ <m:mi>&#x2207;</m:mi>
+ <m:mo>&#x2022;</m:mo>
+ <m:mover>
+  <m:mi>B</m:mi>
+  <m:mo stretchy='true'>&#x2192;</m:mo>
+ </m:mover>
+ <m:mo stretchy='false'>=</m:mo>
+ <m:mrow>
+  <m:mo>(</m:mo>
+  <m:mrow>
+   <m:mfrac>
+    <m:mi>&#x2202;</m:mi>
+    <m:mrow>
+     <m:mi>&#x2202;</m:mi>
+     <m:mi>x</m:mi>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo stretchy='false'>,</m:mo>
+   <m:mfrac>
+    <m:mi>&#x2202;</m:mi>
+    <m:mrow>
+     <m:mi>&#x2202;</m:mi>
+     <m:mi>y</m:mi>
+    </m:mrow>
+   </m:mfrac>
+   <m:mo stretchy='false'>,</m:mo>
+   <m:mfrac>
+    <m:mi>&#x2202;</m:mi>
+    <m:mrow>
+     <m:mi>&#x2202;</m:mi>
+     <m:mi>z</m:mi>
+    </m:mrow>
+   </m:mfrac>
+  </m:mrow>
+  <m:mo>)</m:mo>
+ </m:mrow>
+ <m:mo>&#x2022;</m:mo>
+ <m:mrow>
+  <m:mo>(</m:mo>
+  <m:mrow>
+   <m:mn>2</m:mn>
+   <m:mi>x</m:mi>
+   <m:mi>y</m:mi>
+   <m:mo stretchy='false'>,</m:mo>
+   <m:mo stretchy='false'>-</m:mo>
+   <m:msup>
+    <m:mi>y</m:mi>
+    <m:mn>2</m:mn>
+   </m:msup>
+   <m:mo stretchy='false'>,</m:mo>
+   <m:mn>1</m:mn>
+  </m:mrow>
+  <m:mo>)</m:mo>
+ </m:mrow>
+ <m:mo stretchy='false'>=</m:mo>
+ <m:mn>2</m:mn>
+ <m:mi>y</m:mi>
+ <m:mo stretchy='false'>-</m:mo>
+ <m:mn>2</m:mn>
+ <m:mi>y</m:mi>
+ <m:mo stretchy='false'>=</m:mo>
+ <m:mn>0</m:mn>
+</m:mrow>
+</m:math>
+</informalequation>
+
+<para>Por lo que vemos que los campos <inlineequation>
+<alt role='tex'>\vec{E}</alt>
+<m:math display="inline">
+ 
+<m:mover>
+ <m:mi>E</m:mi>
+ <m:mo stretchy='true'>&#x2192;</m:mo>
+</m:mover>
+</m:math>
+</inlineequation> y <inlineequation>
+<alt role='tex'>\vec{B}</alt>
+<m:math display="inline">
+ 
+<m:mover>
+ <m:mi>B</m:mi>
+ <m:mo stretchy='true'>&#x2192;</m:mo>
+</m:mover>
+</m:math>
+</inlineequation> son estáticos. Para calcular la densidad volumétrica recurrimos a la <emphasis>Ley de Gauss</emphasis> en su forma diferencial:</para>
+<informalequation>
+<alt role='tex'>\nabla\bullet\vec{E}=\frac{\rho}{\epsilon_{0}}</alt>
+<m:math display="block">
+ 
+<m:mrow>
+ <m:mi>&#x2207;</m:mi>
+ <m:mo>&#x2022;</m:mo>
+ <m:mover>
+  <m:mi>E</m:mi>
+  <m:mo stretchy='true'>&#x2192;</m:mo>
+ </m:mover>
+ <m:mo stretchy='false'>=</m:mo>
+ <m:mfrac>
+  <m:mi>&#x3C1;</m:mi>
+  <m:msub>
+   <m:mi>&#x3F5;</m:mi>
+   <m:mn>0</m:mn>
+  </m:msub>
+ </m:mfrac>
+</m:mrow>
+</m:math>
+</informalequation>
+
+<para>Calculando la divergencia obtenemos que:</para>
+<informalequation>
+<alt role='tex'>\nabla\bullet\vec{E}=2y-6z</alt>
+<m:math display="block">
+ 
+<m:mrow>
+ <m:mi>&#x2207;</m:mi>
+ <m:mo>&#x2022;</m:mo>
+ <m:mover>
+  <m:mi>E</m:mi>
+  <m:mo stretchy='true'>&#x2192;</m:mo>
+ </m:mover>
+ <m:mo stretchy='false'>=</m:mo>
+ <m:mn>2</m:mn>
+ <m:mi>y</m:mi>
+ <m:mo stretchy='false'>-</m:mo>
+ <m:mn>6</m:mn>
+ <m:mi>z</m:mi>
+</m:mrow>
+</m:math>
+</informalequation>
+
+<para>Igualando, obtenemos:</para>
+<informalequation>
+<alt role='tex'>\rho=2\epsilon_{0}\cdot\left(y-3z\right)</alt>
+<m:math display="block">
+ 
+<m:mrow>
+ <m:mi>&#x3C1;</m:mi>
+ <m:mo stretchy='false'>=</m:mo>
+ <m:mn>2</m:mn>
+ <m:msub>
+  <m:mi>&#x3F5;</m:mi>
+  <m:mn>0</m:mn>
+ </m:msub>
+ <m:mo>&#x22C5;</m:mo>
+ <m:mrow>
+  <m:mo>(</m:mo>
+  <m:mrow>
+   <m:mi>y</m:mi>
+   <m:mo stretchy='false'>-</m:mo>
+   <m:mn>3</m:mn>
+   <m:mi>z</m:mi>
+  </m:mrow>
+  <m:mo>)</m:mo>
+ </m:mrow>
+</m:mrow>
+</m:math>
+</informalequation>
+
+<para>Para calcular <inlineequation>
+<alt role='tex'>\vec{J}</alt>
+<m:math display="inline">
+ 
+<m:mover>
+ <m:mi>J</m:mi>
+ <m:mo stretchy='true'>&#x2192;</m:mo>
+</m:mover>
+</m:math>
+</inlineequation>, seguimos la <emphasis>Ley de Ampère</emphasis>, donde <inlineequation>
+<alt role='tex'>\vec{H}=\frac{1}{\mu}\vec{B}</alt>
+<m:math display="inline">
+ 
+<m:mrow>
+ <m:mover>
+  <m:mi>H</m:mi>
+  <m:mo stretchy='true'>&#x2192;</m:mo>
+ </m:mover>
+ <m:mo stretchy='false'>=</m:mo>
+ <m:mfrac>
+  <m:mn>1</m:mn>
+  <m:mi>&#x3BC;</m:mi>
+ </m:mfrac>
+ <m:mover>
+  <m:mi>B</m:mi>
+  <m:mo stretchy='true'>&#x2192;</m:mo>
+ </m:mover>
+</m:mrow>
+</m:math>
+</inlineequation>:</para>
+<informalequation>
+<alt role='tex'>\nabla\times\vec{H}=\vec{J}</alt>
+<m:math display="block">
+ 
+<m:mrow>
+ <m:mi>&#x2207;</m:mi>
+ <m:mo>&#x00D7;</m:mo>
+ <m:mover>
+  <m:mi>H</m:mi>
+  <m:mo stretchy='true'>&#x2192;</m:mo>
+ </m:mover>
+ <m:mo stretchy='false'>=</m:mo>
+ <m:mover>
+  <m:mi>J</m:mi>
+  <m:mo stretchy='true'>&#x2192;</m:mo>
+ </m:mover>
+</m:mrow>
+</m:math>
+</informalequation>
+<informalequation>
+<alt role='tex'>\vec{J}=\begin{vmatrix}\hat{i} &amp; \hat{j} &amp; \hat{k}\\
+\nicefrac{\partial}{\partial x} &amp; \nicefrac{\partial}{\partial y} &amp; \nicefrac{\partial}{\partial z}\\
+\frac{2xy}{\mu_{0}} &amp; \frac{-y^{2}}{\mu_{0}} &amp; \frac{1}{\mu_{0}}
+\end{vmatrix}=-\frac{2x}{\mu_{0}}\hat{k}</alt>
+<m:math display="block">
+ 
+<m:mrow>
+ <m:mover>
+  <m:mi>J</m:mi>
+  <m:mo stretchy='true'>&#x2192;</m:mo>
+ </m:mover>
+ <m:mo stretchy='false'>=</m:mo>
+ <m:mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>|</m:mo>
+ <m:mtable>
+  <m:mtr>
+   <m:mtd>
+    <m:mover>
+     <m:mi>i</m:mi>
+     <m:mo stretchy='true'>&#x02C6;</m:mo>
+    </m:mover>
+   </m:mtd>
+   <m:mtd>
+    <m:mover>
+     <m:mi>j</m:mi>
+     <m:mo stretchy='true'>&#x02C6;</m:mo>
+    </m:mover>
+   </m:mtd>
+   <m:mtd>
+    <m:mover>
+     <m:mi>k</m:mi>
+     <m:mo stretchy='true'>&#x02C6;</m:mo>
+    </m:mover>
+   </m:mtd>
+  </m:mtr>
+  <m:mtr>
+   <m:mtd>
+    <m:mfrac bevelled='true'>
+     <m:mi>&#x2202;</m:mi>
+     <m:mrow>
+      <m:mi>&#x2202;</m:mi>
+      <m:mi>x</m:mi>
+     </m:mrow>
+    </m:mfrac>
+   </m:mtd>
+   <m:mtd>
+    <m:mfrac bevelled='true'>
+     <m:mi>&#x2202;</m:mi>
+     <m:mrow>
+      <m:mi>&#x2202;</m:mi>
+      <m:mi>y</m:mi>
+     </m:mrow>
+    </m:mfrac>
+   </m:mtd>
+   <m:mtd>
+    <m:mfrac bevelled='true'>
+     <m:mi>&#x2202;</m:mi>
+     <m:mrow>
+      <m:mi>&#x2202;</m:mi>
+      <m:mi>z</m:mi>
+     </m:mrow>
+    </m:mfrac>
+   </m:mtd>
+  </m:mtr>
+  <m:mtr>
+   <m:mtd>
+    <m:mfrac>
+     <m:mrow>
+      <m:mn>2</m:mn>
+      <m:mi>x</m:mi>
+      <m:mi>y</m:mi>
+     </m:mrow>
+     <m:msub>
+      <m:mi>&#x3BC;</m:mi>
+      <m:mn>0</m:mn>
+     </m:msub>
+    </m:mfrac>
+   </m:mtd>
+   <m:mtd>
+    <m:mfrac>
+     <m:mrow>
+      <m:mo stretchy='false'>-</m:mo>
+      <m:msup>
+       <m:mi>y</m:mi>
+       <m:mn>2</m:mn>
+      </m:msup>
+     </m:mrow>
+     <m:msub>
+      <m:mi>&#x3BC;</m:mi>
+      <m:mn>0</m:mn>
+     </m:msub>
+    </m:mfrac>
+   </m:mtd>
+   <m:mtd>
+    <m:mfrac>
+     <m:mn>1</m:mn>
+     <m:msub>
+      <m:mi>&#x3BC;</m:mi>
+      <m:mn>0</m:mn>
+     </m:msub>
+    </m:mfrac>
+   </m:mtd>
+  </m:mtr>
+ </m:mtable>
+ <m:mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='0.1666em'>|</m:mo>
+ <m:mo stretchy='false'>=</m:mo>
+ <m:mo stretchy='false'>-</m:mo>
+ <m:mfrac>
+  <m:mrow>
+   <m:mn>2</m:mn>
+   <m:mi>x</m:mi>
+  </m:mrow>
+  <m:msub>
+   <m:mi>&#x3BC;</m:mi>
+   <m:mn>0</m:mn>
+  </m:msub>
+ </m:mfrac>
+ <m:mover>
+  <m:mi>k</m:mi>
+  <m:mo stretchy='true'>&#x02C6;</m:mo>
+ </m:mover>
+</m:mrow>
+</m:math>
+</informalequation>
+</section>
+<section>
+<title>Segundo ejercicio</title>
+<orderedlist>
+<listitem>
+<para><emphasis>Verdadero</emphasis>. La corriente de conducción se mide en amperios, al igual que la de desplazamiento. </para>
+</listitem>
+<listitem>
+<para><emphasis>Verdadero</emphasis>. Sabemos que la corriente de desplazamiento es directamente proporcional a la tasa de cambio del flujo eléctrico a lo largo del tiempo en una región definida. Si el flujo cambia, el campo ha de modificarse.</para>
+</listitem>
+<listitem>
+<para><emphasis>Falso</emphasis>. Las ecuaciones de Maxwell pueden adaptarse a campos no estáticos. En concreto, la Ley de Gauss:
+<informalequation>
+<alt role='tex'>\nabla\bullet\vec{E}=\frac{\rho}{\epsilon_{0}}</alt>
+<m:math display="block">
+ 
+<m:mrow>
+ <m:mi>&#x2207;</m:mi>
+ <m:mo>&#x2022;</m:mo>
+ <m:mover>
+  <m:mi>E</m:mi>
+  <m:mo stretchy='true'>&#x2192;</m:mo>
+ </m:mover>
+ <m:mo stretchy='false'>=</m:mo>
+ <m:mfrac>
+  <m:mi>&#x3C1;</m:mi>
+  <m:msub>
+   <m:mi>&#x3F5;</m:mi>
+   <m:mn>0</m:mn>
+  </m:msub>
+ </m:mfrac>
+</m:mrow>
+</m:math>
+</informalequation>
+ sigue siendo válida, así como:
+<informalequation>
+<alt role='tex'>\nabla\bullet\vec{H}=0</alt>
+<m:math display="block">
+ 
+<m:mrow>
+ <m:mi>&#x2207;</m:mi>
+ <m:mo>&#x2022;</m:mo>
+ <m:mover>
+  <m:mi>H</m:mi>
+  <m:mo stretchy='true'>&#x2192;</m:mo>
+ </m:mover>
+ <m:mo stretchy='false'>=</m:mo>
+ <m:mn>0</m:mn>
+</m:mrow>
+</m:math>
+</informalequation>
+ al no existir fuentes o sumideros magnéticos. Por otro lado, las ecuaciones que implican a los rotacionales varían añadiendo términos diferenciales que definen el dinamismo de los campos.</para>
+</listitem>
+<listitem>
+<para><emphasis>Verdadero</emphasis>. Mediante la ley de Ampère-Maxwell se predice la existencia de ondas electromagnéticas y puede obtenerse su ecuación.</para>
+</listitem>
+<listitem>
+<para><emphasis>Verdadero</emphasis>. Las ondas electromagnéticas son transversales al ser la dirección de propagación perpendicular a la oscilación de <inlineequation>
+<alt role='tex'>\vec{B}</alt>
+<m:math display="inline">
+ 
+<m:mover>
+ <m:mi>B</m:mi>
+ <m:mo stretchy='true'>&#x2192;</m:mo>
+</m:mover>
+</m:math>
+</inlineequation> y <inlineequation>
+<alt role='tex'>\vec{E}</alt>
+<m:math display="inline">
+ 
+<m:mover>
+ <m:mi>E</m:mi>
+ <m:mo stretchy='true'>&#x2192;</m:mo>
+</m:mover>
+</m:math>
+</inlineequation>.</para>
+</listitem>
+</orderedlist>
+</section>
+<section>
+<title>Tercer ejercicio</title>
+<para>Viendo la ecuación, tenemos que:</para>
+<itemizedlist>
+<listitem>
+<para>La frecuencia de la onda es <inlineequation>
+<alt role='tex'>2\pi\cdot10^{6}\:\mathrm{hz}</alt>
+<m:math display="inline">
+ 
+<m:mrow>
+ <m:mn>2</m:mn>
+ <m:mi>&#x3C0;</m:mi>
+ <m:mo>&#x22C5;</m:mo>
+ <m:mn>1</m:mn>
+ <m:msup>
+  <m:mn>0</m:mn>
+  <m:mn>6</m:mn>
+ </m:msup>
+ <m:mspace/>
+ <m:mstyle mathvariant='normal'>
+  <m:mrow>
+   <m:mi>h</m:mi>
+   <m:mi>z</m:mi>
+  </m:mrow>
+ </m:mstyle>
+</m:mrow>
+</m:math>
+</inlineequation>, al multiplicar al tiempo.</para>
+</listitem>
+<listitem>
+<para>El número de onda es <inlineequation>
+<alt role='tex'>\nicefrac{\pi}{2}</alt>
+<m:math display="inline">
+ 
+<m:mfrac bevelled='true'>
+ <m:mi>&#x3C0;</m:mi>
+ <m:mn>2</m:mn>
+</m:mfrac>
+</m:math>
+</inlineequation>, al multiplicar a la coordenada de propagación <inlineequation>
+<alt role='tex'>z</alt>
+<m:math display="inline">
+ 
+<m:mi>z</m:mi>
+</m:math>
+</inlineequation>.</para>
+</listitem>
+<listitem>
+<para>Esta onda se propaga en el sentido positivo del eje, por llevar delante de <inlineequation>
+<alt role='tex'>z</alt>
+<m:math display="inline">
+ 
+<m:mi>z</m:mi>
+</m:math>
+</inlineequation> un signo negativo.</para>
+</listitem>
+</itemizedlist>
+<para>Por otro lado, calculamos la impedancia de la onda mediante la siguiente relación:</para>
+<informalequation>
+<alt role='tex'>Z=\sqrt{\frac{\mu_{0}}{\epsilon_{0}}}=376.7\:\Omega</alt>
+<m:math display="block">
+ 
+<m:mrow>
+ <m:mi>Z</m:mi>
+ <m:mo stretchy='false'>=</m:mo>
+ <m:msqrt>
+  <m:mfrac>
+   <m:msub>
+    <m:mi>&#x3BC;</m:mi>
+    <m:mn>0</m:mn>
+   </m:msub>
+   <m:msub>
+    <m:mi>&#x3F5;</m:mi>
+    <m:mn>0</m:mn>
+   </m:msub>
+  </m:mfrac>
+ </m:msqrt>
+ <m:mo stretchy='false'>=</m:mo>
+ <m:mn>376.7</m:mn>
+ <m:mspace/>
+ <m:mi>&#x3A9;</m:mi>
+</m:mrow>
+</m:math>
+</informalequation>
+
+<para>Para calcular el campo magnético, sabemos que:</para>
+<informalequation>
+<alt role='tex'>\vec{B}=\vec{E}\cdot\sqrt{\mu_{0}\cdot\epsilon_{0}}=\sqrt{\mu_{0}\cdot\epsilon_{0}}\cdot60\pi\cos\left(2\pi\cdot10^{6}t-\frac{\pi}{2}z\right)\vec{a_{x}}</alt>
+<m:math display="block">
+ 
+<m:mrow>
+ <m:mover>
+  <m:mi>B</m:mi>
+  <m:mo stretchy='true'>&#x2192;</m:mo>
+ </m:mover>
+ <m:mo stretchy='false'>=</m:mo>
+ <m:mover>
+  <m:mi>E</m:mi>
+  <m:mo stretchy='true'>&#x2192;</m:mo>
+ </m:mover>
+ <m:mo>&#x22C5;</m:mo>
+ <m:msqrt>
+  <m:mrow>
+   <m:msub>
+    <m:mi>&#x3BC;</m:mi>
+    <m:mn>0</m:mn>
+   </m:msub>
+   <m:mo>&#x22C5;</m:mo>
+   <m:msub>
+    <m:mi>&#x3F5;</m:mi>
+    <m:mn>0</m:mn>
+   </m:msub>
+  </m:mrow>
+ </m:msqrt>
+ <m:mo stretchy='false'>=</m:mo>
+ <m:msqrt>
+  <m:mrow>
+   <m:msub>
+    <m:mi>&#x3BC;</m:mi>
+    <m:mn>0</m:mn>
+   </m:msub>
+   <m:mo>&#x22C5;</m:mo>
+   <m:msub>
+    <m:mi>&#x3F5;</m:mi>
+    <m:mn>0</m:mn>
+   </m:msub>
+  </m:mrow>
+ </m:msqrt>
+ <m:mo>&#x22C5;</m:mo>
+ <m:mn>60</m:mn>
+ <m:mi>&#x3C0;</m:mi>
+ <m:mo>cos</m:mo>
+ <m:mrow>
+  <m:mo>(</m:mo>
+  <m:mrow>
+   <m:mn>2</m:mn>
+   <m:mi>&#x3C0;</m:mi>
+   <m:mo>&#x22C5;</m:mo>
+   <m:mn>1</m:mn>
+   <m:msup>
+    <m:mn>0</m:mn>
+    <m:mn>6</m:mn>
+   </m:msup>
+   <m:mi>t</m:mi>
+   <m:mo stretchy='false'>-</m:mo>
+   <m:mfrac>
+    <m:mi>&#x3C0;</m:mi>
+    <m:mn>2</m:mn>
+   </m:mfrac>
+   <m:mi>z</m:mi>
+  </m:mrow>
+  <m:mo>)</m:mo>
+ </m:mrow>
+ <m:mover>
+  <m:msub>
+   <m:mi>a</m:mi>
+   <m:mi>x</m:mi>
+  </m:msub>
+  <m:mo stretchy='true'>&#x2192;</m:mo>
+ </m:mover>
+</m:mrow>
+</m:math>
+</informalequation>
+</section>
+</article>

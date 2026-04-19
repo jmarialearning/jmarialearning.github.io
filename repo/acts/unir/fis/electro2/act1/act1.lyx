@@ -8,7 +8,7 @@
 \use_default_options true
 \maintain_unincluded_children no
 \language spanish
-\language_package default
+\language_package babel
 \inputencoding utf8
 \fontencoding auto
 \font_roman "default" "default"
@@ -109,16 +109,9 @@ Jesús María Mora Mur
 \end_layout
 
 \begin_layout Date
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-today
-\end_layout
-
+\begin_inset Info
+type  "date"
+arg   "loclong"
 \end_inset
 
 
@@ -393,6 +386,42 @@ Esta onda se propaga en el sentido positivo del eje,
 \end_inset
 
  un signo negativo.
+\end_layout
+
+\begin_layout Standard
+Por otro lado,
+ calculamos la impedancia de la onda mediante la siguiente relación:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Z=\sqrt{\frac{\mu_{0}}{\epsilon_{0}}}=376.7\:\Omega
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para calcular el campo magnético,
+ sabemos que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vec{B}=\vec{E}\cdot\sqrt{\mu_{0}\cdot\epsilon_{0}}=\sqrt{\mu_{0}\cdot\epsilon_{0}}\cdot60\pi\cos\left(2\pi\cdot10^{6}t-\frac{\pi}{2}z\right)\vec{a_{x}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \end_body
