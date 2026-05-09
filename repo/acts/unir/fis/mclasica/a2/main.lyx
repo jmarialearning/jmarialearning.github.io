@@ -138,7 +138,214 @@ Primer ejercicio.
 \end_layout
 
 \begin_layout Standard
-Las ecuaciones de Euler-Lagrange son:
+Las ecuaciones de Euler-Lagrange son las siguientes para las coordenadas generalizadas:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+q_{i}=\left\{ x_{1},y_{1},x_{2},y_{2}\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\mathrm{d}}{\mathrm{dt}}\left(\frac{\partial\mathcal{L}}{\partial\dot{q_{i}}}\right)-\frac{\partial\mathcal{L}}{\partial q_{i}}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+obteniendo las 4 siguientes:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+m_{1}\ddot{x_{1}}+\frac{\partial V}{\partial r}\cdot\frac{x_{1}-x_{2}}{r}=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+m_{1}\ddot{y_{1}}+\frac{\partial V}{\partial r}\cdot\frac{y_{1}-y_{2}}{r}=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+m_{1}\ddot{x_{2}}-\frac{\partial V}{\partial r}\cdot\frac{x_{1}-x_{2}}{r}=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+m_{1}\ddot{y_{2}}-\frac{\partial V}{\partial r}\cdot\frac{y_{1}-y_{2}}{r}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Al ser el potencial 
+\begin_inset Formula $\mathrm{V}(r)$
+\end_inset
+
+ la única parte de la función lagrangiana dependiente de las coordenadas no derivadas.
+\end_layout
+
+\begin_layout Section
+Segundo ejercicio.
+\end_layout
+
+\begin_layout Standard
+Necesitamos en primer lugar los momentos conjugados:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{cases}
+p_{1x}=\frac{\partial\mathcal{L}}{\partial\dot{x_{1}}}=m_{1}\dot{x_{1}}\\
+p_{2x}=\frac{\partial\mathcal{L}}{\partial\dot{x_{2}}}=m_{2}\dot{x_{2}}\\
+p_{1y}=\frac{\partial\mathcal{L}}{\partial\dot{y_{1}}}=m_{1}\dot{y_{1}}\\
+p_{2y}=\frac{\partial\mathcal{L}}{\partial\dot{y_{2}}}=m_{2}\dot{y_{2}}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Formamos el hamiltoniano despajando las velocidades:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathcal{H}=\sum p_{i}\cdot q_{i}-\mathcal{L}=\frac{p^{2}_{1x}+p^{2}_{1y}}{2m_{1}}+\frac{p^{2}_{2x}+p^{2}_{2y}}{2m_{2}}+V(r)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Las ecuaciones de Hamilton quedan de la forma siguiente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{cases}
+\dot{x_{1}}=\frac{\partial\mathcal{H}}{\partial p_{1x}}=\frac{p_{1x}}{m_{1}}\\
+\dot{x_{2}}=\frac{\partial\mathcal{H}}{\partial p_{2x}}=\frac{p_{2x}}{m_{2}}\\
+\dot{y_{1}}=\frac{\partial\mathcal{H}}{\partial p_{1y}}=\frac{p_{1y}}{m_{1}}\\
+\dot{y_{2}}=\frac{\partial\mathcal{H}}{\partial p_{2y}}=\frac{p_{2y}}{m_{2}}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+para las velocidades.
+ Por otro lado,
+ las fuerzas son:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{cases}
+\dot{p_{1x}}=-\frac{\partial\mathcal{H}}{\partial x_{1}}=-\frac{dV}{dr}\frac{x_{1}-x_{2}}{r}\\
+\dot{p_{2x}}=-\frac{\partial\mathcal{H}}{\partial x_{2}}=\frac{dV}{dr}\frac{x_{1}-x_{2}}{r}\\
+\dot{p_{1y}}=-\frac{\partial\mathcal{H}}{\partial y_{1}}=-\frac{dV}{dr}\frac{y_{1}-y_{2}}{r}\\
+\dot{p_{2y}}=-\frac{\partial\mathcal{H}}{\partial y_{2}}=\frac{dV}{dr}\frac{y_{1}-y_{2}}{r}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Utilizando el mismo procedimiento que en el ejercicio anterior.
+\end_layout
+
+\begin_layout Section
+Tercer ejercicio.
+\end_layout
+
+\begin_layout Standard
+Para calcular que son constantes de movimiento veremos como la derivada temporal para cada magnitud se anula:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{dP_{x}}{dt}=\dot{p_{1x}}+\dot{p_{2x}}=\frac{dV}{dr}\frac{x_{1}-x_{2}}{r}-\frac{dV}{dr}\frac{x_{1}-x_{2}}{r}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{dP_{y}}{dt}=\dot{p_{1y}}+\dot{p_{2y}}=\frac{dV}{dr}\frac{y_{1}-y_{2}}{r}-\frac{dV}{dr}\frac{y_{1}-y_{2}}{r}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{dK_{x}}{dt}=m_{1}\dot{x_{1}}+m_{2}\dot{x_{2}}-P_{x}-t\frac{dP_{x}}{dt}=P_{x}-P_{x}-0=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{dK_{y}}{dt}=m_{1}\dot{y_{1}}+m_{2}\dot{y_{2}}-P_{y}-t\frac{dP_{y}}{dt}=P_{y}-P_{y}-0=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Conservándose pues las magnitudes.
 \end_layout
 
 \end_body
