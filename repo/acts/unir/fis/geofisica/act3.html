@@ -6,22 +6,61 @@
         <title>Actividad geofísica</title>
     <script>
       MathJax = {
-        tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']]
-        }
+        loader: { load: ['[tex]/units', '[tex]/gensymb'] },
+       tex: { 
+        packages: { '[+]': ['units', 'gensymb'] } ,
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
       };
       </script>
       <script src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js" defer></script>
-      <!-- <script src="https://cdn.jsdelivr.net/npm/mathjax@2.5.1/MathJax.min.js"></script> -->
     </head>
     <body>
         <h1>Actividad geofísica. Diseño de instalación geométrica.</h1>
         <footer>Jesús María Mora Mur.</footer>
         <!---->
         <h2>Determinación de la longitud de la tubería</h2>
-        <p>Para determinar la longitud de la tubería, debemos empezar por conocer las oscilaciones de temperatura que tendremos en el emplazamiento. Para realizar esto, partiendo de la fórmula:</p>
+        <h3>Temperatura mínima del suelo</h3>
+        <p>Para determinar la longitud de la tubería, debemos empezar por conocer las oscilaciones de temperatura que tendremos en el emplazamiento. Para realizar esto, partimos de la fórmula:</p>
         \[
-            \mathrm{T}_{\mathrm{terreno}} = 
+            \mathrm{T}_{\mathrm{mínima}} = \mathrm{T}_{\mathrm{media}} - a \cdot \mathrm{e}^{-x \cdot \sqrt{\frac{\pi}{365\cdot \alpha}}}
         \]
+        <p>donde $\mathrm{T_media}$ refiere la temperatura media del emplazamiento, $a$, la amplitud térmica, $x$ la profundidad de sondeo y $\alpha$ la difusividad del suelo. Aplicando esto obtenemos que $\mathrm{T_{mínima}} \approx 11.40 \: \degree \mathrm{C}$, dentro del rango de operaciones de nuestra bomba de calor.</p>
+        <h3>Temperatura de salida de la calefacción</h3>
+        <p>Utilizaremos la siguiente fórmula para conocer la temperatura de salida del fluido de la bomba:</p>
+        \[
+            \mathrm{T_s} = \mathrm{T_e}-\frac{1000 \cdot \mathrm{P_c} \cdot \frac{\mathrm{COP} - 1}{\mathrm{COP}}}{\mathrm{C_p} \cdot \frac{\mathrm{Q}}{3600}}
+        \]
+        <p>Donde $\mathrm{Q}$ es el caudal, $\mathrm{P_c}$ la potencia de la bomba, $\mathrm{C_p}$ el calor específico de la salmuera, fijado en $\unitfrac[3729]{J}{K \cdot kg}$ y $\mathrm{Q}$ es el caudal de la máquina. Obtenemos una temperatura de salida del agua de $5.66\: \degree \mathrm{C}$, considerando que entra a la temperatura mínima.</p>
+        <p>Ello nos permite considerar que la temperatura media del circuito es:</p>
+        \[
+            \mathrm{T_{circuito}} \approx 8.53 \: \degree \mathrm{C}
+        \]
+        <h3>Cálculo de la resistencia de los tubos al paso del calor</h3>
+        <p>Para ello utilizamos la ecuación siguiente:</p>
+        \[
+            \mathrm{R_p} = \frac{1}{2 \cdot \pi \cdot \mathrm{K_p}} \cdot \ln{\frac{\mathrm{D_0}}{\mathrm{D_1}}}
+        \]
+        <p>Donde $\mathrm{K_p}$ es la conductividad térmica del material que se ha considerado $\unitfrac[0.39]{W}{m\cdot \degree C}$, $\mathrm{D_0}$ y $\mathrm{D_1}$ son los radios interior y exterior del tubo. Obtenemos una resistencia de aproximadamente $\unitfrac[0.024]{m \cdot W}{\degree C}$</p>
+        <h3>Cálculo de la resistencia de los intercambiadores</h3>
+        <p>Se utiliza la ecuación siguiente:</p>
+        \[
+            \mathrm{R_s} = \frac{1}{4\pi \lambda} \cdot \mathrm{Ei}\left(\frac{-r^2}{4\alpha t}\right)
+        \]
+        <p>Donde $\mathrm{Ei}(x)$ representa la integral exponencial. De acuerdo con <a href="#carslaw59" class="cita">Carslaw y Jaeger (1959)</a> y <a href="#abramowitz64" class="cita">Abramowitz y Stegun (1964)</a>, obtenemos la expresión siguiente:</p>
+        \[
+            \mathrm{R_s} = \frac{1}{4\pi \lambda} \cdot \left( \gamma + \ln \frac{r^2}{4\alpha t} + \sum_{n = 1}^{\infty} \frac{\left(-1\right)^n \cdot \frac{r^{2n}}{\left(4\alpha t\right)^n}}{n \cdot n!} \right)
+        \]
+        <p>obteniendo un valor de $0.30435$. Por otro lado el <i>factor de utilización</i> es de $0.766$ aproximadamente.</p>
+        <h3>Cálculo final de la longitud de la tubería</h3>
+        <p>Aplicamos finalmente la siguiente fórmula para calcular la longitud de tubería que precisamos:</p>
+        \[
+            \mathrm{L_{tubería}} = \frac{\mathrm{P_{inst}}\cdot \frac{\mathrm{COP - 1}}{\mathrm{COP}} \cdot \left(\mathrm{R_p}  + \mathrm{R_s} \mathrm{F_{utilización}}\right)}{\mathrm{T_{mínima} - T_{salida}}}
+        \]
+        <p>Donde $\mathrm{P_{inst}}$ es la demanda que se ha de cubrir. Obtenemos un valor de $1569.21 \: \mathrm{m}$, lo cual parece tener sentido considerando los ejemplos de la guía del <a href="#guiaidae" class="cita">IDAE (2012)</a>.</p>
+        <h2>Referencias</h2>
+        <p class="francesa" id="abramowitz64">Abramowitz, M., Stegun, I. A. (1972). <i>Handbook of mathematical functions with formulas, graphs, and mathematical tables.</i> Wiley.</p>
+        <p class="francesa" id="carslaw59">Carslaw, H. S. and Jaeger, J. C. (1959). <i>Conduction heat in solids.</i> Oxford University Press.</p>
+        <p class="francesa" id="guiaidae">Instituto para la Diversificación y Ahorro de la Energía (coord.) (2012). <i>Guía técnica de diseño de sistemas de intercambio geotérmico de circuito cerrado</i>. Ministerio de Industria, Energía y Turismo. Gobierno de España.</p>
     </body>
 </html>
