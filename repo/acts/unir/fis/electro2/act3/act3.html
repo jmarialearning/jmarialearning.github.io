@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <link rel="stylesheet" href="/repo/academic.css">
+            <meta http-equiv="x-ua-compatible" content="ie=edge">
+            <meta name="viewport" content="width=device-width">
+            <title>Actividad 3 electromagnetismo</title>
+        <script>
+        MathJax = {
+            loader: { load: ['[tex]/units', '[tex]/gensymb'] },
+        tex: { 
+            packages: { '[+]': ['units', 'gensymb'] } ,
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+        };
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js" defer></script>
+    </head>
+    <body>
+        <h1>Actividad 3 Electromagnetismo II</h1>
+        <footer>Jesús María Mora Mur</footer>
+        <h2>Ejercicio 1</h2>
+        <p class="enunciado">En el instante $t=0$ se conecta un carrete de autoinducción $L$ y resistencia $R$ a una batería de diferencia de potencial constante $V$ y resistencia interna despreciable.</p>
+        <p class="enunciado">Calcular la energía magnética en el carrete en el instante $t = T$.</p>
+        <p>Sabemos que la energía magnética de un inductor es:</p>
+        \[
+            \mathrm{U_m} = \frac{1}{2} \cdot L \cdot I^2
+        \]
+        <p>Por otro lado, sabemos que la intensidad es:</p>
+        \[
+            i(t) = I \cdot \mathrm{e}^{-t \cdot \frac{R}{L}}
+        \]
+        <p>Donde $I = \nicefrac{V}{R}$. Obtenemos un valor de:</p>
+        \[
+            i(T) = \frac{V}{R} \cdot \left(1 - \mathrm{e}^{-T \cdot \frac{R}{L}} \right)
+        \]
+        <p>Sustituyendo en la ecuación de la energía magnética, tenemos:</p>
+        \[
+            \mathrm{U_m} = \frac{1}{2} \cdot L \cdot \frac{V^2}{R^2} \cdot \left(1 - \mathrm{e}^{-T \cdot \frac{R}{L}} \right)^2
+        \]
+        <p class="enunciado">La energía suministrada por la batería hasta ese instante.</p>
+        <p>Para ello, sabemos que la energía es integral de la potencia:</p>
+        \[
+            E = \int_0^T V \cdot i(t) \: dt = \frac{V^2}{R} \int_0^T \left(1 - \mathrm{e}^{-T \cdot \frac{R}{L}} \right) \: dt = \frac{V^2}{R} T - \frac{V^2 \cdot L}{R^2} \mathrm{e}^{-T \cdot \frac{R}{L}}
+        \]
+        <p class="enunciado">La energía disipada por efecto Joule hasta ese instante.</p>
+        <p>La obtenemos mediante la siguiente integral:</p>
+        \[
+            \int_0^T R \cdot [i(t)]^2 = \frac{V^2}{R} \cdot \int_0^T \left( 1 - \mathrm{e}^{-t \frac{R}{L}} \right)^2 dt
+        \]
+        <p>Integramos término a término, expandiendo la identidad notable:</p>
+        \[
+            \left( 1 - \mathrm{e}^{-t \frac{R}{L}} \right)^2 = 1 - 2 \cdot \mathrm{e}^{-t \frac{R}{L}} + \mathrm{e}^{-2t \frac{R}{L}}
+        \]
+        \[
+            \int_0^T 1 \: dt = T
+        \]
+        \[
+            \int_0^T \mathrm{e}^{-2t \frac{R}{L}} = -\frac{L}{2R} \left( \mathrm{e}^{-2T \frac{R}{L}} \right)
+        \]
+        \[
+            \int_0^T -2 \cdot \mathrm{e}^{-t \frac{R}{L}} = \frac{2L}{R} \left( \mathrm{e}^{-T \frac{R}{L}} \right)
+        \]
+        <p>En resumen, la integral da como resultado:</p>
+        \[
+            \frac{V^2}{R} \left[ T + \frac{2L}{R} \left( \mathrm{e}^{-T \frac{R}{L}} \right) - \frac{L}{2R} \left( \mathrm{e}^{-2T \frac{R}{L}} \right) \right]
+        \]
+        <p class="enunciado">Comprobar que la energía suministrada por la batería es la suma de la energía magnética almacenada y la energía disipada en calor.</p>
+        <p>La energía la obtendremos restando la energía suministrada por la batería y la energía magnética. Así pues, vemos que es correcto:</p>
+        \[
+            E_{\mathrm{Joule}} = \left( \frac{V^2}{R} T - \frac{V^2 \cdot L}{R^2} \mathrm{e}^{-T \cdot \frac{R}{L}} \right) - \frac{1}{2} \cdot L \cdot \frac{V^2}{R^2} \cdot \left(1 - \mathrm{e}^{-T \cdot \frac{R}{L}} \right)^2
+        \]
+        <h2>Ejercicio 2</h2>
+        <p class="enunciado">Un condensador plano paralelo de placas circulares de radio $b$ separadas una distancia $d$ tiene en su interior dos dieléctricos de permitividades 1 y 2 y permeabilidad $\mu_0$ que ocupa todo el espacio entre las placas del condensador: el dieléctrico de permitividad 1 ocupa el espacio de un cilindro de radio $a$ (con $a < b$) coaxial con el condensador y el dieléctrico de permitividad 2 ocupa el resto del espacio. El condensador se conecta a una batería que proporciona una diferencia de potencial: </p>
+            \[V=V_0 \cdot t/\tau\]
+        <p class="enunciado">Calcular los campos en el interior del condensador.</p>
+        <p>Sabemos que:</p>
+        \[
+            \vec{E} = \frac{V}{d} \hat{r} = \frac{V_0 \cdot t}{d \cdot \tau} \hat{r}
+        \]
+        <p>Por otro lado, sabemos que la permitividad eléctrica en los dieléctricos se define a trozos:</p>
+        \[
+            \varepsilon (r) = \cases{
+                \varepsilon_1 \qquad 0 < r < a & \\
+                \varepsilon_2 \qquad a < r < b
+            }
+        \]
+        <p>Así el campo de desplazamiento será:</p>
+        \[
+            \vec{D} = \varepsilon(r) \cdot \vec{E}
+        \]
+        <p>Aplicamos la ley de Ampère-Maxwell para poder obtener el campo magnético, partiendo de contorno C:</p>
+        \[
+        \oint_C \vec{B} \cdot d\vec{l} = 2 \pi r B_\theta
+        \]
+        <p>Ahora, calculamos el flujo de desplazamiento a través de la superficie $A$ encerrada por $C$:</p>
+        \[
+            \int_A \vec{D} \cdot d\vec{S}
+        \]
+        <p>Existen variaciones según el punto donde se mida la superficie:</p>
+        \[
+            \int_A \vec{D} \cdot d\vec{S} = \cases{
+                \varepsilon_1 \cdot E \cdot \pi r^2 \qquad 0 < r < a & \\
+                \varepsilon_1 \cdot E \cdot \pi a^2 + \varepsilon_2 \cdot E \cdot \pi \left( r^2 - a^2 \right) \qquad a < r < b & \\
+                \pi \cdot E \cdot \left[ \varepsilon_2 \cdot b^2 + \left( \varepsilon_1 - \varepsilon_2 \right) \cdot a^2 \right] \qquad r \geq b
+            }
+        \]
+    </body>
+</html>
