@@ -7,9 +7,9 @@
             <title>Actividad 3 electromagnetismo</title>
         <script>
         MathJax = {
-            loader: { load: ['[tex]/units', '[tex]/gensymb'] },
+            loader: { load: ['[tex]/units', '[tex]/gensymb', '[tex]/physics'] },
         tex: { 
-            packages: { '[+]': ['units', 'gensymb'] } ,
+            packages: { '[+]': ['units', 'gensymb', 'physics'] } ,
             inlineMath: [['$', '$'], ['\\(', '\\)']]
         }
         };
@@ -105,5 +105,61 @@
                 \pi \cdot E \cdot \left[ \varepsilon_2 \cdot b^2 + \left( \varepsilon_1 - \varepsilon_2 \right) \cdot a^2 \right] \qquad r \geq b
             }
         \]
+        <p>Conseguido esto, podemos aplicar la ley de Ampère propiamente. Considerando que el campo electrico depende linealmente del tiempo,</p>
+        \[
+            \vec{B} = \cases{
+                \frac{\mu_0 \varepsilon_1 \cdot r}{2} \cdot \frac{V_0}{d \cdot \tau} \qquad 0 < r < a & \\
+                \frac{\mu_0}{2} \cdot \frac{V_0}{d \cdot \tau} \cdot \left[\varepsilon_2 \cdot r + \frac{\left( \varepsilon_1 - \varepsilon_2 \right) \cdot a^2}{r}\right] \qquad a < r < b & \\
+                \frac{\mu_0 \cdot V_0}{2r \cdot \tau d} \cdot \left[ \varepsilon_2 b^2 + \left( \varepsilon_1 - \varepsilon_2 \right) a^2  \right] \qquad r \geq b
+            }
+        \]
+        <p class="enunciado">La densidad de carga en las placas del condensador.</p>
+        <p>La densidad de carga se calcula mediante el vector desplazamiento.</p>
+        \[
+            \sigma = \cases{
+                \varepsilon_1 \cdot E \qquad r \in (0,a) & \\
+                \varepsilon_2 \cdot E \qquad r \in (a,b)
+            }
+        \]
+        <p>Donde $E$ es conocido.</p>
+        <h2>Ejercicio 4.</h2>
+        <p class="enunciado">En un medio dieléctrico de permitividad µ0 se propaga una onda electromagnética, plana y planopolarizada cuya frecuencia es $f={10}^6 \: \mathrm{Hz}$. Siendo el índice de refracción del medio para esta frecuencia $n=1.5$ y la amplitud del campo eléctrico $E_0= \unitfrac[2 \cdot 10^{-5}]{V}{m}$, se desea conocer:</p>
+        <p class="enunciado">La impedancia intrínseca del medio. Los valores instantáneos de campos eléctrico y magnético.</p>
+        <p>Para calcular esto debemos saber que a partir de la impedancia en el vacío y el índice de refracción podemos calcular la impedancia:</p>
+        \[
+            Z = \frac{Z_0}{n} = \frac{\mu_0 \cdot c_0}{n} = 251.15 \: \Omega
+        \]
+        <p>Para calcular los valores de campo eléctrico instantáneo, recordamos la ecuación de onda.</p>
+        \[
+            E = E_0 \cdot \cos \left( kz - \omega t \right)
+        \]
+        <p>Sabiendo que la onda se propaga a $\unitfrac[2 \cdot 10^8]{m}{s}$ y que la longitud de onda es $\lambda = \nicefrac{v}{f}$, $k = \nicefrac{2\pi}{\lambda}$ y $\omega = 2 \pi f$, tenemos que:</p>
+        \[
+            E = 2 \cdot10^{-5} \cdot \cos \left( \frac{\pi}{100}z - 2 \cdot \pi \cdot 10^6 t \right)
+        \]
+        <p>Calculando la amplitud del campo magnético como $B_0 = \nicefrac{E_0}{v}$, tenemos que el campo magnético es:</p>
+        \[
+            B = B_0 \cdot \cos \left( kz - \omega t \right)
+        \]
+        <p>Sustituyendo,</p>
+        \[
+            B = 1 \cdot 10^{-13} \cdot \cos \left( \frac{\pi}{100}z - 2 \cdot \pi \cdot 10^6 t \right)
+        \]
+        <p class="enunciado">La energía media transportada por la onda y la energía media almacenada en el medio</p>
+        <p>Para calcular la energía media utilizaremos el vector de Poynting:</p>
+        \[
+            \mathrm{E_m} = \frac{E_0^2}{2Z} = \frac{4 \cdot 10^{-10}}{2 \cdot 251.15} = \unitfrac[7.96 \cdot 10^{-13}]{W}{m^2}
+        \]
+        <p>Para calcular la densidad de energía, sumaremos las densidades magnética y eléctrica divididas por dos:</p>
+        \[
+            \mathrm{U_m} = \frac{1}{4}\epsilon_0 \cdot n^2 \cdot E_0^2 + \frac{1}{4}\frac{B_0^2}{\mu_0} = \unitfrac[3.98 \cdot 10^{-21}]{J}{m^3}
+        \]
+        <p class="enunciado">Si se coloca un carrete plano de 100 espiras y 0.5 m de lado con su plano paralelo a la dirección del campo eléctrico, ¿cuánto vale la f.e.m. inducida?</p>
+        <p>Aplicamos la ley de Faraday:</p>
+        \[
+            \mathcal{E} = N\dv{\phi_B}{t} = N \cdot A \cdot B_0 \cdot \omega \sin \left( kz - \omega t \right) = 100 \cdot 0.5^2 \cdot 1 \cdot 10^{-13} \cdot 2 \pi \cdot 10^{6} \cdot \sin \left( \frac{\pi}{100} z - 2 \pi \cdot 10^{6} t \right)
+        \]
+        <p class="enunciado">Discutir qué valor tomará la f.e.m. inducida en el carrete si la frecuencia de la onda fuese $f={10}^9 \: \mathrm{Hz}$.</p>
+        <p>El valor sería mucho más alto (3 órdenes de magnitud) por la frecuencia. Sin embargo, el índice de refracción compensaría también parte de ese aumento, aunque nunca la totalidad. Aunque, el valor real diferirá de 1000 veces el obtenido anteriormente por lo mencionado, será evidentemente mucho mayor al que hemos visto.</p>
     </body>
 </html>
