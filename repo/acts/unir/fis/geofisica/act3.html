@@ -51,7 +51,45 @@
         \[
             \mathrm{R_s} = \frac{1}{4\pi \lambda} \cdot \left( \gamma + \ln \frac{r^2}{4\alpha t} + \sum_{n = 1}^{\infty} \frac{\left(-1\right)^n \cdot \frac{r^{2n}}{\left(4\alpha t\right)^n}}{n \cdot n!} \right)
         \]
-        <p>obteniendo un valor de $0.30435$. Por otro lado el <i>factor de utilización</i> es de $0.766$ aproximadamente.</p>
+        <p>obteniendo un valor de $0.30435$. Por otro lado el <i>factor de utilización</i> es de $0.766$ aproximadamente. Para obtener el valor de la integral exponencial se ha calculado numéricamente con el código de C <a href="resistenciaCaptador.c">siguiente</a>:</p>
+        <pre>
+            <code>
+#include < stdio.h >
+#include < math.h >
+unsigned int factorial(unsigned int n){
+    unsigned int resultado = 1;
+    for (int i = 1; i<=n;i++){
+        resultado *= i;
+    }
+    return resultado;
+}
+int main(){
+    double radio = 0.09f;
+    double alpha = 0.88e-6 * 86400;
+    double tiempoUso = 100.0f;
+    double resultadoSuma = 0;
+    for (int n = 1; n<=15; n++){
+        double fracPeq = (pow(radio,2*n))/(pow((4*alpha*tiempoUso),n));
+        double signo = pow(-1, n);
+        double numerador = signo * fracPeq;
+        double denominador = n * factorial(n);
+        double fraccion = numerador / denominador;
+        resultadoSuma += fraccion;
+        printf("\nLa suma da: %lf",resultadoSuma);
+    }
+    double numeroPi = 2*acos(0.0);
+    double logaritmo = log(pow(radio,2)/(4*alpha*tiempoUso));
+    double gamma = 0.5772156f;
+    double resParentesis = gamma + logaritmo + resultadoSuma;
+    double lambda = 2.0f;
+    double coeficiente = 1/(4 * numeroPi * lambda);
+    double resistenciaCaptador = coeficiente * resParentesis;
+    printf("\nLa resistencia es: %lf", resistenciaCaptador);
+    return 0;
+
+}
+            </code>
+        </pre>
         <h3>Cálculo final de la longitud de la tubería</h3>
         <p>Aplicamos finalmente la siguiente fórmula para calcular la longitud de tubería que precisamos:</p>
         \[
