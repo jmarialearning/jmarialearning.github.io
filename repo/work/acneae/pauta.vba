@@ -1,4 +1,4 @@
-Sub CrearPautasQueQuepan()
+Sub CrearPautas()
     Dim doc As Document
     Dim tabla As Table
     Dim separacionLineas As Double
@@ -6,17 +6,27 @@ Sub CrearPautasQueQuepan()
     Dim altoUtil As Double
     Dim altoPauta As Double
     Dim cantidad As Long
+    Dim opcion As String
+    Dim respuesta As String
     Dim i As Long
     Dim fila As Row
 
     Set doc = ActiveDocument
+
+    opcion = InputBox( _
+        "Elige una opción:" & vbCrLf & _
+        "1 = Llenar la hoja" & vbCrLf & _
+        "2 = Indicar un número de pautas", _
+        "Cantidad de pautas", "1")
+
+    If opcion <> "1" And opcion <> "2" Then Exit Sub
 
     separacionLineas = Val(InputBox( _
         "Separación entre las dos líneas, en centímetros:", _
         "Espaciado de líneas", "0.7"))
 
     If separacionLineas <= 0 Then
-        MsgBox "Introduce una separación mayor que cero."
+        MsgBox "Introduce una separación entre líneas mayor que cero."
         Exit Sub
     End If
 
@@ -29,16 +39,32 @@ Sub CrearPautasQueQuepan()
         Exit Sub
     End If
 
-    With Selection.Sections(1).PageSetup
-        altoUtil = .PageHeight - .TopMargin - .BottomMargin
-    End With
-
     altoPauta = (2 * separacionLineas) + espacioEntrePautas
-    cantidad = Int(PointsToCentimeters(altoUtil) / altoPauta)
 
-    If cantidad < 1 Then
-        MsgBox "Con esos valores no cabe ninguna pauta en la página."
-        Exit Sub
+    If opcion = "1" Then
+        With Selection.Sections(1).PageSetup
+            altoUtil = .PageHeight - .TopMargin - .BottomMargin
+        End With
+
+        cantidad = Int(PointsToCentimeters(altoUtil) / altoPauta)
+
+        If cantidad < 1 Then
+            MsgBox "Con esos valores no cabe ninguna pauta en la página."
+            Exit Sub
+        End If
+    Else
+        respuesta = InputBox( _
+            "¿Cuántas pautas quieres crear?", _
+            "Número de pautas", "5")
+
+        If respuesta = "" Or Not IsNumeric(respuesta) Then Exit Sub
+
+        cantidad = CLng(respuesta)
+
+        If cantidad < 1 Then
+            MsgBox "Introduce un número de pautas mayor que cero."
+            Exit Sub
+        End If
     End If
 
     Set tabla = doc.Tables.Add( _
@@ -54,10 +80,10 @@ Sub CrearPautasQueQuepan()
         fila.HeightRule = wdRowHeightExactly
 
         If i Mod 3 = 0 Then
-            ' Fila sin línea: espacio entre pautas
+            ' Fila vacía: espacio entre pautas
             fila.Height = CentimetersToPoints(espacioEntrePautas)
         Else
-            ' Las dos filas con borde forman las líneas de la pauta
+            ' Las otras dos filas tienen línea inferior
             fila.Height = CentimetersToPoints(separacionLineas)
             fila.Cells(1).Borders(wdBorderBottom).LineStyle = wdLineStyleSingle
         End If
