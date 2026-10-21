@@ -1,0 +1,20 @@
+leyOrganica:
+  type: legislation
+  title: Ley Orgánica 3/2020, de 29 de diciembre, por la que se modifica la Ley Orgánica 2/2006, de 3 de mayo, de Educación.
+  date: 2020
+  page-total: 86
+leyOrganicaAntigua:
+  type: legislation
+  title: Ley Orgánica 2/2006, de 3 de mayo, de Educación.
+  date: 2006
+  page-total: 112
+leyOrganicaFP:
+  type: legislation
+  title: Ley Orgánica 3/2022, de 31 de marzo, de ordenación e integración de la Formación Profesional.
+  date: 2022
+  page-total: 75
+realDecretoFP:
+  type: legislation
+  title: Real Decreto 659/2023, de 18 de julio, por el que se desarrolla la ordenación del Sistema de Formación Profesional
+  date: 2023
+  page-total: 175
