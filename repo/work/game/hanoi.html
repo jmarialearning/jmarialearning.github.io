@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Torres de Hanoi</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: system-ui, sans-serif;
+      background: #101522;
+      color: #f5f7ff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    main {
+      width: min(900px, 100%);
+      text-align: center;
+    }
+
+    h1 { margin-bottom: 8px; }
+    .intro { color: #b9c2d8; margin-top: 0; }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 24px 0;
+    }
+
+    select, button {
+      border: 1px solid #46516a;
+      border-radius: 10px;
+      padding: 10px 14px;
+      font: inherit;
+      color: inherit;
+      background: #20293a;
+    }
+
+    button { cursor: pointer; }
+    button:hover { background: #303d54; }
+
+    #status {
+      min-height: 1.5em;
+      color: #c6d2ed;
+      margin: 12px 0;
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .tower {
+      position: relative;
+      height: 300px;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: flex-start;
+      padding-bottom: 18px;
+      border: 2px solid transparent;
+      border-radius: 16px;
+      background: #192133;
+      cursor: pointer;
+      transition: border-color .15s, background .15s;
+    }
+
+    .tower:hover, .tower.selected {
+      border-color: #8b9cff;
+      background: #202b42;
+    }
+
+    .tower::before {
+      content: "";
+      position: absolute;
+      bottom: 18px;
+      width: 12px;
+      height: 215px;
+      border-radius: 8px 8px 0 0;
+      background: #69758f;
+      z-index: 0;
+    }
+
+    .base {
+      position: absolute;
+      bottom: 12px;
+      width: 86%;
+      height: 12px;
+      border-radius: 8px;
+      background: #8792aa;
+    }
+
+    .disk {
+      position: relative;
+      z-index: 1;
+      flex: 0 0 25px;
+      height: 25px;
+      border: 2px solid #ffffff35;
+      border-radius: 8px;
+      cursor: grab;
+      box-shadow: 0 3px 7px #0004;
+    }
+
+    .disk:active { cursor: grabbing; }
+
+    .tower-label {
+      position: absolute;
+      bottom: -32px;
+      color: #b9c2d8;
+      font-weight: 600;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      margin-top: 48px;
+      color: #c6d2ed;
+    }
+
+    @media (max-width: 560px) {
+      .tower { height: 250px; }
+      .tower::before { height: 170px; }
+      .disk { flex-basis: 22px; height: 22px; }
+      .stats { gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Torres de Hanoi</h1>
+    <p class="intro">Mueve todos los discos a la última torre. No pongas un disco grande sobre uno pequeño.</p>
+
+    <div class="controls">
+      <label for="diskCount">Discos:</label>
+      <select id="diskCount">
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5" selected>5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+      </select>
+      <button id="reset">Reiniciar</button>
+    </div>
+
+    <p id="status" aria-live="polite">Elige una torre con discos y luego la torre de destino.</p>
+
+    <section class="board" aria-label="Tablero de juego">
+      <div class="tower" data-tower="0" aria-label="Torre 1"><div class="base"></div><span class="tower-label">Torre 1</span></div>
+      <div class="tower" data-tower="1" aria-label="Torre 2"><div class="base"></div><span class="tower-label">Torre 2</span></div>
+      <div class="tower" data-tower="2" aria-label="Torre 3"><div class="base"></div><span class="tower-label">Torre 3</span></div>
+    </section>
+
+    <div class="stats">
+      <span>Movimientos: <strong id="moves">0</strong></span>
+      <span>Mínimo posible: <strong id="minimum">31</strong></span>
+    </div>
+  </main>
+
+  <script>
+    const colors = ["", "#ff6b6b", "#ffa94d", "#ffd43b", "#69db7c",
+                    "#4dabf7", "#9775fa", "#f06595"];
+    const towers = [[], [], []];
+    const towerElements = [...document.querySelectorAll(".tower")];
+    const countSelect = document.querySelector("#diskCount");
+    const movesElement = document.querySelector("#moves");
+    const minimumElement = document.querySelector("#minimum");
+    const statusElement = document.querySelector("#status");
+
+    let selectedTower = null;
+    let moves = 0;
+    let draggedDisk = null;
+
+    function startGame() {
+      const count = Number(countSelect.value);
+      towers.forEach(tower => tower.splice(0));
+      for (let size = count; size >= 1; size--) towers[0].push(size);
+
+      selectedTower = null;
+      moves = 0;
+      movesElement.textContent = moves;
+      minimumElement.textContent = 2 ** count - 1;
+      statusElement.textContent = "Elige una torre con discos y luego la torre de destino.";
+      render();
+    }
+
+    function render() {
+      towerElements.forEach((element, index) => {
+        element.querySelectorAll(".disk").forEach(disk => disk.remove());
+        element.classList.toggle("selected", selectedTower === index);
+
+        towers[index].forEach(size => {
+          const disk = document.createElement("div");
+          disk.className = "disk";
+          disk.style.width = `${Math.max(28, 28 + size * 24)}px`;
+          disk.style.background = colors[size];
+          disk.draggable = true;
+          disk.dataset.size = size;
+          disk.setAttribute("aria-label", `Disco ${size}`);
+
+          disk.addEventListener("dragstart", event => {
+            if (towers[index].at(-1) !== size) {
+              event.preventDefault();
+              return;
+            }
+            draggedDisk = index;
+            event.dataTransfer.setData("text/plain", String(index));
+          });
+
+          element.appendChild(disk);
+        });
+      });
+    }
+
+    function moveDisk(from, to) {
+      if (from === to) return;
+
+      const disk = towers[from].at(-1);
+      if (!disk) return;
+
+      const destinationTop = towers[to].at(-1);
+      if (destinationTop && destinationTop < disk) {
+        statusElement.textContent = "Movimiento no válido: un disco grande no puede ir sobre uno pequeño.";
+        return;
+      }
+
+      towers[from].pop();
+      towers[to].push(disk);
+      moves++;
+      movesElement.textContent = moves;
+      selectedTower = null;
+
+      if (towers[2].length === Number(countSelect.value)) {
+        statusElement.textContent = `¡Lo lograste en ${moves} movimientos!`;
+      } else {
+        statusElement.textContent = "¡Buen movimiento! Sigue jugando.";
+      }
+
+      render();
+    }
+
+    towerElements.forEach((towerElement, index) => {
+      towerElement.addEventListener("click", () => {
+        if (selectedTower === null) {
+          if (towers[index].length) {
+            selectedTower = index;
+            statusElement.textContent = "Ahora elige la torre de destino.";
+            render();
+          }
+        } else {
+          moveDisk(selectedTower, index);
+          if (selectedTower !== null) {
+            selectedTower = null;
+            render();
+          }
+        }
+      });
+
+      towerElement.addEventListener("dragover", event => event.preventDefault());
+      towerElement.addEventListener("drop", event => {
+        event.preventDefault();
+        const from = Number(event.dataTransfer.getData("text/plain"));
+        if (!Number.isNaN(from)) moveDisk(from, index);
+        draggedDisk = null;
+      });
+    });
+
+    document.querySelector("#reset").addEventListener("click", startGame);
+    countSelect.addEventListener("change", startGame);
+    startGame();
+  </script>
+</body>
+</html>
