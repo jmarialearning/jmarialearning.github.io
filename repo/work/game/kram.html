@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cram</title>
+  <style>
+    :root {
+      --cell-size: 42px;
+      --red: #d94b4b;
+      --white-piece: #fff;
+    }
+
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 0;
+      padding: 24px;
+      background: #f3f4f6;
+      color: #222;
+      text-align: center;
+    }
+
+    h1 { margin-top: 0; }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    select, button {
+      padding: 8px 12px;
+      font: inherit;
+    }
+
+    #status {
+      min-height: 1.5em;
+      font-weight: 700;
+      margin: 12px;
+    }
+
+    #boards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 24px;
+    }
+
+    .board-wrap h2 {
+      font-size: 1rem;
+      margin: 0 0 8px;
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: repeat(6, var(--cell-size));
+      border: 2px solid #333;
+      background: #d8c39a;
+      touch-action: manipulation;
+    }
+
+    .cell {
+      width: var(--cell-size);
+      height: var(--cell-size);
+      box-sizing: border-box;
+      border: 1px solid #9b835a;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .cell:hover { background: #ead8b5; }
+
+    .cell.red {
+      background: var(--red);
+      border-color: #a82d2d;
+    }
+
+    .cell.white {
+      background: var(--white-piece);
+      border-color: #777;
+    }
+
+    .instructions {
+      max-width: 620px;
+      margin: 20px auto 0;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 420px) {
+      :root { --cell-size: 36px; }
+      body { padding: 16px 8px; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Cram</h1>
+
+  <div class="controls">
+    <label for="boardCount">Número de tableros:</label>
+    <select id="boardCount">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+    <button id="newGame">Nueva partida</button>
+  </div>
+
+  <div id="status" aria-live="polite"></div>
+  <div id="boards"></div>
+
+  <p class="instructions">
+    Haz clic en una casilla y luego en otra contigua para colocar una ficha.
+    Puedes colocarla en horizontal o vertical, y elegir cualquier tablero.
+    Rojo y blanco se alternan; pierde quien no pueda hacer una jugada.
+  </p>
+
+  <script>
+    const ROWS = 6;
+    const COLS = 6;
+
+    const boardsElement = document.getElementById("boards");
+    const statusElement = document.getElementById("status");
+    const countSelect = document.getElementById("boardCount");
+
+    let boards = [];
+    let currentPlayer = "red";
+    let selectedCell = null;
+    let gameOver = false;
+
+    function newGame() {
+      const count = Number(countSelect.value);
+      boards = Array.from({ length: count }, () =>
+        Array.from({ length: ROWS }, () => Array(COLS).fill(null))
+      );
+
+      currentPlayer = "red";
+      selectedCell = null;
+      gameOver = false;
+      render();
+      updateStatus();
+    }
+
+    function render() {
+      boardsElement.innerHTML = "";
+
+      boards.forEach((board, boardIndex) => {
+        const wrap = document.createElement("section");
+        wrap.className = "board-wrap";
+
+        const title = document.createElement("h2");
+        title.textContent = `Tablero ${boardIndex + 1}`;
+        wrap.appendChild(title);
+
+        const grid = document.createElement("div");
+        grid.className = "board";
+
+        for (let row = 0; row < ROWS; row++) {
+          for (let col = 0; col < COLS; col++) {
+            const cell = document.createElement("div");
+            cell.className = "cell";
+            cell.dataset.board = boardIndex;
+            cell.dataset.row = row;
+            cell.dataset.col = col;
+
+            if (board[row][col]) {
+              cell.classList.add(board[row][col]);
+            }
+
+            if (
+              selectedCell &&
+              selectedCell.board === boardIndex &&
+              selectedCell.row === row &&
+              selectedCell.col === col
+            ) {
+              cell.style.outline = "3px solid #2463eb";
+              cell.style.outlineOffset = "-3px";
+            }
+
+            cell.addEventListener("click", () =>
+              handleCellClick(boardIndex, row, col)
+            );
+
+            grid.appendChild(cell);
+          }
+        }
+
+        wrap.appendChild(grid);
+        boardsElement.appendChild(wrap);
+      });
+    }
+
+    function handleCellClick(boardIndex, row, col) {
+      if (gameOver) return;
+
+      const board = boards[boardIndex];
+
+      if (!selectedCell) {
+        if (board[row][col] !== null) {
+          statusElement.textContent = "Esa casilla ya está ocupada.";
+          return;
+        }
+
+        selectedCell = { board: boardIndex, row, col };
+        render();
+        statusElement.textContent = "Ahora elige una casilla contigua.";
+        return;
+      }
+
+      const first = selectedCell;
+      selectedCell = null;
+
+      const sameBoard = first.board === boardIndex;
+      const adjacent =
+        Math.abs(first.row - row) + Math.abs(first.col - col) === 1;
+      const bothEmpty =
+        boards[first.board][first.row][first.col] === null &&
+        board[row][col] === null;
+
+      if (!sameBoard || !adjacent || !bothEmpty) {
+        render();
+        statusElement.textContent =
+          "Jugada inválida. Elige dos casillas vacías y contiguas del mismo tablero.";
+        return;
+      }
+
+      board[first.row][first.col] = currentPlayer;
+      board[row][col] = currentPlayer;
+
+      currentPlayer = currentPlayer === "red" ? "white" : "red";
+      render();
+      updateStatus();
+    }
+
+    function hasLegalMove() {
+      return boards.some(board => {
+        for (let row = 0; row < ROWS; row++) {
+          for (let col = 0; col < COLS; col++) {
+            if (board[row][col] !== null) continue;
+
+            const canRight =
+              col + 1 < COLS && board[row][col + 1] === null;
+            const canDown =
+              row + 1 < ROWS && board[row + 1][col] === null;
+
+            if (canRight || canDown) return true;
+          }
+        }
+        return false;
+      });
+    }
+
+    function updateStatus() {
+      if (!hasLegalMove()) {
+        gameOver = true;
+        const winner = currentPlayer === "red" ? "Blancas" : "Rojas";
+        statusElement.textContent =
+          `¡Fin de la partida! Ganan las fichas ${winner}.`;
+        return;
+      }
+
+      const playerName = currentPlayer === "red" ? "Rojas" : "Blancas";
+      statusElement.textContent = `Turno de las fichas ${playerName}.`;
+    }
+
+    document.getElementById("newGame").addEventListener("click", newGame);
+    countSelect.addEventListener("change", newGame);
+
+    newGame();
+  </script>
+</body>
+</html>
