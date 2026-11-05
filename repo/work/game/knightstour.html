@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>El problema del caballo</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      text-align: center;
+      margin: 24px;
+      background: #f4f1eb;
+      color: #222;
+    }
+
+    #tablero {
+      display: grid;
+      grid-template-columns: repeat(8, min(10vw, 64px));
+      grid-template-rows: repeat(8, min(10vw, 64px));
+      width: fit-content;
+      margin: 20px auto;
+      border: 3px solid #333;
+    }
+
+    .casilla {
+      display: grid;
+      place-items: center;
+      font-size: clamp(22px, 7vw, 42px);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .clara { background: #f0d9b5; }
+    .oscura { background: #779556; }
+    .posible { box-shadow: inset 0 0 0 5px #f5df50; }
+    .visitada { background-color: #6e9aaf; }
+    .actual { box-shadow: inset 0 0 0 5px #e34b4b; }
+
+    button {
+      font: inherit;
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+
+    #estado { min-height: 1.5em; }
+    .opciones { margin-top: 12px; }
+  </style>
+</head>
+<body>
+  <h1>El problema del caballo</h1>
+  <p>Empieza en cualquier casilla. Visita todas sin repetir ninguna.</p>
+
+  <div id="estado">Elige una casilla para empezar.</div>
+
+  <div id="tablero" aria-label="Tablero de ajedrez"></div>
+
+  <div class="opciones">
+    <label>
+      <input type="checkbox" id="mostrarMovimientos" checked>
+      Mostrar movimientos posibles en amarillo
+    </label>
+  </div>
+
+  <p><button id="reiniciar">Reiniciar</button></p>
+
+  <script>
+    const tablero = document.querySelector("#tablero");
+    const estado = document.querySelector("#estado");
+    const mostrarMovimientos = document.querySelector("#mostrarMovimientos");
+    const casillasVisitadas = new Set();
+    let posicionActual = null;
+
+    function clave(fila, columna) {
+      return `${fila},${columna}`;
+    }
+
+    function esMovimientoLegal(fila, columna) {
+      if (posicionActual === null) return true;
+
+      const df = Math.abs(fila - posicionActual.fila);
+      const dc = Math.abs(columna - posicionActual.columna);
+
+      return df * dc === 2 && !casillasVisitadas.has(clave(fila, columna));
+    }
+
+    function dibujar() {
+      tablero.innerHTML = "";
+
+      for (let fila = 0; fila < 8; fila++) {
+        for (let columna = 0; columna < 8; columna++) {
+          const casilla = document.createElement("div");
+          const id = clave(fila, columna);
+          const esActual =
+            posicionActual?.fila === fila &&
+            posicionActual?.columna === columna;
+
+          casilla.className = "casilla " +
+            ((fila + columna) % 2 === 0 ? "clara" : "oscura");
+
+          if (casillasVisitadas.has(id)) {
+            casilla.classList.add("visitada");
+          }
+
+          if (esActual) {
+            casilla.classList.add("actual");
+            casilla.textContent = "♞";
+          } else if (
+            mostrarMovimientos.checked &&
+            posicionActual &&
+            esMovimientoLegal(fila, columna)
+          ) {
+            casilla.classList.add("posible");
+          }
+
+          casilla.addEventListener("click", () => jugar(fila, columna));
+          tablero.appendChild(casilla);
+        }
+      }
+    }
+
+    function jugar(fila, columna) {
+  if (casillasVisitadas.has(clave(fila, columna))) {
+    estado.textContent = "En esta casilla ya has estado.";
+    return;
+  }
+
+  if (!esMovimientoLegal(fila, columna)) {
+    estado.textContent = posicionActual
+      ? "Movimiento no válido: el caballo debe moverse en forma de L."
+      : "Elige una casilla para empezar.";
+    return;
+  }
+
+  posicionActual = { fila, columna };
+  casillasVisitadas.add(clave(fila, columna));
+
+  estado.textContent = casillasVisitadas.size === 64
+    ? "¡Lo lograste! Recorriste todo el tablero."
+    : `Casillas visitadas: ${casillasVisitadas.size} de 64.`;
+
+  dibujar();
+}
+
+
+    function reiniciar() {
+      casillasVisitadas.clear();
+      posicionActual = null;
+      estado.textContent = "Elige una casilla para empezar.";
+      dibujar();
+    }
+
+    mostrarMovimientos.addEventListener("change", dibujar);
+    document.querySelector("#reiniciar").addEventListener("click", reiniciar);
+
+    dibujar();
+  </script>
+</body>
+</html>
