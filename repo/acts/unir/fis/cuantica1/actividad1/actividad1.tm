@@ -221,6 +221,17 @@
 
   <section|Quinto ejercicio>
 
+  Definimos las relaciones de De Broglie y Planck, respectivamente:
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|p=\<hbar\>k>|<cell|>|<cell|>>|<row|<cell|E=\<hbar\>\<omega\>>|<cell|>|<cell|>>>>
+  </eqnarray*>
+
+  partiendo de las ecuaciones <math|E=h\<nu\>> y
+  <math|\<lambda\>=<frac*|h|mv>>.
+
+  <subsection|Caso no relativista>
+
   La velocidad de grupo es <math|g=<frac|d\<omega\>|dk>> y haciendo uso de
   las relaciones de De Broglie y Planck, obtenemos:
 
@@ -242,6 +253,60 @@
   </equation*>
 
   Como queríamos demostrar.
+
+  <subsection|Caso relativista>\ 
+
+  Por otro lado, para este caso, tenemos que la energía es:
+
+  <\equation*>
+    E=<sqrt|p<rsup|2>c<rsup|2>+m<rsup|2>c<rsup|4>>
+  </equation*>
+
+  Aplicando las relaciones de De Broglie y Planck:
+
+  <\equation*>
+    \<omega\>=<frac|1|\<hbar\>><sqrt|\<hbar\><rsup|2>k<rsup|2>c<rsup|2>+m<rsup|2>c<rsup|4>>
+  </equation*>
+
+  La velocidad de grupo sigue lo que se ha expuesto anteriormente. Sin
+  embargo, atendiendo a las relaciones de Planck y de De Broglie, podemos
+  afirmar que:
+
+  <\equation*>
+    g=<frac|d\<omega\>|dk>=<frac|dE|dp>
+  </equation*>
+
+  Derivando, obtenemos:
+
+  <\equation*>
+    g=<frac|dE|dp>=<frac|2pc<rsup|2>|2<sqrt|p<rsup|2>c<rsup|2>+m<rsup|2>c<rsup|4>>>=<frac|2pc<rsup|2>|2E>=<frac|pc<rsup|2>|E>
+  </equation*>
+
+  La mecánica relativista considera que <math|p=\<gamma\>mv> y
+  <math|E=\<gamma\>mc<rsup|2>>. Así, tenemos que:
+
+  <\equation*>
+    <frac|<neg|\<gamma\>m>v<neg|c><rsup|2>|<neg|\<gamma\>mc<rsup|2>>>=v
+  </equation*>
+
+  Como queríamos demostrar. Por otro lado, la velocidad de fase es:
+
+  <\equation*>
+    u=<frac|\<omega\>|k>=<frac|E|p>
+  </equation*>
+
+  aplicando las relaciones de Planck y De Broglie. Multiplicando <math|u> por
+  <math|g>:
+
+  <\equation*>
+    ug=<frac|<neg|E>|<neg|p>><frac|<neg|p>c<rsup|2>|<neg|E>>=c<rsup|2>
+  </equation*>
+
+  Por lo que queda demostrado que:
+
+  <\equation*>
+    u=<frac|c<rsup|2>|g>
+  </equation*>
 </body>
 
 <\initial>
@@ -255,13 +320,15 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
+    <associate|auto-10|<tuple|5.2|?>>
     <associate|auto-2|<tuple|1.1|1>>
     <associate|auto-3|<tuple|1.2|2>>
     <associate|auto-4|<tuple|1.3|3>>
     <associate|auto-5|<tuple|2|3>>
     <associate|auto-6|<tuple|3|4>>
     <associate|auto-7|<tuple|4|4>>
-    <associate|auto-8|<tuple|5|?>>
+    <associate|auto-8|<tuple|5|5>>
+    <associate|auto-9|<tuple|5.1|?>>
   </collection>
 </references>
 
@@ -295,6 +362,10 @@
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-shape|<quote|small-caps>|4.<space|2spc>Cuarto
       ejercicio> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <pageref|auto-7><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-shape|<quote|small-caps>|5.<space|2spc>Quinto
+      ejercicio> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <pageref|auto-8><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
