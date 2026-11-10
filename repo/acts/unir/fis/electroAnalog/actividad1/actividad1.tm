@@ -163,8 +163,118 @@
   Por lo que las caídas de tensión en las resistencias serán:
 
   <\eqnarray*>
-    <tformat|<table|<row|<cell|V<rsub|R<rsub|1>>=V<rsub|1>-V<rsub|nodo<rsub|1>>=<around*|(|10-7.38|)><space|0.4spc><text|V>=2.62<space|0.4spc><text|V>>|<cell|>|<cell|>>|<row|<cell|V<rsub|R<rsub|4>>=V<rsub|>>|<cell|>|<cell|>>>>
+    <tformat|<table|<row|<cell|V<rsub|R<rsub|1>>=V<rsub|1>-V<rsub|nodo<rsub|1>>=<around*|(|10-7.38|)><space|0.4spc><text|V>=2.62<space|0.4spc><text|V>>|<cell|>|<cell|>>|<row|<cell|V<rsub|R<rsub|4>>=V<rsub|nodo<rsub|1>>-V<rsub|4>=7.38<space|0.4spc><text|V>-2<space|0.4spc><text|V>=5.38<space|0.4spc><text|V>>|<cell|>|<cell|>>>>
   </eqnarray*>
+
+  Como <math|R<rsub|2>> y <math|R<rsub|3>> están en serie, la intensidad que
+  circula por ellas es:
+
+  <\equation*>
+    I<rsub|23>=<frac|V<rsub|nodo<rsub|1>>-V<rsub|2>|R<rsub|2>+R<rsub|3>>=1.28\<cdot\>10<rsup|-3><space|0.4spc><text|A>
+  </equation*>
+
+  Por ello, las caídas de tensión serán:
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|V<rsub|2>=I<rsub|23>\<cdot\>R<rsub|2>=2.56<space|0.4spc><text|V>>|<cell|>|<cell|>>|<row|<cell|V<rsub|3>=I<rsub|23>\<cdot\>R<rsub|3>=3.84<space|0.4spc><text|V>>|<cell|>|<cell|>>>>
+  </eqnarray*>
+
+  Para <math|R<rsub|1>> y <math|R<rsub|4>>, las intensidades se calculan con
+  la <em|Ley de Ohm>:
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|I<rsub|1>=<frac*|V<rsub|R<rsub|1>>|R<rsub|1>>=2.62\<cdot\>10<rsup|-3><space|0.4spc><text|A>>|<cell|>|<cell|>>|<row|<cell|I<rsub|4>=<frac*|V<rsub|R<rsub|4>>|R<rsub|4>>=1.34\<cdot\>10<rsup|-3><space|0.4spc><text|A>>|<cell|>|<cell|>>>>
+  </eqnarray*>
+
+  <section|Quinto ejercicio>
+
+  Se retira la resistencia de <math|1<space|0.4spc>\<Omega\>>. Para calcular
+  el voltaje de Thévenin, calculamos la diferencia de potencial entre A y B.
+  Sabemos que <math|V<rsub|B>=0<space|0.4spc><text|V>>. La resistencia
+  equivalente de las 3 en serie es:
+
+  <\equation*>
+    R<rsub|eq>=<around*|(|6+6+4|)><space|0.4spc>\<Omega\>=16<space|0.4spc>\<Omega\>
+  </equation*>
+
+  La intensidad que pasa por el circuito es:
+
+  <\equation*>
+    I=<frac|V|R>=<frac|12<space|0.4spc><text|V>|16<space|0.4spc>\<Omega\>>=0.75<space|0.4spc><text|A>
+  </equation*>
+
+  Por ello, como los terminales están en paralelo con <math|R<rsub|11>>, por
+  ellos circulará el mismo voltaje. Así:
+
+  <\equation*>
+    V<rsub|AB>=0.75<space|0.4spc><text|A>\<cdot\>4<space|0.4spc>\<Omega\>=3<space|0.4spc><text|V>
+  </equation*>
+
+  Para calcular la resistencia de Thévenin, se eliminan las fuentes de
+  tensión, quedando las resistencias <math|R<rsub|9>> y <math|R<rsub|10>> en
+  serie con <math|R<rsub|11>> en paralelo:
+
+  <\equation*>
+    R<rsub|eq>=<frac|1|<frac|1|R<rsub|9>+R<rsub|10>>+<frac|1|R<rsub|11>>>=3<space|0.4spc>\<Omega\>
+  </equation*>
+
+  El circuito equivalente lleva una fuente de tensión de
+  <math|3<space|0.4spc><text|V>> con una resistencia de
+  <math|3<space|0.4spc>\<Omega\>>.\ 
+
+  <section|Sexto ejercicio>
+
+  Sabemos que el potencial de barrera del diodo es:
+
+  <\equation*>
+    U=V<rsub|t>\<cdot\>ln<around*|(|<frac|N<rsub|D>N<rsub|A>|n<rsup|2><rsub|i>>|)>=0.026<space|0.4spc><text|V>\<cdot\>ln<around*|(|<frac|10<rsup|15>\<cdot\>10<rsup|19>|10<rsup|20>><frac|1|cm<rsup|3>>|)>=0.84<space|0.4spc><text|V>
+  </equation*>
+
+  Por ello, la anchura total de la deplexión es:
+
+  <\equation*>
+    W=<sqrt|<frac|2\<varepsilon\>|q><around*|[|<frac|N<rsub|A>+N<rsub|D>|N<rsub|A>N<rsub|D>><around*|(|U-V|)>|]>>=1.04\<cdot\>10<rsup|-4><space|0.4spc><text|cm>\<equiv\>1.043<space|0.4spc>\<mu\><text|m>
+  </equation*>
+
+  La parte de la deplexión correspondiente a cada tipo (P o N) la calculamos
+  resolviendo un sistema:
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|N<rsub|A>\<cdot\>\<chi\><rsub|p>=N<rsub|D>\<cdot\>\<chi\><rsub|n>>|<cell|>|<cell|<eq-number>>>|<row|<cell|W=\<chi\><rsub|p>+\<chi\><rsub|n>>|<cell|>|<cell|<eq-number>>>>>
+  </eqnarray*>
+
+  Así, despejamos <math|\<chi\><rsub|n>> de <eqref|7> y sustituimos:
+
+  <\equation*>
+    \<chi\><rsub|p>=W<frac|N<rsub|D>|N<rsub|A>+N<rsub|D>>=1.043\<cdot\>10<rsup|-8><space|0.4spc><text|cm>
+  </equation*>
+
+  <\equation*>
+    \<chi\><rsub|n>=W-\<chi\><rsub|p>=1.043\<cdot\>10<rsup|-8><space|0.4spc><text|cm>
+  </equation*>
+
+  El campo eléctrico máximo en la unión es:
+
+  <\equation*>
+    E<rsub|max>=<frac|q\<cdot\>N<rsub|A>\<chi\><rsub|p>|\<varepsilon\>>=16064.6<space|0.4spc><frac|<text|V>|cm>
+  </equation*>
+
+  <section|Séptimo ejercicio>
+
+  Como el voltaje que se aplica es de <math|1<space|0.4spc><text|V>>, en cada
+  diodo se invertirán <math|0.5<space|0.4spc><text|V>>. Sabemos que la
+  corriente de saturación inversa es <math|10<rsup|-9><space|0.4spc><text|A>>,
+  por lo que:
+
+  <\equation*>
+    I=I<rsub|s><around*|(|<text|e><rsup|<frac|V<rsub|d>|\<eta\>V<rsub|t>>-1>|)>\<approx\>0.25<space|0.4spc><text|A>
+  </equation*>
+
+  considerando que <math|\<eta\>=1> al aplicar la Ley de Shockley.
+
+  <section|Octavo ejercicio>
+
+  \;
 </body>
 
 <\initial>
@@ -190,12 +300,15 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
+    <associate|auto-10|<tuple|8|?>>
     <associate|auto-2|<tuple|1|1>>
     <associate|auto-3|<tuple|2|2>>
     <associate|auto-4|<tuple|3|2>>
     <associate|auto-5|<tuple|4|2>>
     <associate|auto-6|<tuple|2|2>>
-    <associate|eqn:5|<tuple|5|?>>
+    <associate|auto-7|<tuple|5|3>>
+    <associate|auto-8|<tuple|6|4>>
+    <associate|auto-9|<tuple|7|?>>
   </collection>
 </references>
 
@@ -226,6 +339,14 @@
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-shape|<quote|small-caps>|4.<space|2spc>Cuarto
       ejercicio> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <pageref|auto-5><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-shape|<quote|small-caps>|5.<space|2spc>Quinto
+      ejercicio> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <pageref|auto-7><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-shape|<quote|small-caps>|6.<space|2spc>Sexto
+      ejercicio> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <pageref|auto-8><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
