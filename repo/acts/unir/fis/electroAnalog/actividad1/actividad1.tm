@@ -274,6 +274,30 @@
 
   <section|Octavo ejercicio>
 
+  Según la tercera aproximación de los diodos, tenemos que:
+
+  <\equation*>
+    I=<frac|V-V<rsub|d>|R+R<rsub|d>>=<frac|20-0.7|1000+0.23><space|0.4spc><text|A>=0.193<space|0.4spc><text|A>
+  </equation*>
+
+  Para calcular la potencia de la resistencia, tenemos que:
+
+  <\equation*>
+    P<rsub|R<rsub|1>>=I<rsup|2>\<cdot\>R<rsub|1>=0.372<space|0.4spc><text|W>
+  </equation*>
+
+  Considerando la resistencia del diodo, tenemos que la caída de tensión es:
+
+  <\equation*>
+    V<rsub|dtotal>=V<rsub|d>+I<rsub|d>\<cdot\>R<rsub|d>=0.704<space|0.4spc><text|V>
+  </equation*>
+
+  Por lo que la potencia que disipa el diodo se realiza con esos valores:
+
+  <\equation*>
+    P<rsub|d>=V<rsub|dtotal>\<cdot\>I<rsub|d>=0.0136<space|0.4spc><text|W>
+  </equation*>
+
   \;
 </body>
 
@@ -300,7 +324,7 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|8|?>>
+    <associate|auto-10|<tuple|8|4>>
     <associate|auto-2|<tuple|1|1>>
     <associate|auto-3|<tuple|2|2>>
     <associate|auto-4|<tuple|3|2>>
@@ -308,7 +332,7 @@
     <associate|auto-6|<tuple|2|2>>
     <associate|auto-7|<tuple|5|3>>
     <associate|auto-8|<tuple|6|4>>
-    <associate|auto-9|<tuple|7|?>>
+    <associate|auto-9|<tuple|7|4>>
   </collection>
 </references>
 
@@ -347,6 +371,14 @@
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-shape|<quote|small-caps>|6.<space|2spc>Sexto
       ejercicio> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <pageref|auto-8><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-shape|<quote|small-caps>|7.<space|2spc>Séptimo
+      ejercicio> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <pageref|auto-9><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-shape|<quote|small-caps>|8.<space|2spc>Octavo
+      ejercicio> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <pageref|auto-10><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
