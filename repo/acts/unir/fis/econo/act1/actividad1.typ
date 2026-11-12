@@ -1,3 +1,4 @@
+#import "@preview/quadrille:0.1.0": *
 #set document(
     title: [Actividad 1 Economía],
     author: "Jesús María Mora Mur",
@@ -33,4 +34,60 @@
 #counter(page).update(1)
 #set par(leading: 1.5em)
 = Análisis de la demanda.
-En el pódcast que escuchamos acerca de la vivienda, los primeros instantes de emisión arrojan diferentes datos acerca de la compraventa de viviendas en España.
+En el pódcast que escuchamos acerca de la vivienda, los primeros instantes de emisión arrojan diferentes datos acerca de la compraventa de viviendas en España. Se especifica que se realizaron 61886 operaciones de compraventa de vivienda en el mes de septiembre de 2024. El entrevistado (Javier Ruiz) achaca este aumento de la demanda a diferentes factores, a saber:
+- La bajada del Euríbor, principal índice de referencia para la tramitación de hipotecas a tipo variable. Si este índice baja, los créditos se abaratan. Además, las perspectivas del índice siguen siendo bajistas, lo cual sigue aumentando la demanda.
+- Además de la buena coyuntura para el préstamo hipotecario, la demografía española también afecta al mercado de la vivienda, en tanto en cuanto se deben absorber los flujos migratorios que inmigran al territorio nacional. Los buenos datos macroeconómicos y las perspectivas de crecimiento empujan a ciertos grupos de población extranjera a dejar su país de origen en busca de un futuro mejor. Estos flujos migratorios no hacen sino aumentar la demanda de vivienda.
+== Curva inicial de demanda
+#figure(
+    graph(
+    x:(-9,9), y:(-1,6), scale: auto,
+    fn(x => -x, [$D_0$], stroke: red),
+    x-label: "Viviendas demandadas",
+    y-label: "Precio de cada vivienda",
+    axes: "edge",
+    grid: false,
+    ticks: none,
+    fn(x => -x+3, [$D_1$], stroke: auto)
+),
+caption:[Curva  de demanda inicial $D_0$ y afectada $D_1$.]
+)
+Esta curva permite identificar la demanda inicial, $D_0$ y la demanda afectada por los factores especificados, $D_1$. Como vemos $D_1$, queda _totalmente desplazada a la derecha_, lo cual demuestra un aumento de la demanda, coincidiendo con lo que se relata en la grabación.
+= Análisis de la oferta.
+- La inversión en construcción de obra nueva es menor que antaño. Comparando en porcentaje con respecto a Producto Interior Bruto, se invierte un 6%, cuando en los años previos a la crisis (2007) se invertía hasta un 12%.
+- Al no construir obra nueva, las operaciones se realizan casi en su totalidad (9 de cada 10) con inmuebles de segunda mano.
+- Ello convierte a la vivienda en un bien escaso.
+== Curva de oferta.
+#figure(
+    graph(
+    x:(-9,9), y:(-1,6), scale: auto,
+    fn(x => x , [$S_0$], stroke: red),
+    x-label: "Viviendas ofertadas",
+    y-label: "Precio de cada vivienda",
+    axes: "edge",
+    grid: false,
+    ticks: none,
+    fn(x => x+3, [$S_1$], stroke: auto)
+),
+caption: [Curva de oferta inicial $S_0$ y afectada $S_1$.]
+)
+Esta curva permite identificar la oferta inicial, $S_0$ y la oferta afectada por los factores especificados, $S_1$. Como vemos $S_1$, queda _totalmente desplazada a la izquierda_, lo cual demuestra una disminución de la oferta, coincidiendo también con lo que se relata en la grabación.
+= Análisis del equilibrio.
+== Curvas desplazadas $S_1$ y $D_1$.
+#figure(
+    graph(
+    x:(-9,9), y:(-1,6), scale: auto,
+    fn(x => -x +3, [$D_1$], stroke: red),
+    points((0,3,$E_1$), mark: "square", stroke: olive),
+    x-label: "Viviendas",
+    y-label: "Precio de cada vivienda",
+    axes: "edge",
+    grid: false,
+    ticks: none,
+    fn(x => x+3, [$S_1$], stroke: blue)
+),
+caption: [Curvas afectadas de oferta y demanda $S_1$ y $D_1$ junto con el punto de equilibrio $E_1$.]
+)
+Según lo que se ha comprobado en los gráficos, tenemos que la demanda actual $D_1$ es mayor que la inicial $D_0$. Por ello estamos en una situación de *exceso de demanda*. Ello provoca pérdidas y ganancias a diferentes sectores de la población. Es elemental comparar los dos puntos de equilibrio en caso de mostrarlos ($E_0$ y $E_1$), detectando como el equilibrio actual implica el mismo número de viviendas por un precio mayor. En otras palabras, en el equilibrio actual, el precio de la vivienda ha ascendido. Así pues:
+- Todas aquellas personas que posean bienes inmuebles que fueran comprados de acuerdo con lo que muestran $S_0$ y $D_0$, en el supuesto de la salida al mercado de dichos bienes para su compraventa, obtendrían previsiblemente, ganancias, obviando las depreciaciones fruto de deterioros no habituales del bien.
+- Todas aquellas personas en situación contraria (que buscan inmuebles en el mercado para hacerse con su propiedad), de elegir esta situación, con la oferta $S_1$ y la demanda $D_1$, en lugar de la generada con oferta $S_0$ y demanda $D_0$, harían frente a mayores gastos, si bien no constituirían dichos gastos una pérdida directa.
+Considerando, en el supuesto analizado, una corriente liberal, el mercado se regularía espontáneamente, manteniendo los precios una tendencia alcista hasta el punto de equilibrio por un exceso de demanda. Esto puede tener consecuencias graves a nivel social, al ser inasumible una subida de precios para ciertos sectores de la población, impidiendo por ello el acceso al bien.
