@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Juego de Nim</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 760px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #222;
+      background: #f5f7fb;
+    }
+
+    h1, #estado { text-align: center; }
+
+    #pilas {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin: 30px 0;
+    }
+
+    .pila {
+      min-width: 110px;
+      padding: 16px;
+      text-align: center;
+      background: white;
+      border: 2px solid #d9deea;
+      border-radius: 12px;
+    }
+
+    .objetos {
+      min-height: 60px;
+      margin: 12px 0;
+      font-size: 24px;
+      line-height: 1.5;
+      overflow-wrap: anywhere;
+    }
+
+    button, select, input {
+      padding: 9px 12px;
+      font: inherit;
+      border: 1px solid #aab3c5;
+      border-radius: 7px;
+      background: white;
+    }
+
+    button { cursor: pointer; }
+    button:hover { background: #edf1fa; }
+    button:disabled { cursor: not-allowed; opacity: 0.5; }
+
+    #estado {
+      min-height: 1.5em;
+      font-weight: 600;
+    }
+
+    .controles {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    #cantidadPilas { width: 70px; }
+  </style>
+</head>
+<body>
+  <h1>Juego de Nim</h1>
+  <p>En cada turno, elige una pila y quita uno o más objetos. Quien toma el último objeto pierde.</p>
+
+  <div id="pilas"></div>
+  <p id="estado" aria-live="polite"></p>
+
+  <div class="controles">
+    <label for="modo">Modo:</label>
+    <select id="modo">
+      <option value="ordenador">Contra el ordenador</option>
+      <option value="dos">Dos jugadores</option>
+    </select>
+
+    <label for="cantidadPilas">Número de pilas:</label>
+    <input id="cantidadPilas" type="number" min="1" max="20" value="3">
+
+    <button id="reiniciar">Nueva partida</button>
+  </div>
+
+  <script>
+    const contenedor = document.getElementById("pilas");
+    const estado = document.getElementById("estado");
+    const selectorModo = document.getElementById("modo");
+    const selectorPilas = document.getElementById("cantidadPilas");
+
+    let pilas = [];
+    let modo = selectorModo.value;
+    let jugadorActual = 1;
+    let partidaTerminada = false;
+    let turnoJugador = true;
+    let temporizadorOrdenador = null;
+
+    function crearPilasIniciales() {
+      const numero = Math.max(
+        1,
+        Math.min(20, Number(selectorPilas.value) || 3)
+      );
+
+      selectorPilas.value = numero;
+
+      // Las pilas empiezan con 3, 4, 5 objetos y luego repiten el patrón.
+      return Array.from({ length: numero }, (_, i) => 3 + (i % 3));
+    }
+
+    function iniciarPartida() {
+      clearTimeout(temporizadorOrdenador);
+
+      pilas = crearPilasIniciales();
+      modo = selectorModo.value;
+      jugadorActual = 1;
+      partidaTerminada = false;
+      turnoJugador = true;
+
+      dibujar();
+    }
+
+    function nombreTurno() {
+      if (modo === "dos") {
+        return `Turno del Jugador ${jugadorActual}`;
+      }
+
+      return turnoJugador ? "Tu turno" : "Turno del ordenador…";
+    }
+
+    function dibujar() {
+      contenedor.innerHTML = "";
+
+      pilas.forEach((cantidad, indice) => {
+        const tarjeta = document.createElement("div");
+        tarjeta.className = "pila";
+
+        const titulo = document.createElement("strong");
+        titulo.textContent = `Pila ${indice + 1}`;
+
+        const objetos = document.createElement("div");
+        objetos.className = "objetos";
+        objetos.textContent = cantidad > 0
+          ? "● ".repeat(cantidad)
+          : "Vacía";
+
+        const selectorCantidad = document.createElement("select");
+        selectorCantidad.setAttribute(
+          "aria-label",
+          `Cuántos objetos quitar de la pila ${indice + 1}`
+        );
+
+        for (let n = 1; n <= cantidad; n++) {
+          const opcion = document.createElement("option");
+          opcion.value = n;
+          opcion.textContent = n === 1 ? "1 objeto" : `${n} objetos`;
+          selectorCantidad.appendChild(opcion);
+        }
+
+        const boton = document.createElement("button");
+        boton.textContent = "Quitar";
+        boton.disabled =
+          partidaTerminada ||
+          cantidad === 0 ||
+          (modo === "ordenador" && !turnoJugador);
+
+        boton.addEventListener("click", () => {
+          jugar(indice, Number(selectorCantidad.value));
+        });
+
+        tarjeta.append(titulo, objetos, selectorCantidad, boton);
+        contenedor.appendChild(tarjeta);
+      });
+
+      if (!partidaTerminada) {
+        estado.textContent = nombreTurno();
+      }
+    }
+
+    function jugar(indice, cantidad) {
+      if (partidaTerminada || cantidad < 1 || cantidad > pilas[indice]) return;
+      if (modo === "ordenador" && !turnoJugador) return;
+
+      pilas[indice] -= cantidad;
+
+      // Quien deja todas las pilas vacías tomó el último objeto y pierde.
+      if (pilas.every(pila => pila === 0)) {
+        partidaTerminada = true;
+
+        if (modo === "dos") {
+          const ganador = jugadorActual === 1 ? 2 : 1;
+          estado.textContent = `¡Ganó el Jugador ${ganador}!`;
+        } else if (turnoJugador) {
+          estado.textContent =
+            "Perdiste: tomaste el último objeto. ¡Ganó el ordenador!";
+        } else {
+          estado.textContent =
+            "¡Ganaste: el ordenador tomó el último objeto!";
+        }
+
+        dibujar();
+        return;
+      }
+
+      if (modo === "dos") {
+        jugadorActual = jugadorActual === 1 ? 2 : 1;
+        dibujar();
+      } else {
+        turnoJugador = false;
+        dibujar();
+        temporizadorOrdenador = setTimeout(turnoOrdenador, 700);
+      }
+    }
+
+    function turnoOrdenador() {
+      if (partidaTerminada) return;
+
+      const pilasGrandes = pilas
+        .map((cantidad, indice) => ({ cantidad, indice }))
+        .filter(pila => pila.cantidad > 1);
+
+      let indice;
+      let cantidad;
+
+      if (pilasGrandes.length === 0) {
+        // Solo quedan pilas de un objeto.
+        indice = pilas.findIndex(pila => pila > 0);
+        cantidad = 1;
+      } else if (pilasGrandes.length === 1) {
+        // Ajusta la pila grande según cuántas pilas de un objeto quedan.
+        const pilaGrande = pilasGrandes[0];
+        const pilasSueltas = pilas.filter(pila => pila === 1).length;
+        const objetivo = pilasSueltas % 2 === 0 ? 1 : 0;
+
+        indice = pilaGrande.indice;
+        cantidad = pilaGrande.cantidad - objetivo;
+      } else {
+        // Estrategia de Nim para dos o más pilas grandes.
+        const nimSum = pilas.reduce((total, pila) => total ^ pila, 0);
+
+        indice = pilas.findIndex(pila => (pila ^ nimSum) < pila);
+
+        if (indice >= 0) {
+          cantidad = pilas[indice] - (pilas[indice] ^ nimSum);
+        } else {
+          // Si no hay una jugada ganadora, hace una jugada legal.
+          indice = pilas.findIndex(pila => pila > 0);
+          cantidad = 1;
+        }
+      }
+
+      pilas[indice] -= cantidad;
+
+      if (pilas.every(pila => pila === 0)) {
+        partidaTerminada = true;
+        estado.textContent =
+          "El ordenador tomó el último objeto y perdió. ¡Ganaste!";
+      } else {
+        turnoJugador = true;
+      }
+
+      dibujar();
+    }
+
+    document.getElementById("reiniciar").addEventListener("click", iniciarPartida);
+
+    selectorModo.addEventListener("change", iniciarPartida);
+    selectorPilas.addEventListener("change", iniciarPartida);
+
+    iniciarPartida();
+  </script>
+</body>
+</html>

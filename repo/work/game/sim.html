@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SIM</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 20px;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #f1f3f6;
+      color: #20242b;
+      font-family: Arial, sans-serif;
+    }
+
+    main {
+      width: min(100%, 600px);
+      padding: 24px;
+      border-radius: 16px;
+      background: white;
+      box-shadow: 0 8px 30px #17203322;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 18px 0;
+    }
+
+    select,
+    button {
+      padding: 10px 14px;
+      border: 1px solid #cbd0d8;
+      border-radius: 8px;
+      background: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #f0f2f5;
+    }
+
+    #status {
+      min-height: 28px;
+      font-weight: bold;
+    }
+
+    svg {
+      display: block;
+      width: min(100%, 480px);
+      margin: 12px auto;
+      touch-action: manipulation;
+    }
+
+    .edge {
+      stroke: #d0d5dd;
+      stroke-width: 4;
+      stroke-linecap: round;
+    }
+
+    .dot {
+      fill: #27313f;
+      stroke: white;
+      stroke-width: 3;
+      cursor: pointer;
+    }
+
+    .hint {
+      font-size: 14px;
+      color: #555d69;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>SIM</h1>
+    <p>Une dos puntos en cada turno. Pierde quien forme un triángulo de su color.</p>
+
+    <div class="controls">
+      <label for="mode">Modo:</label>
+      <select id="mode">
+        <option value="cpu">Contra la máquina</option>
+        <option value="two">Dos jugadores</option>
+      </select>
+      <button id="newGame">Nueva partida</button>
+    </div>
+
+    <div id="status" aria-live="polite"></div>
+    <svg id="board" viewBox="0 0 400 360" aria-label="Tablero del juego SIM"></svg>
+    <p class="hint">Toca un punto y luego otro para dibujar una línea.</p>
+  </main>
+
+  <script>
+    const svg = document.querySelector("#board");
+    const statusEl = document.querySelector("#status");
+    const modeEl = document.querySelector("#mode");
+
+    const points = [
+      [200, 35],
+      [335, 105],
+      [335, 255],
+      [200, 325],
+      [65, 255],
+      [65, 105]
+    ];
+
+    const colors = ["#e32636", "#1769e0"];
+
+    let edges;
+    let turn;
+    let over;
+    let busy;
+    let firstPoint;
+
+    function edgeKey(a, b) {
+      return a < b ? `${a}-${b}` : `${b}-${a}`;
+    }
+
+    function startGame() {
+      edges = new Map();
+      turn = 0;
+      over = false;
+      busy = false;
+      firstPoint = null;
+      draw();
+      updateStatus();
+    }
+
+    function draw() {
+      svg.replaceChildren();
+
+      // Dibuja las líneas entre todos los puntos.
+      for (let a = 0; a < points.length; a++) {
+        for (let b = a + 1; b < points.length; b++) {
+          const line = document.createElementNS(
+            "http://www.w3.org/2000/svg",
+            "line"
+          );
+
+          line.setAttribute("x1", points[a][0]);
+          line.setAttribute("y1", points[a][1]);
+          line.setAttribute("x2", points[b][0]);
+          line.setAttribute("y2", points[b][1]);
+          line.setAttribute("class", "edge");
+
+          const k = edgeKey(a, b);
+
+          if (edges.has(k)) {
+            // style.stroke hace que el color se vea por encima del CSS.
+            line.style.stroke = colors[edges.get(k)];
+            line.style.strokeWidth = "6";
+          }
+
+          svg.appendChild(line);
+        }
+      }
+
+      // Dibuja los puntos. El punto elegido se colorea enseguida.
+      points.forEach(([x, y], i) => {
+        const circle = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "circle"
+        );
+
+        circle.setAttribute("cx", x);
+        circle.setAttribute("cy", y);
+        circle.setAttribute("r", 13);
+        circle.setAttribute("class", "dot");
+
+        if (i === firstPoint) {
+          // style.fill hace que el color se vea por encima del CSS.
+          circle.style.fill = colors[turn];
+          circle.setAttribute("r", 15);
+        }
+
+        circle.addEventListener("click", () => selectPoint(i));
+        svg.appendChild(circle);
+      });
+    }
+
+    function selectPoint(i) {
+      if (over || busy) return;
+
+      if (firstPoint === null) {
+        firstPoint = i;
+        draw();
+        statusEl.textContent =
+          `Jugador ${turn + 1}: ahora elige el segundo punto.`;
+        return;
+      }
+
+      if (firstPoint === i) {
+        firstPoint = null;
+        draw();
+        updateStatus();
+        return;
+      }
+
+      const a = firstPoint;
+      const b = i;
+      firstPoint = null;
+      play(a, b, turn);
+    }
+
+    function makesTriangle(a, b, player) {
+      for (let c = 0; c < points.length; c++) {
+        if (
+          c !== a &&
+          c !== b &&
+          edges.get(edgeKey(a, c)) === player &&
+          edges.get(edgeKey(b, c)) === player
+        ) {
+          return true;
+        }
+      }
+
+      return false;
+    }
+
+    function play(a, b, player) {
+      const k = edgeKey(a, b);
+
+      if (edges.has(k) || over) {
+        draw();
+        updateStatus();
+        return;
+      }
+
+      edges.set(k, player);
+      draw();
+
+      if (makesTriangle(a, b, player)) {
+        over = true;
+        statusEl.textContent =
+          `¡Jugador ${player + 1} pierde al formar un triángulo!`;
+        return;
+      }
+
+      turn = 1 - player;
+
+      if (modeEl.value === "cpu" && turn === 1) {
+        busy = true;
+        statusEl.textContent = "La máquina está pensando…";
+        setTimeout(machineMove, 500);
+      } else {
+        updateStatus();
+      }
+    }
+
+    function machineMove() {
+      const available = [];
+
+      for (let a = 0; a < points.length; a++) {
+        for (let b = a + 1; b < points.length; b++) {
+          if (!edges.has(edgeKey(a, b))) {
+            available.push([a, b]);
+          }
+        }
+      }
+
+      if (available.length === 0) {
+        over = true;
+        busy = false;
+        statusEl.textContent = "¡Empate!";
+        return;
+      }
+
+      const safeMoves = available.filter(
+        ([a, b]) => !makesTriangle(a, b, 1)
+      );
+
+      const choices = safeMoves.length > 0 ? safeMoves : available;
+      const [a, b] = choices[Math.floor(Math.random() * choices.length)];
+
+      busy = false;
+      play(a, b, 1);
+    }
+
+    function updateStatus() {
+      const colorName = turn === 0 ? "rojo" : "azul";
+      statusEl.textContent =
+        `Turno del jugador ${turn + 1} (${colorName}). Elige dos puntos.`;
+    }
+
+    document
+      .querySelector("#newGame")
+      .addEventListener("click", startGame);
+
+    modeEl.addEventListener("change", startGame);
+
+    startGame();
+  </script>
+</body>
+</html>

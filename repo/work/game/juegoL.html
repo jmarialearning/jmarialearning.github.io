@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Juego de la L</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 24px;
+      font: 16px system-ui, sans-serif;
+      color: #202634;
+      background: #f3f5f9;
+      text-align: center;
+    }
+
+    main {
+      max-width: 520px;
+      margin: auto;
+    }
+
+    h1 { margin: 0 0 8px; }
+
+    .controls { margin: 18px 0; }
+
+    select, button {
+      padding: 9px 12px;
+      margin: 4px;
+      border: 1px solid #c7ceda;
+      border-radius: 8px;
+      background: white;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    #status {
+      min-height: 48px;
+      margin: 16px 0;
+    }
+
+    #board {
+      width: min(90vw, 420px);
+      aspect-ratio: 1;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 5px;
+      margin: 0 auto;
+    }
+
+    .cell {
+      border: 0;
+      border-radius: 8px;
+      background: #dce3ed;
+      font-size: clamp(22px, 8vw, 40px);
+      font-weight: 700;
+      cursor: pointer;
+      color: #202634;
+    }
+
+    .cell:hover { outline: 3px solid #9aabc4; }
+    .p1 { background: #5d8ef0; color: white; }
+    .p2 { background: #ed8068; color: white; }
+    .neutral { background: #f0c84b; }
+    .picked { outline: 4px solid #27334a; }
+    .hint { color: #586273; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Juego de la L</h1>
+    <p class="hint">
+      Mueve tu L a cuatro casillas con forma de L. Puedes reutilizar casillas
+      de tu posición anterior, pero debes cubrir al menos una casilla nueva.
+      Después puedes mover una ficha amarilla.
+    </p>
+
+    <div class="controls">
+      <label for="mode">Modo: </label>
+      <select id="mode">
+        <option value="ai">Contra la máquina</option>
+        <option value="two">Dos personas</option>
+      </select>
+      <button id="restart">Nueva partida</button>
+      <button id="pass">Pasar ficha</button>
+    </div>
+
+    <div id="status" aria-live="polite"></div>
+    <div id="board" aria-label="Tablero de 4 por 4"></div>
+  </main>
+
+  <script>
+    const boardEl = document.querySelector("#board");
+    const statusEl = document.querySelector("#status");
+    const modeEl = document.querySelector("#mode");
+
+    let pieces;
+    let neutrals;
+    let player;
+    let phase;
+    let selectedNeutral;
+    let chosenCells;
+    let gameOver;
+
+    function key(row, col) {
+      return row * 4 + col;
+    }
+
+    function rc(k) {
+      return [Math.floor(k / 4), k % 4];
+    }
+
+    // Casillas ocupadas por la otra L y las fichas neutrales.
+    // La L propia se excluye para permitir reutilizar sus casillas.
+    function occupied(excludePiece = -1) {
+      const all = new Set(neutrals);
+
+      pieces.forEach((piece, i) => {
+        if (i !== excludePiece) {
+          piece.forEach(k => all.add(k));
+        }
+      });
+
+      return all;
+    }
+
+    // Comprueba que las cuatro casillas formen una L:
+    // un bloque de 3 casillas y otro de 1, unido en un extremo.
+    function isL(cells) {
+      if (cells.length !== 4 || new Set(cells).size !== 4) {
+        return false;
+      }
+
+      const coords = cells.map(rc);
+      const rows = coords.map(([r]) => r);
+      const cols = coords.map(([, c]) => c);
+
+      const minR = Math.min(...rows);
+      const maxR = Math.max(...rows);
+      const minC = Math.min(...cols);
+      const maxC = Math.max(...cols);
+
+      const height = maxR - minR + 1;
+      const width = maxC - minC + 1;
+
+      // L horizontal: una fila tiene 3 casillas y la otra 1,
+      // que debe estar en uno de los extremos.
+      if (height === 2 && width === 3) {
+        const rowCounts = [0, 0];
+
+        for (const [r] of coords) {
+          rowCounts[r - minR]++;
+        }
+
+        if (rowCounts.includes(3) && rowCounts.includes(1)) {
+          const shortRow = rowCounts.indexOf(1);
+          const singleCell = coords.find(([r]) => r - minR === shortRow);
+          const singleCol = singleCell[1];
+
+          return singleCol === minC || singleCol === maxC;
+        }
+      }
+
+      // L vertical: una columna tiene 3 casillas y la otra 1,
+      // que debe estar en uno de los extremos.
+      if (height === 3 && width === 2) {
+        const colCounts = [0, 0];
+
+        for (const [, c] of coords) {
+          colCounts[c - minC]++;
+        }
+
+        if (colCounts.includes(3) && colCounts.includes(1)) {
+          const shortColumn = colCounts.indexOf(1);
+          const singleCell = coords.find(([, c]) => c - minC === shortColumn);
+          const singleRow = singleCell[0];
+
+          return singleRow === minR || singleRow === maxR;
+        }
+      }
+
+      return false;
+    }
+
+    function setStatus(text) {
+      statusEl.textContent = text;
+    }
+
+    function render() {
+      boardEl.innerHTML = "";
+
+      for (let k = 0; k < 16; k++) {
+        const cell = document.createElement("button");
+        cell.className = "cell";
+        cell.type = "button";
+
+        const [row, col] = rc(k);
+        cell.setAttribute(
+          "aria-label",
+          `Fila ${row + 1}, columna ${col + 1}`
+        );
+
+        const pieceIndex = pieces.findIndex(piece => piece.includes(k));
+        const neutralIndex = neutrals.indexOf(k);
+
+        if (pieceIndex === 0) {
+          cell.classList.add("p1");
+          cell.textContent = "1";
+        }
+
+        if (pieceIndex === 1) {
+          cell.classList.add("p2");
+          cell.textContent = "2";
+        }
+
+        if (neutralIndex !== -1) {
+          cell.classList.add("neutral");
+          cell.textContent = "●";
+        }
+
+        if (
+          chosenCells.includes(k) ||
+          (selectedNeutral === neutralIndex && neutralIndex !== -1)
+        ) {
+          cell.classList.add("picked");
+        }
+
+        cell.addEventListener("click", () => clickCell(k));
+        boardEl.appendChild(cell);
+      }
+    }
+
+    function start() {
+      pieces = [
+        [key(0, 0), key(0, 1), key(0, 2), key(1, 0)],
+        [key(3, 1), key(3, 2), key(3, 3), key(2, 3)]
+      ];
+
+      neutrals = [key(1, 1), key(2, 2)];
+      player = 0;
+      phase = "move";
+      selectedNeutral = -1;
+      chosenCells = [];
+      gameOver = false;
+
+      setStatus("Turno del jugador 1: selecciona las cuatro casillas de tu L.");
+      render();
+    }
+
+    function clickCell(k) {
+      if (gameOver || (modeEl.value === "ai" && player === 1)) {
+        return;
+      }
+
+      if (phase === "move") {
+        // La otra L y las fichas neutrales bloquean estas casillas.
+        // Las casillas de la propia L sí se pueden reutilizar.
+        if (occupied(player).has(k)) {
+          setStatus("Esa casilla está ocupada por otra pieza o ficha.");
+          return;
+        }
+
+        if (chosenCells.includes(k)) {
+          chosenCells = chosenCells.filter(cell => cell !== k);
+        } else {
+          chosenCells.push(k);
+        }
+
+        if (chosenCells.length === 4) {
+          if (!isL(chosenCells)) {
+            setStatus("Esas casillas no forman una L válida. Prueba otra combinación.");
+            chosenCells = [];
+          } else if (!chosenCells.some(cell => !pieces[player].includes(cell))) {
+            setStatus("La L debe cubrir al menos una casilla nueva.");
+            chosenCells = [];
+          } else {
+            pieces[player] = [...chosenCells];
+            chosenCells = [];
+            phase = "neutral";
+            selectedNeutral = -1;
+            setStatus("Puedes mover una ficha amarilla o pulsar «Pasar ficha».");
+          }
+        } else {
+          setStatus(
+            `Selecciona cuatro casillas para formar la L (${chosenCells.length}/4).`
+          );
+        }
+
+        render();
+        return;
+      }
+
+      if (phase === "neutral") {
+        const neutralIndex = neutrals.indexOf(k);
+
+        if (selectedNeutral === -1) {
+          if (neutralIndex !== -1) {
+            selectedNeutral = neutralIndex;
+            setStatus("Elige una casilla libre para mover la ficha.");
+          }
+        } else if (!occupied().has(k)) {
+          neutrals[selectedNeutral] = k;
+          finishTurn();
+        } else {
+          setStatus("Esa casilla está ocupada. Elige otra o pasa.");
+        }
+
+        render();
+      }
+    }
+
+    function finishTurn() {
+      selectedNeutral = -1;
+      player = 1 - player;
+      phase = "move";
+      chosenCells = [];
+
+      if (legalMoves(player).length === 0) {
+        gameOver = true;
+        setStatus(
+          `¡Gana el jugador ${2 - player}! El jugador ${player + 1} no tiene movimientos legales.`
+        );
+        render();
+        return;
+      }
+
+      setStatus(
+        `Turno del jugador ${player + 1}: selecciona las cuatro casillas de tu L.`
+      );
+      render();
+
+      if (modeEl.value === "ai" && player === 1) {
+        setTimeout(aiTurn, 450);
+      }
+    }
+
+    function legalMoves(which) {
+      const blocked = occupied(which);
+      const result = [];
+
+      for (let a = 0; a < 16; a++) {
+        for (let b = a + 1; b < 16; b++) {
+          for (let c = b + 1; c < 16; c++) {
+            for (let d = c + 1; d < 16; d++) {
+              const cells = [a, b, c, d];
+
+              if (cells.some(cell => blocked.has(cell))) {
+                continue;
+              }
+
+              if (!isL(cells)) {
+                continue;
+              }
+
+              // El movimiento debe ocupar al menos una casilla nueva.
+              if (!cells.some(cell => !pieces[which].includes(cell))) {
+                continue;
+              }
+
+              result.push(cells);
+            }
+          }
+        }
+      }
+
+      return result;
+    }
+
+    function aiTurn() {
+      if (gameOver || player !== 1 || modeEl.value !== "ai") {
+        return;
+      }
+
+      const moves = legalMoves(1);
+
+      if (moves.length === 0) {
+        gameOver = true;
+        setStatus("¡Gana el jugador 1! La máquina no tiene movimientos legales.");
+        render();
+        return;
+      }
+
+      // Elige al azar una L legal.
+      pieces[1] = moves[Math.floor(Math.random() * moves.length)];
+
+      // Mueve una ficha neutral a una casilla libre, si puede.
+      const freeCells = [];
+
+      for (let k = 0; k < 16; k++) {
+        if (!occupied().has(k)) {
+          freeCells.push(k);
+        }
+      }
+
+      if (freeCells.length > 0) {
+        const neutralIndex = Math.floor(Math.random() * neutrals.length);
+        neutrals[neutralIndex] =
+          freeCells[Math.floor(Math.random() * freeCells.length)];
+      }
+
+      finishTurn();
+    }
+
+    document.querySelector("#restart").addEventListener("click", start);
+    modeEl.addEventListener("change", start);
+
+    document.querySelector("#pass").addEventListener("click", () => {
+      if (
+        !gameOver &&
+        phase === "neutral" &&
+        !(modeEl.value === "ai" && player === 1)
+      ) {
+        finishTurn();
+      }
+    });
+
+    start();
+  </script>
+</body>
+</html>

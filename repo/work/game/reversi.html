@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reversi</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      font-family: system-ui, sans-serif;
+      color: #f5f5f5;
+      background: #17221c;
+    }
+
+    main {
+      width: min(100%, 520px);
+      text-align: center;
+    }
+
+    h1 { margin: 0 0 8px; }
+
+    #status {
+      min-height: 1.5em;
+      margin: 8px 0;
+      color: #d4e8d9;
+    }
+
+    #score {
+      margin: 12px 0;
+      font-size: 1.1rem;
+    }
+
+    #board {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 3px;
+      padding: 6px;
+      border: 3px solid #583b25;
+      border-radius: 8px;
+      background: #583b25;
+      aspect-ratio: 1;
+    }
+
+    .cell {
+      position: relative;
+      display: grid;
+      place-items: center;
+      min-width: 0;
+      border: 0;
+      border-radius: 3px;
+      background: #27804e;
+      cursor: pointer;
+    }
+
+    .cell:hover { background: #31945c; }
+
+    .disc {
+      width: 78%;
+      height: 78%;
+      border-radius: 50%;
+      box-shadow: inset 0 -3px 5px #0005, 0 1px 3px #0006;
+    }
+
+    .black { background: #171717; }
+    .white { background: #f4f1e8; }
+
+    .legal::after {
+      content: "";
+      width: 20%;
+      height: 20%;
+      border-radius: 50%;
+      background: #ffffff80;
+    }
+
+    button#restart {
+      margin-top: 16px;
+      padding: 10px 18px;
+      border: 0;
+      border-radius: 6px;
+      color: #17221c;
+      background: #d4e8d9;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    button#restart:hover { background: white; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Reversi</h1>
+    <div id="status" aria-live="polite"></div>
+    <div id="score"></div>
+    <div id="board" aria-label="Tablero de Reversi"></div>
+    <button id="restart">Nueva partida</button>
+  </main>
+
+  <script>
+    const SIZE = 8;
+    const DIRECTIONS = [
+      [-1, -1], [-1, 0], [-1, 1], [0, -1],
+      [0, 1], [1, -1], [1, 0], [1, 1]
+    ];
+
+    const boardElement = document.getElementById("board");
+    const statusElement = document.getElementById("status");
+    const scoreElement = document.getElementById("score");
+
+    let board;
+    let turn;
+    let gameOver;
+
+    function startGame() {
+      board = Array.from({ length: SIZE }, () => Array(SIZE).fill(0));
+      board[3][3] = board[4][4] = 2;
+      board[3][4] = board[4][3] = 1;
+      turn = 1;
+      gameOver = false;
+      render();
+    }
+
+    function capturesAt(row, col, player) {
+      if (board[row][col] !== 0) return [];
+
+      const captured = [];
+
+      for (const [dr, dc] of DIRECTIONS) {
+        let r = row + dr;
+        let c = col + dc;
+        const line = [];
+
+        while (
+          r >= 0 && r < SIZE &&
+          c >= 0 && c < SIZE &&
+          board[r][c] === 3 - player
+        ) {
+          line.push([r, c]);
+          r += dr;
+          c += dc;
+        }
+
+        if (
+          line.length &&
+          r >= 0 && r < SIZE &&
+          c >= 0 && c < SIZE &&
+          board[r][c] === player
+        ) {
+          captured.push(...line);
+        }
+      }
+
+      return captured;
+    }
+
+    function legalMoves(player) {
+      const moves = [];
+      for (let r = 0; r < SIZE; r++) {
+        for (let c = 0; c < SIZE; c++) {
+          if (capturesAt(r, c, player).length) moves.push([r, c]);
+        }
+      }
+      return moves;
+    }
+
+    function play(row, col) {
+      if (gameOver) return;
+
+      const captured = capturesAt(row, col, turn);
+      if (!captured.length) return;
+
+      board[row][col] = turn;
+      for (const [r, c] of captured) board[r][c] = turn;
+
+      turn = 3 - turn;
+      let moves = legalMoves(turn);
+
+      if (!moves.length) {
+        const passedPlayer = turn;
+        turn = 3 - turn;
+        moves = legalMoves(turn);
+
+        if (!moves.length) {
+          gameOver = true;
+          render();
+          return;
+        }
+
+        render(`${playerName(passedPlayer)} no tiene movimientos; pasa su turno.`);
+        return;
+      }
+
+      render();
+    }
+
+    function playerName(player) {
+      return player === 1 ? "Negras" : "Blancas";
+    }
+
+    function render(message = "") {
+      boardElement.replaceChildren();
+      const moves = gameOver ? [] : legalMoves(turn);
+
+      for (let r = 0; r < SIZE; r++) {
+        for (let c = 0; c < SIZE; c++) {
+          const cell = document.createElement("button");
+          cell.className = "cell";
+          cell.type = "button";
+          cell.setAttribute("aria-label", `Fila ${r + 1}, columna ${c + 1}`);
+
+          if (board[r][c]) {
+            const disc = document.createElement("span");
+            disc.className = `disc ${board[r][c] === 1 ? "black" : "white"}`;
+            cell.append(disc);
+          } else if (moves.some(([mr, mc]) => mr === r && mc === c)) {
+            cell.classList.add("legal");
+          }
+
+          cell.addEventListener("click", () => play(r, c));
+          boardElement.append(cell);
+        }
+      }
+
+      const blackCount = board.flat().filter(cell => cell === 1).length;
+      const whiteCount = board.flat().filter(cell => cell === 2).length;
+      scoreElement.textContent = `⚫ Negras: ${blackCount}　 ⚪ Blancas: ${whiteCount}`;
+
+      if (gameOver) {
+        const result = blackCount === whiteCount
+          ? "¡Empate!"
+          : `¡Ganan las ${playerName(blackCount > whiteCount ? 1 : 2).toLowerCase()}!`;
+        statusElement.textContent = `Partida terminada. ${result}`;
+      } else {
+        statusElement.textContent = message || `Turno de las ${playerName(turn).toLowerCase()}.`;
+      }
+    }
+
+    document.getElementById("restart").addEventListener("click", startGame);
+    startGame();
+  </script>
+</body>
+</html>
