@@ -18,4 +18,13 @@ lopezViviendas:
     serial-number:
       issn: 1131-8635
     publisher: "Revistas Científicas Complutenses"
-
+rdl1-1993:
+  type: Legislation
+  title: "Real Decreto Legislativo 1/1993, de 24 de septiembre, por el que se aprueba el Texto refundido de la Ley del Impuesto sobre Transmisiones Patrimoniales y Actos Jurídicos Documentados."
+  author: "Gobierno de España"
+  date: 1993-09-24
+ley37-92:
+  type: Legislation
+  title: "Ley 37/1992, de 28 de diciembre, del Impuesto sobre el Valor Añadido."
+  author: "Gobierno de España"
+  date: 1992-12-28
