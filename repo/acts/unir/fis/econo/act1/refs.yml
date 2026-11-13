@@ -1,0 +1,21 @@
+gavilanBDE:
+  type: Article
+  title: "Informe Anual 2023. Capítulo 4. El mercado de la vivienda en España: evolución reciente, riesgos y problemas de accesibilidad"
+  author: "Gavilán, Ángel"
+  date: 2024
+lopezViviendas:
+  type: Article
+  title: "Las viviendas que pudieron hundir la economía española. La caída del mercado de vivienda y sus consecuencias."
+  author: "Rodríguez López, Julio"
+  date: 2017
+  serial-number:
+    doi: 10.5209/CRLA.54984
+  parent:
+    type: Periodical
+    title: "Cuadernos de relaciones laborales"
+    volume: 35
+    issue: 1
+    serial-number:
+      issn: 1131-8635
+    publisher: "Revistas Científicas Complutenses"
+
