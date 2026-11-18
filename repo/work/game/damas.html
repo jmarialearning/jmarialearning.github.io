@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Damas</title>
+  <style>
+    :root {
+      --claro: #f0d9b5;
+      --oscuro: #8b5a3c;
+      --fondo: #f7f3ee;
+      --resaltado: #f6e05e;
+      --movimiento: #8fd694;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+      color: #29231f;
+      background: var(--fondo);
+      font-family: system-ui, sans-serif;
+    }
+
+    main {
+      width: min(100%, 560px);
+      text-align: center;
+    }
+
+    h1 { margin: 0 0 8px; }
+
+    .controles {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 16px 0;
+    }
+
+    select, button {
+      padding: 9px 12px;
+      border: 1px solid #b7a99c;
+      border-radius: 8px;
+      background: white;
+      color: inherit;
+      font: inherit;
+    }
+
+    button { cursor: pointer; }
+    button:hover { background: #eee8e1; }
+
+    #estado {
+      min-height: 1.5em;
+      margin: 10px 0 14px;
+      font-weight: 600;
+    }
+
+    #tablero {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      width: min(90vw, 520px);
+      aspect-ratio: 1;
+      margin: auto;
+      border: 5px solid #543a2c;
+      box-shadow: 0 8px 22px #0002;
+    }
+
+    .casilla {
+      display: grid;
+      place-items: center;
+      position: relative;
+      border: 0;
+      border-radius: 0;
+      padding: 0;
+      aspect-ratio: 1;
+    }
+
+    .clara { background: var(--claro); }
+    .oscura { background: var(--oscuro); }
+
+    .casilla.seleccionada { box-shadow: inset 0 0 0 5px var(--resaltado); }
+    .casilla.destino::after {
+      content: "";
+      width: 28%;
+      height: 28%;
+      border-radius: 50%;
+      background: var(--movimiento);
+      box-shadow: 0 0 0 2px #244b28;
+    }
+
+    .ficha {
+      width: 76%;
+      height: 76%;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      font-size: clamp(16px, 5vw, 28px);
+      font-weight: 800;
+      box-shadow: inset 0 3px 5px #fff5, inset 0 -5px 7px #0005, 0 2px 4px #0005;
+      pointer-events: none;
+    }
+
+    .roja { background: #c83e3e; color: #fff; border: 3px solid #8a2020; }
+    .negra { background: #292929; color: #fff; border: 3px solid #111; }
+
+    .ayuda {
+      margin: 14px auto 0;
+      max-width: 500px;
+      color: #5b5149;
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>♟ Damas</h1>
+
+    <div class="controles">
+      <label for="modo">Modo:</label>
+      <select id="modo">
+        <option value="maquina">Contra la máquina</option>
+        <option value="dos">Dos jugadores</option>
+      </select>
+      <button id="nuevo">Nueva partida</button>
+    </div>
+
+    <div id="estado" aria-live="polite"></div>
+    <div id="tablero" aria-label="Tablero de damas"></div>
+
+    <p class="ayuda">
+      Las rojas empiezan. Elige una ficha y luego una casilla marcada.
+      Las capturas son obligatorias; si puedes seguir capturando con la misma
+      ficha, debes hacerlo. Al llegar al extremo opuesto, la ficha se convierte
+      en dama.
+    </p>
+  </main>
+
+  <script>
+    (() => {
+      const tableroEl = document.getElementById("tablero");
+      const estadoEl = document.getElementById("estado");
+      const modoEl = document.getElementById("modo");
+      const nuevoBtn = document.getElementById("nuevo");
+
+      let tablero;
+      let turno;
+      let seleccion = null;
+      let movimientosSeleccion = [];
+      let capturaContinua = null;
+      let juegoTerminado = false;
+      let pensando = false;
+
+      function iniciar() {
+        tablero = Array.from({ length: 8 }, () => Array(8).fill(null));
+
+        // Las negras empiezan arriba; las rojas, abajo.
+        for (let r = 0; r < 3; r++) {
+          for (let c = 0; c < 8; c++) {
+            if ((r + c) % 2 === 1) tablero[r][c] = { color: "negra", dama: false };
+          }
+        }
+
+        for (let r = 5; r < 8; r++) {
+          for (let c = 0; c < 8; c++) {
+            if ((r + c) % 2 === 1) tablero[r][c] = { color: "roja", dama: false };
+          }
+        }
+
+        turno = "roja";
+        seleccion = null;
+        movimientosSeleccion = [];
+        capturaContinua = null;
+        juegoTerminado = false;
+        pensando = false;
+        dibujar();
+        actualizarEstado();
+      }
+
+      function esDentro(r, c) {
+        return r >= 0 && r < 8 && c >= 0 && c < 8;
+      }
+
+      function direcciones(ficha) {
+        if (ficha.dama) return [-1, 1];
+        return ficha.color === "roja" ? [-1] : [1];
+      }
+
+      function movimientosDeFicha(r, c, soloCapturas = false) {
+        const ficha = tablero[r][c];
+        if (!ficha) return [];
+
+        const resultado = [];
+        for (const dr of direcciones(ficha)) {
+          for (const dc of [-1, 1]) {
+            const r1 = r + dr, c1 = c + dc;
+            const r2 = r + 2 * dr, c2 = c + 2 * dc;
+
+            if (
+              esDentro(r2, c2) &&
+              tablero[r1][c1] &&
+              tablero[r1][c1].color !== ficha.color &&
+              !tablero[r2][c2]
+            ) {
+              resultado.push({ desde: [r, c], hasta: [r2, c2], captura: [r1, c1] });
+            }
+
+            if (!soloCapturas && esDentro(r1, c1) && !tablero[r1][c1]) {
+              resultado.push({ desde: [r, c], hasta: [r1, c1], captura: null });
+            }
+          }
+        }
+        return resultado;
+      }
+
+      function todasLasCapturas(color) {
+        const resultado = [];
+        for (let r = 0; r < 8; r++) {
+          for (let c = 0; c < 8; c++) {
+            if (tablero[r][c]?.color === color) {
+              resultado.push(...movimientosDeFicha(r, c, true));
+            }
+          }
+        }
+        return resultado;
+      }
+
+      function todosLosMovimientos(color) {
+        const capturas = todasLasCapturas(color);
+        if (capturas.length) return capturas;
+
+        const resultado = [];
+        for (let r = 0; r < 8; r++) {
+          for (let c = 0; c < 8; c++) {
+            if (tablero[r][c]?.color === color) {
+              resultado.push(...movimientosDeFicha(r, c));
+            }
+          }
+        }
+        return resultado;
+      }
+
+      function dibujar() {
+        tableroEl.innerHTML = "";
+
+        const destinos = new Set(
+          movimientosSeleccion.map(m => `${m.hasta[0]},${m.hasta[1]}`)
+        );
+
+        for (let r = 0; r < 8; r++) {
+          for (let c = 0; c < 8; c++) {
+            const casilla = document.createElement("button");
+            casilla.type = "button";
+            casilla.className = `casilla ${(r + c) % 2 ? "oscura" : "clara"}`;
+            casilla.setAttribute("aria-label", `Fila ${r + 1}, columna ${c + 1}`);
+
+            if (seleccion && seleccion[0] === r && seleccion[1] === c) {
+              casilla.classList.add("seleccionada");
+            }
+            if (destinos.has(`${r},${c}`)) casilla.classList.add("destino");
+
+            const ficha = tablero[r][c];
+            if (ficha) {
+              const piezaEl = document.createElement("span");
+              piezaEl.className = `ficha ${ficha.color}`;
+              piezaEl.textContent = ficha.dama ? "♛" : "";
+              casilla.appendChild(piezaEl);
+            }
+
+            casilla.addEventListener("click", () => pulsarCasilla(r, c));
+            tableroEl.appendChild(casilla);
+          }
+        }
+      }
+
+      function actualizarEstado() {
+        if (juegoTerminado) return;
+
+        if (pensando) {
+          estadoEl.textContent = "La máquina está pensando…";
+          return;
+        }
+
+        const nombre = turno === "roja" ? "Rojas" : "Negras";
+        if (capturaContinua) {
+          estadoEl.textContent = `${nombre}: continúa capturando con la misma ficha.`;
+        } else {
+          estadoEl.textContent = `Turno de las ${nombre}.`;
+        }
+      }
+
+      function pulsarCasilla(r, c) {
+        if (juegoTerminado || pensando) return;
+        if (modoEl.value === "maquina" && turno === "negra") return;
+
+        const ficha = tablero[r][c];
+
+        if (seleccion) {
+          const movimiento = movimientosSeleccion.find(
+            m => m.hasta[0] === r && m.hasta[1] === c
+          );
+
+          if (movimiento) {
+            hacerMovimiento(movimiento);
+            return;
+          }
+        }
+
+        if (ficha && ficha.color === turno) {
+          if (capturaContinua && (r !== capturaContinua[0] || c !== capturaContinua[1])) {
+            return;
+          }
+
+          const capturas = capturaContinua
+            ? movimientosDeFicha(r, c, true)
+            : todasLasCapturas(turno);
+
+          movimientosSeleccion = capturas.length
+            ? capturas.filter(m => m.desde[0] === r && m.desde[1] === c)
+            : movimientosDeFicha(r, c);
+
+          if (movimientosSeleccion.length) {
+            seleccion = [r, c];
+          } else {
+            seleccion = null;
+          }
+        } else {
+          seleccion = null;
+          movimientosSeleccion = [];
+        }
+
+        dibujar();
+      }
+
+      function hacerMovimiento(movimiento) {
+        const [origenR, origenC] = movimiento.desde;
+        const [destinoR, destinoC] = movimiento.hasta;
+        const ficha = tablero[origenR][origenC];
+
+        tablero[destinoR][destinoC] = ficha;
+        tablero[origenR][origenC] = null;
+
+        if (movimiento.captura) {
+          const [capturaR, capturaC] = movimiento.captura;
+          tablero[capturaR][capturaC] = null;
+        }
+
+        if (
+          (ficha.color === "roja" && destinoR === 0) ||
+          (ficha.color === "negra" && destinoR === 7)
+        ) {
+          ficha.dama = true;
+        }
+
+        if (movimiento.captura) {
+          const siguientes = movimientosDeFicha(destinoR, destinoC, true);
+          if (siguientes.length) {
+            capturaContinua = [destinoR, destinoC];
+            seleccion = [destinoR, destinoC];
+            movimientosSeleccion = siguientes;
+            dibujar();
+            actualizarEstado();
+            return;
+          }
+        }
+
+        capturaContinua = null;
+        seleccion = null;
+        movimientosSeleccion = [];
+        turno = turno === "roja" ? "negra" : "roja";
+
+        const legales = todosLosMovimientos(turno);
+        if (!legales.length) {
+          juegoTerminado = true;
+          const ganador = turno === "roja" ? "Negras" : "Rojas";
+          estadoEl.textContent = `¡${ganador} ganan!`;
+          dibujar();
+          return;
+        }
+
+        dibujar();
+        actualizarEstado();
+
+        if (modoEl.value === "maquina" && turno === "negra") {
+          jugarMaquina();
+        }
+      }
+
+      function jugarMaquina() {
+        pensando = true;
+        actualizarEstado();
+
+        setTimeout(() => {
+          const opciones = todosLosMovimientos("negra");
+          if (!opciones.length) {
+            pensando = false;
+            juegoTerminado = true;
+            estadoEl.textContent = "¡Rojas ganan!";
+            return;
+          }
+
+          // Las capturas ya son obligatorias; entre ellas, la máquina elige al azar.
+          const elegido = opciones[Math.floor(Math.random() * opciones.length)];
+          pensando = false;
+          hacerMovimiento(elegido);
+        }, 450);
+      }
+
+      nuevoBtn.addEventListener("click", iniciar);
+      modoEl.addEventListener("change", iniciar);
+
+      iniciar();
+    })();
+  </script>
+</body>
+</html>

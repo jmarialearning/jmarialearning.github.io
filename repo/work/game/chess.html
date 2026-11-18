@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ajedrez</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 560px;
+      margin: 24px auto;
+      padding: 0 16px;
+      text-align: center;
+      color: #222;
+    }
+
+    #controls {
+      margin: 16px 0;
+    }
+
+    select, button {
+      font: inherit;
+      padding: 8px 12px;
+      margin: 4px;
+    }
+
+    #board {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      width: min(88vw, 480px);
+      margin: auto;
+      border: 3px solid #333;
+    }
+
+    .square {
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+      font-size: clamp(26px, 8vw, 50px);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .light { background: #f0d9b5; }
+    .dark { background: #b58863; }
+    .selected { background: #f6f669; }
+    .target { box-shadow: inset 0 0 0 5px #71a85a; }
+
+    #status {
+      min-height: 1.5em;
+      margin: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ajedrez</h1>
+
+  <div id="controls">
+    <label for="mode">Modo: </label>
+    <select id="mode">
+      <option value="human">Dos personas</option>
+      <option value="ai">Contra la máquina</option>
+    </select>
+    <button id="newGame">Nueva partida</button>
+    <button id="undo">↶ Retroceder jugada</button>
+  </div>
+
+  <div id="status" aria-live="polite"></div>
+  <div id="board" aria-label="Tablero de ajedrez"></div>
+
+  <script type="module">
+    import { Chess } from "https://esm.sh/chess.js@1.0.0";
+
+    const game = new Chess();
+    const boardEl = document.querySelector("#board");
+    const statusEl = document.querySelector("#status");
+    const modeEl = document.querySelector("#mode");
+
+    const symbols = {
+      w: { k: "♔", q: "♕", r: "♖", b: "♗", n: "♘", p: "♙" },
+      b: { k: "♚", q: "♛", r: "♜", b: "♝", n: "♞", p: "♟" }
+    };
+
+    const values = { p: 100, n: 320, b: 330, r: 500, q: 900, k: 0 };
+
+    let selected = null;
+    let targets = [];
+
+    function render() {
+      boardEl.innerHTML = "";
+      const position = game.board();
+
+      for (let row = 0; row < 8; row++) {
+        for (let col = 0; col < 8; col++) {
+          const squareName = "abcdefgh"[col] + (8 - row);
+          const piece = position[row][col];
+          const square = document.createElement("div");
+
+          square.className =
+            `square ${(row + col) % 2 ? "dark" : "light"}`;
+
+          if (squareName === selected) {
+            square.classList.add("selected");
+          }
+
+          if (targets.includes(squareName)) {
+            square.classList.add("target");
+          }
+
+          square.textContent = piece
+            ? symbols[piece.color][piece.type]
+            : "";
+
+          square.addEventListener("click", () => onSquareClick(squareName));
+          boardEl.appendChild(square);
+        }
+      }
+
+      if (game.isCheckmate()) {
+        statusEl.textContent =
+          `Jaque mate. Ganan las ${game.turn() === "w" ? "negras" : "blancas"}.`;
+      } else if (game.isDraw()) {
+        statusEl.textContent = "Tablas.";
+      } else {
+        const turn = game.turn() === "w" ? "blancas" : "negras";
+        statusEl.textContent =
+          `Turno de las ${turn}${game.isCheck() ? " — ¡jaque!" : ""}`;
+      }
+    }
+
+    function onSquareClick(square) {
+      if (game.isGameOver()) return;
+
+      // En modo máquina, las negras las controla la IA.
+      if (modeEl.value === "ai" && game.turn() === "b") return;
+
+      const piece = game.get(square);
+
+      if (selected && targets.includes(square)) {
+        try {
+          game.move({
+            from: selected,
+            to: square,
+            promotion: "q"
+          });
+        } catch {
+          // Ignora movimientos no válidos.
+        }
+
+        selected = null;
+        targets = [];
+        render();
+
+        if (modeEl.value === "ai" && !game.isGameOver()) {
+          statusEl.textContent = "La máquina está pensando…";
+          setTimeout(makeAIMove, 40);
+        }
+
+        return;
+      }
+
+      if (piece && piece.color === game.turn()) {
+        selected = square;
+        targets = game.moves({ square, verbose: true }).map(move => move.to);
+      } else {
+        selected = null;
+        targets = [];
+      }
+
+      render();
+    }
+
+    // Evalúa la posición desde el punto de vista del jugador al que le toca.
+    function evaluate() {
+      let score = 0;
+
+      for (const row of game.board()) {
+        for (const piece of row) {
+          if (piece) {
+            score += (piece.color === "b" ? 1 : -1) * values[piece.type];
+          }
+        }
+      }
+
+      return game.turn() === "b" ? score : -score;
+    }
+
+    // Minimax con poda alfa-beta.
+    function search(depth, alpha, beta) {
+      if (game.isCheckmate()) return -100000 - depth;
+      if (game.isDraw() || depth === 0) return evaluate();
+
+      let best = -Infinity;
+
+      for (const move of game.moves({ verbose: true })) {
+        game.move(move);
+        const score = -search(depth - 1, -beta, -alpha);
+        game.undo();
+
+        best = Math.max(best, score);
+        alpha = Math.max(alpha, score);
+
+        if (alpha >= beta) break;
+      }
+
+      return best;
+    }
+
+    function makeAIMove() {
+      // Evita que una respuesta pendiente de la IA mueva después de deshacer.
+      if (game.isGameOver() || game.turn() !== "b") return;
+
+      let bestScore = -Infinity;
+      let bestMoves = [];
+
+      for (const move of game.moves({ verbose: true })) {
+        game.move(move);
+        const score = -search(1, -Infinity, Infinity);
+        game.undo();
+
+        if (score > bestScore) {
+          bestScore = score;
+          bestMoves = [move];
+        } else if (score === bestScore) {
+          bestMoves.push(move);
+        }
+      }
+
+      if (bestMoves.length > 0) {
+        const move = bestMoves[Math.floor(Math.random() * bestMoves.length)];
+
+        game.move({
+          from: move.from,
+          to: move.to,
+          promotion: "q"
+        });
+      }
+
+      render();
+    }
+
+    document.querySelector("#newGame").addEventListener("click", () => {
+      game.reset();
+      selected = null;
+      targets = [];
+      render();
+    });
+
+    document.querySelector("#undo").addEventListener("click", () => {
+      if (modeEl.value === "ai" && game.turn() === "w") {
+        // La IA ya respondió: deshace su jugada y la del jugador.
+        game.undo();
+        game.undo();
+      } else {
+        // Dos personas, o la IA todavía no ha respondido.
+        game.undo();
+      }
+
+      selected = null;
+      targets = [];
+      render();
+    });
+
+    modeEl.addEventListener("change", () => {
+      game.reset();
+      selected = null;
+      targets = [];
+      render();
+    });
+
+    render();
+  </script>
+</body>
+</html>
