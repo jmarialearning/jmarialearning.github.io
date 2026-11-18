@@ -317,6 +317,34 @@
 
   \;
 
+  <section|Décimo ejercicio>
+
+  Suponiendo que el transformador es ideal, tenemos que:
+
+  <\equation*>
+    <frac|V<rsub|s>|V<rsub|p>>=<frac|N<rsub|s>|N<rsub|p>>=<frac|I<rsub|p>|I<rsub|s>>
+  </equation*>
+
+  Como sabemos que la relación entre intensidades es <math|3>, tenemos que el
+  múmero de espiras en el segundo núcleo es:
+
+  <\equation*>
+    N<rsub|segundo>=3\<cdot\>N<rsub|0>=150<space|0.4spc><text|espiras>
+  </equation*>
+
+  Por otro lado la tensión pico a la salida es:
+
+  <\equation*>
+    V<rsub|salida>=20<space|0.4spc><text|V>\<cdot\>3=60<space|0.4spc><text|V>
+  </equation*>
+
+  La potencia de entrada y salida deben coincidir al ser un transformador
+  ideal, sin pérdidas:
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|P<rsub|entrada>=20<space|0.4spc><text|V>\<cdot\>6<space|0.4spc><text|A>=120<space|0.4spc><text|W>>|<cell|>|<cell|>>|<row|<cell|P<rsub|salida>=60<space|0.4spc><text|V>\<cdot\>2<space|0.4spc><text|A>=120<space|0.4spc><text|W>>|<cell|>|<cell|>>>>
+  </eqnarray*>
+
   \;
 </body>
 
@@ -346,6 +374,7 @@
     <associate|auto-10|<tuple|8|4>>
     <associate|auto-11|<tuple|9|5>>
     <associate|auto-12|<tuple|3|5>>
+    <associate|auto-13|<tuple|10|?>>
     <associate|auto-2|<tuple|1|1>>
     <associate|auto-3|<tuple|2|2>>
     <associate|auto-4|<tuple|3|2>>
@@ -369,7 +398,7 @@
       </surround>|<pageref|auto-6>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|3>|>
-        \;
+        Gráfica de entrada (morado) y de salida del diodo (verde)
       </surround>|<pageref|auto-12>>
     </associate>
     <\associate|toc>
